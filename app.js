@@ -11,23 +11,29 @@
     if (muteIcon) muteIcon.setAttribute("aria-label", muted ? "Unmute" : "Mute");
   }
 
-  function playFromStart(withSound) {
-    if (!video) return;
-    try { video.currentTime = 0; } catch (e) {}
-    setMuted(!withSound);
-    var go = function () { video.play().catch(function () {}); };
-    if (video.readyState >= 1) go();
-    else video.addEventListener("loadeddata", go, { once: true });
+  function tryPlay() {
+    if (!video || reduce) return;
+    video.muted = true;
+    var p = video.play();
+    if (p && p.catch) p.catch(function () {});
   }
 
   if (video) {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.setAttribute("playsinline", "");
+    video.setAttribute("autoplay", "");
+    video.loop = true;
     video.removeAttribute("poster");
-    video.setAttribute("preload", "auto");
-    video.addEventListener("loadeddata", function () {
-      if (!reduce) playFromStart(false);
+    tryPlay();
+    video.addEventListener("canplay", tryPlay);
+    video.addEventListener("loadeddata", tryPlay);
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) tryPlay();
     });
     video.addEventListener("click", function () {
-      if (video.paused) video.play().catch(function () {});
+      if (video.paused) tryPlay();
       else video.pause();
     });
   }
@@ -35,11 +41,65 @@
   function toggleSound(e) {
     if (e) e.stopPropagation();
     if (!video) return;
-    if (video.muted) playFromStart(true);
-    else setMuted(true);
+    if (video.muted) {
+      video.muted = false;
+      setMuted(false);
+      try { video.currentTime = 0; } catch (err) {}
+      video.play().catch(function () {});
+    } else {
+      setMuted(true);
+    }
   }
   if (soundBtn) soundBtn.addEventListener("click", toggleSound);
   if (muteIcon) muteIcon.addEventListener("click", toggleSound);
+
+  var album = document.getElementById("album");
+  if (album) {
+    fetch("/photos/album.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (items) {
+        if (!Array.isArray(items) || !items.length) return;
+        items.forEach(function (item) {
+          var src = typeof item === "string" ? item : item.src;
+          var caption = typeof item === "string" ? "" : (item.caption || "");
+          if (!src) return;
+          var li = document.createElement("li");
+          li.innerHTML =
+            '<button type="button" class="photo group relative block w-full overflow-hidden rounded-xl bg-bg-warm text-left card-shadow" data-full="' + src + '">' +
+            '<img src="' + src + '" alt="' + caption + '" class="aspect-photo w-full object-cover" />' +
+            (caption ? '<span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-fg/70 to-transparent px-3 pb-3 pt-8 text-sm font-medium text-surface">' + caption + "</span>" : "") +
+            "</button>";
+          album.appendChild(li);
+        });
+        bindLightbox();
+      })
+      .catch(function () {});
+  }
+
+  var lb = document.getElementById("lb");
+  var lbImg = document.getElementById("lb-img");
+  function bindLightbox() {
+    document.querySelectorAll(".photo").forEach(function (el) {
+      if (el.dataset.bound) return;
+      el.dataset.bound = "1";
+      el.addEventListener("click", function () {
+        lbImg.src = el.getAttribute("data-full");
+        lb.classList.remove("hidden");
+        lb.classList.add("flex");
+      });
+    });
+  }
+  bindLightbox();
+  function closeLb() {
+    if (!lb) return;
+    lb.classList.add("hidden");
+    lb.classList.remove("flex");
+    lbImg.src = "";
+  }
+  var closeBtn = document.getElementById("lb-close");
+  if (closeBtn) closeBtn.addEventListener("click", closeLb);
+  if (lb) lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
 
   if (typeof L === "undefined") return;
 
@@ -94,23 +154,4 @@
     photoPin(36.4165, 25.4324, "/photos/santorini.jpg", "Santorini");
     photoPin(37.9838, 23.7275, "/photos/athens.jpg", "Athens");
   }
-
-  var lb = document.getElementById("lb");
-  var lbImg = document.getElementById("lb-img");
-  document.querySelectorAll(".photo").forEach(function (el) {
-    el.addEventListener("click", function () {
-      lbImg.src = el.getAttribute("data-full");
-      lb.classList.remove("hidden");
-      lb.classList.add("flex");
-    });
-  });
-  function closeLb() {
-    lb.classList.add("hidden");
-    lb.classList.remove("flex");
-    lbImg.src = "";
-  }
-  var closeBtn = document.getElementById("lb-close");
-  if (closeBtn) closeBtn.addEventListener("click", closeLb);
-  if (lb) lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
 })();
