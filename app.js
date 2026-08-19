@@ -5,22 +5,38 @@
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function setMuted(muted) {
+    if (!video) return;
     video.muted = muted;
     if (soundBtn) soundBtn.textContent = muted ? "Tap for sound" : "Sound on";
+    if (muteIcon) muteIcon.setAttribute("aria-label", muted ? "Unmute" : "Mute");
+  }
+
+  function playFromStart(withSound) {
+    if (!video) return;
+    try { video.currentTime = 0; } catch (e) {}
+    setMuted(!withSound);
+    var go = function () { video.play().catch(function () {}); };
+    if (video.readyState >= 1) go();
+    else video.addEventListener("loadeddata", go, { once: true });
   }
 
   if (video) {
+    video.removeAttribute("poster");
+    video.setAttribute("preload", "auto");
     video.addEventListener("loadeddata", function () {
-      if (!reduce) video.play().catch(function () {});
+      if (!reduce) playFromStart(false);
     });
     video.addEventListener("click", function () {
       if (video.paused) video.play().catch(function () {});
       else video.pause();
     });
   }
-  function toggleSound() {
-    setMuted(!video.muted);
-    video.play().catch(function () {});
+
+  function toggleSound(e) {
+    if (e) e.stopPropagation();
+    if (!video) return;
+    if (video.muted) playFromStart(true);
+    else setMuted(true);
   }
   if (soundBtn) soundBtn.addEventListener("click", toggleSound);
   if (muteIcon) muteIcon.addEventListener("click", toggleSound);
