@@ -1,6 +1,11 @@
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
-
 /intro.mp4
   Content-Type: video/mp4
+  Cache-Control: public, max-age=86400
+
+/intro.jpg
+  Content-Type: image/jpeg
+  Cache-Control: public, max-age=86400
+
+/photos/*
+  Content-Type: image/jpeg
   Cache-Control: public, max-age=86400
