@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daniel & Julia’s Greece Adventure 2026</title>
+  <meta name="description" content="A public trip page for friends and family — Crete, Santorini, and Athens. August 24 – September 17, 2026." />
+  <meta property="og:title" content="Daniel & Julia’s Greece Adventure 2026" />
+  <meta property="og:description" content="Crete • Santorini • Athens — August 24 – September 17, 2026." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin />
+  <link rel="stylesheet" href="/site.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="video-wrap" id="intro-wrap">
+        <div class="poster" aria-hidden="true"></div>
+        <video id="intro" playsinline muted loop poster="/intro.jpg" preload="metadata">
+          <source src="/intro.mp4" type="video/mp4" />
+        </video>
+        <button type="button" class="hint" id="sound-btn" hidden>Tap for sound</button>
+      </div>
+      <p class="kicker">A note for friends & family</p>
+      <h1>Daniel & Julia’s <em>Greece Adventure 2026</em></h1>
+      <p class="sub">Crete • Santorini • Athens</p>
+      <p class="dates">August 24 – September 17, 2026</p>
+      <div class="status"><span class="dot" aria-hidden="true"></span> Preparing to depart from Los Angeles</div>
+    </div>
+  </header>
+
+  <nav class="jump" aria-label="On this page">
+    <div class="wrap">
+      <a href="#where">Where</a>
+      <a href="#greece">Greece</a>
+      <a href="#log">Log</a>
+      <a href="#photos">Photos</a>
+      <a href="#plan">Plan</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="where">
+      <h2>Where we are</h2>
+      <p class="badge">Tucson, Arizona</p>
+      <p class="lede">A live view — we’ll move this pin as we go.</p>
+      <div id="live-map" class="map" role="img" aria-label="Map showing current location in Tucson"></div>
+    </section>
+
+    <section id="greece">
+      <h2>Greece</h2>
+      <p class="lede">Athens at the top, Crete at the bottom. Pictures sit on the map where they were taken — tap a thumbnail to preview.</p>
+      <div id="greece-map" class="map" role="img" aria-label="Map of the Greece trip from Athens to Crete"></div>
+      <ul class="legend">
+        <li><i></i>Overland on Crete</li>
+        <li><i class="ferry"></i>Ferry</li>
+      </ul>
+    </section>
+
+    <section id="log">
+      <h2>Adventure log</h2>
+      <p class="lede">Newest first. We’ll add notes from the road.</p>
+      <article class="card log" style="margin-top:1.1rem">
+        <span class="tag">Pre-trip</span>
+        <h3>The plan, as booked</h3>
+        <time datetime="2026-08-19">August 19, 2026</time>
+        <p>Five days out. We leave from Burbank on the 24th and land in Chania late on the 25th. Crete first — Chania, Paleochora, Douliana, Elounda, and Heraklion — before a morning ferry to Santorini on the 9th and on to Athens on the 12th. Home on the 17th. We’ll fill this in from the road.</p>
+      </article>
+    </section>
+
+    <section id="photos">
+      <h2>Photos</h2>
+      <p class="lede">Placeholders for now — trip pictures will land here, and on the map.</p>
+      <div class="photos">
+        <figure class="photo" data-full="/photos/crete.jpg">
+          <img src="/photos/crete.jpg" alt="Crete" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mood crete',textContent:'Crete'}))" />
+          <figcaption>Crete — photos coming</figcaption>
+        </figure>
+        <figure class="photo" data-full="/photos/santorini.jpg">
+          <img src="/photos/santorini.jpg" alt="Santorini" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mood santorini',textContent:'Santorini'}))" />
+          <figcaption>Santorini — photos coming</figcaption>
+        </figure>
+        <figure class="photo" data-full="/photos/athens.jpg">
+          <img src="/photos/athens.jpg" alt="Athens" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mood athens',textContent:'Athens'}))" />
+          <figcaption>Athens — photos coming</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="plan">
+      <h2>Rough plan</h2>
+      <p class="lede">Cities and dates only — we’ll fill in the days as we go.</p>
+      <div class="plan">
+        <article class="card stop">
+          <div class="when">August 24–25</div>
+          <div>
+            <span class="tag travel">Travel</span>
+            <h3>Burbank → Chania</h3>
+            <p>Heading out Monday afternoon from Burbank. We land in Chania late Tuesday night.</p>
+          </div>
+        </article>
+        <article class="card stop">
+          <div class="when">August 25–30</div>
+          <div>
+            <span class="tag">Crete</span>
+            <h3>Chania, Crete</h3>
+            <p>Slow days by the harbour, and the Saturday market — Mercato del Sabato.</p>
+          </div>
+        </article>
+        <article class="card stop">
+          <div class="when">August 30 – September 1</div>
+          <div>
+            <span class="tag">Crete</span>
+            <h3>Paleochora</h3>
+            <p>Down to the south coast. We pick up a car in Chania that morning, and plan to visit Elafonissi Beach.</p>
+          </div>
+        </article>
+        <article class="card stop">
+          <div class="when">September 1–4</div>
+          <div>
+            <span class="tag">Crete</span>
+            <h3>Douliana</h3>
+            <p>Three nights in a mountain village inland from the north coast.</p>
+          </div>
+        </article>
+        <article class="card stop">
+          <div class="when">September 4–6</div>
+          <div>
+            <span class="tag">Crete</span>
+            <h3>Elounda</h3>
+            <p>Two nights on the northeast coast, near Agios Nikolaos.</p>
+          </div>
+        </article>
+        <article class="card stop">
+          <div class="when">September 6–9</div>
+          <div>
+            <span class="tag">Crete</span>
+            <h3>Heraklion</h3>
+            <p>Last stretch on Crete. We drop the car here on the 6th. One stop that matters to us: Saint Minas Cathedral, a family site.</p>
+          </div>
+        </article>
+        <article class="card stop">
+          <div class="when">September 9</div>
+          <div>
+            <span class="tag santorini">Santorini</span>
+            <h3>Heraklion → Santorini</h3>
+            <p>Morning Seajets ferry, 8:00–9:35.</p>
+          </div>
+        </article>
+        <article class="card stop">
+          <div class="when">September 9–12</div>
+          <div>
+            <span class="tag santorini">Santorini</span>
+            <h3>Santorini</h3>
+            <p>Three nights on the island.</p>
+          </div>
+        </article>
+        <article class="card stop">
+          <div class="when">September 12</div>
+          <div>
+            <span class="tag athens">Athens</span>
+            <h3>Santorini → Athens</h3>
+            <p>Afternoon Seajets ferry to Piraeus, 12:55–18:30.</p>
+          </div>
+        </article>
+        <article class="card stop">
+          <div class="when">September 12–17</div>
+          <div>
+            <span class="tag athens">Athens</span>
+            <h3>Athens</h3>
+            <p>Last days in the city. The Parthenon, a few museums, and hunting for hidden bars in the Plaka. Homeward on the 17th.</p>
+          </div>
+        </article>
+        <article class="card stop">
+          <div class="when">September 17</div>
+          <div>
+            <span class="tag travel">Travel</span>
+            <h3>Athens → Burbank</h3>
+            <p>Early start from Athens. Back in Burbank that evening.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Last updated August 19, 2026 · Daniel & Julia</div>
+  </footer>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo">
+    <button type="button" id="lb-close" aria-label="Close">×</button>
+    <img id="lb-img" alt="" />
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin></script>
+  <script src="/app.js"></script>
+</body>
+</html>
