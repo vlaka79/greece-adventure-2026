@@ -9,6 +9,19 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
   <link rel="stylesheet" href="https://grove-amber-horizon-mist.grok.me/assets/styles-CM6tjZ7_.css" />
+  <style>
+    .route-pin-done { background: #1b6f66 !important; color: #f4eee4 !important; }
+    #guestbook-form label { display: block; font-size: 0.875rem; font-weight: 600; color: inherit; margin-bottom: 0.35rem; }
+    #guestbook-form input, #guestbook-form textarea {
+      width: 100%; border-radius: 0.75rem; border: 1px solid rgba(0,0,0,0.08);
+      background: #faf7f2; padding: 0.75rem 0.9rem; font: inherit; color: inherit;
+    }
+    #guestbook-form textarea { min-height: 6.5rem; resize: vertical; }
+    #guestbook-form button[type=submit] {
+      border: 0; border-radius: 999px; background: #1b6f66; color: #f4eee4;
+      font: inherit; font-weight: 600; padding: 0.7rem 1.25rem; cursor: pointer;
+    }
+  </style>
 </head>
 <body class="bg-bg text-fg">
   <div class="min-h-dvh bg-bg text-fg">
@@ -43,6 +56,7 @@
         <li class="flex-1 sm:flex-none"><a href="#log" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Log</a></li>
         <li class="flex-1 sm:flex-none"><a href="#photos" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Photos</a></li>
         <li class="flex-1 sm:flex-none"><a href="#plan" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Plan</a></li>
+        <li class="flex-1 sm:flex-none"><a href="#notes" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Notes</a></li>
       </ul>
     </nav>
     <main class="mx-auto flex max-w-3xl flex-col gap-14 px-5 py-10 sm:gap-16 sm:py-14">
@@ -54,10 +68,11 @@
       </section>
       <section id="greece" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Greece</h2>
-        <p class="mt-2 text-muted">Athens at the top, Crete at the bottom. Pictures sit on the map where they were taken — tap a thumbnail to preview.</p>
+        <p class="mt-2 text-muted">Athens at the top, Crete at the bottom. The planned line follows the roads on Crete. The solid line grows as we go and as photos land on the map.</p>
         <div class="mt-5"><div class="relative h-96 overflow-hidden rounded-xl bg-bg-warm card-shadow"><div id="greece-map" class="absolute inset-0"></div></div></div>
         <ul class="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted">
-          <li class="inline-flex items-center gap-2"><span class="inline-block w-6 border-t-2 border-primary"></span>Overland on Crete</li>
+          <li class="inline-flex items-center gap-2"><span class="inline-block w-6 border-t-2 border-dashed border-primary/70"></span>Planned (roads)</li>
+          <li class="inline-flex items-center gap-2"><span class="inline-block w-6 border-t-2 border-primary"></span>Actual path</li>
           <li class="inline-flex items-center gap-2"><span class="inline-block w-6 border-t-2 border-dashed border-accent"></span>Ferry</li>
         </ul>
       </section>
@@ -115,6 +130,25 @@
           <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">September 12–17</p><span class="inline-flex min-h-7 items-center rounded-full bg-primary/15 px-2.5 text-xs font-semibold tracking-wide text-primary">Athens</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Athens</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Last days in the city. The Parthenon, a few museums, and hunting for hidden bars in the Plaka. Homeward on the 17th.</p></article></li>
           <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">September 17</p><span class="inline-flex min-h-7 items-center rounded-full bg-bg-warm px-2.5 text-xs font-semibold tracking-wide text-muted">Travel</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Athens → Burbank</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Early start from Athens. Back in Burbank that evening.</p></article></li>
         </ol>
+      </section>
+      <section id="notes" class="scroll-mt-16">
+        <h2 class="font-serif text-3xl font-semibold text-fg">Notes from friends</h2>
+        <p class="mt-2 text-muted">Leave a short note for us. We’ll read them on the road.</p>
+        <p id="guestbook-thanks" class="mt-5 hidden rounded-xl bg-primary-soft p-5 text-primary font-semibold">Thank you — your note is on its way.</p>
+        <form id="guestbook-form" name="guestbook" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?notes=thanks#notes" class="mt-6 space-y-4 rounded-xl bg-surface p-5 card-shadow">
+          <input type="hidden" name="form-name" value="guestbook" />
+          <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+          <div>
+            <label for="guest-name">Name</label>
+            <input id="guest-name" name="name" type="text" required maxlength="80" autocomplete="name" placeholder="Your name" />
+          </div>
+          <div>
+            <label for="guest-message">Note</label>
+            <textarea id="guest-message" name="message" required maxlength="800" placeholder="A hello, a tip, or a wish for the trip…"></textarea>
+          </div>
+          <button type="submit">Send note</button>
+        </form>
+        <ul id="guestbook-list" class="mt-8 space-y-4"></ul>
       </section>
     </main>
     <footer class="border-t border-border bg-bg-warm"><div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 text-sm text-muted"><p>Last updated: August 19, 2026</p><p>Made for friends & family</p></div></footer>
