@@ -17,13 +17,42 @@
   var empty = document.getElementById("place-empty");
   var lb = document.getElementById("lb");
   var lbImg = document.getElementById("lb-img");
+  var shown = 0;
 
-  function resolveSrc(src) {
-    if (!src) return "";
-    if (src.indexOf("data:") === 0 || src.indexOf("http") === 0 || src.charAt(0) === "/") return src;
-    var bag = window.ALBUM_B64 || {};
-    if (bag[src]) return bag[src];
-    return "/photos/album/" + src + ".jpg";
+  function addPhoto(src, caption) {
+    var li = document.createElement("li");
+    var img = document.createElement("img");
+    img.className = "aspect-photo w-full object-cover";
+    img.alt = caption || "";
+    img.loading = "lazy";
+    img.src = src;
+    img.onerror = function () {
+      li.remove();
+      shown = Math.max(0, shown - 1);
+      if (!shown && empty) empty.classList.remove("hidden");
+    };
+    img.onload = function () {
+      shown += 1;
+      if (empty) empty.classList.add("hidden");
+    };
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "photo group relative block w-full overflow-hidden rounded-xl bg-bg-warm text-left card-shadow";
+    btn.setAttribute("data-full", src);
+    btn.appendChild(img);
+    if (caption) {
+      var cap = document.createElement("span");
+      cap.className = "absolute inset-x-0 bottom-0 bg-gradient-to-t from-fg/70 to-transparent px-3 pb-3 pt-8 text-sm font-medium text-surface";
+      cap.textContent = caption;
+      btn.appendChild(cap);
+    }
+    btn.addEventListener("click", function () {
+      lbImg.src = src;
+      lb.classList.remove("hidden");
+      lb.classList.add("flex");
+    });
+    li.appendChild(btn);
+    album.appendChild(li);
   }
 
   fetch("/photos/album.json", { cache: "no-store" })
@@ -32,27 +61,16 @@
       var shots = (items || []).filter(function (item) {
         return (item.place || "").toLowerCase() === id;
       });
-      var shown = 0;
+      if (!shots.length) {
+        if (empty) empty.classList.remove("hidden");
+        return;
+      }
       shots.forEach(function (item) {
-        var url = resolveSrc(item.src);
-        if (!url) return;
-        shown += 1;
-        var li = document.createElement("li");
-        li.innerHTML =
-          '<button type="button" class="photo group relative block w-full overflow-hidden rounded-xl bg-bg-warm text-left card-shadow" data-full="' + url + '">' +
-          '<img src="' + url + '" alt="' + (item.caption || "") + '" class="aspect-photo w-full object-cover" loading="lazy" />' +
-          (item.caption ? '<span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-fg/70 to-transparent px-3 pb-3 pt-8 text-sm font-medium text-surface">' + item.caption + "</span>" : "") +
-          "</button>";
-        album.appendChild(li);
+        if (item.src) addPhoto(item.src, item.caption || "");
       });
-      if (!shown && empty) empty.classList.remove("hidden");
-      album.querySelectorAll(".photo").forEach(function (el) {
-        el.addEventListener("click", function () {
-          lbImg.src = el.getAttribute("data-full");
-          lb.classList.remove("hidden");
-          lb.classList.add("flex");
-        });
-      });
+      setTimeout(function () {
+        if (!shown && empty) empty.classList.remove("hidden");
+      }, 800);
     })
     .catch(function () {
       if (empty) empty.classList.remove("hidden");
