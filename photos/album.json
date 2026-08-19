@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "src": "/photos/album/crete-hills.jpg",
+    "caption": "Inland Crete",
+    "lat": 35.4296,
+    "lng": 24.1911
+  },
+  {
+    "src": "/photos/album/west-crete-coast.jpg",
+    "caption": "West Crete coast",
+    "lat": 35.272,
+    "lng": 23.545
+  },
+  {
+    "src": "/photos/album/elafonissi.jpg",
+    "caption": "Elafonissi",
+    "lat": 35.2685,
+    "lng": 23.537
+  }
+]
