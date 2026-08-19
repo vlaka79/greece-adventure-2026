@@ -1,0 +1,8 @@
+[build]
+  command = "python3 decode_media.py"
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
