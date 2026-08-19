@@ -1,1 +1,5 @@
-# Static site. Do not SPA-fallback missing files (that served HTML as video/jpeg).
+/intro.mp4  https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/intro.mp4  200
+/intro.jpg  https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/intro.jpg  200
+/photos/crete.jpg  https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/crete.jpg  200
+/photos/santorini.jpg  https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/santorini.jpg  200
+/photos/athens.jpg  https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/athens.jpg  200

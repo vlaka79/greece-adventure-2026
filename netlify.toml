@@ -1,2 +1,28 @@
 [build]
+  command = "python3 decode_media.py"
   publish = "."
+
+[[redirects]]
+  from = "/intro.mp4"
+  to = "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/intro.mp4"
+  status = 200
+
+[[redirects]]
+  from = "/intro.jpg"
+  to = "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/intro.jpg"
+  status = 200
+
+[[redirects]]
+  from = "/photos/crete.jpg"
+  to = "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/crete.jpg"
+  status = 200
+
+[[redirects]]
+  from = "/photos/santorini.jpg"
+  to = "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/santorini.jpg"
+  status = 200
+
+[[redirects]]
+  from = "/photos/athens.jpg"
+  to = "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/athens.jpg"
+  status = 200

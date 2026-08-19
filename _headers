@@ -1,11 +1,11 @@
 /intro.mp4
   Content-Type: video/mp4
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=0, must-revalidate
 
 /intro.jpg
   Content-Type: image/jpeg
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=0, must-revalidate
 
 /photos/*
   Content-Type: image/jpeg
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=0, must-revalidate
