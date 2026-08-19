@@ -53,16 +53,71 @@
   if (soundBtn) soundBtn.addEventListener("click", toggleSound);
   if (muteIcon) muteIcon.addEventListener("click", toggleSound);
 
+  var tiles = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
+  var attr = "&copy; OpenStreetMap &copy; CARTO";
+  var HOME = [32.1848, -110.8147];
+  var greeceMap = null;
+
+  if (typeof L !== "undefined") {
+    var liveEl = document.getElementById("live-map");
+    if (liveEl) {
+      var live = L.map(liveEl, { scrollWheelZoom: false, zoomControl: true }).setView(HOME, 15);
+      L.tileLayer(tiles, { attribution: attr, maxZoom: 19 }).addTo(live);
+      L.circle(HOME, { radius: 220, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.14, interactive: false }).addTo(live);
+      L.marker(HOME, {
+        icon: L.divIcon({ className: "trip-pin", html: '<div class="trip-pin-inner"><span class="live-pin-pulse"></span><div class="trip-pin-head"><span></span></div><div class="trip-pin-tail"></div></div>', iconSize: [28, 40], iconAnchor: [14, 40] })
+      }).addTo(live).bindPopup('<p class="map-popup-title">Home</p><p class="map-popup-meta">Tucson, Arizona</p>');
+    }
+
+    var greeceEl = document.getElementById("greece-map");
+    if (greeceEl) {
+      greeceMap = L.map(greeceEl, { scrollWheelZoom: false, zoomControl: true, maxBounds: [[34.5, 22.3], [38.85, 26.95]] });
+      L.tileLayer(tiles, { attribution: attr, maxZoom: 19 }).addTo(greeceMap);
+      greeceMap.fitBounds([[34.82, 22.95], [38.32, 26.25]], { padding: [24, 24], animate: false });
+
+      var land = [[35.5164, 24.0181], [35.231, 23.68], [35.4296, 24.1911], [35.265, 25.723], [35.3387, 25.1442]];
+      var ferry = [[35.3387, 25.1442], [36.4165, 25.4324], [37.9838, 23.7275]];
+      L.polyline(land, { color: "#1b6f66", weight: 3, opacity: 0.9 }).addTo(greeceMap);
+      L.polyline(ferry, { color: "#c4a35a", weight: 3, dashArray: "7 7", opacity: 0.95 }).addTo(greeceMap);
+
+      var stops = [
+        [35.5164, 24.0181, "Chania"],
+        [35.231, 23.68, "Paleochora"],
+        [35.4296, 24.1911, "Douliana"],
+        [35.265, 25.723, "Elounda"],
+        [35.3387, 25.1442, "Heraklion"],
+        [36.4165, 25.4324, "Santorini"],
+        [37.9838, 23.7275, "Athens"]
+      ];
+      stops.forEach(function (s, i) {
+        L.marker([s[0], s[1]], {
+          icon: L.divIcon({ className: "route-pin-icon", html: '<div class="route-pin">' + (i + 1) + "</div>", iconSize: [26, 26], iconAnchor: [13, 13] })
+        }).addTo(greeceMap).bindPopup(s[2]);
+      });
+    }
+  }
+
+  function photoPin(lat, lng, src, label) {
+    if (!greeceMap || typeof L === "undefined") return;
+    var html = '<div class="photo-pin"><div class="photo-pin-card"><img src="' + src + '" alt="" /></div><div class="photo-pin-tail"></div></div>';
+    var popup = '<div class="map-photo-popup"><img src="' + src + '" alt="" /><figcaption>' + label + "</figcaption></div>";
+    L.marker([lat, lng], {
+      icon: L.divIcon({ className: "photo-pin-icon", html: html, iconSize: [56, 66], iconAnchor: [28, 66] }),
+      zIndexOffset: 900,
+      title: label
+    }).addTo(greeceMap).bindPopup(popup, { className: "photo-popup" });
+  }
+
   var album = document.getElementById("album");
-  if (album) {
-    fetch("/photos/album.json", { cache: "no-store" })
-      .then(function (r) { return r.ok ? r.json() : []; })
-      .then(function (items) {
-        if (!Array.isArray(items) || !items.length) return;
-        items.forEach(function (item) {
-          var src = typeof item === "string" ? item : item.src;
-          var caption = typeof item === "string" ? "" : (item.caption || "");
-          if (!src) return;
+  fetch("/photos/album.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : []; })
+    .then(function (items) {
+      if (!Array.isArray(items)) return;
+      items.forEach(function (item) {
+        var src = typeof item === "string" ? item : item.src;
+        var caption = typeof item === "string" ? "" : (item.caption || "");
+        if (!src) return;
+        if (album) {
           var li = document.createElement("li");
           li.innerHTML =
             '<button type="button" class="photo group relative block w-full overflow-hidden rounded-xl bg-bg-warm text-left card-shadow" data-full="' + src + '">' +
@@ -70,11 +125,12 @@
             (caption ? '<span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-fg/70 to-transparent px-3 pb-3 pt-8 text-sm font-medium text-surface">' + caption + "</span>" : "") +
             "</button>";
           album.appendChild(li);
-        });
-        bindLightbox();
-      })
-      .catch(function () {});
-  }
+        }
+        if (item.lat && item.lng) photoPin(item.lat, item.lng, src, caption || "Photo");
+      });
+      bindLightbox();
+    })
+    .catch(function () {});
 
   var lb = document.getElementById("lb");
   var lbImg = document.getElementById("lb-img");
@@ -100,59 +156,4 @@
   if (closeBtn) closeBtn.addEventListener("click", closeLb);
   if (lb) lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
-
-  if (typeof L === "undefined") return;
-
-  var tiles = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
-  var attr = "&copy; OpenStreetMap &copy; CARTO";
-  var HOME = [32.1848, -110.8147];
-
-  var liveEl = document.getElementById("live-map");
-  if (liveEl) {
-    var live = L.map(liveEl, { scrollWheelZoom: false, zoomControl: true }).setView(HOME, 15);
-    L.tileLayer(tiles, { attribution: attr, maxZoom: 19 }).addTo(live);
-    L.circle(HOME, { radius: 220, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.14, interactive: false }).addTo(live);
-    L.marker(HOME, {
-      icon: L.divIcon({ className: "trip-pin", html: '<div class="trip-pin-inner"><span class="live-pin-pulse"></span><div class="trip-pin-head"><span></span></div><div class="trip-pin-tail"></div></div>', iconSize: [28, 40], iconAnchor: [14, 40] })
-    }).addTo(live).bindPopup('<p class="map-popup-title">Home</p><p class="map-popup-meta">Tucson, Arizona</p>');
-  }
-
-  var greeceEl = document.getElementById("greece-map");
-  if (greeceEl) {
-    var greece = L.map(greeceEl, { scrollWheelZoom: false, zoomControl: true, maxBounds: [[34.5, 22.3], [38.85, 26.95]] });
-    L.tileLayer(tiles, { attribution: attr, maxZoom: 19 }).addTo(greece);
-    greece.fitBounds([[34.82, 22.95], [38.32, 26.25]], { padding: [24, 24], animate: false });
-
-    var land = [[35.5164, 24.0181], [35.231, 23.68], [35.4296, 24.1911], [35.265, 25.723], [35.3387, 25.1442]];
-    var ferry = [[35.3387, 25.1442], [36.4165, 25.4324], [37.9838, 23.7275]];
-    L.polyline(land, { color: "#1b6f66", weight: 3, opacity: 0.9 }).addTo(greece);
-    L.polyline(ferry, { color: "#c4a35a", weight: 3, dashArray: "7 7", opacity: 0.95 }).addTo(greece);
-
-    var stops = [
-      [35.5164, 24.0181, "Chania"],
-      [35.231, 23.68, "Paleochora"],
-      [35.4296, 24.1911, "Douliana"],
-      [35.265, 25.723, "Elounda"],
-      [35.3387, 25.1442, "Heraklion"],
-      [36.4165, 25.4324, "Santorini"],
-      [37.9838, 23.7275, "Athens"]
-    ];
-    stops.forEach(function (s, i) {
-      L.marker([s[0], s[1]], {
-        icon: L.divIcon({ className: "route-pin-icon", html: '<div class="route-pin">' + (i + 1) + "</div>", iconSize: [26, 26], iconAnchor: [13, 13] })
-      }).addTo(greece).bindPopup(s[2]);
-    });
-
-    function photoPin(lat, lng, src, label) {
-      var html = '<div class="photo-pin"><div class="photo-pin-card"><img src="' + src + '" alt="" /></div><div class="photo-pin-tail"></div></div>';
-      L.marker([lat, lng], {
-        icon: L.divIcon({ className: "photo-pin-icon", html: html, iconSize: [56, 66], iconAnchor: [28, 66] }),
-        zIndexOffset: 900,
-        title: label
-      }).addTo(greece).bindPopup(label);
-    }
-    photoPin(35.3, 24.9, "/photos/crete.jpg", "Crete");
-    photoPin(36.4165, 25.4324, "/photos/santorini.jpg", "Santorini");
-    photoPin(37.9838, 23.7275, "/photos/athens.jpg", "Athens");
-  }
 })();
