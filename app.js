@@ -53,6 +53,35 @@
   if (soundBtn) soundBtn.addEventListener("click", toggleSound);
   if (muteIcon) muteIcon.addEventListener("click", toggleSound);
 
+  // Guestbook: show notes + thank-you after Netlify form submit
+  var notesList = document.getElementById("guestbook-list");
+  if (notesList) {
+    fetch("/guestbook.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (items) {
+        notesList.innerHTML = "";
+        (items || []).forEach(function (n) {
+          var li = document.createElement("li");
+          li.className = "rounded-xl bg-surface p-5 card-shadow";
+          var when = n.date ? new Date(n.date + "T12:00:00").toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" }) : "";
+          li.innerHTML =
+            '<div class="flex flex-wrap items-baseline justify-between gap-2">' +
+            '<p class="font-semibold text-fg">' + (n.name || "Friend") + "</p>" +
+            (when ? '<time class="text-sm text-muted">' + when + "</time>" : "") +
+            "</div>" +
+            '<p class="mt-2 text-base leading-relaxed text-fg/90">' + (n.message || "") + "</p>";
+          notesList.appendChild(li);
+        });
+      })
+      .catch(function () {});
+  }
+  if (location.search.indexOf("notes=thanks") >= 0) {
+    var thanks = document.getElementById("guestbook-thanks");
+    if (thanks) thanks.classList.remove("hidden");
+    var form = document.getElementById("guestbook-form");
+    if (form) form.classList.add("hidden");
+  }
+
   if (typeof L === "undefined") return;
 
   var tiles = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
@@ -75,25 +104,84 @@
     L.tileLayer(tiles, { attribution: attr, maxZoom: 19 }).addTo(greece);
     greece.fitBounds([[34.82, 22.95], [38.32, 26.25]], { padding: [24, 24], animate: false });
 
-    var land = [[35.5164, 24.0181], [35.231, 23.68], [35.4296, 24.1911], [35.265, 25.723], [35.3387, 25.1442]];
-    var ferry = [[35.3387, 25.1442], [36.4165, 25.4324], [37.9838, 23.7275]];
-    L.polyline(land, { color: "#1b6f66", weight: 3, opacity: 0.9 }).addTo(greece);
-    L.polyline(ferry, { color: "#c4a35a", weight: 3, dashArray: "7 7", opacity: 0.95 }).addTo(greece);
+    function nearestIndex(path, lat, lng) {
+      var best = 0, bestD = Infinity;
+      for (var i = 0; i < path.length; i++) {
+        var d = Math.hypot(path[i][0] - lat, path[i][1] - lng);
+        if (d < bestD) { bestD = d; best = i; }
+      }
+      return best;
+    }
 
-    var stops = [
-      [35.5164, 24.0181, "Chania"],
-      [35.231, 23.68, "Paleochora"],
-      [35.4296, 24.1911, "Douliana"],
-      [35.265, 25.723, "Elounda"],
-      [35.3387, 25.1442, "Heraklion"],
-      [36.4165, 25.4324, "Santorini"],
-      [37.9838, 23.7275, "Athens"]
-    ];
-    stops.forEach(function (s, i) {
-      L.marker([s[0], s[1]], {
-        icon: L.divIcon({ className: "route-pin-icon", html: '<div class="route-pin">' + (i + 1) + "</div>", iconSize: [26, 26], iconAnchor: [13, 13] })
-      }).addTo(greece).bindPopup(s[2]);
-    });
+    function buildActualFromVisited(planned, stops, visitedIds) {
+      if (!visitedIds || !visitedIds.length || !planned || !planned.length) return [];
+      var creteIds = ["chania", "paleochora", "douliana", "elounda", "heraklion"];
+      var creteVisited = visitedIds.filter(function (id) { return creteIds.indexOf(id) >= 0; });
+      if (!creteVisited.length) return [];
+      var byId = {};
+      (stops || []).forEach(function (s) { byId[s.id] = s; });
+      var idxs = creteVisited.map(function (id) {
+        var s = byId[id];
+        return s ? nearestIndex(planned, s.lat, s.lng) : 0;
+      }).sort(function (a, b) { return a - b; });
+      var from = idxs[0];
+      var to = idxs[idxs.length - 1];
+      return planned.slice(from, to + 1);
+    }
+
+    fetch("/route.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (route) {
+        route = route || {};
+        var planned = route.plannedCrete || [];
+        var ferry = route.ferry || [[35.3387, 25.1442], [36.4165, 25.4324], [37.9838, 23.7275]];
+        var stops = route.stops || [];
+        var visited = route.visited || [];
+        var actual = (route.actual && route.actual.length) ? route.actual : buildActualFromVisited(planned, stops, visited);
+
+        if (planned.length) {
+          L.polyline(planned, {
+            color: "#1b6f66",
+            weight: 3,
+            opacity: 0.45,
+            dashArray: "8 8"
+          }).addTo(greece).bindPopup("Planned — roads on Crete");
+        }
+
+        if (actual.length > 1) {
+          L.polyline(actual, {
+            color: "#1b6f66",
+            weight: 4,
+            opacity: 0.95
+          }).addTo(greece).bindPopup("Actual path so far");
+        }
+
+        L.polyline(ferry, {
+          color: "#c4a35a",
+          weight: 3,
+          dashArray: "7 7",
+          opacity: 0.95
+        }).addTo(greece).bindPopup("Ferry");
+
+        stops.forEach(function (s, i) {
+          var done = visited.indexOf(s.id) >= 0;
+          L.marker([s.lat, s.lng], {
+            icon: L.divIcon({
+              className: "route-pin-icon",
+              html: '<div class="route-pin' + (done ? " route-pin-done" : "") + '">' + (i + 1) + "</div>",
+              iconSize: [26, 26],
+              iconAnchor: [13, 13]
+            })
+          }).addTo(greece).bindPopup(s.name + (done ? " · visited" : ""));
+        });
+      })
+      .catch(function () {
+        // Fallback if route.json missing
+        var land = [[35.5164, 24.0181], [35.231, 23.68], [35.4296, 24.1911], [35.265, 25.723], [35.3387, 25.1442]];
+        var ferry = [[35.3387, 25.1442], [36.4165, 25.4324], [37.9838, 23.7275]];
+        L.polyline(land, { color: "#1b6f66", weight: 3, opacity: 0.45, dashArray: "8 8" }).addTo(greece);
+        L.polyline(ferry, { color: "#c4a35a", weight: 3, dashArray: "7 7", opacity: 0.95 }).addTo(greece);
+      });
 
     function photoPin(lat, lng, src, label) {
       var html = '<div class="photo-pin"><div class="photo-pin-card"><img src="' + src + '" alt="" onerror="this.parentNode.parentNode.style.display=\'none\'" /></div><div class="photo-pin-tail"></div></div>';
