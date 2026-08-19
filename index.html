@@ -1,203 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="antialiased">
 <head>
   <meta charset="utf-8" />
-  <!-- intro video + destination photos -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Daniel & Julia’s Greece Adventure 2026</title>
-  <meta name="description" content="A public trip page for friends and family — Crete, Santorini, and Athens. August 24 – September 17, 2026." />
-  <meta property="og:title" content="Daniel & Julia’s Greece Adventure 2026" />
-  <meta property="og:description" content="Crete • Santorini • Athens — August 24 – September 17, 2026." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin />
-  <link rel="stylesheet" href="/site.css" />
+  <title>Daniel &amp; Julia’s Greece Adventure 2026</title>
+  <meta name="description" content="Follow Daniel and Julia through Crete, Santorini, and Athens — August 24 to September 17, 2026." />
+  <meta name="theme-color" content="#f4eee4" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" />
+  <link rel="stylesheet" href="https://grove-amber-horizon-mist.grok.me/assets/styles-CM6tjZ7_.css" />
 </head>
-<body>
-  <header class="hero">
-    <div class="wrap">
-      <div class="video-wrap" id="intro-wrap">
-        <div class="poster" aria-hidden="true"></div>
-        <video id="intro" playsinline muted loop poster="/intro.jpg" preload="metadata">
-          <source src="/intro.mp4" type="video/mp4" />
-        </video>
-        <button type="button" class="hint" id="sound-btn" hidden>Tap for sound</button>
+<body class="bg-bg text-fg">
+  <div class="min-h-dvh bg-bg text-fg">
+    <header class="relative overflow-hidden bg-bg">
+      <div class="relative mx-auto max-w-3xl px-5 pb-6 pt-6 sm:pt-8">
+        <figure>
+          <div class="relative overflow-hidden rounded-xl bg-fg ring-1 ring-accent/35 card-shadow">
+            <video id="intro" class="aspect-video w-full cursor-pointer object-cover" poster="/intro.jpg" playsinline preload="auto" muted loop>
+              <source src="/intro.mp4" type="video/mp4" />
+            </video>
+            <button type="button" id="sound-btn" class="absolute bottom-3 left-3 z-20 rounded-full bg-surface/90 px-3.5 py-2 text-sm font-semibold text-fg card-shadow">Tap for sound</button>
+            <button type="button" id="mute-icon" class="absolute bottom-3 right-3 z-20 flex size-11 items-center justify-center rounded-full bg-surface/90 text-fg card-shadow" aria-label="Unmute">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-5"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><line x1="22" x2="16" y1="9" y2="15"></line><line x1="16" x2="22" y1="9" y2="15"></line></svg>
+            </button>
+          </div>
+          <figcaption class="mt-3 text-center font-serif text-base italic text-muted">A little taste of Athens</figcaption>
+        </figure>
+        <p class="stagger-in mt-8 text-xs font-semibold uppercase tracking-widest text-primary">A note for friends &amp; family</p>
+        <h1 class="stagger-in mt-3 font-serif text-4xl font-semibold leading-tight text-fg sm:text-5xl">Daniel &amp; Julia’s<span class="mt-1 block italic text-primary">Greece Adventure 2026</span></h1>
+        <p class="stagger-in mt-4 font-serif text-xl text-sea sm:text-2xl">Crete • Santorini • Athens</p>
+        <p class="stagger-in mt-2 text-base text-muted">August 24 – September 17, 2026</p>
+        <div class="stagger-in mt-5 inline-flex max-w-full items-center gap-2.5 rounded-full bg-surface px-3.5 py-2.5 card-shadow">
+          <span class="pulse-dot relative inline-flex size-2.5 shrink-0 rounded-full bg-primary"></span>
+          <span class="text-sm font-medium leading-snug text-fg">Preparing to depart from Los Angeles</span>
+        </div>
       </div>
-      <p class="kicker">A note for friends & family</p>
-      <h1>Daniel & Julia’s <em>Greece Adventure 2026</em></h1>
-      <p class="sub">Crete • Santorini • Athens</p>
-      <p class="dates">August 24 – September 17, 2026</p>
-      <div class="status"><span class="dot" aria-hidden="true"></span> Preparing to depart from Los Angeles</div>
-    </div>
-  </header>
-
-  <nav class="jump" aria-label="On this page">
-    <div class="wrap">
-      <a href="#where">Where</a>
-      <a href="#greece">Greece</a>
-      <a href="#log">Log</a>
-      <a href="#photos">Photos</a>
-      <a href="#plan">Plan</a>
-    </div>
-  </nav>
-
-  <main class="wrap">
-    <section id="where">
-      <h2>Where we are</h2>
-      <p class="badge">Tucson, Arizona</p>
-      <p class="lede">A live view — we’ll move this pin as we go.</p>
-      <div id="live-map" class="map" role="img" aria-label="Map showing current location in Tucson"></div>
-    </section>
-
-    <section id="greece">
-      <h2>Greece</h2>
-      <p class="lede">Athens at the top, Crete at the bottom. Pictures sit on the map where they were taken — tap a thumbnail to preview.</p>
-      <div id="greece-map" class="map" role="img" aria-label="Map of the Greece trip from Athens to Crete"></div>
-      <ul class="legend">
-        <li><i></i>Overland on Crete</li>
-        <li><i class="ferry"></i>Ferry</li>
+    </header>
+    <nav aria-label="On this page" class="sticky top-0 z-20 border-b border-border/80 bg-bg/90 backdrop-blur-md">
+      <ul class="mx-auto flex max-w-3xl items-stretch justify-between px-1 sm:justify-center sm:gap-1 sm:px-5">
+        <li class="flex-1 sm:flex-none"><a href="#where" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Where</a></li>
+        <li class="flex-1 sm:flex-none"><a href="#greece" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Greece</a></li>
+        <li class="flex-1 sm:flex-none"><a href="#log" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Log</a></li>
+        <li class="flex-1 sm:flex-none"><a href="#photos" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Photos</a></li>
+        <li class="flex-1 sm:flex-none"><a href="#plan" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Plan</a></li>
       </ul>
-    </section>
-
-    <section id="log">
-      <h2>Adventure log</h2>
-      <p class="lede">Newest first. We’ll add notes from the road.</p>
-      <article class="card log" style="margin-top:1.1rem">
-        <span class="tag">Pre-trip</span>
-        <h3>The plan, as booked</h3>
-        <time datetime="2026-08-19">August 19, 2026</time>
-        <p>Five days out. We leave from Burbank on the 24th and land in Chania late on the 25th. Crete first — Chania, Paleochora, Douliana, Elounda, and Heraklion — before a morning ferry to Santorini on the 9th and on to Athens on the 12th. Home on the 17th. We’ll fill this in from the road.</p>
-      </article>
-    </section>
-
-    <section id="photos">
-      <h2>Photos</h2>
-      <p class="lede">Placeholders for now — trip pictures will land here, and on the map.</p>
-      <div class="photos">
-        <figure class="photo" data-full="/photos/crete.jpg">
-          <img src="/photos/crete.jpg" alt="Crete" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mood crete',textContent:'Crete'}))" />
-          <figcaption>Crete — photos coming</figcaption>
-        </figure>
-        <figure class="photo" data-full="/photos/santorini.jpg">
-          <img src="/photos/santorini.jpg" alt="Santorini" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mood santorini',textContent:'Santorini'}))" />
-          <figcaption>Santorini — photos coming</figcaption>
-        </figure>
-        <figure class="photo" data-full="/photos/athens.jpg">
-          <img src="/photos/athens.jpg" alt="Athens" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mood athens',textContent:'Athens'}))" />
-          <figcaption>Athens — photos coming</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="plan">
-      <h2>Rough plan</h2>
-      <p class="lede">Cities and dates only — we’ll fill in the days as we go.</p>
-      <div class="plan">
-        <article class="card stop">
-          <div class="when">August 24–25</div>
-          <div>
-            <span class="tag travel">Travel</span>
-            <h3>Burbank → Chania</h3>
-            <p>Heading out Monday afternoon from Burbank. We land in Chania late Tuesday night.</p>
-          </div>
-        </article>
-        <article class="card stop">
-          <div class="when">August 25–30</div>
-          <div>
-            <span class="tag">Crete</span>
-            <h3>Chania, Crete</h3>
-            <p>Slow days by the harbour, and the Saturday market — Mercato del Sabato.</p>
-          </div>
-        </article>
-        <article class="card stop">
-          <div class="when">August 30 – September 1</div>
-          <div>
-            <span class="tag">Crete</span>
-            <h3>Paleochora</h3>
-            <p>Down to the south coast. We pick up a car in Chania that morning, and plan to visit Elafonissi Beach.</p>
-          </div>
-        </article>
-        <article class="card stop">
-          <div class="when">September 1–4</div>
-          <div>
-            <span class="tag">Crete</span>
-            <h3>Douliana</h3>
-            <p>Three nights in a mountain village inland from the north coast.</p>
-          </div>
-        </article>
-        <article class="card stop">
-          <div class="when">September 4–6</div>
-          <div>
-            <span class="tag">Crete</span>
-            <h3>Elounda</h3>
-            <p>Two nights on the northeast coast, near Agios Nikolaos.</p>
-          </div>
-        </article>
-        <article class="card stop">
-          <div class="when">September 6–9</div>
-          <div>
-            <span class="tag">Crete</span>
-            <h3>Heraklion</h3>
-            <p>Last stretch on Crete. We drop the car here on the 6th. One stop that matters to us: Saint Minas Cathedral, a family site.</p>
-          </div>
-        </article>
-        <article class="card stop">
-          <div class="when">September 9</div>
-          <div>
-            <span class="tag santorini">Santorini</span>
-            <h3>Heraklion → Santorini</h3>
-            <p>Morning Seajets ferry, 8:00–9:35.</p>
-          </div>
-        </article>
-        <article class="card stop">
-          <div class="when">September 9–12</div>
-          <div>
-            <span class="tag santorini">Santorini</span>
-            <h3>Santorini</h3>
-            <p>Three nights on the island.</p>
-          </div>
-        </article>
-        <article class="card stop">
-          <div class="when">September 12</div>
-          <div>
-            <span class="tag athens">Athens</span>
-            <h3>Santorini → Athens</h3>
-            <p>Afternoon Seajets ferry to Piraeus, 12:55–18:30.</p>
-          </div>
-        </article>
-        <article class="card stop">
-          <div class="when">September 12–17</div>
-          <div>
-            <span class="tag athens">Athens</span>
-            <h3>Athens</h3>
-            <p>Last days in the city. The Parthenon, a few museums, and hunting for hidden bars in the Plaka. Homeward on the 17th.</p>
-          </div>
-        </article>
-        <article class="card stop">
-          <div class="when">September 17</div>
-          <div>
-            <span class="tag travel">Travel</span>
-            <h3>Athens → Burbank</h3>
-            <p>Early start from Athens. Back in Burbank that evening.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">Last updated August 19, 2026 · Daniel & Julia</div>
-  </footer>
-
-  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo">
-    <button type="button" id="lb-close" aria-label="Close">×</button>
-    <img id="lb-img" alt="" />
+    </nav>
+    <main class="mx-auto flex max-w-3xl flex-col gap-14 px-5 py-10 sm:gap-16 sm:py-14">
+      <section id="where" class="scroll-mt-16">
+        <h2 class="font-serif text-3xl font-semibold text-fg">Where we are</h2>
+        <p class="mt-3 inline-flex items-center gap-2 rounded-full bg-primary-soft px-3.5 py-1.5 text-sm font-semibold text-primary">Tucson, Arizona</p>
+        <p class="mt-2 text-sm text-muted">A live view — we’ll move this pin as we go.</p>
+        <div class="mt-5"><div class="relative h-72 overflow-hidden rounded-xl bg-bg-warm card-shadow sm:h-96"><div id="live-map" class="absolute inset-0"></div></div></div>
+      </section>
+      <section id="greece" class="scroll-mt-16">
+        <h2 class="font-serif text-3xl font-semibold text-fg">Greece</h2>
+        <p class="mt-2 text-muted">Athens at the top, Crete at the bottom. Pictures sit on the map where they were taken — tap a thumbnail to preview.</p>
+        <div class="mt-5"><div class="relative h-96 overflow-hidden rounded-xl bg-bg-warm card-shadow"><div id="greece-map" class="absolute inset-0"></div></div></div>
+        <ul class="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted">
+          <li class="inline-flex items-center gap-2"><span class="inline-block w-6 border-t-2 border-primary"></span>Overland on Crete</li>
+          <li class="inline-flex items-center gap-2"><span class="inline-block w-6 border-t-2 border-dashed border-accent"></span>Ferry</li>
+        </ul>
+      </section>
+      <section id="log" class="scroll-mt-16">
+        <h2 class="font-serif text-3xl font-semibold text-fg">Adventure log</h2>
+        <p class="mt-2 text-muted">Newest first. Short notes from the road.</p>
+        <ol class="mt-6 space-y-4"><li><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><time datetime="2026-08-19" class="text-sm font-medium text-muted">August 19, 2026</time><span class="inline-flex min-h-7 items-center rounded-full bg-accent-soft px-2.5 text-xs font-semibold tracking-wide text-fg">Pre-trip</span></div><h3 class="mt-3 font-serif text-2xl font-semibold text-fg">The plan, as booked</h3><p class="mt-2 text-base leading-relaxed text-fg/90">Five days out. We leave from Burbank on the 24th and land in Chania late on the 25th. Crete first — Chania, Paleochora, Douliana, Elounda, and Heraklion — before a morning ferry to Santorini on the 9th and on to Athens on the 12th. Home on the 17th. We’ll fill this in from the road.</p></article></li></ol>
+      </section>
+      <section id="photos" class="scroll-mt-16">
+        <h2 class="font-serif text-3xl font-semibold text-fg">Photos</h2>
+        <p class="mt-2 text-muted">Tap a tile to enlarge. Real shots will land here as we go.</p>
+        <ul class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <li><button type="button" class="photo group relative block w-full overflow-hidden rounded-xl bg-bg-warm text-left card-shadow" data-full="/photos/crete.jpg"><img src="/photos/crete.jpg" alt="Crete" class="aspect-photo w-full object-cover" /><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-fg/70 to-transparent px-3 pb-3 pt-8 text-sm font-medium text-surface">Crete</span></button></li>
+          <li><button type="button" class="photo group relative block w-full overflow-hidden rounded-xl bg-bg-warm text-left card-shadow" data-full="/photos/santorini.jpg"><img src="/photos/santorini.jpg" alt="Santorini" class="aspect-photo w-full object-cover" /><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-fg/70 to-transparent px-3 pb-3 pt-8 text-sm font-medium text-surface">Santorini</span></button></li>
+          <li><button type="button" class="photo group relative block w-full overflow-hidden rounded-xl bg-bg-warm text-left card-shadow" data-full="/photos/athens.jpg"><img src="/photos/athens.jpg" alt="Athens" class="aspect-photo w-full object-cover" /><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-fg/70 to-transparent px-3 pb-3 pt-8 text-sm font-medium text-surface">Athens</span></button></li>
+        </ul>
+      </section>
+      <section id="plan" class="scroll-mt-16">
+        <h2 class="font-serif text-3xl font-semibold text-fg">Rough itinerary</h2>
+        <p class="mt-2 text-muted">A sketch of the days — not a locked schedule.</p>
+        <ol class="relative mt-8 space-y-4 before:absolute before:bottom-4 before:left-[11px] before:top-4 before:w-px before:bg-accent/70">
+          <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">August 24–25</p><span class="inline-flex min-h-7 items-center rounded-full bg-bg-warm px-2.5 text-xs font-semibold tracking-wide text-muted">Travel</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Burbank → Chania</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Heading out Monday afternoon from Burbank. We land in Chania late Tuesday night.</p></article></li>
+          <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">August 25–30</p><span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">Crete</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Chania, Crete</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Slow days by the harbour, and the Saturday market — Mercato del Sabato.</p></article></li>
+          <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">August 30 – September 1</p><span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">Crete</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Paleochora</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Down to the south coast. We pick up a car in Chania that morning, and plan to visit Elafonissi Beach.</p></article></li>
+          <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">September 1–4</p><span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">Crete</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Douliana</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Three nights in a mountain village inland from the north coast.</p></article></li>
+          <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">September 4–6</p><span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">Crete</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Elounda</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Two nights on the northeast coast, near Agios Nikolaos.</p></article></li>
+          <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">September 6–9</p><span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">Crete</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Heraklion</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Last stretch on Crete. We drop the car here on the 6th. One stop that matters to us: Saint Minas Cathedral, a family site.</p></article></li>
+          <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">September 9</p><span class="inline-flex min-h-7 items-center rounded-full bg-accent-soft px-2.5 text-xs font-semibold tracking-wide text-fg">Santorini</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Heraklion → Santorini</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Morning Seajets ferry, 8:00–9:35.</p></article></li>
+          <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">September 9–12</p><span class="inline-flex min-h-7 items-center rounded-full bg-accent-soft px-2.5 text-xs font-semibold tracking-wide text-fg">Santorini</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Santorini</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Three nights on the island.</p></article></li>
+          <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">September 12</p><span class="inline-flex min-h-7 items-center rounded-full bg-primary/15 px-2.5 text-xs font-semibold tracking-wide text-primary">Athens</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Santorini → Athens</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Afternoon Seajets ferry to Piraeus, 12:55–18:30.</p></article></li>
+          <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">September 12–17</p><span class="inline-flex min-h-7 items-center rounded-full bg-primary/15 px-2.5 text-xs font-semibold tracking-wide text-primary">Athens</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Athens</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Last days in the city. The Parthenon, a few museums, and hunting for hidden bars in the Plaka. Homeward on the 17th.</p></article></li>
+          <li class="relative pl-9"><span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><p class="text-sm font-semibold text-primary">September 17</p><span class="inline-flex min-h-7 items-center rounded-full bg-bg-warm px-2.5 text-xs font-semibold tracking-wide text-muted">Travel</span></div><h3 class="mt-2 font-serif text-xl font-semibold text-fg">Athens → Burbank</h3><p class="mt-1.5 text-base leading-relaxed text-fg/90">Early start from Athens. Back in Burbank that evening.</p></article></li>
+        </ol>
+      </section>
+    </main>
+    <footer class="border-t border-border bg-bg-warm"><div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 text-sm text-muted"><p>Last updated: August 19, 2026</p><p>Made for friends &amp; family</p></div></footer>
   </div>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin></script>
+  <div id="lb" class="fixed inset-0 z-50 hidden items-center justify-center bg-fg/80 p-4" role="dialog" aria-modal="true">
+    <button type="button" id="lb-close" class="absolute right-4 top-3 text-3xl text-surface" aria-label="Close">×</button>
+    <img id="lb-img" alt="" class="max-h-[86dvh] max-w-full rounded-xl" />
+  </div>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="/app.js"></script>
 </body>
 </html>
