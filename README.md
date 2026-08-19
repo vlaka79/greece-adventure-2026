@@ -22,10 +22,9 @@ First-time import:
 
 ## Photos & video
 
-Drop files in the repo root when you have them:
+These files are in the repo root:
 
 - `/intro.mp4` and `/intro.jpg` — hero clip
 - `/photos/crete.jpg`, `/photos/santorini.jpg`, `/photos/athens.jpg`
-- `/hero.jpg`, `/og.jpg`
 
 Hotel names stay off this page on purpose.
