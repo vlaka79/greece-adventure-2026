@@ -12,6 +12,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Fetch photos and intro video
         run: sh fetch_media.sh
       - name: Commit binaries
@@ -23,5 +25,6 @@ jobs:
             echo "no media changes"
           else
             git commit -m "Add intro video and destination photos"
+            git pull --rebase origin main
             git push
           fi
