@@ -21,6 +21,17 @@
       border: 0; border-radius: 999px; background: #1b6f66; color: #f4eee4;
       font: inherit; font-weight: 600; padding: 0.7rem 1.25rem; cursor: pointer;
     }
+    #updates-form label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.35rem; }
+    #updates-form input {
+      width: 100%; border-radius: 0.75rem; border: 1px solid rgba(0,0,0,0.08);
+      background: #faf7f2; padding: 0.75rem 0.9rem; font: inherit;
+    }
+    #updates-form button[type=submit], #share-btn {
+      border: 0; border-radius: 999px; background: #1b6f66; color: #f4eee4;
+      font: inherit; font-weight: 600; padding: 0.7rem 1.25rem; cursor: pointer;
+    }
+    #share-btn { background: #2c2a26; }
+    .guestbook-reply { margin-top: 1rem; border-left: 2px solid rgba(27,111,102,0.4); padding-left: 0.85rem; }
   </style>
 </head>
 <body class="bg-bg text-fg">
@@ -43,10 +54,15 @@
         <h1 class="stagger-in mt-3 font-serif text-4xl font-semibold leading-tight text-fg sm:text-5xl">Daniel & Julia’s<span class="mt-1 block italic text-primary">Greece Adventure 2026</span></h1>
         <p class="stagger-in mt-4 font-serif text-xl text-sea sm:text-2xl">Crete • Santorini • Athens</p>
         <p class="stagger-in mt-2 text-base text-muted">August 24 – September 17, 2026</p>
-        <div class="stagger-in mt-5 inline-flex max-w-full items-center gap-2.5 rounded-full bg-surface px-3.5 py-2.5 card-shadow">
-          <span class="pulse-dot relative inline-flex size-2.5 shrink-0 rounded-full bg-primary"></span>
-          <span class="text-sm font-medium leading-snug text-fg">At home in Tucson</span>
+        <div class="stagger-in mt-5 flex flex-wrap items-center gap-3">
+          <div class="inline-flex max-w-full items-center gap-2.5 rounded-full bg-surface px-3.5 py-2.5 card-shadow">
+            <span class="pulse-dot relative inline-flex size-2.5 shrink-0 rounded-full bg-primary"></span>
+            <span class="text-sm font-medium leading-snug text-fg">At home in Tucson</span>
+          </div>
+          <p id="day-count" class="text-sm font-medium text-muted"></p>
+          <button type="button" id="share-btn">Share this page</button>
         </div>
+        <p id="share-status" class="mt-2 hidden text-sm text-primary"></p>
       </div>
     </header>
     <nav aria-label="On this page" class="sticky top-0 z-20 border-b border-border/80 bg-bg/90 backdrop-blur-md">
@@ -65,6 +81,8 @@
         <p class="mt-3 inline-flex items-center gap-2 rounded-full bg-primary-soft px-3.5 py-1.5 text-sm font-semibold text-primary">Home — Tucson, Arizona</p>
         <p class="mt-2 text-sm text-muted">A live view — we’ll move this pin as we go.</p>
         <div class="mt-5"><div class="relative h-72 overflow-hidden rounded-xl bg-bg-warm card-shadow sm:h-96"><div id="live-map" class="absolute inset-0"></div></div></div>
+        <p id="weather-line" class="mt-3 text-sm font-medium text-fg"></p>
+        <p id="tomorrow-line" class="mt-1 text-sm text-muted"></p>
       </section>
       <section id="greece" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Greece</h2>
@@ -79,6 +97,19 @@
       <section id="log" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Adventure log</h2>
         <p class="mt-2 text-muted">Newest first. Short notes from the road.</p>
+        <article id="postcard" class="mt-6 hidden overflow-hidden rounded-xl bg-surface card-shadow">
+          <div id="postcard-photo-wrap" class="hidden">
+            <img id="postcard-photo" alt="" class="aspect-video w-full object-cover" />
+          </div>
+          <div class="p-5">
+            <p class="text-xs font-semibold uppercase tracking-widest text-primary">Today’s postcard</p>
+            <div class="mt-2 flex flex-wrap items-baseline justify-between gap-2">
+              <h3 id="postcard-title" class="font-serif text-2xl font-semibold text-fg"></h3>
+              <time id="postcard-date" class="text-sm text-muted"></time>
+            </div>
+            <p id="postcard-note" class="mt-2 text-base leading-relaxed text-fg/90"></p>
+          </div>
+        </article>
         <ol class="mt-6 space-y-4"><li><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><time datetime="2026-08-19" class="text-sm font-medium text-muted">August 19, 2026</time><span class="inline-flex min-h-7 items-center rounded-full bg-accent-soft px-2.5 text-xs font-semibold tracking-wide text-fg">Pre-trip</span></div><h3 class="mt-3 font-serif text-2xl font-semibold text-fg">The plan, as booked</h3><p class="mt-2 text-base leading-relaxed text-fg/90">Five days out. We leave from Burbank on the 24th and land in Chania late on the 25th. Crete first — Chania, Paleochora, Douliana, Elounda, and Heraklion — before a morning ferry to Santorini on the 9th and on to Athens on the 12th. Home on the 17th. We’ll fill this in from the road.</p></article></li></ol>
       </section>
       <section id="photos" class="scroll-mt-16">
@@ -133,8 +164,28 @@
       </section>
       <section id="notes" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Notes from friends</h2>
-        <p class="mt-2 text-muted">Leave a short note for us. We’ll read them on the road.</p>
+        <p class="mt-2 text-muted">Leave a short note for us. We’ll read them on the road — and write back when we can.</p>
         <p id="guestbook-thanks" class="mt-5 hidden rounded-xl bg-primary-soft p-5 text-primary font-semibold">Thank you — your note is on its way.</p>
+        <p id="updates-thanks" class="mt-5 hidden rounded-xl bg-primary-soft p-5 text-primary font-semibold">You’re on the list. We’ll send a short note when we post.</p>
+        <form id="updates-form" name="updates" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?updates=thanks#notes" class="mt-6 space-y-3 rounded-xl bg-surface p-5 card-shadow">
+          <input type="hidden" name="form-name" value="updates" />
+          <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+          <p class="font-serif text-xl font-semibold text-fg">Get a note when we post</p>
+          <p class="text-sm text-muted">Email or a US mobile number. We’ll send a quick hello when there’s a new day on the site.</p>
+          <div>
+            <label for="update-name">Name</label>
+            <input id="update-name" name="name" type="text" required maxlength="80" autocomplete="name" placeholder="Your name" />
+          </div>
+          <div>
+            <label for="update-email">Email</label>
+            <input id="update-email" name="email" type="email" maxlength="120" autocomplete="email" placeholder="you@email.com" />
+          </div>
+          <div>
+            <label for="update-phone">Phone (optional)</label>
+            <input id="update-phone" name="phone" type="tel" maxlength="30" autocomplete="tel" placeholder="For a text instead" />
+          </div>
+          <button type="submit">Keep me posted</button>
+        </form>
         <form id="guestbook-form" name="guestbook" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?notes=thanks#notes" class="mt-6 space-y-4 rounded-xl bg-surface p-5 card-shadow">
           <input type="hidden" name="form-name" value="guestbook" />
           <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
