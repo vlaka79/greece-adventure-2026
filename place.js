@@ -2,7 +2,8 @@
   var PLACES = {
     crete: { title: "Crete", lead: "Hills, coast, and the days on the island." },
     santorini: { title: "Santorini", lead: "Three nights on the island." },
-    athens: { title: "Athens", lead: "The last days in the city." }
+    athens: { title: "Athens", lead: "The last days in the city." },
+    travel: { title: "There & back", lead: "The road and the flights — going to Greece, and coming home." }
   };
   var id = (new URLSearchParams(location.search).get("place") || "crete").toLowerCase();
   if (!PLACES[id]) id = "crete";
