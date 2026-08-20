@@ -204,18 +204,24 @@
       })
       .catch(function () {});
   }
-  if (location.search.indexOf("notes=thanks") >= 0) {
-    var thanks = document.getElementById("guestbook-thanks");
-    if (thanks) thanks.classList.remove("hidden");
-    var form = document.getElementById("guestbook-form");
-    if (form) form.classList.add("hidden");
+  function silentForm(form) {
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var data = new URLSearchParams(new FormData(form));
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: data.toString()
+      }).then(function () {
+        form.reset();
+      }).catch(function () {
+        form.submit();
+      });
+    });
   }
-  if (location.search.indexOf("updates=thanks") >= 0) {
-    var uthanks = document.getElementById("updates-thanks");
-    if (uthanks) uthanks.classList.remove("hidden");
-    var uform = document.getElementById("updates-form");
-    if (uform) uform.classList.add("hidden");
-  }
+  silentForm(document.getElementById("guestbook-form"));
+  silentForm(document.getElementById("updates-form"));
 
   var lb = document.getElementById("lb");
   var lbImg = document.getElementById("lb-img");
