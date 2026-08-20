@@ -1,0 +1,134 @@
+[
+  {
+    "dates": "August 24–25",
+    "tag": "Travel",
+    "tone": "muted",
+    "title": "Burbank → Chania",
+    "blurb": "Heading out Monday afternoon from Burbank. We land in Chania late Tuesday night.",
+    "plan": "Fly out Monday afternoon from Burbank and land in Chania late Tuesday. Keep the first night easy — bags, a late bite, sleep.",
+    "days": [
+      { "date": "Aug 24", "actual": "—" },
+      { "date": "Aug 25", "actual": "—" }
+    ]
+  },
+  {
+    "dates": "August 25–30",
+    "tag": "Crete",
+    "tone": "crete",
+    "title": "Chania, Crete",
+    "blurb": "Slow days by the harbour, and the Saturday market — Mercato del Sabato.",
+    "plan": "Ease into Crete. Harbour walks, a coffee in the old town, and Saturday’s market. No car yet — stay close and eat well.",
+    "days": [
+      { "date": "Aug 25", "actual": "—" },
+      { "date": "Aug 26", "actual": "—" },
+      { "date": "Aug 27", "actual": "—" },
+      { "date": "Aug 28", "actual": "—" },
+      { "date": "Aug 29", "actual": "—" }
+    ]
+  },
+  {
+    "dates": "August 30 – September 1",
+    "tag": "Crete",
+    "tone": "crete",
+    "title": "Paleochora",
+    "blurb": "Down to the south coast. We pick up a car in Chania that morning, and plan to visit Elafonissi Beach.",
+    "plan": "Pick up the car in Chania and take the south-coast roads to Paleochora. Elafonissi if the day is kind — pink sand, a long swim, a slow drive back.",
+    "days": [
+      { "date": "Aug 30", "actual": "—" },
+      { "date": "Aug 31", "actual": "—" }
+    ]
+  },
+  {
+    "dates": "September 1–4",
+    "tag": "Crete",
+    "tone": "crete",
+    "title": "Douliana",
+    "blurb": "Three nights in a mountain village inland from the north coast.",
+    "plan": "Three quiet nights in the hills. Village walks, a taverna table, and a swim on the north coast if we want one.",
+    "days": [
+      { "date": "Sep 1", "actual": "—" },
+      { "date": "Sep 2", "actual": "—" },
+      { "date": "Sep 3", "actual": "—" }
+    ]
+  },
+  {
+    "dates": "September 4–6",
+    "tag": "Crete",
+    "tone": "crete",
+    "title": "Elounda",
+    "blurb": "Two nights on the northeast coast, near Agios Nikolaos.",
+    "plan": "Two nights in Elounda. Spinalonga if we feel like the boat, an easy evening by the water, nothing rushed.",
+    "days": [
+      { "date": "Sep 4", "actual": "—" },
+      { "date": "Sep 5", "actual": "—" }
+    ]
+  },
+  {
+    "dates": "September 6–9",
+    "tag": "Crete",
+    "tone": "crete",
+    "title": "Heraklion",
+    "blurb": "Last stretch on Crete. We drop the car here on the 6th. One stop that matters to us: Saint Minas Cathedral, a family site.",
+    "plan": "Drop the car. Saint Minas Cathedral — family ground — then the old town, a market wander, and a last Cretan dinner before the ferry.",
+    "days": [
+      { "date": "Sep 6", "actual": "—" },
+      { "date": "Sep 7", "actual": "—" },
+      { "date": "Sep 8", "actual": "—" }
+    ]
+  },
+  {
+    "dates": "September 9",
+    "tag": "Santorini",
+    "tone": "island",
+    "title": "Heraklion → Santorini",
+    "blurb": "Morning Seajets ferry, 8:00–9:35.",
+    "plan": "WORLDCHAMPION JET, Club class. Heraklion 8:00, Santorini 9:35. At the port early, then up from Athinios to the caldera.",
+    "days": [{ "date": "Sep 9", "actual": "—" }]
+  },
+  {
+    "dates": "September 9–12",
+    "tag": "Santorini",
+    "tone": "island",
+    "title": "Santorini",
+    "blurb": "Three nights on the island.",
+    "plan": "Caldera light, an Oia wander before the crush, a winery for Assyrtiko, and dinners with a view. Heat in the middle of the day — we slow down.",
+    "days": [
+      { "date": "Sep 9", "actual": "—" },
+      { "date": "Sep 10", "actual": "—" },
+      { "date": "Sep 11", "actual": "—" }
+    ]
+  },
+  {
+    "dates": "September 12",
+    "tag": "Athens",
+    "tone": "athens",
+    "title": "Santorini → Athens",
+    "blurb": "Afternoon Seajets ferry to Piraeus, 12:55–18:30.",
+    "plan": "EUROCHAMPION JET 2. Santorini 12:55, Piraeus 18:30. A long, easy crossing, then into Athens for the night.",
+    "days": [{ "date": "Sep 12", "actual": "—" }]
+  },
+  {
+    "dates": "September 12–17",
+    "tag": "Athens",
+    "tone": "athens",
+    "title": "Athens",
+    "blurb": "Last days in the city. The Parthenon, a few museums, and hunting for hidden bars in the Plaka. Homeward on the 17th.",
+    "plan": "Acropolis in a cooler hour, a museum or two, Plaka and hidden bars, and enough time left to just sit. Nothing packed tight.",
+    "days": [
+      { "date": "Sep 12", "actual": "—" },
+      { "date": "Sep 13", "actual": "—" },
+      { "date": "Sep 14", "actual": "—" },
+      { "date": "Sep 15", "actual": "—" },
+      { "date": "Sep 16", "actual": "—" }
+    ]
+  },
+  {
+    "dates": "September 17",
+    "tag": "Travel",
+    "tone": "muted",
+    "title": "Athens → Burbank",
+    "blurb": "Early start from Athens. Back in Burbank that evening.",
+    "plan": "Early start from Athens. A travel day, then home to Burbank that evening.",
+    "days": [{ "date": "Sep 17", "actual": "—" }]
+  }
+]
