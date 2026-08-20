@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "src": "/photos/album/elafonissi-selfie.jpg",
+    "caption": "Elafonissi",
+    "place": "crete",
+    "lat": 35.2687,
+    "lng": 23.5317
+  },
+  {
+    "src": "/photos/album/elafonissi-julia.jpg",
+    "caption": "Elafonissi water",
+    "place": "crete",
+    "lat": 35.2687,
+    "lng": 23.5317
+  },
+  {
+    "src": "/photos/album/kissamos-sunset.jpg",
+    "caption": "Sunset, west Crete",
+    "place": "crete",
+    "lat": 35.4788,
+    "lng": 23.5891
+  }
+]
