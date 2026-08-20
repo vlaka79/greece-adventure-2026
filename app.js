@@ -86,14 +86,14 @@
 
   var tiles = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
   var attr = "&copy; OpenStreetMap &copy; CARTO";
-  var HOME = [32.1848, -110.8147];
+  var TUCSON = [32.2226, -110.9747];
 
   var liveEl = document.getElementById("live-map");
   if (liveEl) {
-    var live = L.map(liveEl, { scrollWheelZoom: false, zoomControl: true }).setView(HOME, 15);
+    var live = L.map(liveEl, { scrollWheelZoom: false, zoomControl: true }).setView(TUCSON, 11);
     L.tileLayer(tiles, { attribution: attr, maxZoom: 19 }).addTo(live);
-    L.circle(HOME, { radius: 220, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.14, interactive: false }).addTo(live);
-    L.marker(HOME, {
+    L.circle(TUCSON, { radius: 12000, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.12, interactive: false }).addTo(live);
+    L.marker(TUCSON, {
       icon: L.divIcon({ className: "trip-pin", html: '<div class="trip-pin-inner"><span class="live-pin-pulse"></span><div class="trip-pin-head"><span></span></div><div class="trip-pin-tail"></div></div>', iconSize: [28, 40], iconAnchor: [14, 40] })
     }).addTo(live).bindPopup('<p class="map-popup-title">Home</p><p class="map-popup-meta">Tucson, Arizona</p>');
   }
@@ -176,7 +176,6 @@
         });
       })
       .catch(function () {
-        // Fallback if route.json missing
         var land = [[35.5164, 24.0181], [35.231, 23.68], [35.4296, 24.1911], [35.265, 25.723], [35.3387, 25.1442]];
         var ferry = [[35.3387, 25.1442], [36.4165, 25.4324], [37.9838, 23.7275]];
         L.polyline(land, { color: "#1b6f66", weight: 3, opacity: 0.45, dashArray: "8 8" }).addTo(greece);
