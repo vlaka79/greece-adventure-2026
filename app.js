@@ -223,6 +223,42 @@
   silentForm(document.getElementById("guestbook-form"));
   silentForm(document.getElementById("updates-form"));
 
+  fetch("/itinerary.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : []; })
+    .then(function (stops) {
+      var list = document.getElementById("itinerary-list");
+      if (!list) return;
+      var toneClass = {
+        muted: "bg-bg-warm text-muted",
+        crete: "bg-primary-soft text-primary",
+        island: "bg-accent-soft text-fg",
+        athens: "bg-primary/15 text-primary"
+      };
+      list.innerHTML = "";
+      (stops || []).forEach(function (s) {
+        var days = (s.days || []).map(function (d) {
+          return "<li><time>" + d.date + "</time><span>" + (d.actual || "—") + "</span></li>";
+        }).join("");
+        var li = document.createElement("li");
+        li.className = "relative pl-9";
+        li.innerHTML =
+          '<span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span>' +
+          '<article class="rounded-xl bg-surface p-5 card-shadow">' +
+          '<div class="flex flex-wrap items-center gap-2">' +
+          '<p class="text-sm font-semibold text-primary">' + (s.dates || "") + "</p>" +
+          '<span class="inline-flex min-h-7 items-center rounded-full px-2.5 text-xs font-semibold tracking-wide ' + (toneClass[s.tone] || toneClass.muted) + '">' + (s.tag || "") + "</span>" +
+          "</div>" +
+          '<h3 class="mt-2 font-serif text-xl font-semibold text-fg">' + (s.title || "") + "</h3>" +
+          '<p class="mt-1.5 text-base leading-relaxed text-fg/90">' + (s.blurb || "") + "</p>" +
+          '<div class="itinerary-sub"><h4 class="text-primary">The plan</h4>' +
+          '<p class="mt-1.5 text-base leading-relaxed text-fg/90">' + (s.plan || "") + "</p></div>" +
+          '<div class="itinerary-sub"><h4 class="text-muted">What we actually did</h4>' +
+          '<ul class="itinerary-days">' + days + "</ul></div></article>";
+        list.appendChild(li);
+      });
+    })
+    .catch(function () {});
+
   var lb = document.getElementById("lb");
   var lbImg = document.getElementById("lb-img");
   var lbCaption = document.getElementById("lb-caption");
