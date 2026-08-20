@@ -48,7 +48,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-5"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><line x1="22" x2="16" y1="9" y2="15"></line><line x1="16" x2="22" y1="9" y2="15"></line></svg>
             </button>
           </div>
-          <figcaption class="mt-3 text-center font-serif text-base italic text-muted">A little taste of Athens</figcaption>
+          <figcaption class="mt-3 text-center font-serif text-base italic text-muted">A magical journey across Greece</figcaption>
         </figure>
         <p class="stagger-in mt-8 text-xs font-semibold uppercase tracking-widest text-primary">A note for friends & family</p>
         <h1 class="stagger-in mt-3 font-serif text-4xl font-semibold leading-tight text-fg sm:text-5xl">Daniel & Julia’s<span class="mt-1 block italic text-primary">Greece Adventure 2026</span></h1>
@@ -163,15 +163,28 @@
         </ol>
       </section>
       <section id="notes" class="scroll-mt-16">
-        <h2 class="font-serif text-3xl font-semibold text-fg">Notes from friends</h2>
-        <p class="mt-2 text-muted">Leave a short note for us. We’ll read them on the road — and write back when we can.</p>
-        <p id="guestbook-thanks" class="mt-5 hidden rounded-xl bg-primary-soft p-5 text-primary font-semibold">Thank you — your note is on its way.</p>
-        <p id="updates-thanks" class="mt-5 hidden rounded-xl bg-primary-soft p-5 text-primary font-semibold">You’re on the list. We’ll send a short note when we post.</p>
+        <h2 class="font-serif text-3xl font-semibold text-fg">A note for the road</h2>
+        <p class="mt-2 text-muted">If you’re thinking of us, say hello. A wish, a memory, a restaurant tip — we’ll read every one, and write back when we can.</p>
+        <p id="guestbook-thanks" class="mt-5 hidden rounded-xl bg-primary-soft p-5 text-primary font-semibold">Thank you. We’ll carry that with us.</p>
+        <p id="updates-thanks" class="mt-5 hidden rounded-xl bg-primary-soft p-5 text-primary font-semibold">You’re in. We’ll tap you when there’s a new day on the page.</p>
+        <form id="guestbook-form" name="guestbook" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?notes=thanks#notes" class="mt-6 space-y-4 rounded-xl bg-surface p-5 card-shadow">
+          <input type="hidden" name="form-name" value="guestbook" />
+          <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+          <div>
+            <label for="guest-name">Name</label>
+            <input id="guest-name" name="name" type="text" required maxlength="80" autocomplete="name" placeholder="Your name" />
+          </div>
+          <div>
+            <label for="guest-message">Your note</label>
+            <textarea id="guest-message" name="message" required maxlength="800" placeholder="Write us a little something…"></textarea>
+          </div>
+          <button type="submit">Leave a note</button>
+        </form>
         <form id="updates-form" name="updates" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?updates=thanks#notes" class="mt-6 space-y-3 rounded-xl bg-surface p-5 card-shadow">
           <input type="hidden" name="form-name" value="updates" />
           <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-          <p class="font-serif text-xl font-semibold text-fg">Get a note when we post</p>
-          <p class="text-sm text-muted">Email or a US mobile number. We’ll send a quick hello when there’s a new day on the site.</p>
+          <p class="font-serif text-xl font-semibold text-fg">Want a tap when we post?</p>
+          <p class="text-sm text-muted">Leave an email or a phone number. No spam — just a short hello when we add a day.</p>
           <div>
             <label for="update-name">Name</label>
             <input id="update-name" name="name" type="text" required maxlength="80" autocomplete="name" placeholder="Your name" />
@@ -184,20 +197,7 @@
             <label for="update-phone">Phone (optional)</label>
             <input id="update-phone" name="phone" type="tel" maxlength="30" autocomplete="tel" placeholder="For a text instead" />
           </div>
-          <button type="submit">Keep me posted</button>
-        </form>
-        <form id="guestbook-form" name="guestbook" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?notes=thanks#notes" class="mt-6 space-y-4 rounded-xl bg-surface p-5 card-shadow">
-          <input type="hidden" name="form-name" value="guestbook" />
-          <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-          <div>
-            <label for="guest-name">Name</label>
-            <input id="guest-name" name="name" type="text" required maxlength="80" autocomplete="name" placeholder="Your name" />
-          </div>
-          <div>
-            <label for="guest-message">Note</label>
-            <textarea id="guest-message" name="message" required maxlength="800" placeholder="A hello, a tip, or a wish for the trip…"></textarea>
-          </div>
-          <button type="submit">Send note</button>
+          <button type="submit">Yes, keep me posted</button>
         </form>
         <ul id="guestbook-list" class="mt-8 space-y-4"></ul>
       </section>
