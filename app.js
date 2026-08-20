@@ -53,7 +53,128 @@
   if (soundBtn) soundBtn.addEventListener("click", toggleSound);
   if (muteIcon) muteIcon.addEventListener("click", toggleSound);
 
-  // Guestbook: show notes + thank-you after Netlify form submit
+  function startOfDay(d) {
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  }
+  function daysBetween(a, b) {
+    return Math.round((startOfDay(b) - startOfDay(a)) / 86400000);
+  }
+  function formatDate(iso) {
+    if (!iso) return "";
+    return new Date(iso + "T12:00:00").toLocaleDateString(undefined, {
+      year: "numeric", month: "long", day: "numeric"
+    });
+  }
+
+  var TRIP_START = new Date(2026, 7, 24);
+  var TRIP_END = new Date(2026, 8, 17);
+  var TRIP_DAYS = daysBetween(TRIP_START, TRIP_END) + 1;
+  var dayEl = document.getElementById("day-count");
+  if (dayEl) {
+    var today = new Date();
+    if (startOfDay(today) < startOfDay(TRIP_START)) {
+      var left = daysBetween(today, TRIP_START);
+      dayEl.textContent = left === 1 ? "1 day until we leave" : left + " days until we leave";
+    } else if (startOfDay(today) > startOfDay(TRIP_END)) {
+      dayEl.textContent = "Home again — " + TRIP_DAYS + " days on the road";
+    } else {
+      dayEl.textContent = "Day " + (daysBetween(TRIP_START, today) + 1) + " of " + TRIP_DAYS;
+    }
+  }
+
+  var shareBtn = document.getElementById("share-btn");
+  var shareStatus = document.getElementById("share-status");
+  function showShare(msg) {
+    if (!shareStatus) return;
+    shareStatus.textContent = msg;
+    shareStatus.classList.remove("hidden");
+  }
+  if (shareBtn) {
+    shareBtn.addEventListener("click", function () {
+      var url = location.origin + "/";
+      var text = "Follow Daniel and Julia through Crete, Santorini, and Athens — Aug 24 to Sep 17.";
+      var payload = { title: "Daniel & Julia’s Greece Adventure", text: text, url: url };
+      if (navigator.share) {
+        navigator.share(payload).catch(function () {});
+        return;
+      }
+      var sms = "sms:?&body=" + encodeURIComponent(text + " " + url);
+      if (/iPhone|iPad|Android/i.test(navigator.userAgent)) {
+        location.href = sms;
+        return;
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function () {
+          showShare("Link copied — paste it into a text or email.");
+        }).catch(function () {
+          showShare(url);
+        });
+      } else {
+        showShare(url);
+      }
+    });
+  }
+
+  function weatherPhrase(code) {
+    if (code == null) return "";
+    if (code === 0) return "clear";
+    if (code <= 3) return "partly cloudy";
+    if (code <= 48) return "foggy";
+    if (code <= 67) return "rain";
+    if (code <= 77) return "snow";
+    if (code <= 82) return "showers";
+    if (code >= 95) return "thunderstorms";
+    return "mixed skies";
+  }
+
+  fetch("/status.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (status) {
+      status = status || {};
+      var tomorrow = document.getElementById("tomorrow-line");
+      if (tomorrow && status.tomorrow) {
+        tomorrow.textContent = "Tomorrow: " + status.tomorrow;
+      }
+      var card = status.postcard || {};
+      var postcard = document.getElementById("postcard");
+      if (postcard && (card.note || card.title)) {
+        postcard.classList.remove("hidden");
+        var title = document.getElementById("postcard-title");
+        var note = document.getElementById("postcard-note");
+        var date = document.getElementById("postcard-date");
+        if (title) title.textContent = card.title || "Postcard";
+        if (note) note.textContent = card.note || "";
+        if (date) date.textContent = formatDate(card.date);
+        if (card.photo) {
+          var wrap = document.getElementById("postcard-photo-wrap");
+          var img = document.getElementById("postcard-photo");
+          if (wrap && img) {
+            img.src = card.photo;
+            img.alt = card.title || "Postcard";
+            wrap.classList.remove("hidden");
+          }
+        }
+      }
+      var lat = status.lat != null ? status.lat : 32.2226;
+      var lng = status.lng != null ? status.lng : -110.9747;
+      var place = status.location || "Tucson";
+      var weatherEl = document.getElementById("weather-line");
+      if (weatherEl) {
+        var url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat +
+          "&longitude=" + lng + "&current=temperature_2m,weather_code&temperature_unit=fahrenheit";
+        fetch(url)
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (w) {
+            if (!w || !w.current) return;
+            var temp = Math.round(w.current.temperature_2m);
+            var phrase = weatherPhrase(w.current.weather_code);
+            weatherEl.textContent = place + ", " + temp + "°F" + (phrase ? ", " + phrase : "");
+          })
+          .catch(function () {});
+      }
+    })
+    .catch(function () {});
+
   var notesList = document.getElementById("guestbook-list");
   if (notesList) {
     fetch("/guestbook.json", { cache: "no-store" })
@@ -63,13 +184,21 @@
         (items || []).forEach(function (n) {
           var li = document.createElement("li");
           li.className = "rounded-xl bg-surface p-5 card-shadow";
-          var when = n.date ? new Date(n.date + "T12:00:00").toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" }) : "";
-          li.innerHTML =
+          var when = formatDate(n.date);
+          var html =
             '<div class="flex flex-wrap items-baseline justify-between gap-2">' +
             '<p class="font-semibold text-fg">' + (n.name || "Friend") + "</p>" +
             (when ? '<time class="text-sm text-muted">' + when + "</time>" : "") +
             "</div>" +
             '<p class="mt-2 text-base leading-relaxed text-fg/90">' + (n.message || "") + "</p>";
+          if (n.reply) {
+            html +=
+              '<div class="guestbook-reply">' +
+              '<p class="text-xs font-semibold uppercase tracking-wide text-primary">Daniel & Julia</p>' +
+              '<p class="mt-1 text-base leading-relaxed text-fg/90">' + n.reply + "</p>" +
+              "</div>";
+          }
+          li.innerHTML = html;
           notesList.appendChild(li);
         });
       })
@@ -80,6 +209,12 @@
     if (thanks) thanks.classList.remove("hidden");
     var form = document.getElementById("guestbook-form");
     if (form) form.classList.add("hidden");
+  }
+  if (location.search.indexOf("updates=thanks") >= 0) {
+    var uthanks = document.getElementById("updates-thanks");
+    if (uthanks) uthanks.classList.remove("hidden");
+    var uform = document.getElementById("updates-form");
+    if (uform) uform.classList.add("hidden");
   }
 
   if (typeof L === "undefined") return;
