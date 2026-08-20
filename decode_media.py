@@ -52,6 +52,20 @@ def decode_b64() -> None:
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_bytes(data)
         print(f"wrote {out} ({len(data)} bytes)")
+    for blob in sorted(root.rglob("*.b64")):
+        rel = blob.relative_to(root).with_suffix("")
+        # photos/album/name.jpg.b64 -> photos/album/name.jpg
+        if rel.suffix == "":
+            continue
+        try:
+            data = base64.b64decode("".join(blob.read_text().split()))
+        except Exception as exc:
+            print(f"decode failed for {blob}: {exc}")
+            continue
+        out = Path(rel)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_bytes(data)
+        print(f"wrote {out} ({len(data)} bytes)")
 
 
 def fetch_missing() -> None:
