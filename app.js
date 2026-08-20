@@ -217,6 +217,81 @@
     if (uform) uform.classList.add("hidden");
   }
 
+  var lb = document.getElementById("lb");
+  var lbImg = document.getElementById("lb-img");
+  var lbCaption = document.getElementById("lb-caption");
+  var lbCount = document.getElementById("lb-count");
+  var lbPrev = document.getElementById("lb-prev");
+  var lbNext = document.getElementById("lb-next");
+  var lbClose = document.getElementById("lb-close");
+  var lbItems = [];
+  var lbIndex = 0;
+
+  function renderLightbox() {
+    if (!lb || !lbImg || !lbItems.length) return;
+    var item = lbItems[lbIndex];
+    lbImg.src = item.src;
+    lbImg.alt = item.caption || "";
+    if (lbCaption) lbCaption.textContent = item.caption || "";
+    if (lbCount) {
+      lbCount.textContent = lbItems.length > 1 ? (lbIndex + 1) + " / " + lbItems.length : "";
+    }
+    var many = lbItems.length > 1;
+    if (lbPrev) lbPrev.classList.toggle("hidden", !many);
+    if (lbNext) lbNext.classList.toggle("hidden", !many);
+    lb.classList.remove("hidden");
+    lb.classList.add("flex");
+    document.body.style.overflow = "hidden";
+  }
+
+  function openLightbox(items, start) {
+    lbItems = (items || []).filter(function (it) { return it && it.src; });
+    if (!lbItems.length) return;
+    lbIndex = Math.max(0, Math.min(start || 0, lbItems.length - 1));
+    renderLightbox();
+  }
+
+  function closeLightbox() {
+    if (!lb) return;
+    lb.classList.add("hidden");
+    lb.classList.remove("flex");
+    document.body.style.overflow = "";
+  }
+
+  function stepLightbox(dir) {
+    if (lbItems.length < 2) return;
+    lbIndex = (lbIndex + dir + lbItems.length) % lbItems.length;
+    renderLightbox();
+  }
+
+  if (lbClose) lbClose.addEventListener("click", function (e) { e.stopPropagation(); closeLightbox(); });
+  if (lbPrev) lbPrev.addEventListener("click", function (e) { e.stopPropagation(); stepLightbox(-1); });
+  if (lbNext) lbNext.addEventListener("click", function (e) { e.stopPropagation(); stepLightbox(1); });
+  if (lb) {
+    lb.addEventListener("click", function (e) {
+      if (e.target === lb) closeLightbox();
+    });
+  }
+  document.addEventListener("keydown", function (e) {
+    if (!lb || lb.classList.contains("hidden")) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") stepLightbox(-1);
+    if (e.key === "ArrowRight") stepLightbox(1);
+  });
+  var touchX = null;
+  if (lb) {
+    lb.addEventListener("touchstart", function (e) {
+      if (e.changedTouches && e.changedTouches[0]) touchX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    lb.addEventListener("touchend", function (e) {
+      if (touchX == null || !e.changedTouches || !e.changedTouches[0]) return;
+      var dx = e.changedTouches[0].clientX - touchX;
+      touchX = null;
+      if (dx > 40) stepLightbox(-1);
+      if (dx < -40) stepLightbox(1);
+    }, { passive: true });
+  }
+
   if (typeof L === "undefined") return;
 
   var tiles = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
@@ -317,20 +392,37 @@
         L.polyline(ferry, { color: "#c4a35a", weight: 3, dashArray: "7 7", opacity: 0.95 }).addTo(greece);
       });
 
-    function photoPin(lat, lng, src, label) {
-      var html = '<div class="photo-pin"><div class="photo-pin-card"><img src="' + src + '" alt="" onerror="this.parentNode.parentNode.style.display=\'none\'" /></div><div class="photo-pin-tail"></div></div>';
-      L.marker([lat, lng], {
+    function photoPin(lat, lng, items) {
+      var first = items[0];
+      var extra = items.length > 1 ? '<span class="photo-pin-count">' + items.length + "</span>" : "";
+      var html = '<div class="photo-pin"><div class="photo-pin-card"><img src="' + first.src + '" alt="" onerror="this.parentNode.parentNode.style.display=\'none\'" />' + extra + '</div><div class="photo-pin-tail"></div></div>';
+      var marker = L.marker([lat, lng], {
         icon: L.divIcon({ className: "photo-pin-icon", html: html, iconSize: [56, 66], iconAnchor: [28, 66] }),
         zIndexOffset: 900,
-        title: label
-      }).addTo(greece).bindPopup(label);
+        title: first.caption || "Photo"
+      }).addTo(greece);
+      marker.on("click", function (e) {
+        if (e && e.originalEvent) {
+          e.originalEvent.preventDefault();
+          e.originalEvent.stopPropagation();
+        }
+        openLightbox(items, 0);
+      });
     }
 
     fetch("/photos/album.json", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (items) {
+        var groups = {};
         (items || []).forEach(function (item) {
-          if (item.lat && item.lng && item.src) photoPin(item.lat, item.lng, item.src, item.caption || "Photo");
+          if (!item.lat || !item.lng || !item.src) return;
+          var key = Number(item.lat).toFixed(3) + "," + Number(item.lng).toFixed(3);
+          if (!groups[key]) groups[key] = { lat: item.lat, lng: item.lng, items: [] };
+          groups[key].items.push(item);
+        });
+        Object.keys(groups).forEach(function (key) {
+          var g = groups[key];
+          photoPin(g.lat, g.lng, g.items);
         });
       })
       .catch(function () {});
