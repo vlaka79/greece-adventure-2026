@@ -15,6 +15,11 @@
   tickClocks();
   setInterval(tickClocks, 15000);
 
+  var pulse = document.querySelector(".pulse-dot");
+  if (pulse && pulse.nextElementSibling) pulse.nextElementSibling.textContent = "In Simi Valley";
+  var pills = document.querySelectorAll("#where .rounded-full");
+  if (pills && pills[0]) pills[0].textContent = "Simi Valley, California";
+
   fetch("/status.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (status) {
@@ -57,4 +62,28 @@
       });
     })
     .catch(function () {});
+
+  function placeLiveMap() {
+    var el = document.getElementById("live-map");
+    if (!el || typeof L === "undefined") return;
+    if (el._leaflet_id) {
+      try { el._leaflet_id = undefined; } catch (e) {}
+      el.innerHTML = "";
+      delete el._leaflet_id;
+    }
+    var here = [34.2694, -118.7815];
+    var tiles = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
+    var live = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView(here, 12);
+    L.tileLayer(tiles, { attribution: "&copy; OpenStreetMap &copy; CARTO", maxZoom: 19 }).addTo(live);
+    L.circle(here, { radius: 8000, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.12, interactive: false }).addTo(live);
+    L.marker(here, {
+      icon: L.divIcon({
+        className: "trip-pin",
+        html: '<div class="trip-pin-inner"><span class="live-pin-pulse"></span><div class="trip-pin-head"><span></span></div><div class="trip-pin-tail"></div></div>',
+        iconSize: [28, 40],
+        iconAnchor: [14, 40]
+      })
+    }).addTo(live).bindPopup('<p class="map-popup-title">Simi Valley</p><p class="map-popup-meta">California</p>');
+  }
+  setTimeout(placeLiveMap, 700);
 })();
