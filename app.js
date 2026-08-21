@@ -204,10 +204,26 @@
       })
       .catch(function () {});
   }
+  function showFormToast(msg) {
+    var el = document.getElementById("form-toast");
+    if (!el) {
+      el = document.createElement("div");
+      el.id = "form-toast";
+      el.setAttribute("role", "status");
+      el.style.cssText = "position:fixed;left:50%;bottom:1.4rem;transform:translateX(-50%);z-index:80;width:min(22rem,calc(100% - 2rem));border-radius:1rem;background:#1b6f66;color:#f4eee4;padding:1rem 1.15rem;text-align:center;font:600 1rem/1.4 Source Sans 3,system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.2);";
+      document.body.appendChild(el);
+    }
+    el.textContent = msg;
+    el.style.display = "block";
+    clearTimeout(showFormToast._t);
+    showFormToast._t = setTimeout(function () { el.style.display = "none"; }, 4200);
+  }
   function silentForm(form) {
     if (!form) return;
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      var btn = form.querySelector("button[type=submit]");
+      if (btn) btn.disabled = true;
       var data = new URLSearchParams(new FormData(form));
       fetch("/", {
         method: "POST",
@@ -215,8 +231,14 @@
         body: data.toString()
       }).then(function () {
         form.reset();
+        var note = form.id === "updates-form"
+          ? "You’re on the list. We’ll tap you when we post."
+          : "Got it — thank you. We’ll read this.";
+        showFormToast(note);
       }).catch(function () {
         form.submit();
+      }).then(function () {
+        if (btn) btn.disabled = false;
       });
     });
   }
