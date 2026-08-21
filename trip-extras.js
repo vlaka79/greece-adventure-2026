@@ -86,4 +86,13 @@
     }).addTo(live).bindPopup('<p class="map-popup-title">Simi Valley</p><p class="map-popup-meta">California</p>');
   }
   setTimeout(placeLiveMap, 700);
+
+  function hideEmptyActuals() {
+    document.querySelectorAll(".itinerary-sub").forEach(function (el) {
+      var h = el.querySelector("h4");
+      if (h && /actually did/i.test(h.textContent || "")) el.remove();
+    });
+  }
+  setTimeout(hideEmptyActuals, 400);
+  setTimeout(hideEmptyActuals, 1200);
 })();
