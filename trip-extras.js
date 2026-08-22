@@ -31,7 +31,6 @@
         var wel = document.getElementById("word-el");
         var wen = document.getElementById("word-en");
         var wsay = document.getElementById("word-say");
-        var hear = document.getElementById("word-hear");
         if (wel) wel.textContent = word.el || "";
         if (wen) {
           var bits = [];
@@ -40,20 +39,6 @@
           wen.textContent = bits.join(" \u2014 ");
         }
         if (wsay) wsay.textContent = word.say ? ("Say it: " + word.say) : "";
-        if (hear) {
-          if (!word.el) {
-            hear.style.display = "none";
-          } else {
-            hear.style.display = "";
-            hear.onclick = function (e) {
-              if (e) e.preventDefault();
-              // Reliable on iPhone: real Greek voice in Google Translate
-              var url = "https://translate.google.com/?sl=el&tl=en&text=" +
-                encodeURIComponent(word.el) + "&op=translate";
-              window.open(url, "_blank", "noopener,noreferrer");
-            };
-          }
-        }
       }
     })
     .catch(function () {});
