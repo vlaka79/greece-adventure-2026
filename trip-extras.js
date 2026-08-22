@@ -20,6 +20,37 @@
   var pills = document.querySelectorAll("#where .rounded-full");
   if (pills && pills[0]) pills[0].textContent = "Simi Valley, California";
 
+  var wordAudio = null;
+
+  function speakGreek(text, customUrl) {
+    if (!text && !customUrl) return;
+    try {
+      if (wordAudio) {
+        wordAudio.pause();
+        wordAudio = null;
+      }
+      var src = customUrl ||
+        ("https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=el&q=" +
+          encodeURIComponent(text));
+      wordAudio = new Audio(src);
+      wordAudio.playsInline = true;
+      var p = wordAudio.play();
+      if (p && p.catch) {
+        p.catch(function () {
+          // last resort: browser speech (often missing Greek on iPhone)
+          if (!window.speechSynthesis || !text) return;
+          try {
+            window.speechSynthesis.cancel();
+            var u = new SpeechSynthesisUtterance(text);
+            u.lang = "el-GR";
+            u.rate = 0.9;
+            window.speechSynthesis.speak(u);
+          } catch (e2) {}
+        });
+      }
+    } catch (e) {}
+  }
+
   fetch("/status.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (status) {
@@ -41,35 +72,19 @@
         }
         if (wsay) wsay.textContent = word.say ? ("Say it: " + word.say) : "";
         if (hear) {
-          if (!word.el || !window.speechSynthesis) {
+          if (!word.el && !word.audio) {
             hear.style.display = "none";
           } else {
             hear.style.display = "";
-            hear.onclick = function () {
-              try {
-                window.speechSynthesis.cancel();
-                var u = new SpeechSynthesisUtterance(word.el);
-                u.lang = "el-GR";
-                u.rate = 0.9;
-                var voices = window.speechSynthesis.getVoices() || [];
-                var greek = voices.filter(function (v) {
-                  return (v.lang || "").toLowerCase().indexOf("el") === 0;
-                });
-                if (greek.length) u.voice = greek[0];
-                window.speechSynthesis.speak(u);
-              } catch (e) {}
+            hear.onclick = function (e) {
+              if (e) e.preventDefault();
+              speakGreek(word.el, word.audio || null);
             };
           }
         }
       }
     })
     .catch(function () {});
-  if (window.speechSynthesis) {
-    window.speechSynthesis.getVoices();
-    window.speechSynthesis.onvoiceschanged = function () {
-      window.speechSynthesis.getVoices();
-    };
-  }
 
   fetch("/eats.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : []; })
