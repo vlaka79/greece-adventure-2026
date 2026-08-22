@@ -20,25 +20,6 @@
   var pills = document.querySelectorAll("#where .rounded-full");
   if (pills && pills[0]) pills[0].textContent = "Simi Valley, California";
 
-  var wordAudio = null;
-
-  function speakGreek(text, customUrl) {
-    if (!customUrl && !text) return;
-    try {
-      if (wordAudio) {
-        try { wordAudio.pause(); } catch (e0) {}
-        wordAudio = null;
-      }
-      var src = customUrl;
-      if (!src) return;
-      wordAudio = new Audio(src);
-      wordAudio.setAttribute("playsinline", "true");
-      wordAudio.playsInline = true;
-      var p = wordAudio.play();
-      if (p && p.catch) p.catch(function () {});
-    } catch (e) {}
-  }
-
   fetch("/status.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (status) {
@@ -60,13 +41,16 @@
         }
         if (wsay) wsay.textContent = word.say ? ("Say it: " + word.say) : "";
         if (hear) {
-          if (!word.audio) {
+          if (!word.el) {
             hear.style.display = "none";
           } else {
             hear.style.display = "";
             hear.onclick = function (e) {
               if (e) e.preventDefault();
-              speakGreek(word.el, word.audio);
+              // Reliable on iPhone: real Greek voice in Google Translate
+              var url = "https://translate.google.com/?sl=el&tl=en&text=" +
+                encodeURIComponent(word.el) + "&op=translate";
+              window.open(url, "_blank", "noopener,noreferrer");
             };
           }
         }
