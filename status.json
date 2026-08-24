@@ -1,15 +1,20 @@
 {
-  "lat": 34.2694,
-  "lng": -118.7815,
-  "location": "Simi Valley, California",
-  "tomorrow": "A day in Simi — Burbank on the 24th.",
+  "lat": 34.2006,
+  "lng": -118.3585,
+  "location": "Burbank Airport",
+  "tomorrow": "Wheels up for Greece \u2014 Chania by late the 25th.",
   "postcard": {
-    "date": "2026-08-20",
-    "title": "Made it to Simi",
-    "note": "The drive is done. We're in Simi Valley with family. Next up: Burbank on the 24th, then Greece."
+    "date": "2026-08-24",
+    "title": "DDIC report from Gate Country",
+    "note": "We\u2019re at Guy Fieri\u2019s Kitchen + Bar Express in Burbank Airport with cold Space Dust IPAs in hand. Official day-drinkers-in-California business before the long hop to Crete. See you on the other side of the ocean.",
+    "photo": "/photos/album/lax-cheers.jpeg"
+  },
+  "photoDay": {
+    "src": "/photos/album/lax-cheers.jpeg",
+    "caption": "Space Dust at Guy Fieri\u2019s \u2014 Burbank Airport, departure day"
   },
   "word": {
-    "el": "Καλημέρα",
+    "el": "\u039a\u03b1\u03bb\u03b7\u03bc\u03ad\u03c1\u03b1",
     "en": "Kalimera",
     "say": "kah-lee-MEH-rah",
     "meaning": "Good morning."
