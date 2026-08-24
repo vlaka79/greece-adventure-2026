@@ -23,6 +23,10 @@
     var laCard = laClock.closest(".rounded-xl") || laClock.parentElement;
     if (laCard) laCard.style.display = "none";
   }
+  var grClock = document.getElementById("clock-gr");
+  if (grClock && grClock.previousElementSibling) {
+    grClock.previousElementSibling.textContent = "Daniel & Julia time";
+  }
 
   var wordCardEl = document.getElementById("word-card");
   if (wordCardEl && !document.getElementById("word-past-btn")) {
