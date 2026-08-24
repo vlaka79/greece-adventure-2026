@@ -1,3 +1,8 @@
 [build]
   command = "python3 decode_media.py"
   publish = "."
+
+[[redirects]]
+  from = "/api/guestbook"
+  to = "/.netlify/functions/guestbook"
+  status = 200
