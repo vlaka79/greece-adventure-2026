@@ -105,6 +105,37 @@
     } catch (e) { return iso; }
   }
 
+  function noteKey(n) {
+    return String(n.name || "").trim().toLowerCase() + "|" + String(n.message || "").trim().toLowerCase();
+  }
+
+  function readPending() {
+    try {
+      var raw = localStorage.getItem("guestbook-pending");
+      var arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr : [];
+    } catch (e) { return []; }
+  }
+
+  function writePending(arr) {
+    try { localStorage.setItem("guestbook-pending", JSON.stringify(arr || [])); } catch (e) {}
+  }
+
+  function mergeNotes(server) {
+    var seen = {};
+    var out = [];
+    function add(n) {
+      if (!n || !n.message) return;
+      var k = noteKey(n);
+      if (seen[k]) return;
+      seen[k] = true;
+      out.push(n);
+    }
+    readPending().forEach(add);
+    (server || []).forEach(add);
+    return out;
+  }
+
   function noteCard(n) {
     var when = formatNoteDate(n.date);
     var html =
@@ -127,7 +158,7 @@
     var list = document.getElementById("guestbook-list");
     if (!list) return;
     list.innerHTML = "";
-    (items || []).forEach(function (n) {
+    mergeNotes(items).forEach(function (n) {
       var li = document.createElement("li");
       li.className = "rounded-xl bg-surface p-5 card-shadow";
       li.innerHTML = noteCard(n);
@@ -156,7 +187,6 @@
   }
 
   setTimeout(loadNotes, 300);
-  setTimeout(loadNotes, 2500);
 
   var gbForm = document.getElementById("guestbook-form");
   if (gbForm) {
@@ -166,18 +196,15 @@
       var name = nameEl ? nameEl.value.trim() : "";
       var message = msgEl ? msgEl.value.trim() : "";
       if (!message) return;
-      var list = document.getElementById("guestbook-list");
-      if (!list) return;
       var today = new Date();
       var iso = today.getFullYear() + "-" +
         String(today.getMonth() + 1).padStart(2, "0") + "-" +
         String(today.getDate()).padStart(2, "0");
-      var li = document.createElement("li");
-      li.className = "rounded-xl bg-surface p-5 card-shadow";
-      li.innerHTML = noteCard({ name: name || "Friend", date: iso, message: message });
-      if (list.firstChild) list.insertBefore(li, list.firstChild);
-      else list.appendChild(li);
-      setTimeout(loadNotes, 4000);
+      var note = { name: name || "Friend", date: iso, message: message };
+      var pending = readPending();
+      pending.unshift(note);
+      writePending(pending);
+      drawNotes([]);
     });
   }
 })();
