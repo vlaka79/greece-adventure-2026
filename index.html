@@ -61,7 +61,7 @@
         <div class="stagger-in mt-5 flex flex-wrap items-center gap-3">
           <div class="inline-flex max-w-full items-center gap-2.5 rounded-full bg-surface px-3.5 py-2.5 card-shadow">
             <span class="pulse-dot relative inline-flex size-2.5 shrink-0 rounded-full bg-primary"></span>
-            <span class="text-sm font-medium leading-snug text-fg">At home in Tucson</span>
+            <span class="text-sm font-medium leading-snug text-fg">At Burbank Airport</span>
           </div>
           <p id="day-count" class="text-sm font-medium text-muted"></p>
           <button type="button" id="share-btn">Share this page</button>
@@ -82,7 +82,7 @@
     <main class="mx-auto flex max-w-3xl flex-col gap-14 px-5 py-10 sm:gap-16 sm:py-14">
       <section id="where" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Where we are</h2>
-        <p class="mt-3 inline-flex items-center gap-2 rounded-full bg-primary-soft px-3.5 py-1.5 text-sm font-semibold text-primary">Home — Tucson, Arizona</p>
+        <p class="mt-3 inline-flex items-center gap-2 rounded-full bg-primary-soft px-3.5 py-1.5 text-sm font-semibold text-primary">Burbank Airport, California</p>
         <p class="mt-2 text-sm text-muted">A live view — we’ll move this pin as we go.</p>
         <div class="mt-5"><div class="relative h-72 overflow-hidden rounded-xl bg-bg-warm card-shadow sm:h-96"><div id="live-map" class="absolute inset-0"></div></div></div>
         <p id="weather-line" class="mt-3 text-sm font-medium text-fg"></p>
@@ -102,6 +102,13 @@
           <p id="word-el" class="mt-2 font-serif text-3xl font-semibold text-fg"></p>
           <p id="word-en" class="mt-1 text-base text-fg/90"></p>
           <p id="word-say" class="mt-1 text-sm text-muted"></p>
+        </article>
+        <article id="photo-day" class="mt-5 hidden overflow-hidden rounded-xl bg-surface card-shadow">
+          <img id="photo-day-img" alt="" class="aspect-video w-full object-cover" />
+          <div class="p-5">
+            <p class="text-xs font-semibold uppercase tracking-widest text-primary">Picture of the day</p>
+            <p id="photo-day-caption" class="mt-2 text-base leading-relaxed text-fg/90"></p>
+          </div>
         </article>
       </section>
       <section id="greece" class="scroll-mt-16">
@@ -130,7 +137,28 @@
             <p id="postcard-note" class="mt-2 text-base leading-relaxed text-fg/90"></p>
           </div>
         </article>
-        <ol class="mt-6 space-y-4"><li><article class="rounded-xl bg-surface p-5 card-shadow"><div class="flex flex-wrap items-center gap-2"><time datetime="2026-08-19" class="text-sm font-medium text-muted">August 19, 2026</time><span class="inline-flex min-h-7 items-center rounded-full bg-accent-soft px-2.5 text-xs font-semibold tracking-wide text-fg">Pre-trip</span></div><h3 class="mt-3 font-serif text-2xl font-semibold text-fg">The plan, as booked</h3><p class="mt-2 text-base leading-relaxed text-fg/90">Five days out. We leave from Burbank on the 24th and land in Chania late on the 25th. Crete first — Chania, Paleochora, Douliana, Elounda, and Heraklion — before a morning ferry to Santorini on the 9th and on to Athens on the 12th. Home on the 17th. We’ll fill this in from the road.</p></article></li></ol>
+        <ol class="mt-6 space-y-4">
+          <li>
+            <article class="rounded-xl bg-surface p-5 card-shadow">
+              <div class="flex flex-wrap items-center gap-2">
+                <time datetime="2026-08-24" class="text-sm font-medium text-muted">August 24, 2026</time>
+                <span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">Departure day</span>
+              </div>
+              <h3 class="mt-3 font-serif text-2xl font-semibold text-fg">DDIC at Burbank</h3>
+              <p class="mt-2 text-base leading-relaxed text-fg/90">We made it to Hollywood Burbank Airport. Currently parked at Guy Fieri’s Kitchen + Bar Express with a couple of Space Dust IPAs — official Day Drinkers in California business before the long haul. Next stop: Crete. Wheels up soon. Καλή πτήση to us.</p>
+            </article>
+          </li>
+          <li>
+            <article class="rounded-xl bg-surface p-5 card-shadow">
+              <div class="flex flex-wrap items-center gap-2">
+                <time datetime="2026-08-19" class="text-sm font-medium text-muted">August 19, 2026</time>
+                <span class="inline-flex min-h-7 items-center rounded-full bg-accent-soft px-2.5 text-xs font-semibold tracking-wide text-fg">Pre-trip</span>
+              </div>
+              <h3 class="mt-3 font-serif text-2xl font-semibold text-fg">The plan, as booked</h3>
+              <p class="mt-2 text-base leading-relaxed text-fg/90">Five days out. We leave from Burbank on the 24th and land in Chania late on the 25th. Crete first — Chania, Paleochora, Douliana, Elounda, and Heraklion — before a morning ferry to Santorini on the 9th and on to Athens on the 12th. Home on the 17th. We’ll fill this in from the road.</p>
+            </article>
+          </li>
+        </ol>
       </section>
       <section id="table" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Eat & drink</h2>
@@ -171,7 +199,7 @@
           </li>
           <li>
             <a href="/place.html?place=travel" class="relative block overflow-hidden rounded-xl bg-bg-warm card-shadow">
-              <img src="/intro.jpg" alt="There and back" class="aspect-photo w-full object-cover blur-[4px] scale-[1.06]" />
+              <img src="/photos/album/lax-cheers.jpeg" alt="There and back" class="aspect-photo w-full object-cover blur-[4px] scale-[1.06]" />
               <span class="absolute inset-0 flex flex-col items-center justify-center bg-fg/35 px-3 text-center">
                 <span class="font-serif text-lg font-semibold text-surface">There & back</span>
                 <span class="mt-1 text-sm text-surface/90">Open album</span>
@@ -225,7 +253,7 @@
         <ul id="guestbook-list" class="mt-8 space-y-4"></ul>
       </section>
     </main>
-    <footer class="border-t border-border bg-bg-warm"><div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 text-sm text-muted"><p>Last updated: August 19, 2026</p><p>Made for friends & family</p></div></footer>
+    <footer class="border-t border-border bg-bg-warm"><div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 text-sm text-muted"><p>Last updated: August 24, 2026</p><p>Made for friends & family</p></div></footer>
   </div>
   <div id="lb" class="fixed inset-0 z-50 hidden items-center justify-center bg-fg/80 p-4" role="dialog" aria-modal="true">
     <button type="button" id="lb-close" class="absolute right-4 top-3 z-10 text-4xl leading-none text-surface" aria-label="Close">×</button>
