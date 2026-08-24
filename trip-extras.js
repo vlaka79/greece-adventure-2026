@@ -14,9 +14,9 @@
   setInterval(tickClocks, 15000);
 
   var pulse = document.querySelector(".pulse-dot");
-  if (pulse && pulse.nextElementSibling) pulse.nextElementSibling.textContent = "In Simi Valley";
+  if (pulse && pulse.nextElementSibling) pulse.nextElementSibling.textContent = "At Burbank Airport";
   var pills = document.querySelectorAll("#where .rounded-full");
-  if (pills && pills[0]) pills[0].textContent = "Simi Valley, California";
+  if (pills && pills[0]) pills[0].textContent = "Burbank Airport, California";
 
   var laClock = document.getElementById("clock-la");
   if (laClock) {
@@ -75,6 +75,17 @@
           wen.textContent = bits.join(" \u2014 ");
         }
         if (wsay) wsay.textContent = word.say ? ("Say it: " + word.say) : "";
+      }
+
+      var photoDay = status.photoDay || {};
+      var photoCard = document.getElementById("photo-day");
+      var photoImg = document.getElementById("photo-day-img");
+      var photoCap = document.getElementById("photo-day-caption");
+      if (photoCard && photoImg && photoDay.src) {
+        photoImg.src = photoDay.src;
+        photoImg.alt = photoDay.caption || "Picture of the day";
+        if (photoCap) photoCap.textContent = photoDay.caption || "";
+        photoCard.classList.remove("hidden");
       }
     })
     .catch(function () {});
@@ -150,11 +161,11 @@
       el.innerHTML = "";
       delete el._leaflet_id;
     }
-    var here = [34.2694, -118.7815];
+    var here = [34.2006, -118.3585];
     var tiles = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
-    var live = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView(here, 12);
+    var live = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView(here, 13);
     L.tileLayer(tiles, { attribution: "&copy; OpenStreetMap &copy; CARTO", maxZoom: 19 }).addTo(live);
-    L.circle(here, { radius: 8000, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.12, interactive: false }).addTo(live);
+    L.circle(here, { radius: 2500, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.12, interactive: false }).addTo(live);
     L.marker(here, {
       icon: L.divIcon({
         className: "trip-pin",
@@ -162,7 +173,7 @@
         iconSize: [28, 40],
         iconAnchor: [14, 40]
       })
-    }).addTo(live).bindPopup('<p class="map-popup-title">Simi Valley</p><p class="map-popup-meta">California</p>');
+    }).addTo(live).bindPopup('<p class="map-popup-title">Burbank Airport</p><p class="map-popup-meta">Guy Fieri\u2019s Kitchen + Bar Express</p>');
   }
   setTimeout(placeLiveMap, 700);
 
