@@ -1,4 +1,8 @@
 (function () {
+  var ga = document.createElement("script");
+  ga.src = "/ga.js";
+  document.head.appendChild(ga);
+
   function clockTime(tz) {
     try {
       return new Date().toLocaleTimeString("en-US", {
