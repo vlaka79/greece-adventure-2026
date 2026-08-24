@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "src": "/photos/album/lax-cheers.jpg",
+    "caption": "Cheers before the flight \u2014 LAX, August 24",
+    "place": "travel",
+    "lat": 33.9425,
+    "lng": -118.4081
+  }
+]
