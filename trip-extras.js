@@ -109,11 +109,19 @@
     return String(n.name || "").trim().toLowerCase() + "|" + String(n.message || "").trim().toLowerCase();
   }
 
+  function isJunkNote(n) {
+    var name = String(n.name || "").trim().toLowerCase();
+    var msg = String(n.message || "").trim().toLowerCase();
+    return msg === "test" || msg === "testing" || (name === "daniel boone" && msg === "test");
+  }
+
   function readPending() {
     try {
       var raw = localStorage.getItem("guestbook-pending");
       var arr = raw ? JSON.parse(raw) : [];
-      return Array.isArray(arr) ? arr : [];
+      arr = (Array.isArray(arr) ? arr : []).filter(function (n) { return !isJunkNote(n); });
+      localStorage.setItem("guestbook-pending", JSON.stringify(arr));
+      return arr;
     } catch (e) { return []; }
   }
 
@@ -125,7 +133,7 @@
     var seen = {};
     var out = [];
     function add(n) {
-      if (!n || !n.message) return;
+      if (!n || !n.message || isJunkNote(n)) return;
       var k = noteKey(n);
       if (seen[k]) return;
       seen[k] = true;
@@ -167,23 +175,10 @@
   }
 
   function loadNotes() {
-    fetch("/api/guestbook", { cache: "no-store" })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (items) {
-        if (items && items.length) {
-          drawNotes(items);
-          return;
-        }
-        return fetch("/guestbook.json", { cache: "no-store" })
-          .then(function (r) { return r.ok ? r.json() : []; })
-          .then(drawNotes);
-      })
-      .catch(function () {
-        fetch("/guestbook.json", { cache: "no-store" })
-          .then(function (r) { return r.ok ? r.json() : []; })
-          .then(drawNotes)
-          .catch(function () {});
-      });
+    fetch("/guestbook.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(drawNotes)
+      .catch(function () {});
   }
 
   setTimeout(loadNotes, 300);
@@ -201,6 +196,7 @@
         String(today.getMonth() + 1).padStart(2, "0") + "-" +
         String(today.getDate()).padStart(2, "0");
       var note = { name: name || "Friend", date: iso, message: message };
+      if (isJunkNote(note)) return;
       var pending = readPending();
       pending.unshift(note);
       writePending(pending);
