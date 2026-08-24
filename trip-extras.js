@@ -7,9 +7,7 @@
     } catch (e) { return ""; }
   }
   function tickClocks() {
-    var la = document.getElementById("clock-la");
     var gr = document.getElementById("clock-gr");
-    if (la) la.textContent = clockTime("America/Los_Angeles");
     if (gr) gr.textContent = clockTime("Europe/Athens");
   }
   tickClocks();
@@ -40,6 +38,49 @@
         }
         if (wsay) wsay.textContent = word.say ? ("Say it: " + word.say) : "";
       }
+    })
+    .catch(function () {});
+
+  fetch("/words.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : []; })
+    .then(function (words) {
+      var btn = document.getElementById("word-past-btn");
+      var list = document.getElementById("word-past");
+      if (!btn || !list) return;
+      words = words || [];
+      if (words.length < 2) {
+        btn.textContent = "Past words will collect here";
+        btn.disabled = true;
+        return;
+      }
+      var todayEl = (document.getElementById("word-el") || {}).textContent || "";
+      list.innerHTML = "";
+      words.forEach(function (w) {
+        if (todayEl && w.el === todayEl) return;
+        var li = document.createElement("li");
+        li.className = "rounded-lg bg-bg-warm px-3 py-2";
+        var when = "";
+        if (w.date) {
+          try {
+            when = new Date(w.date + "T12:00:00").toLocaleDateString(undefined, { month: "short", day: "numeric" });
+          } catch (e) { when = w.date; }
+        }
+        li.innerHTML =
+          '<p class="font-serif text-lg font-semibold text-fg">' + (w.el || "") + "</p>" +
+          '<p class="text-sm text-fg/90">' + [w.en, w.meaning].filter(Boolean).join(" \u2014 ") + "</p>" +
+          '<p class="text-xs text-muted">' + (w.say ? ("Say it: " + w.say) : "") + (when ? " \u00b7 " + when : "") + "</p>";
+        list.appendChild(li);
+      });
+      if (!list.children.length) {
+        btn.textContent = "Past words will collect here";
+        btn.disabled = true;
+        return;
+      }
+      btn.addEventListener("click", function () {
+        var open = !list.classList.contains("hidden");
+        list.classList.toggle("hidden", open);
+        btn.textContent = open ? "Past words" : "Hide past words";
+      });
     })
     .catch(function () {});
 
