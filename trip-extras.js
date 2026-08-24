@@ -95,4 +95,89 @@
   }
   setTimeout(hideEmptyActuals, 400);
   setTimeout(hideEmptyActuals, 1200);
+
+  function formatNoteDate(iso) {
+    if (!iso) return "";
+    try {
+      return new Date(iso + "T12:00:00").toLocaleDateString(undefined, {
+        year: "numeric", month: "long", day: "numeric"
+      });
+    } catch (e) { return iso; }
+  }
+
+  function noteCard(n) {
+    var when = formatNoteDate(n.date);
+    var html =
+      '<div class="flex flex-wrap items-baseline justify-between gap-2">' +
+      '<p class="font-semibold text-fg">' + (n.name || "Friend") + "</p>" +
+      (when ? '<time class="text-sm text-muted">' + when + "</time>" : "") +
+      "</div>" +
+      '<p class="mt-2 text-base leading-relaxed text-fg/90">' + (n.message || "") + "</p>";
+    if (n.reply) {
+      html +=
+        '<div class="guestbook-reply">' +
+        '<p class="text-xs font-semibold uppercase tracking-wide text-primary">Daniel & Julia</p>' +
+        '<p class="mt-1 text-base leading-relaxed text-fg/90">' + n.reply + "</p>" +
+        "</div>";
+    }
+    return html;
+  }
+
+  function drawNotes(items) {
+    var list = document.getElementById("guestbook-list");
+    if (!list) return;
+    list.innerHTML = "";
+    (items || []).forEach(function (n) {
+      var li = document.createElement("li");
+      li.className = "rounded-xl bg-surface p-5 card-shadow";
+      li.innerHTML = noteCard(n);
+      list.appendChild(li);
+    });
+  }
+
+  function loadNotes() {
+    fetch("/api/guestbook", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (items) {
+        if (items && items.length) {
+          drawNotes(items);
+          return;
+        }
+        return fetch("/guestbook.json", { cache: "no-store" })
+          .then(function (r) { return r.ok ? r.json() : []; })
+          .then(drawNotes);
+      })
+      .catch(function () {
+        fetch("/guestbook.json", { cache: "no-store" })
+          .then(function (r) { return r.ok ? r.json() : []; })
+          .then(drawNotes)
+          .catch(function () {});
+      });
+  }
+
+  setTimeout(loadNotes, 300);
+  setTimeout(loadNotes, 2500);
+
+  var gbForm = document.getElementById("guestbook-form");
+  if (gbForm) {
+    gbForm.addEventListener("submit", function () {
+      var nameEl = document.getElementById("guest-name");
+      var msgEl = document.getElementById("guest-message");
+      var name = nameEl ? nameEl.value.trim() : "";
+      var message = msgEl ? msgEl.value.trim() : "";
+      if (!message) return;
+      var list = document.getElementById("guestbook-list");
+      if (!list) return;
+      var today = new Date();
+      var iso = today.getFullYear() + "-" +
+        String(today.getMonth() + 1).padStart(2, "0") + "-" +
+        String(today.getDate()).padStart(2, "0");
+      var li = document.createElement("li");
+      li.className = "rounded-xl bg-surface p-5 card-shadow";
+      li.innerHTML = noteCard({ name: name || "Friend", date: iso, message: message });
+      if (list.firstChild) list.insertBefore(li, list.firstChild);
+      else list.appendChild(li);
+      setTimeout(loadNotes, 4000);
+    });
+  }
 })();
