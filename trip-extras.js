@@ -27,6 +27,13 @@
   if (grClock && grClock.previousElementSibling) {
     grClock.previousElementSibling.textContent = "Daniel & Julia time";
   }
+  if (grClock && !document.getElementById("clock-gr-note")) {
+    var note = document.createElement("p");
+    note.id = "clock-gr-note";
+    note.className = "mt-1 text-sm text-muted";
+    note.textContent = "Still Greece time under the hood \u2014 just more fun.";
+    grClock.insertAdjacentElement("afterend", note);
+  }
 
   var wordCardEl = document.getElementById("word-card");
   if (wordCardEl && !document.getElementById("word-past-btn")) {
