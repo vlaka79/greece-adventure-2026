@@ -18,6 +18,33 @@
   var pills = document.querySelectorAll("#where .rounded-full");
   if (pills && pills[0]) pills[0].textContent = "Simi Valley, California";
 
+  var laClock = document.getElementById("clock-la");
+  if (laClock) {
+    var laCard = laClock.closest(".rounded-xl") || laClock.parentElement;
+    if (laCard) laCard.style.display = "none";
+  }
+
+  var wordCardEl = document.getElementById("word-card");
+  if (wordCardEl && !document.getElementById("word-past-btn")) {
+    var pastBtn = document.createElement("button");
+    pastBtn.type = "button";
+    pastBtn.id = "word-past-btn";
+    pastBtn.className = "mt-3 text-sm font-semibold text-primary";
+    pastBtn.textContent = "Past words";
+    var pastList = document.createElement("ul");
+    pastList.id = "word-past";
+    pastList.className = "mt-3 hidden space-y-2";
+    wordCardEl.appendChild(pastBtn);
+    wordCardEl.appendChild(pastList);
+  }
+
+  var updatesForm = document.getElementById("updates-form");
+  var notesListEl = document.getElementById("guestbook-list");
+  if (updatesForm && notesListEl && notesListEl.parentNode) {
+    notesListEl.parentNode.insertBefore(updatesForm, notesListEl.nextSibling);
+    updatesForm.classList.add("mt-8");
+  }
+
   fetch("/status.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (status) {
