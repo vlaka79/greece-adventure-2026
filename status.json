@@ -1,22 +1,17 @@
 {
-  "lat": 37.6213,
-  "lng": -122.3790,
-  "location": "San Francisco International",
-  "tomorrow": "Overnight toward Crete \u2014 Chania late on the 25th.",
+  "lat": 35.5162,
+  "lng": 24.0178,
+  "location": "Chania, Crete",
+  "tomorrow": "Sleep first. Pictures and a wander through Chania after that.",
   "postcard": {
-    "date": "2026-08-24",
-    "title": "Made the connection",
-    "note": "Burbank ran an hour late. We had an hour and a half to make the SFO flight and we used all of it. Through the terminal at a run, on the jetway with no time to spare. Seats found. Next stop, Greece.",
-    "photo": "/photos/album/lax-cheers.jpeg"
-  },
-  "photoDay": {
-    "src": "/photos/album/lax-cheers.jpeg",
-    "caption": "Space Dust at Guy Fieri\u2019s \u2014 Burbank, before the scramble"
+    "date": "2026-08-26",
+    "title": "Keys in the door",
+    "note": "Twenty-eight hours, every flight a little late, and we still made it. Pi Suite in Chania is home for now. Pictures tomorrow \u2014 tonight is for sleep."
   },
   "word": {
-    "el": "\u039a\u03b1\u03bb\u03ae \u03c0\u03c4\u03ae\u03c3\u03b7",
-    "en": "Kali ptisi",
-    "say": "kah-LEE PTEE-see",
-    "meaning": "Have a good flight."
+    "el": "\u039a\u03b1\u03bb\u03b7\u03bd\u03cd\u03c7\u03c4\u03b1",
+    "en": "Kalinihta",
+    "say": "kah-lee-NEEKH-tah",
+    "meaning": "Good night."
   }
 }
