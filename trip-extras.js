@@ -18,9 +18,9 @@
   setInterval(tickClocks, 15000);
 
   var pulse = document.querySelector(".pulse-dot");
-  if (pulse && pulse.nextElementSibling) pulse.nextElementSibling.textContent = "On the SFO flight";
+  if (pulse && pulse.nextElementSibling) pulse.nextElementSibling.textContent = "In Chania";
   var pills = document.querySelectorAll("#where .rounded-full");
-  if (pills && pills[0]) pills[0].textContent = "San Francisco International";
+  if (pills && pills[0]) pills[0].textContent = "Chania, Crete";
 
   var laClock = document.getElementById("clock-la");
   if (laClock) {
@@ -61,10 +61,24 @@
   }
 
   var logList = document.querySelector("#log ol");
-  if (logList && !document.getElementById("log-sfo")) {
+  if (logList && !document.getElementById("log-chania")) {
     var li = document.createElement("li");
-    li.id = "log-sfo";
+    li.id = "log-chania";
     li.innerHTML =
+      '<article class="rounded-xl bg-surface p-5 card-shadow">' +
+      '<div class="flex flex-wrap items-center gap-2">' +
+      '<time datetime="2026-08-26" class="text-sm font-medium text-muted">August 26, 2026</time>' +
+      '<span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">Crete</span>' +
+      "</div>" +
+      '<h3 class="mt-3 font-serif text-2xl font-semibold text-fg">Keys in the door</h3>' +
+      '<p class="mt-2 text-base leading-relaxed text-fg/90">Twenty-eight hours door to door, and every flight found a way to run late. We still made it. Pi Suite in Chania is ours for the night \u2014 bags down, lights low. Pictures tomorrow, after sleep does its job. Kalinihta from Crete.</p>' +
+      "</article>";
+    logList.insertBefore(li, logList.firstChild);
+  }
+  if (logList && !document.getElementById("log-sfo")) {
+    var li2 = document.createElement("li");
+    li2.id = "log-sfo";
+    li2.innerHTML =
       '<article class="rounded-xl bg-surface p-5 card-shadow">' +
       '<div class="flex flex-wrap items-center gap-2">' +
       '<time datetime="2026-08-24" class="text-sm font-medium text-muted">August 24, 2026</time>' +
@@ -73,7 +87,9 @@
       '<h3 class="mt-3 font-serif text-2xl font-semibold text-fg">Made the connection</h3>' +
       '<p class="mt-2 text-base leading-relaxed text-fg/90">The Burbank hop ran an hour late. We had an hour and a half on the ground at SFO and we used every minute of it \u2014 through the terminal at a run, onto the next plane with nothing to spare. Seats found. Breath caught. Next stop, Greece.</p>' +
       "</article>";
-    logList.insertBefore(li, logList.firstChild);
+    var first = document.getElementById("log-chania");
+    if (first && first.nextSibling) logList.insertBefore(li2, first.nextSibling);
+    else logList.appendChild(li2);
   }
 
   fetch("/status.json", { cache: "no-store" })
@@ -181,11 +197,11 @@
       el.innerHTML = "";
       delete el._leaflet_id;
     }
-    var here = [37.6213, -122.3790];
+    var here = [35.5162, 24.0178];
     var tiles = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
-    var live = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView(here, 12);
+    var live = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView(here, 14);
     L.tileLayer(tiles, { attribution: "&copy; OpenStreetMap &copy; CARTO", maxZoom: 19 }).addTo(live);
-    L.circle(here, { radius: 4000, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.12, interactive: false }).addTo(live);
+    L.circle(here, { radius: 900, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.12, interactive: false }).addTo(live);
     L.marker(here, {
       icon: L.divIcon({
         className: "trip-pin",
@@ -193,7 +209,7 @@
         iconSize: [28, 40],
         iconAnchor: [14, 40]
       })
-    }).addTo(live).bindPopup('<p class="map-popup-title">San Francisco</p><p class="map-popup-meta">SFO \u2014 wheels up for Greece</p>');
+    }).addTo(live).bindPopup('<p class="map-popup-title">Chania</p><p class="map-popup-meta">Pi Suite \u2014 first night in Crete</p>');
   }
   setTimeout(placeLiveMap, 700);
 
