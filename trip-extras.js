@@ -18,9 +18,9 @@
   setInterval(tickClocks, 15000);
 
   var pulse = document.querySelector(".pulse-dot");
-  if (pulse && pulse.nextElementSibling) pulse.nextElementSibling.textContent = "At Burbank Airport";
+  if (pulse && pulse.nextElementSibling) pulse.nextElementSibling.textContent = "On the SFO flight";
   var pills = document.querySelectorAll("#where .rounded-full");
-  if (pills && pills[0]) pills[0].textContent = "Burbank Airport, California";
+  if (pills && pills[0]) pills[0].textContent = "San Francisco International";
 
   var laClock = document.getElementById("clock-la");
   if (laClock) {
@@ -58,6 +58,22 @@
   if (updatesForm && notesListEl && notesListEl.parentNode) {
     notesListEl.parentNode.insertBefore(updatesForm, notesListEl.nextSibling);
     updatesForm.classList.add("mt-8");
+  }
+
+  var logList = document.querySelector("#log ol");
+  if (logList && !document.getElementById("log-sfo")) {
+    var li = document.createElement("li");
+    li.id = "log-sfo";
+    li.innerHTML =
+      '<article class="rounded-xl bg-surface p-5 card-shadow">' +
+      '<div class="flex flex-wrap items-center gap-2">' +
+      '<time datetime="2026-08-24" class="text-sm font-medium text-muted">August 24, 2026</time>' +
+      '<span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">Connection</span>' +
+      "</div>" +
+      '<h3 class="mt-3 font-serif text-2xl font-semibold text-fg">Made the connection</h3>' +
+      '<p class="mt-2 text-base leading-relaxed text-fg/90">The Burbank hop ran an hour late. We had an hour and a half on the ground at SFO and we used every minute of it \u2014 through the terminal at a run, onto the next plane with nothing to spare. Seats found. Breath caught. Next stop, Greece.</p>' +
+      "</article>";
+    logList.insertBefore(li, logList.firstChild);
   }
 
   fetch("/status.json", { cache: "no-store" })
@@ -165,11 +181,11 @@
       el.innerHTML = "";
       delete el._leaflet_id;
     }
-    var here = [34.2006, -118.3585];
+    var here = [37.6213, -122.3790];
     var tiles = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
-    var live = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView(here, 13);
+    var live = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView(here, 12);
     L.tileLayer(tiles, { attribution: "&copy; OpenStreetMap &copy; CARTO", maxZoom: 19 }).addTo(live);
-    L.circle(here, { radius: 2500, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.12, interactive: false }).addTo(live);
+    L.circle(here, { radius: 4000, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.12, interactive: false }).addTo(live);
     L.marker(here, {
       icon: L.divIcon({
         className: "trip-pin",
@@ -177,7 +193,7 @@
         iconSize: [28, 40],
         iconAnchor: [14, 40]
       })
-    }).addTo(live).bindPopup('<p class="map-popup-title">Burbank Airport</p><p class="map-popup-meta">Guy Fieri\u2019s Kitchen + Bar Express</p>');
+    }).addTo(live).bindPopup('<p class="map-popup-title">San Francisco</p><p class="map-popup-meta">SFO \u2014 wheels up for Greece</p>');
   }
   setTimeout(placeLiveMap, 700);
 
