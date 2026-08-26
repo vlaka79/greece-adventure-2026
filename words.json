@@ -1,21 +1,28 @@
 [
   {
     "date": "2026-08-26",
-    "el": "\u039a\u03b1\u03bb\u03b7\u03bd\u03cd\u03c7\u03c4\u03b1",
+    "el": "Φάρος",
+    "en": "Faros",
+    "say": "FAH-ros",
+    "meaning": "Lighthouse."
+  },
+  {
+    "date": "2026-08-25",
+    "el": "Καληνύχτα",
     "en": "Kalinihta",
     "say": "kah-lee-NEEKH-tah",
     "meaning": "Good night."
   },
   {
     "date": "2026-08-24",
-    "el": "\u039a\u03b1\u03bb\u03ae \u03c0\u03c4\u03ae\u03c3\u03b7",
+    "el": "Καλή πτήση",
     "en": "Kali ptisi",
     "say": "kah-LEE PTEE-see",
     "meaning": "Have a good flight."
   },
   {
     "date": "2026-08-24",
-    "el": "\u039a\u03b1\u03bb\u03b7\u03bc\u03ad\u03c1\u03b1",
+    "el": "Καλημέρα",
     "en": "Kalimera",
     "say": "kah-lee-MEH-rah",
     "meaning": "Good morning."
