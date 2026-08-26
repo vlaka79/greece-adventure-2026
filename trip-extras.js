@@ -3,6 +3,49 @@
   base.src = "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@a17972c1c5e11d60e9a028831f76589255e7fd8c/trip-extras.js";
   document.head.appendChild(base);
 
+  function formatDate(iso) {
+    if (!iso) return "";
+    try {
+      return new Date(iso + "T12:00:00").toLocaleDateString(undefined, {
+        year: "numeric", month: "long", day: "numeric"
+      });
+    } catch (e) { return iso; }
+  }
+
+  function buildLogPreview() {
+    fetch("/log.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (items) {
+        items = items || [];
+        var list = document.querySelector("#log ol");
+        if (!list) return;
+        list.innerHTML = "";
+        items.slice(0, 2).forEach(function (e) {
+          var li = document.createElement("li");
+          li.innerHTML =
+            '<article class="rounded-xl bg-surface p-5 card-shadow">' +
+            '<div class="flex flex-wrap items-center gap-2">' +
+            '<time datetime="' + (e.date || "") + '" class="text-sm font-medium text-muted">' + formatDate(e.date) + "</time>" +
+            (e.tag ? '<span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">' + e.tag + "</span>" : "") +
+            "</div>" +
+            '<h3 class="mt-3 font-serif text-2xl font-semibold text-fg">' + (e.title || "") + "</h3>" +
+            '<p class="mt-2 text-base leading-relaxed text-fg/90">' + (e.body || "") + "</p>" +
+            "</article>";
+          list.appendChild(li);
+        });
+        if (items.length > 2 && !document.getElementById("log-see-all")) {
+          var more = document.createElement("p");
+          more.id = "log-see-all";
+          more.className = "mt-4";
+          more.innerHTML = '<a href="/log.html" class="text-sm font-semibold text-primary">See all adventures \u2192</a>';
+          list.parentNode.insertBefore(more, list.nextSibling);
+        }
+      })
+      .catch(function () {});
+  }
+  setTimeout(buildLogPreview, 400);
+  setTimeout(buildLogPreview, 1200);
+
   function buildRotator() {
     fetch("/eats.json", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : []; })
@@ -96,9 +139,7 @@
           var dot = li.querySelector(":scope > span");
           var state = s.state || "upcoming";
           if (state === "done") {
-            if (article) {
-              article.style.opacity = "0.55";
-            }
+            if (article) article.style.opacity = "0.55";
             if (dot) {
               dot.style.background = "#1b6f66";
               dot.style.borderColor = "#1b6f66";
