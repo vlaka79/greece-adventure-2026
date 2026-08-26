@@ -5,6 +5,7 @@
     athens: { title: "Athens", lead: "The last days in the city." },
     travel: { title: "There & back", lead: "The road and the flights — going to Greece, and coming home." }
   };
+  var NEW_MS = 48 * 60 * 60 * 1000;
   var id = (new URLSearchParams(location.search).get("place") || "crete").toLowerCase();
   if (!PLACES[id]) id = "crete";
   var meta = PLACES[id];
@@ -20,7 +21,14 @@
   var lbImg = document.getElementById("lb-img");
   var shown = 0;
 
-  function addPhoto(src, caption) {
+  function isNew(item) {
+    if (!item || !item.added) return false;
+    var t = Date.parse(item.added + (item.added.length <= 10 ? "T12:00:00" : ""));
+    if (isNaN(t)) return false;
+    return Date.now() - t < NEW_MS;
+  }
+
+  function addPhoto(src, caption, isNewShot) {
     var li = document.createElement("li");
     var img = document.createElement("img");
     img.className = "aspect-photo w-full object-cover";
@@ -41,6 +49,12 @@
     btn.className = "photo group relative block w-full overflow-hidden rounded-xl bg-bg-warm text-left card-shadow";
     btn.setAttribute("data-full", src);
     btn.appendChild(img);
+    if (isNewShot) {
+      var badge = document.createElement("span");
+      badge.className = "photo-new-badge";
+      badge.textContent = "New";
+      btn.appendChild(badge);
+    }
     if (caption) {
       var cap = document.createElement("span");
       cap.className = "absolute inset-x-0 bottom-0 bg-gradient-to-t from-fg/70 to-transparent px-3 pb-3 pt-8 text-sm font-medium text-surface";
@@ -62,12 +76,17 @@
       var shots = (items || []).filter(function (item) {
         return (item.place || "").toLowerCase() === id;
       });
+      shots.sort(function (a, b) {
+        var ta = Date.parse((a.added || "2000-01-01") + "T12:00:00") || 0;
+        var tb = Date.parse((b.added || "2000-01-01") + "T12:00:00") || 0;
+        return tb - ta;
+      });
       if (!shots.length) {
         if (empty) empty.classList.remove("hidden");
         return;
       }
       shots.forEach(function (item) {
-        if (item.src) addPhoto(item.src, item.caption || "");
+        if (item.src) addPhoto(item.src, item.caption || "", isNew(item));
       });
       setTimeout(function () {
         if (!shown && empty) empty.classList.remove("hidden");
