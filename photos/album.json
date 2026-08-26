@@ -142,5 +142,29 @@
     "lat": 35.5187,
     "lng": 24.0188,
     "added": "2026-08-26T19:49:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-labodega-placemat.jpg",
+    "caption": "La bodega: doctors say a glass of wine a day is good for the heart. Just think what a bottle could do.",
+    "place": "crete",
+    "lat": 35.5178,
+    "lng": 24.0161,
+    "added": "2026-08-26T20:54:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-labodega-board.jpg",
+    "caption": "Dinner at La bodega — meats, cheese, figs, walnuts, and olives",
+    "place": "crete",
+    "lat": 35.5176,
+    "lng": 24.0168,
+    "added": "2026-08-26T21:08:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-lighthouse-night.jpg",
+    "caption": "The Egyptian lighthouse after dark",
+    "place": "crete",
+    "lat": 35.5183,
+    "lng": 24.0162,
+    "added": "2026-08-26T22:26:00"
   }
 ]
