@@ -26,5 +26,26 @@
     "place": "travel",
     "lat": 37.9411,
     "lng": 23.9510
+  },
+  {
+    "src": "/photos/album/crete-hotel-jacuzzi.jpg",
+    "caption": "First night in Crete \u2014 the jacuzzi room",
+    "place": "crete",
+    "lat": 35.5175,
+    "lng": 24.0217
+  },
+  {
+    "src": "/photos/album/crete-hotel-bed.jpg",
+    "caption": "Welcome to the room \u2014 towels and an orchid",
+    "place": "crete",
+    "lat": 35.5175,
+    "lng": 24.0217
+  },
+  {
+    "src": "/photos/album/crete-hotel-raki-fruit.jpg",
+    "caption": "Welcome basket: fruit and aged tsikoudia (Crete raki)",
+    "place": "crete",
+    "lat": 35.5175,
+    "lng": 24.0217
   }
 ]
