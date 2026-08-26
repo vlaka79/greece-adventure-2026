@@ -178,4 +178,65 @@
   }
   setTimeout(styleItinerary, 700);
   setTimeout(styleItinerary, 1600);
+
+  function buildPastWords() {
+    var wordCardEl = document.getElementById("word-card");
+    if (wordCardEl && !document.getElementById("word-past-btn")) {
+      var pastBtn = document.createElement("button");
+      pastBtn.type = "button";
+      pastBtn.id = "word-past-btn";
+      pastBtn.className = "mt-3 text-sm font-semibold text-primary";
+      pastBtn.textContent = "Past words";
+      var pastList = document.createElement("ul");
+      pastList.id = "word-past";
+      pastList.className = "mt-3 hidden space-y-2";
+      wordCardEl.appendChild(pastBtn);
+      wordCardEl.appendChild(pastList);
+    }
+    fetch("/words.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (words) {
+        var btn = document.getElementById("word-past-btn");
+        var list = document.getElementById("word-past");
+        if (!btn || !list) return;
+        words = words || [];
+        var todayEl = (document.getElementById("word-el") || {}).textContent || "";
+        list.innerHTML = "";
+        words.forEach(function (w) {
+          if (todayEl && w.el === todayEl) return;
+          var li = document.createElement("li");
+          li.className = "rounded-lg bg-bg-warm px-3 py-2";
+          var when = "";
+          if (w.date) {
+            try {
+              when = new Date(w.date + "T12:00:00").toLocaleDateString(undefined, { month: "short", day: "numeric" });
+            } catch (e) { when = w.date; }
+          }
+          li.innerHTML =
+            '<p class="font-serif text-lg font-semibold text-fg">' + (w.el || "") + "</p>" +
+            '<p class="text-sm text-fg/90">' + [w.en, w.meaning].filter(Boolean).join(" \u2014 ") + "</p>" +
+            '<p class="text-xs text-muted">' + (w.say ? ("Say it: " + w.say) : "") + (when ? " \u00b7 " + when : "") + "</p>";
+          list.appendChild(li);
+        });
+        if (!list.children.length) {
+          btn.textContent = "Past words will collect here";
+          btn.disabled = true;
+          return;
+        }
+        btn.disabled = false;
+        btn.textContent = "Past words";
+        if (!btn._bound) {
+          btn._bound = true;
+          btn.addEventListener("click", function () {
+            var open = !list.classList.contains("hidden");
+            list.classList.toggle("hidden", open);
+            btn.textContent = open ? "Past words" : "Hide past words";
+          });
+        }
+      })
+      .catch(function () {});
+  }
+  setTimeout(buildPastWords, 500);
+  setTimeout(buildPastWords, 1600);
+
 })();
