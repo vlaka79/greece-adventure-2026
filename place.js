@@ -21,10 +21,15 @@
   var lbImg = document.getElementById("lb-img");
   var shown = 0;
 
+  function parseAdded(item) {
+    var raw = (item && item.added) || "";
+    if (!raw) return 0;
+    var t = Date.parse(raw.length <= 10 ? raw + "T12:00:00" : raw);
+    return isNaN(t) ? 0 : t;
+  }
   function isNew(item) {
-    if (!item || !item.added) return false;
-    var t = Date.parse(item.added + (item.added.length <= 10 ? "T12:00:00" : ""));
-    if (isNaN(t)) return false;
+    var t = parseAdded(item);
+    if (!t) return false;
     return Date.now() - t < NEW_MS;
   }
 
@@ -77,9 +82,7 @@
         return (item.place || "").toLowerCase() === id;
       });
       shots.sort(function (a, b) {
-        var ta = Date.parse((a.added || "2000-01-01") + "T12:00:00") || 0;
-        var tb = Date.parse((b.added || "2000-01-01") + "T12:00:00") || 0;
-        return tb - ta;
+        return parseAdded(b) - parseAdded(a);
       });
       if (!shots.length) {
         if (empty) empty.classList.remove("hidden");
