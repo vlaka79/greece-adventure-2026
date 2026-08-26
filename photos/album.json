@@ -72,7 +72,7 @@
     "added": "2026-08-26T12:00:00"
   },
   {
-    "src": "/photos/album/crete-chania-greek-salad.jpg",
+    "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-greek-salad.jpg",
     "caption": "Horiatiki by the water \u2014 lunch on Chania harbour",
     "place": "crete",
     "lat": 35.5160,
@@ -80,7 +80,7 @@
     "added": "2026-08-26T14:00:00"
   },
   {
-    "src": "/photos/album/crete-chania-souvlaki.jpg",
+    "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-souvlaki.jpg",
     "caption": "Souvlaki, fries, and Alfa \u2014 Chania harbour lunch",
     "place": "crete",
     "lat": 35.5160,
@@ -88,7 +88,7 @@
     "added": "2026-08-26T14:05:00"
   },
   {
-    "src": "/photos/album/crete-chania-alfa-beers.jpg",
+    "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-alfa-beers.jpg",
     "caption": "Two Alfa beers with a view of the old harbour",
     "place": "crete",
     "lat": 35.5160,
