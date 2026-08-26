@@ -1,6 +1,6 @@
 [
   {
-    "place": "Guy Fieri\u2019s Kitchen + Bar Express, Burbank Airport",
+    "place": "Guy Fieri’s Kitchen + Bar Express, Burbank Airport",
     "dish": "Space Dust IPA",
     "note": "Cold cans, gate-side, official DDIC kickoff before the flight to Crete.",
     "photo": "/photos/album/lax-cheers.jpeg"
@@ -8,19 +8,19 @@
   {
     "place": "Pork to Beef Wild, Chania area",
     "dish": "Grilled sandwich with fries",
-    "note": "First meal in Greece \u2014 juicy, herbed fries, and exactly what we needed after landing. Delicious.",
+    "note": "First meal in Greece — juicy, herbed fries, and exactly what we needed after landing. Delicious.",
     "photo": "/photos/album/crete-pork-to-beef-wild.jpg"
   },
   {
     "place": "Neoria Fish Tavern, Chania harbour",
-    "dish": "Frapp\u00e9 (\u03c6\u03c1\u03b1\u03c0\u03ad)",
+    "dish": "Frappé (φραπέ)",
     "note": "Two frothy iced coffees and cold mountain water with the Venetian harbour behind us. First proper morning in Crete.",
     "photo": "/photos/album/crete-chania-harbor-freddo.jpg"
   },
   {
     "place": "Chania harbour waterfront",
     "dish": "Horiatiki (Greek salad)",
-    "note": "Tomatoes, onion, olives, and a slab of feta with oregano \u2014 proper village salad by the water.",
+    "note": "Tomatoes, onion, olives, and a slab of feta with oregano — proper village salad by the water.",
     "photo": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-greek-salad.jpg"
   },
   {
@@ -28,5 +28,11 @@
     "dish": "Souvlaki with fries & Alfa lager",
     "note": "Grilled skewers, thick-cut fries, spicy dip, and cold Alfa with the old harbour behind us. Lunch done right.",
     "photo": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-souvlaki.jpg"
+  },
+  {
+    "place": "La bodega, Chania harbour",
+    "dish": "Charcuterie board and wine",
+    "note": "Cured meats, cheese, figs, walnuts, olives — and a placemat that asked what a whole bottle could do for the heart.",
+    "photo": "/photos/album/crete-chania-labodega-board.jpg"
   }
 ]
