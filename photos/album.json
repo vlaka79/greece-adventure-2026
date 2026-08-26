@@ -1,7 +1,7 @@
 [
   {
     "src": "/photos/album/lax-cheers.jpeg",
-    "caption": "Cheers before the flight \u2014 Guy Fieri\u2019s, Burbank Airport",
+    "caption": "Cheers before the flight — Guy Fieri’s, Burbank Airport",
     "place": "travel",
     "lat": 34.2006,
     "lng": -118.3585,
@@ -9,7 +9,7 @@
   },
   {
     "src": "/photos/album/united-tarmac-burbank.jpg",
-    "caption": "First leg \u2014 United on the tarmac at Burbank",
+    "caption": "First leg — United on the tarmac at Burbank",
     "place": "travel",
     "lat": 34.1955,
     "lng": -118.3548,
@@ -17,7 +17,7 @@
   },
   {
     "src": "/photos/album/frankfurt-weissbier-pretzel.jpg",
-    "caption": "Franziskaner Weissbier and a soft pretzel \u2014 Frankfurt lounge layover",
+    "caption": "Franziskaner Weissbier and a soft pretzel — Frankfurt lounge layover",
     "place": "travel",
     "lat": 50.0481,
     "lng": 8.5679,
@@ -25,15 +25,15 @@
   },
   {
     "src": "/photos/album/plane-to-crete-priest.jpg",
-    "caption": "On the way to Crete \u2014 unexpected company in the aisle",
+    "caption": "On the way to Crete — unexpected company in the aisle",
     "place": "travel",
     "lat": 37.9411,
-    "lng": 23.9510,
+    "lng": 23.951,
     "added": "2026-08-25T14:00:00"
   },
   {
     "src": "/photos/album/crete-hotel-jacuzzi.jpg",
-    "caption": "First night in Crete \u2014 the jacuzzi room",
+    "caption": "First night in Crete — the jacuzzi room",
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
@@ -41,7 +41,7 @@
   },
   {
     "src": "/photos/album/crete-hotel-bed.jpg",
-    "caption": "Welcome to the room \u2014 towels and an orchid",
+    "caption": "Welcome to the room — towels and an orchid",
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
@@ -57,7 +57,7 @@
   },
   {
     "src": "/photos/album/crete-pork-to-beef-wild.jpg",
-    "caption": "First meal in Greece \u2014 Pork to Beef Wild, near the hotel",
+    "caption": "First meal in Greece — Pork to Beef Wild, near the hotel",
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
@@ -65,25 +65,25 @@
   },
   {
     "src": "/photos/album/crete-chania-harbor-freddo.jpg",
-    "caption": "Frapp\u00e9 at Neoria Fish Tavern \u2014 Venetian harbour, Chania",
+    "caption": "Frappé at Neoria Fish Tavern — Venetian harbour, Chania",
     "place": "crete",
-    "lat": 35.5160,
+    "lat": 35.516,
     "lng": 24.0175,
     "added": "2026-08-26T12:00:00"
   },
   {
     "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-greek-salad.jpg",
-    "caption": "Horiatiki by the water \u2014 lunch on Chania harbour",
+    "caption": "Horiatiki by the water — lunch on Chania harbour",
     "place": "crete",
-    "lat": 35.5160,
+    "lat": 35.516,
     "lng": 24.0175,
     "added": "2026-08-26T14:00:00"
   },
   {
     "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-souvlaki.jpg",
-    "caption": "Souvlaki, fries, and Alfa \u2014 Chania harbour lunch",
+    "caption": "Souvlaki, fries, and Alfa — Chania harbour lunch",
     "place": "crete",
-    "lat": 35.5160,
+    "lat": 35.516,
     "lng": 24.0175,
     "added": "2026-08-26T14:05:00"
   },
@@ -91,13 +91,13 @@
     "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-alfa-beers.jpg",
     "caption": "Two Alfa beers with a view of the old harbour",
     "place": "crete",
-    "lat": 35.5160,
+    "lat": 35.516,
     "lng": 24.0175,
     "added": "2026-08-26T14:10:00"
   },
   {
     "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-egyptian-lighthouse.jpg",
-    "caption": "The Egyptian lighthouse on Chania\u2019s Venetian breakwater",
+    "caption": "The Egyptian lighthouse on Chania’s Venetian breakwater",
     "place": "crete",
     "lat": 35.5195,
     "lng": 24.0153,
@@ -105,10 +105,26 @@
   },
   {
     "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-lighthouse-selfie.jpg",
-    "caption": "Us at the harbour \u2014 Egyptian lighthouse behind us",
+    "caption": "Us at the harbour — Egyptian lighthouse behind us",
     "place": "crete",
     "lat": 35.5195,
     "lng": 24.0153,
     "added": "2026-08-26T16:05:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-old-town-ruins.jpg",
+    "caption": "Evening in the old town — ruined houses and a doorway full of graffiti",
+    "place": "crete",
+    "lat": 35.5172,
+    "lng": 24.0222,
+    "added": "2026-08-26T19:25:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-blue-boat.jpg",
+    "caption": "A working boat with a plant in it, tied up on the water",
+    "place": "crete",
+    "lat": 35.5185,
+    "lng": 24.0221,
+    "added": "2026-08-26T19:38:00"
   }
 ]
