@@ -188,10 +188,8 @@
 
   function tickClocks() {
     var opts = { hour: "numeric", minute: "2-digit" };
-    var la = document.getElementById("clock-la");
     var gr = document.getElementById("clock-gr");
     var now = new Date();
-    if (la) la.textContent = now.toLocaleTimeString("en-US", Object.assign({ timeZone: "America/Los_Angeles" }, opts));
     if (gr) gr.textContent = now.toLocaleTimeString("en-GB", Object.assign({ timeZone: "Europe/Athens" }, opts));
   }
   tickClocks();
