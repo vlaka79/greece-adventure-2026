@@ -249,23 +249,52 @@
     .then(function (r) { return r.ok ? r.json() : []; })
     .then(function (stops) {
       var list = document.getElementById("itinerary-list");
+      var btnEarlier = document.getElementById("itin-earlier");
+      var btnLater = document.getElementById("itin-later");
       if (!list) return;
+      stops = stops || [];
       var toneClass = {
         muted: "bg-bg-warm text-muted",
         crete: "bg-primary-soft text-primary",
         island: "bg-accent-soft text-fg",
         athens: "bg-primary/15 text-primary"
       };
-      list.innerHTML = "";
-      (stops || []).forEach(function (s) {
+
+      var nowIdx = -1;
+      for (var i = 0; i < stops.length; i++) {
+        if (stops[i].state === "now") { nowIdx = i; break; }
+      }
+      if (nowIdx < 0) {
+        for (var j = 0; j < stops.length; j++) {
+          if (stops[j].state === "upcoming") { nowIdx = j; break; }
+        }
+      }
+      if (nowIdx < 0) nowIdx = Math.max(0, stops.length - 1);
+
+      var showEarlier = false;
+      var showLater = false;
+
+      function focusLabel(role) {
+        if (role === "prev") return "Previous";
+        if (role === "now") return "Now";
+        if (role === "next") return "Next up";
+        return "";
+      }
+
+      function buildItem(s, role) {
         var days = (s.days || []).map(function (d) {
           return "<li><time>" + d.date + "</time><span>" + (d.actual || "\u2014") + "</span></li>";
         }).join("");
         var li = document.createElement("li");
-        li.className = "relative pl-9";
+        li.className = "relative pl-9" + (role === "now" ? " itin-block-now" : "");
+        var label = focusLabel(role);
+        var labelHtml = label
+          ? '<p class="itin-focus-label">' + label + "</p>"
+          : "";
         li.innerHTML =
           '<span class="absolute left-0 top-5 size-5 rounded-full border-[3px] border-accent bg-surface"></span>' +
           '<article class="rounded-xl bg-surface p-5 card-shadow">' +
+          labelHtml +
           '<div class="flex flex-wrap items-center gap-2">' +
           '<p class="text-sm font-semibold text-primary">' + (s.dates || "") + "</p>" +
           '<span class="inline-flex min-h-7 items-center rounded-full px-2.5 text-xs font-semibold tracking-wide ' + (toneClass[s.tone] || toneClass.muted) + '">' + (s.tag || "") + "</span>" +
@@ -276,8 +305,69 @@
           '<p class="mt-1.5 text-base leading-relaxed text-fg/90">' + (s.plan || "") + "</p></div>" +
           '<div class="itinerary-sub"><h4 class="text-muted">What we actually did</h4>' +
           '<ul class="itinerary-days">' + days + "</ul></div></article>";
-        list.appendChild(li);
-      });
+        return li;
+      }
+
+      function render() {
+        list.innerHTML = "";
+        var earlierCount = nowIdx > 1 ? nowIdx - 1 : 0;
+        var laterCount = Math.max(0, stops.length - (nowIdx + 2));
+
+        if (btnEarlier) {
+          if (earlierCount > 0) {
+            btnEarlier.hidden = false;
+            btnEarlier.textContent = showEarlier
+              ? "Hide earlier stops"
+              : "Show earlier stops (" + earlierCount + ")";
+          } else {
+            btnEarlier.hidden = true;
+          }
+        }
+        if (btnLater) {
+          if (laterCount > 0) {
+            btnLater.hidden = false;
+            btnLater.textContent = showLater
+              ? "Hide later stops"
+              : "Show later stops (" + laterCount + ")";
+          } else {
+            btnLater.hidden = true;
+          }
+        }
+
+        if (showEarlier) {
+          for (var e = 0; e < nowIdx - 1; e++) {
+            list.appendChild(buildItem(stops[e], ""));
+          }
+        }
+
+        if (nowIdx > 0) {
+          list.appendChild(buildItem(stops[nowIdx - 1], "prev"));
+        }
+        list.appendChild(buildItem(stops[nowIdx], "now"));
+        if (nowIdx + 1 < stops.length) {
+          list.appendChild(buildItem(stops[nowIdx + 1], "next"));
+        }
+
+        if (showLater) {
+          for (var f = nowIdx + 2; f < stops.length; f++) {
+            list.appendChild(buildItem(stops[f], ""));
+          }
+        }
+      }
+
+      if (btnEarlier) {
+        btnEarlier.addEventListener("click", function () {
+          showEarlier = !showEarlier;
+          render();
+        });
+      }
+      if (btnLater) {
+        btnLater.addEventListener("click", function () {
+          showLater = !showLater;
+          render();
+        });
+      }
+      render();
     })
     .catch(function () {});
 
