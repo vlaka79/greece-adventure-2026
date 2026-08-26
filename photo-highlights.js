@@ -9,14 +9,14 @@
 
   function photoIsNew(item) {
     if (!item || !item.added) return false;
-    var t = Date.parse(item.added + (item.added.length <= 10 ? "T12:00:00" : ""));
+    var t = Date.parse(item.added.length <= 10 ? item.added + "T12:00:00" : item.added);
     if (isNaN(t)) return false;
     return Date.now() - t < NEW_MS;
   }
 
   function photoAddedTime(item) {
     if (!item || !item.added) return 0;
-    var t = Date.parse(item.added + (item.added.length <= 10 ? "T12:00:00" : ""));
+    var t = Date.parse(item.added.length <= 10 ? item.added + "T12:00:00" : item.added);
     return isNaN(t) ? 0 : t;
   }
 
@@ -43,11 +43,11 @@
 
       var recent = items
         .slice()
-        .filter(photoIsNew)
+        .filter(function (it) { return it && it.src && photoIsNew(it); })
         .sort(function (a, b) {
           return photoAddedTime(b) - photoAddedTime(a);
         })
-        .slice(0, 4);
+        .slice(0, 3);
 
       var wrap = document.getElementById("just-added");
       var list = document.getElementById("just-added-list");
@@ -57,17 +57,21 @@
           var a = document.createElement("a");
           a.className = "just-added-card";
           a.href = "/place.html?place=" + encodeURIComponent((it.place || "crete").toLowerCase());
-          a.innerHTML =
-            '<img src="' +
-            it.src +
-            '" alt="" loading="lazy" />' +
-            '<span class="meta">' +
+          var img = document.createElement("img");
+          img.src = it.src;
+          img.alt = "";
+          img.loading = "lazy";
+          var meta = document.createElement("span");
+          meta.className = "meta";
+          meta.innerHTML =
             '<span class="place-tag">' +
             (placeLabels[(it.place || "").toLowerCase()] || it.place || "") +
             "</span>" +
             '<span class="cap">' +
             (it.caption || "New photo") +
-            "</span></span>";
+            "</span>";
+          a.appendChild(img);
+          a.appendChild(meta);
           list.appendChild(a);
         });
         wrap.classList.remove("hidden");
