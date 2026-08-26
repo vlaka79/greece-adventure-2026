@@ -1,6 +1,6 @@
 (function () {
-  var OSM_URL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
-  var OSM_ATTR = "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>";
+  var TILES = "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png";
+  var ATTR = 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="https://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)';
 
   function apply() {
     if (typeof L === "undefined") return;
@@ -22,7 +22,7 @@
         if (el._leaflet_id) delete el._leaflet_id;
 
         var live = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView([lat, lng], 12);
-        L.tileLayer(OSM_URL, { attribution: OSM_ATTR, maxZoom: 19 }).addTo(live);
+        L.tileLayer(TILES, { attribution: ATTR, maxZoom: 17 }).addTo(live);
         L.circle([lat, lng], {
           radius: 5000,
           color: "#1b6f66",
