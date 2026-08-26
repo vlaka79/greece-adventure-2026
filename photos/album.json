@@ -7,10 +7,24 @@
     "lng": -118.3585
   },
   {
+    "src": "/photos/album/united-tarmac-burbank.jpg",
+    "caption": "First leg \u2014 United on the tarmac at Burbank",
+    "place": "travel",
+    "lat": 34.1955,
+    "lng": -118.3548
+  },
+  {
     "src": "/photos/album/frankfurt-weissbier-pretzel.jpg",
     "caption": "Franziskaner Weissbier and a soft pretzel \u2014 Frankfurt lounge layover",
     "place": "travel",
     "lat": 50.0481,
     "lng": 8.5679
+  },
+  {
+    "src": "/photos/album/plane-to-crete-priest.jpg",
+    "caption": "On the way to Crete \u2014 unexpected company in the aisle",
+    "place": "travel",
+    "lat": 37.9411,
+    "lng": 23.9510
   }
 ]
