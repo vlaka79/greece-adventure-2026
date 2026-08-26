@@ -1,3 +1,3 @@
-// Get a free key at https://cloud.maptiler.com/account/keys/
-// Then paste it between the quotes below and save.
-window.MAPTILER_KEY = "";
+// MapTiler Outdoor tiles for the trip maps
+// Restrict this key to djboone-travels.netlify.app in MapTiler Cloud → Allowed HTTP origins
+window.MAPTILER_KEY = "IY6aQ4veTxQekD4eYBXq";
