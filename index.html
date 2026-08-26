@@ -200,28 +200,7 @@
             <p id="postcard-note" class="mt-2 text-base leading-relaxed text-fg/90"></p>
           </div>
         </article>
-        <ol class="mt-6 space-y-4">
-          <li>
-            <article class="rounded-xl bg-surface p-5 card-shadow">
-              <div class="flex flex-wrap items-center gap-2">
-                <time datetime="2026-08-24" class="text-sm font-medium text-muted">August 24, 2026</time>
-                <span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">Departure day</span>
-              </div>
-              <h3 class="mt-3 font-serif text-2xl font-semibold text-fg">DDIC at Burbank</h3>
-              <p class="mt-2 text-base leading-relaxed text-fg/90">We made it to Hollywood Burbank Airport. Currently parked at Guy Fieri’s Kitchen + Bar Express with a couple of Space Dust IPAs — official Day Drinkers in California business before the long haul. Next stop: Crete. Wheels up soon. Καλή πτήση to us.</p>
-            </article>
-          </li>
-          <li>
-            <article class="rounded-xl bg-surface p-5 card-shadow">
-              <div class="flex flex-wrap items-center gap-2">
-                <time datetime="2026-08-19" class="text-sm font-medium text-muted">August 19, 2026</time>
-                <span class="inline-flex min-h-7 items-center rounded-full bg-accent-soft px-2.5 text-xs font-semibold tracking-wide text-fg">Pre-trip</span>
-              </div>
-              <h3 class="mt-3 font-serif text-2xl font-semibold text-fg">The plan, as booked</h3>
-              <p class="mt-2 text-base leading-relaxed text-fg/90">Five days out. We leave from Burbank on the 24th and land in Chania late on the 25th. Crete first — Chania, Paleochora, Douliana, Elounda, and Heraklion — before a morning ferry to Santorini on the 9th and on to Athens on the 12th. Home on the 17th. We’ll fill this in from the road.</p>
-            </article>
-          </li>
-        </ol>
+        <ol class="mt-6 space-y-4" id="log-fallback"></ol>
       </section>
       <section id="table" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Eat & drink</h2>
@@ -349,5 +328,6 @@
   <script src="/app.js"></script>
   <script src="/photo-pin-pulse.js"></script>
   <script src="/live-map-fix.js"></script>
+  <script src="/map-rebuild.js"></script>
 </body>
 </html>
