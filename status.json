@@ -1,18 +1,18 @@
 {
-  "lat": 35.5162,
-  "lng": 24.0178,
+  "lat": 35.5195,
+  "lng": 24.0153,
   "location": "Western Crete",
   "tomorrow": "More of Chania \u2014 old town lanes, a swim if the water calls, and whatever finds us.",
   "postcard": {
     "date": "2026-08-26",
-    "title": "Lunch on the harbour",
-    "note": "Horiatiki, souvlaki, and two cold Alfa lagers looking out over the Venetian harbour. Chania is treating us well.",
-    "photo": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-alfa-beers.jpg"
+    "title": "Harbour lighthouse",
+    "note": "Walked out along the Venetian breakwater to the Egyptian lighthouse. Blue sky, blue water, and the two of us grinning in the sun.",
+    "photo": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-lighthouse-selfie.jpg"
   },
   "word": {
-    "el": "\u03a5\u03b3\u03b5\u03af\u03b1",
-    "en": "Ygeia",
-    "say": "ee-YEE-ah",
-    "meaning": "Cheers / to your health."
+    "el": "\u03a6\u03ac\u03c1\u03bf\u03c2",
+    "en": "Faros",
+    "say": "FAH-ros",
+    "meaning": "Lighthouse."
   }
 }
