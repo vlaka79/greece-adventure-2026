@@ -329,4 +329,26 @@
       drawNotes([]);
     });
   }
+
+  fetch("/photos/album.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : []; })
+    .then(function (items) {
+      var latest = null;
+      (items || []).forEach(function (it) {
+        if (it && it.place === "crete" && it.src) latest = it;
+      });
+      if (!latest) return;
+      var link = document.querySelector('a[href="/place.html?place=crete"]');
+      if (!link) return;
+      var img = link.querySelector("img");
+      if (!img) return;
+      img.src = latest.src;
+      img.alt = latest.caption || "Crete";
+      img.className = "aspect-photo w-full object-cover";
+      var sub = link.querySelectorAll("span.mt-1, span.text-sm");
+      sub.forEach(function (el) {
+        if (/coming soon|open album/i.test(el.textContent || "")) el.textContent = "Open album";
+      });
+    })
+    .catch(function () {});
 })();
