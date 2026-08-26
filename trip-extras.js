@@ -1,8 +1,4 @@
 (function () {
-  var base = document.createElement("script");
-  base.src = "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@a17972c1c5e11d60e9a028831f76589255e7fd8c/trip-extras.js";
-  document.head.appendChild(base);
-
   function formatDate(iso) {
     if (!iso) return "";
     try {
