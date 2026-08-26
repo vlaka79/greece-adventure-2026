@@ -81,4 +81,64 @@
   }
   setTimeout(buildRotator, 900);
   setTimeout(buildRotator, 2000);
+
+  function styleItinerary() {
+    fetch("/itinerary.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (stops) {
+        var list = document.getElementById("itinerary-list");
+        if (!list || !stops || !stops.length) return;
+        var items = list.querySelectorAll(":scope > li");
+        stops.forEach(function (s, idx) {
+          var li = items[idx];
+          if (!li) return;
+          var article = li.querySelector("article");
+          var dot = li.querySelector(":scope > span");
+          var state = s.state || "upcoming";
+          if (state === "done") {
+            if (article) {
+              article.style.opacity = "0.55";
+            }
+            if (dot) {
+              dot.style.background = "#1b6f66";
+              dot.style.borderColor = "#1b6f66";
+              dot.innerHTML = '<span style="display:block;width:100%;height:100%;border-radius:999px;background:#1b6f66;color:#f4eee4;font-size:10px;line-height:14px;text-align:center;font-weight:700;">\u2713</span>';
+              dot.style.display = "flex";
+              dot.style.alignItems = "center";
+              dot.style.justifyContent = "center";
+              dot.style.overflow = "hidden";
+            }
+            var h3 = li.querySelector("h3");
+            if (h3 && !li.querySelector(".it-done-label")) {
+              var lab = document.createElement("span");
+              lab.className = "it-done-label";
+              lab.style.cssText = "margin-left:0.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#1b6f66;";
+              lab.textContent = "Done";
+              h3.appendChild(lab);
+            }
+          } else if (state === "now") {
+            if (article) {
+              article.style.boxShadow = "0 0 0 2px #1b6f66, 0 8px 24px rgba(27,111,102,0.15)";
+              article.style.background = "#f7faf9";
+            }
+            if (dot) {
+              dot.style.background = "#1b6f66";
+              dot.style.borderColor = "#1b6f66";
+              dot.style.boxShadow = "0 0 0 4px rgba(27,111,102,0.25)";
+            }
+            var head = li.querySelector(".flex.flex-wrap");
+            if (head && !li.querySelector(".it-now-label")) {
+              var now = document.createElement("span");
+              now.className = "it-now-label inline-flex min-h-7 items-center rounded-full px-2.5 text-xs font-semibold tracking-wide";
+              now.style.cssText = "background:#1b6f66;color:#f4eee4;";
+              now.textContent = "Here now";
+              head.appendChild(now);
+            }
+          }
+        });
+      })
+      .catch(function () {});
+  }
+  setTimeout(styleItinerary, 700);
+  setTimeout(styleItinerary, 1600);
 })();
