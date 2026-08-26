@@ -5,7 +5,7 @@
     "place": "travel",
     "lat": 34.2006,
     "lng": -118.3585,
-    "added": "2026-08-24"
+    "added": "2026-08-24T18:00:00"
   },
   {
     "src": "/photos/album/united-tarmac-burbank.jpg",
@@ -13,7 +13,7 @@
     "place": "travel",
     "lat": 34.1955,
     "lng": -118.3548,
-    "added": "2026-08-24"
+    "added": "2026-08-24T19:00:00"
   },
   {
     "src": "/photos/album/frankfurt-weissbier-pretzel.jpg",
@@ -21,7 +21,7 @@
     "place": "travel",
     "lat": 50.0481,
     "lng": 8.5679,
-    "added": "2026-08-25"
+    "added": "2026-08-25T10:00:00"
   },
   {
     "src": "/photos/album/plane-to-crete-priest.jpg",
@@ -29,7 +29,7 @@
     "place": "travel",
     "lat": 37.9411,
     "lng": 23.9510,
-    "added": "2026-08-25"
+    "added": "2026-08-25T14:00:00"
   },
   {
     "src": "/photos/album/crete-hotel-jacuzzi.jpg",
@@ -37,7 +37,7 @@
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
-    "added": "2026-08-25"
+    "added": "2026-08-25T20:00:00"
   },
   {
     "src": "/photos/album/crete-hotel-bed.jpg",
@@ -45,7 +45,7 @@
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
-    "added": "2026-08-25"
+    "added": "2026-08-25T20:15:00"
   },
   {
     "src": "/photos/album/crete-hotel-welcome-fruit.jpg",
@@ -53,7 +53,7 @@
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
-    "added": "2026-08-26"
+    "added": "2026-08-25T20:30:00"
   },
   {
     "src": "/photos/album/crete-pork-to-beef-wild.jpg",
@@ -61,7 +61,7 @@
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
-    "added": "2026-08-26"
+    "added": "2026-08-25T21:00:00"
   },
   {
     "src": "/photos/album/crete-chania-harbor-freddo.jpg",
@@ -69,6 +69,6 @@
     "place": "crete",
     "lat": 35.5160,
     "lng": 24.0175,
-    "added": "2026-08-26"
+    "added": "2026-08-26T12:00:00"
   }
 ]
