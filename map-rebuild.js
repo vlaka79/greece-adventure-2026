@@ -1,22 +1,7 @@
 (function () {
   if (typeof L === "undefined") return;
-
-  function tileConfig() {
-    var key = (window.MAPTILER_KEY || "").trim();
-    if (key) {
-      return {
-        url: "https://api.maptiler.com/maps/outdoor-v2/{z}/{x}/{y}.png?key=" + encodeURIComponent(key),
-        attr: '&copy; <a href="https://www.maptiler.com/">MapTiler</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        maxZoom: 20
-      };
-    }
-    // Fallback until a MapTiler key is set in map-config.js
-    return {
-      url: "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
-      attr: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="https://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
-      maxZoom: 17
-    };
-  }
+  var TILES = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+  var ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 
   function clearMap(el) {
     if (!el) return;
@@ -34,9 +19,8 @@
         var lat = st.lat != null ? st.lat : 35.5162;
         var lng = st.lng != null ? st.lng : 24.0178;
         clearMap(el);
-        var cfg = tileConfig();
         var map = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView([lat, lng], 12);
-        L.tileLayer(cfg.url, { attribution: cfg.attr, maxZoom: cfg.maxZoom }).addTo(map);
+        L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 }).addTo(map);
         L.circle([lat, lng], { radius: 5000, color: "#1b6f66", weight: 1, fillColor: "#1b6f66", fillOpacity: 0.12, interactive: false }).addTo(map);
         L.marker([lat, lng], {
           icon: L.divIcon({
@@ -54,9 +38,8 @@
     var el = document.getElementById("greece-map");
     if (!el) return;
     clearMap(el);
-    var cfg = tileConfig();
     var map = L.map(el, { scrollWheelZoom: false, zoomControl: true, maxBounds: [[34.5, 22.3], [38.85, 26.95]] });
-    L.tileLayer(cfg.url, { attribution: cfg.attr, maxZoom: cfg.maxZoom }).addTo(map);
+    L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 }).addTo(map);
     map.fitBounds([[35.45, 23.90], [35.58, 24.15]], { padding: [20, 20], animate: false });
 
     Promise.all([
