@@ -94,5 +94,21 @@
     "lat": 35.5160,
     "lng": 24.0175,
     "added": "2026-08-26T14:10:00"
+  },
+  {
+    "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-egyptian-lighthouse.jpg",
+    "caption": "The Egyptian lighthouse on Chania\u2019s Venetian breakwater",
+    "place": "crete",
+    "lat": 35.5195,
+    "lng": 24.0153,
+    "added": "2026-08-26T16:00:00"
+  },
+  {
+    "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-lighthouse-selfie.jpg",
+    "caption": "Us at the harbour \u2014 Egyptian lighthouse behind us",
+    "place": "crete",
+    "lat": 35.5195,
+    "lng": 24.0153,
+    "added": "2026-08-26T16:05:00"
   }
 ]
