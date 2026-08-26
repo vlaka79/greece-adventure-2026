@@ -126,5 +126,21 @@
     "lat": 35.5185,
     "lng": 24.0221,
     "added": "2026-08-26T19:38:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-harbour-sunset.jpg",
+    "caption": "Sunset on the Venetian harbour — the Egyptian lighthouse on the breakwater",
+    "place": "crete",
+    "lat": 35.5187,
+    "lng": 24.0188,
+    "added": "2026-08-26T19:44:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-sunset-selfie.jpg",
+    "caption": "Us at last light, lighthouse behind us",
+    "place": "crete",
+    "lat": 35.5187,
+    "lng": 24.0188,
+    "added": "2026-08-26T19:49:00"
   }
 ]
