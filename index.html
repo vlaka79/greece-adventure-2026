@@ -39,6 +39,19 @@
     .itinerary-days { margin-top: 0.55rem; display: grid; gap: 0.4rem; }
     .itinerary-days li { display: grid; grid-template-columns: 6.5rem 1fr; gap: 0.6rem; font-size: 0.95rem; line-height: 1.45; }
     .itinerary-days time { color: #1b6f66; font-weight: 600; }
+    .itin-toggle {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+      width: 100%; border: 1px solid rgba(0,0,0,0.1); border-radius: 999px;
+      background: #faf7f2; color: #1b6f66; font: inherit; font-weight: 600;
+      font-size: 0.9rem; padding: 0.65rem 1rem; cursor: pointer;
+    }
+    .itin-toggle:hover { background: #f0ebe3; }
+    .itin-toggle[hidden] { display: none !important; }
+    .itin-focus-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #1b6f66; margin-bottom: 0.35rem;
+    }
+    .itin-block-now article { box-shadow: 0 0 0 2px rgba(27,111,102,0.35), 0 8px 24px rgba(0,0,0,0.06); }
   </style>
 </head>
 <body class="bg-bg text-fg">
@@ -210,8 +223,14 @@
       </section>
       <section id="plan" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Rough itinerary</h2>
-        <p class="mt-2 text-muted">A sketch of the days — not a locked schedule.</p>
-        <ol id="itinerary-list" class="relative mt-8 space-y-4 before:absolute before:bottom-4 before:left-[11px] before:top-4 before:w-px before:bg-accent/70"></ol>
+        <p class="mt-2 text-muted">A sketch of the days — not a locked schedule. Showing where we were, where we are, and what’s next.</p>
+        <div class="mt-6">
+          <button type="button" id="itin-earlier" class="itin-toggle" hidden>Show earlier stops</button>
+        </div>
+        <ol id="itinerary-list" class="relative mt-4 space-y-4 before:absolute before:bottom-4 before:left-[11px] before:top-4 before:w-px before:bg-accent/70"></ol>
+        <div class="mt-4">
+          <button type="button" id="itin-later" class="itin-toggle" hidden>Show later stops</button>
+        </div>
       </section>
       <section id="notes" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">A note for the road</h2>
@@ -253,7 +272,7 @@
         <ul id="guestbook-list" class="mt-8 space-y-4"></ul>
       </section>
     </main>
-    <footer class="border-t border-border bg-bg-warm"><div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 text-sm text-muted"><p>Last updated: August 24, 2026</p><p>Made for friends & family</p></div></footer>
+    <footer class="border-t border-border bg-bg-warm"><div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 text-sm text-muted"><p>Last updated: August 26, 2026</p><p>Made for friends & family</p></div></footer>
   </div>
   <div id="lb" class="fixed inset-0 z-50 hidden items-center justify-center bg-fg/80 p-4" role="dialog" aria-modal="true">
     <button type="button" id="lb-close" class="absolute right-4 top-3 z-10 text-4xl leading-none text-surface" aria-label="Close">×</button>
