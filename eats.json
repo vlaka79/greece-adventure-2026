@@ -10,5 +10,17 @@
     "dish": "Grilled sandwich with fries",
     "note": "First meal in Greece \u2014 juicy, herbed fries, and exactly what we needed after landing. Delicious.",
     "photo": "/photos/album/crete-pork-to-beef-wild.jpg"
+  },
+  {
+    "place": "Chania harbour waterfront",
+    "dish": "Horiatiki (Greek salad)",
+    "note": "Tomatoes, onion, olives, and a slab of feta with oregano \u2014 proper village salad by the water.",
+    "photo": "/photos/album/crete-chania-greek-salad.jpg"
+  },
+  {
+    "place": "Chania harbour waterfront",
+    "dish": "Souvlaki with fries & Alfa lager",
+    "note": "Grilled skewers, thick-cut fries, spicy dip, and cold Alfa with the old harbour behind us. Lunch done right.",
+    "photo": "/photos/album/crete-chania-souvlaki.jpg"
   }
 ]
