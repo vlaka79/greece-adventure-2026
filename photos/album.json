@@ -1,5 +1,29 @@
 [
   {
+    "src": "/photos/album/crete-chania-coffee-to-beer.jpg",
+    "caption": "From coffee to beer — same table, same harbour view",
+    "place": "crete",
+    "lat": 35.5167,
+    "lng": 24.0177,
+    "added": "2026-08-27T18:10:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-beer-harbour.jpg",
+    "caption": "Alfa and chips, same table a little later",
+    "place": "crete",
+    "lat": 35.5167,
+    "lng": 24.0177,
+    "added": "2026-08-27T18:07:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-coffee-harbour.jpg",
+    "caption": "Afternoon frappés, Venetian harbour behind us",
+    "place": "crete",
+    "lat": 35.5167,
+    "lng": 24.0177,
+    "added": "2026-08-27T16:58:00"
+  },
+  {
     "src": "/photos/album/lax-cheers.jpeg",
     "caption": "Cheers before the flight — Guy Fieri’s, Burbank Airport",
     "place": "travel",
