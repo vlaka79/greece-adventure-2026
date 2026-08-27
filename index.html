@@ -6,6 +6,15 @@
   <title>Daniel & Julia’s Greece Adventure 2026</title>
   <meta name="description" content="Follow Daniel and Julia through Crete, Santorini, and Athens — August 24 to September 17, 2026." />
   <meta name="theme-color" content="#f4eee4" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://djbooneadventures.com/" />
+  <meta property="og:title" content="Daniel & Julia · Chania" />
+  <meta property="og:description" content="Walked out along the Venetian breakwater to the Egyptian lighthouse. Blue sky, blue water, and the two of us grinning in the sun." />
+  <meta property="og:image" content="https://djbooneadventures.com/photos/album/crete-chania-lighthouse-selfie.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Daniel & Julia · Chania" />
+  <meta name="twitter:description" content="Walked out along the Venetian breakwater to the Egyptian lighthouse." />
+  <meta name="twitter:image" content="https://djbooneadventures.com/photos/album/crete-chania-lighthouse-selfie.jpg" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
   <link rel="stylesheet" href="https://grove-amber-horizon-mist.grok.me/assets/styles-CM6tjZ7_.css" />
@@ -102,6 +111,38 @@
     @media (prefers-reduced-motion: reduce) {
       .photo-pin-new .photo-pin-card { animation: none; }
     }
+
+    #today-strip { background: #fffcf6; border: 1px solid #e6dfd2; border-radius: 16px; overflow: hidden; }
+    #today-strip[hidden] { display: none !important; }
+    .today-strip-label {
+      padding: 10px 14px 0; font-size: 11px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #1b6f66; font-weight: 600;
+    }
+    .today-strip-row {
+      display: grid; grid-template-columns: 92px 1fr; gap: 0;
+      width: 100%; padding: 10px 12px 12px; border: 0; background: transparent;
+      text-align: left; font: inherit; color: inherit; cursor: pointer;
+    }
+    .today-strip-row img {
+      width: 92px; height: 92px; object-fit: cover; border-radius: 12px; display: block;
+    }
+    .today-strip-copy { padding: 0 4px 0 12px; display: flex; flex-direction: column; justify-content: center; gap: 3px; min-width: 0; }
+    .today-strip-where { font-size: 12px; color: #1b6f66; font-weight: 600; margin: 0; }
+    .today-strip-word { font-family: "Playfair Display", serif; font-size: 22px; line-height: 1.1; margin: 0; }
+    .today-strip-word span { font-family: "Source Sans 3", sans-serif; font-size: 13px; color: #6b645b; font-style: italic; }
+    .today-strip-note {
+      font-size: 13.5px; line-height: 1.35; color: #3f3a34; margin: 2px 0 0;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    #lb-prev, #lb-next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      z-index: 11; min-width: 44px; min-height: 44px; padding: 0;
+      border: 0; border-radius: 999px; background: rgba(244,238,228,0.94);
+      color: #1c1917; font-size: 28px; line-height: 1; cursor: pointer;
+    }
+    #lb-prev { left: 8px; }
+    #lb-next { right: 8px; }
+    #lb-prev[hidden], #lb-next[hidden] { display: none !important; }
   </style>
 </head>
 <body class="bg-bg text-fg">
@@ -143,6 +184,18 @@
       </ul>
     </nav>
     <main class="mx-auto flex max-w-3xl flex-col gap-14 px-5 py-10 sm:gap-16 sm:py-14">
+
+      <aside id="today-strip" hidden>
+        <p class="today-strip-label">Today</p>
+        <button type="button" id="today-strip-btn" class="today-strip-row">
+          <img id="today-strip-img" alt="" />
+          <div class="today-strip-copy">
+            <p id="today-strip-where" class="today-strip-where"></p>
+            <p id="today-strip-word" class="today-strip-word"></p>
+            <p id="today-strip-note" class="today-strip-note"></p>
+          </div>
+        </button>
+      </aside>
       <section id="where" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Where we are</h2>
         <p class="mt-3 inline-flex items-center gap-2 rounded-full bg-primary-soft px-3.5 py-1.5 text-sm font-semibold text-primary">Western Crete</p>
@@ -309,8 +362,8 @@
   </div>
   <div id="lb" class="fixed inset-0 z-50 hidden items-center justify-center bg-fg/80 p-4" role="dialog" aria-modal="true">
     <button type="button" id="lb-close" class="absolute right-4 top-3 z-10 text-4xl leading-none text-surface" aria-label="Close">×</button>
-    <button type="button" id="lb-prev" class="absolute left-2 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-surface/90 px-3 py-2 text-2xl text-fg" aria-label="Previous">‹</button>
-    <button type="button" id="lb-next" class="absolute right-2 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-surface/90 px-3 py-2 text-2xl text-fg" aria-label="Next">›</button>
+    <button type="button" id="lb-prev" hidden aria-label="Previous">‹</button>
+    <button type="button" id="lb-next" hidden aria-label="Next">›</button>
     <figure class="flex max-h-[90dvh] max-w-full flex-col items-center">
       <img id="lb-img" alt="" class="max-h-[78dvh] max-w-full rounded-xl" />
       <figcaption id="lb-caption" class="mt-3 text-center text-sm text-surface"></figcaption>
@@ -321,6 +374,8 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="/trip-extras.js"></script>
   <script src="/photo-highlights.js"></script>
+  <script src="/today-strip.js"></script>
+  <script src="/lightbox.js"></script>
   <script src="/app.js"></script>
   <script src="/photo-pin-pulse.js"></script>
   <script src="/map-config.js"></script>

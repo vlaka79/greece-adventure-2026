@@ -38,10 +38,28 @@
       <div class="mx-auto px-5 py-8 text-sm text-muted">Made for friends & family</div>
     </footer>
   </div>
-  <div id="lb" class="fixed inset-0 z-50 hidden items-center justify-center bg-fg/80 p-4" role="dialog">
-    <button type="button" id="lb-close" class="absolute right-4 top-3 text-3xl text-surface" aria-label="Close">×</button>
-    <img id="lb-img" alt="" class="max-h-[86dvh] max-w-full rounded-xl" />
+  <style>
+    #lb-prev, #lb-next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      z-index: 11; min-width: 44px; min-height: 44px; padding: 0;
+      border: 0; border-radius: 999px; background: rgba(244,238,228,0.94);
+      color: #1c1917; font-size: 28px; line-height: 1; cursor: pointer;
+    }
+    #lb-prev { left: 8px; }
+    #lb-next { right: 8px; }
+    #lb-prev[hidden], #lb-next[hidden] { display: none !important; }
+  </style>
+  <div id="lb" class="fixed inset-0 z-50 hidden items-center justify-center bg-fg/80 p-4" role="dialog" aria-modal="true">
+    <button type="button" id="lb-close" class="absolute right-4 top-3 z-10 text-4xl leading-none text-surface" aria-label="Close">×</button>
+    <button type="button" id="lb-prev" hidden aria-label="Previous">‹</button>
+    <button type="button" id="lb-next" hidden aria-label="Next">›</button>
+    <figure class="flex max-h-[90dvh] max-w-full flex-col items-center">
+      <img id="lb-img" alt="" class="max-h-[78dvh] max-w-full rounded-xl" />
+      <figcaption id="lb-caption" class="mt-3 text-center text-sm text-surface"></figcaption>
+      <p id="lb-count" class="mt-1 text-xs text-surface/80"></p>
+    </figure>
   </div>
+  <script src="/lightbox.js"></script>
   <script src="/place.js"></script>
 </body>
 </html>

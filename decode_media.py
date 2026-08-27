@@ -95,9 +95,58 @@ def fetch_missing() -> None:
 def main() -> None:
     decode_b64()
     fetch_missing()
+    inject_og()
     for rel in MEDIA:
         dest = Path(rel)
         print(f"final {rel}: {'ok '+str(dest.stat().st_size) if dest.is_file() else 'MISSING'}")
+
+
+
+
+def inject_og() -> None:
+    """Stamp Open Graph tags from status.json so link previews stay current."""
+    import json
+    import re
+    status_path = Path("status.json")
+    index_path = Path("index.html")
+    if not status_path.is_file() or not index_path.is_file():
+        print("og skip: missing status.json or index.html")
+        return
+    try:
+        status = json.loads(status_path.read_text())
+    except Exception as exc:
+        print(f"og skip: {exc}")
+        return
+    pc = status.get("postcard") or {}
+    loc = (status.get("location") or "").strip()
+    place = (pc.get("place") or "").split(",")[-1].strip() or loc
+    title = f"Daniel & Julia · {place or loc or 'Greece'}"
+    desc = (pc.get("note") or pc.get("title") or "Greece Adventure 2026").strip()
+    photo = pc.get("photo") or "/photos/album/crete-chania-lighthouse-selfie.jpg"
+    if photo.startswith("/"):
+        photo = "https://djbooneadventures.com" + photo
+
+    def attr(s: str) -> str:
+        return (
+            s.replace("&", "&amp;")
+            .replace('"', "&quot;")
+            .replace("<", "&lt;")
+        )
+
+    def stamp(doc: str, kind: str, name: str, value: str) -> str:
+        attr_name = "property" if kind == "property" else "name"
+        pattern = rf'(<meta {attr_name}="{re.escape(name)}" content=")[^"]*(" />)'
+        return re.sub(pattern, lambda m: m.group(1) + attr(value) + m.group(2), doc, count=1)
+
+    html = index_path.read_text()
+    html = stamp(html, "property", "og:title", title)
+    html = stamp(html, "property", "og:description", desc)
+    html = stamp(html, "property", "og:image", photo)
+    html = stamp(html, "name", "twitter:title", title)
+    html = stamp(html, "name", "twitter:description", desc[:180])
+    html = stamp(html, "name", "twitter:image", photo)
+    index_path.write_text(html)
+    print(f"og updated: {title}")
 
 
 if __name__ == "__main__":

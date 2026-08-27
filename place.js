@@ -17,9 +17,8 @@
 
   var album = document.getElementById("place-album");
   var empty = document.getElementById("place-empty");
-  var lb = document.getElementById("lb");
-  var lbImg = document.getElementById("lb-img");
   var shown = 0;
+  var shotsForLb = [];
 
   function parseAdded(item) {
     var raw = (item && item.added) || "";
@@ -33,11 +32,13 @@
     return Date.now() - t < NEW_MS;
   }
 
-  function addPhoto(src, caption, isNewShot) {
+  function addPhoto(item, idx) {
+    var src = item.src;
+    var caption = item.caption || "";
     var li = document.createElement("li");
     var img = document.createElement("img");
     img.className = "aspect-photo w-full object-cover";
-    img.alt = caption || "";
+    img.alt = caption;
     img.loading = "lazy";
     img.src = src;
     img.onerror = function () {
@@ -54,7 +55,7 @@
     btn.className = "photo group relative block w-full overflow-hidden rounded-xl bg-bg-warm text-left card-shadow";
     btn.setAttribute("data-full", src);
     btn.appendChild(img);
-    if (isNewShot) {
+    if (isNew(item)) {
       var badge = document.createElement("span");
       badge.className = "photo-new-badge";
       badge.textContent = "New";
@@ -67,9 +68,7 @@
       btn.appendChild(cap);
     }
     btn.addEventListener("click", function () {
-      lbImg.src = src;
-      lb.classList.remove("hidden");
-      lb.classList.add("flex");
+      if (typeof window.__openLb === "function") window.__openLb(shotsForLb, idx);
     });
     li.appendChild(btn);
     album.appendChild(li);
@@ -88,8 +87,9 @@
         if (empty) empty.classList.remove("hidden");
         return;
       }
-      shots.forEach(function (item) {
-        if (item.src) addPhoto(item.src, item.caption || "", isNew(item));
+      shotsForLb = shots.map(function (s) { return { src: s.src, caption: s.caption || "" }; });
+      shots.forEach(function (item, idx) {
+        if (item.src) addPhoto(item, idx);
       });
       setTimeout(function () {
         if (!shown && empty) empty.classList.remove("hidden");
@@ -98,14 +98,4 @@
     .catch(function () {
       if (empty) empty.classList.remove("hidden");
     });
-
-  function closeLb() {
-    lb.classList.add("hidden");
-    lb.classList.remove("flex");
-    lbImg.src = "";
-  }
-  var closeBtn = document.getElementById("lb-close");
-  if (closeBtn) closeBtn.addEventListener("click", closeLb);
-  if (lb) lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
 })();
