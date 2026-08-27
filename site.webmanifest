@@ -1,0 +1,20 @@
+{
+  "name": "Daniel & Julia \u2014 Greece Adventure 2026",
+  "short_name": "Greece",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4eee4",
+  "theme_color": "#1b6f66",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

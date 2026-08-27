@@ -379,4 +379,17 @@
     })
     .catch(function () {});
 
+
+  fetch("/status.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (st) {
+      var a = document.getElementById("open-maps");
+      if (!a || !st) return;
+      var lat = Number(st.lat), lng = Number(st.lng);
+      if (!isFinite(lat) || !isFinite(lng)) return;
+      a.href = "https://www.google.com/maps/search/?api=1&query=" + lat + "," + lng;
+      a.hidden = false;
+    })
+    .catch(function () {});
+
 })();

@@ -16,6 +16,11 @@
   <meta name="twitter:description" content="Walked out along the Venetian breakwater to the Egyptian lighthouse." />
   <meta name="twitter:image" content="https://djbooneadventures.com/photos/album/crete-chania-lighthouse-selfie.jpg" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Greece" />
+  <link rel="manifest" href="/site.webmanifest" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
   <link rel="stylesheet" href="https://grove-amber-horizon-mist.grok.me/assets/styles-CM6tjZ7_.css" />
   <style>
@@ -144,6 +149,22 @@
     #lb-next { right: 8px; }
     #lb-prev[hidden], #lb-next[hidden] { display: none !important; }
 
+    #live-map-shell {
+      position: relative; height: 55vh; min-height: 320px; max-height: 420px;
+      overflow: hidden; border-radius: 0.75rem; background: #f3f0ea;
+      box-shadow: 0 0 0 1px rgba(42,36,28,.06), 0 10px 24px -14px rgba(42,36,28,.25);
+    }
+    @media (min-width: 640px) {
+      #live-map-shell { height: 24rem; min-height: 0; max-height: none; }
+    }
+    #open-maps {
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-top: 0.75rem; min-height: 44px; padding: 0 1rem;
+      border-radius: 999px; background: #1b6f66; color: #f4eee4;
+      text-decoration: none; font-weight: 600; font-size: 0.9rem;
+    }
+    #open-maps[hidden] { display: none !important; }
+
     .tap-lg {
       min-height: 44px; display: inline-flex; align-items: center;
       padding: 8px 4px; box-sizing: border-box;
@@ -208,7 +229,10 @@
         <h2 class="font-serif text-3xl font-semibold text-fg">Where we are</h2>
         <p class="mt-3 inline-flex items-center gap-2 rounded-full bg-primary-soft px-3.5 py-1.5 text-sm font-semibold text-primary">Western Crete</p>
         <p class="mt-2 text-sm text-muted">A live view — we’ll move this pin as we go.</p>
-        <div class="mt-5"><div class="relative h-72 overflow-hidden rounded-xl bg-bg-warm card-shadow sm:h-96"><div id="live-map" class="absolute inset-0"></div></div></div>
+        <div class="mt-5">
+          <div id="live-map-shell"><div id="live-map" class="absolute inset-0"></div></div>
+          <a id="open-maps" href="https://www.google.com/maps/search/?api=1&amp;query=35.5195,24.0153" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
         <p id="weather-line" class="mt-3 text-sm font-medium text-fg"></p>
         <p id="tomorrow-line" class="mt-1 text-sm text-muted"></p>
         <div class="mt-5">
