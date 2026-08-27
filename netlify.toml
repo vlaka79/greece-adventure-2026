@@ -1,6 +1,9 @@
+# Git pushes skip builds (exit 0) so we do not burn Netlify credits on every photo/commit.
+# The "manual-publish" build hook still builds: Netlify does not run ignore for hooks.
 [build]
   command = "python3 decode_media.py"
   publish = "."
+  ignore = "exit 0"
 
 [[redirects]]
   from = "/api/guestbook"
