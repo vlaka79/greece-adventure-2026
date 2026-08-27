@@ -1,5 +1,61 @@
 [
   {
+    "src": "/photos/album/crete-chania-loukoumades.jpg",
+    "caption": "Best loukoumades in town",
+    "place": "crete",
+    "lat": 35.5157,
+    "lng": 24.0193,
+    "added": "2026-08-27T22:08:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-walk-old-town.jpg",
+    "caption": "Walking around Chania",
+    "place": "crete",
+    "lat": 35.5155,
+    "lng": 24.0187,
+    "added": "2026-08-27T21:54:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-walk-musicians.jpg",
+    "caption": "Walking around Chania — street music",
+    "place": "crete",
+    "lat": 35.5153,
+    "lng": 24.0187,
+    "added": "2026-08-27T21:53:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-pomegranate-juice.jpg",
+    "caption": "Fresh pomegranate juice. Best in Greece.",
+    "place": "crete",
+    "lat": 35.5152,
+    "lng": 24.0192,
+    "added": "2026-08-27T21:51:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-walk-alley-selfie.jpg",
+    "caption": "Walking around Chania",
+    "place": "crete",
+    "lat": 35.5158,
+    "lng": 24.0163,
+    "added": "2026-08-27T21:38:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-kalamakia.jpg",
+    "caption": "Best souvlaki in Chania — Ta Kalamakia",
+    "place": "crete",
+    "lat": 35.5122,
+    "lng": 24.0168,
+    "added": "2026-08-27T20:49:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-hollywood-set.jpg",
+    "caption": "Sometimes I have to remember this isn't a Hollywood set.",
+    "place": "crete",
+    "lat": 35.5166,
+    "lng": 24.0177,
+    "added": "2026-08-27T19:33:00"
+  },
+  {
     "src": "/photos/album/crete-chania-coffee-to-beer.jpg",
     "caption": "From coffee to beer — same table, same harbour view",
     "place": "crete",
@@ -24,164 +80,12 @@
     "added": "2026-08-27T16:58:00"
   },
   {
-    "src": "/photos/album/lax-cheers.jpeg",
-    "caption": "Cheers before the flight — Guy Fieri’s, Burbank Airport",
-    "place": "travel",
-    "lat": 34.2006,
-    "lng": -118.3585,
-    "added": "2026-08-24T18:00:00"
-  },
-  {
-    "src": "/photos/album/united-tarmac-burbank.jpg",
-    "caption": "First leg — United on the tarmac at Burbank",
-    "place": "travel",
-    "lat": 34.1955,
-    "lng": -118.3548,
-    "added": "2026-08-24T19:00:00"
-  },
-  {
-    "src": "/photos/album/frankfurt-weissbier-pretzel.jpg",
-    "caption": "Franziskaner Weissbier and a soft pretzel — Frankfurt lounge layover",
-    "place": "travel",
-    "lat": 50.0481,
-    "lng": 8.5679,
-    "added": "2026-08-25T10:00:00"
-  },
-  {
-    "src": "/photos/album/plane-to-crete-priest.jpg",
-    "caption": "On the way to Crete — unexpected company in the aisle",
-    "place": "travel",
-    "lat": 37.9411,
-    "lng": 23.951,
-    "added": "2026-08-25T14:00:00"
-  },
-  {
-    "src": "/photos/album/crete-hotel-jacuzzi.jpg",
-    "caption": "First night in Crete — the jacuzzi room",
+    "src": "/photos/album/crete-chania-lighthouse-night.jpg",
+    "caption": "The Egyptian lighthouse after dark",
     "place": "crete",
-    "lat": 35.5175,
-    "lng": 24.0217,
-    "added": "2026-08-25T20:00:00"
-  },
-  {
-    "src": "/photos/album/crete-hotel-bed.jpg",
-    "caption": "Welcome to the room — towels and an orchid",
-    "place": "crete",
-    "lat": 35.5175,
-    "lng": 24.0217,
-    "added": "2026-08-25T20:15:00"
-  },
-  {
-    "src": "/photos/album/crete-hotel-welcome-fruit.jpg",
-    "caption": "Welcome basket: fruit and aged tsikoudia",
-    "place": "crete",
-    "lat": 35.5175,
-    "lng": 24.0217,
-    "added": "2026-08-25T20:30:00"
-  },
-  {
-    "src": "/photos/album/crete-hotel-raki-fruit.jpg",
-    "caption": "Hotel raki and fruit",
-    "place": "crete",
-    "lat": 35.5175,
-    "lng": 24.0217,
-    "added": "2026-08-25T20:35:00"
-  },
-  {
-    "src": "/photos/album/crete-pork-to-beef-wild.jpg",
-    "caption": "First meal in Greece — Pork to Beef Wild, near the hotel",
-    "place": "crete",
-    "lat": 35.5175,
-    "lng": 24.0217,
-    "added": "2026-08-25T21:00:00"
-  },
-  {
-    "src": "/photos/album/crete-chania-harbor-freddo.jpg",
-    "caption": "Frappé at Neoria Fish Tavern — Venetian harbour, Chania",
-    "place": "crete",
-    "lat": 35.516,
-    "lng": 24.0175,
-    "added": "2026-08-26T12:00:00"
-  },
-  {
-    "src": "/photos/album/crete-chania-greek-salad.jpg",
-    "caption": "Horiatiki by the water — lunch on Chania harbour",
-    "place": "crete",
-    "lat": 35.516,
-    "lng": 24.0175,
-    "added": "2026-08-26T14:00:00"
-  },
-  {
-    "src": "/photos/album/crete-chania-souvlaki.jpg",
-    "caption": "Souvlaki, fries, and Alfa — Chania harbour lunch",
-    "place": "crete",
-    "lat": 35.516,
-    "lng": 24.0175,
-    "added": "2026-08-26T14:05:00"
-  },
-  {
-    "src": "/photos/album/crete-chania-alfa-beers.jpg",
-    "caption": "Two Alfa beers with a view of the old harbour",
-    "place": "crete",
-    "lat": 35.516,
-    "lng": 24.0175,
-    "added": "2026-08-26T14:10:00"
-  },
-  {
-    "src": "/photos/album/crete-chania-egyptian-lighthouse.jpg",
-    "caption": "The Egyptian lighthouse on Chania’s Venetian breakwater",
-    "place": "crete",
-    "lat": 35.5195,
-    "lng": 24.0153,
-    "added": "2026-08-26T16:00:00"
-  },
-  {
-    "src": "/photos/album/crete-chania-lighthouse-selfie.jpg",
-    "caption": "Us at the harbour — Egyptian lighthouse behind us",
-    "place": "crete",
-    "lat": 35.5195,
-    "lng": 24.0153,
-    "added": "2026-08-26T16:05:00"
-  },
-  {
-    "src": "/photos/album/crete-chania-old-town-ruins.jpg",
-    "caption": "Evening in the old town — ruined houses and a doorway full of graffiti",
-    "place": "crete",
-    "lat": 35.5172,
-    "lng": 24.0222,
-    "added": "2026-08-26T19:25:00"
-  },
-  {
-    "src": "/photos/album/crete-chania-blue-boat.jpg",
-    "caption": "A working boat with a plant in it, tied up on the water",
-    "place": "crete",
-    "lat": 35.5185,
-    "lng": 24.0221,
-    "added": "2026-08-26T19:38:00"
-  },
-  {
-    "src": "/photos/album/crete-chania-harbour-sunset.jpg",
-    "caption": "Sunset on the Venetian harbour — the Egyptian lighthouse on the breakwater",
-    "place": "crete",
-    "lat": 35.5187,
-    "lng": 24.0188,
-    "added": "2026-08-26T19:44:00"
-  },
-  {
-    "src": "/photos/album/crete-chania-sunset-selfie.jpg",
-    "caption": "Us at last light, lighthouse behind us",
-    "place": "crete",
-    "lat": 35.5187,
-    "lng": 24.0188,
-    "added": "2026-08-26T19:49:00"
-  },
-  {
-    "src": "/photos/album/crete-chania-labodega-placemat.jpg",
-    "caption": "La bodega: doctors say a glass of wine a day is good for the heart. Just think what a bottle could do.",
-    "place": "crete",
-    "lat": 35.5178,
-    "lng": 24.0161,
-    "added": "2026-08-26T20:54:00"
+    "lat": 35.5183,
+    "lng": 24.0162,
+    "added": "2026-08-26T22:26:00"
   },
   {
     "src": "/photos/album/crete-chania-labodega-board.jpg",
@@ -192,11 +96,163 @@
     "added": "2026-08-26T21:08:00"
   },
   {
-    "src": "/photos/album/crete-chania-lighthouse-night.jpg",
-    "caption": "The Egyptian lighthouse after dark",
+    "src": "/photos/album/crete-chania-labodega-placemat.jpg",
+    "caption": "La bodega: doctors say a glass of wine a day is good for the heart. Just think what a bottle could do.",
     "place": "crete",
-    "lat": 35.5183,
-    "lng": 24.0162,
-    "added": "2026-08-26T22:26:00"
+    "lat": 35.5178,
+    "lng": 24.0161,
+    "added": "2026-08-26T20:54:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-sunset-selfie.jpg",
+    "caption": "Us at last light, lighthouse behind us",
+    "place": "crete",
+    "lat": 35.5187,
+    "lng": 24.0188,
+    "added": "2026-08-26T19:49:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-harbour-sunset.jpg",
+    "caption": "Sunset on the Venetian harbour — the Egyptian lighthouse on the breakwater",
+    "place": "crete",
+    "lat": 35.5187,
+    "lng": 24.0188,
+    "added": "2026-08-26T19:44:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-blue-boat.jpg",
+    "caption": "A working boat with a plant in it, tied up on the water",
+    "place": "crete",
+    "lat": 35.5185,
+    "lng": 24.0221,
+    "added": "2026-08-26T19:38:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-old-town-ruins.jpg",
+    "caption": "Evening in the old town — ruined houses and a doorway full of graffiti",
+    "place": "crete",
+    "lat": 35.5172,
+    "lng": 24.0222,
+    "added": "2026-08-26T19:25:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-lighthouse-selfie.jpg",
+    "caption": "Us at the harbour — Egyptian lighthouse behind us",
+    "place": "crete",
+    "lat": 35.5195,
+    "lng": 24.0153,
+    "added": "2026-08-26T16:05:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-egyptian-lighthouse.jpg",
+    "caption": "The Egyptian lighthouse on Chania’s Venetian breakwater",
+    "place": "crete",
+    "lat": 35.5195,
+    "lng": 24.0153,
+    "added": "2026-08-26T16:00:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-alfa-beers.jpg",
+    "caption": "Two Alfa beers with a view of the old harbour",
+    "place": "crete",
+    "lat": 35.516,
+    "lng": 24.0175,
+    "added": "2026-08-26T14:10:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-souvlaki.jpg",
+    "caption": "Souvlaki, fries, and Alfa — Chania harbour lunch",
+    "place": "crete",
+    "lat": 35.516,
+    "lng": 24.0175,
+    "added": "2026-08-26T14:05:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-greek-salad.jpg",
+    "caption": "Horiatiki by the water — lunch on Chania harbour",
+    "place": "crete",
+    "lat": 35.516,
+    "lng": 24.0175,
+    "added": "2026-08-26T14:00:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-harbor-freddo.jpg",
+    "caption": "Frappé at Neoria Fish Tavern — Venetian harbour, Chania",
+    "place": "crete",
+    "lat": 35.516,
+    "lng": 24.0175,
+    "added": "2026-08-26T12:00:00"
+  },
+  {
+    "src": "/photos/album/crete-pork-to-beef-wild.jpg",
+    "caption": "First meal in Greece — Pork to Beef Wild, near the hotel",
+    "place": "crete",
+    "lat": 35.5175,
+    "lng": 24.0217,
+    "added": "2026-08-25T21:00:00"
+  },
+  {
+    "src": "/photos/album/crete-hotel-raki-fruit.jpg",
+    "caption": "Hotel raki and fruit",
+    "place": "crete",
+    "lat": 35.5175,
+    "lng": 24.0217,
+    "added": "2026-08-25T20:35:00"
+  },
+  {
+    "src": "/photos/album/crete-hotel-welcome-fruit.jpg",
+    "caption": "Welcome basket: fruit and aged tsikoudia",
+    "place": "crete",
+    "lat": 35.5175,
+    "lng": 24.0217,
+    "added": "2026-08-25T20:30:00"
+  },
+  {
+    "src": "/photos/album/crete-hotel-bed.jpg",
+    "caption": "Welcome to the room — towels and an orchid",
+    "place": "crete",
+    "lat": 35.5175,
+    "lng": 24.0217,
+    "added": "2026-08-25T20:15:00"
+  },
+  {
+    "src": "/photos/album/crete-hotel-jacuzzi.jpg",
+    "caption": "First night in Crete — the jacuzzi room",
+    "place": "crete",
+    "lat": 35.5175,
+    "lng": 24.0217,
+    "added": "2026-08-25T20:00:00"
+  },
+  {
+    "src": "/photos/album/plane-to-crete-priest.jpg",
+    "caption": "On the way to Crete — unexpected company in the aisle",
+    "place": "travel",
+    "lat": 37.9411,
+    "lng": 23.951,
+    "added": "2026-08-25T14:00:00"
+  },
+  {
+    "src": "/photos/album/frankfurt-weissbier-pretzel.jpg",
+    "caption": "Franziskaner Weissbier and a soft pretzel — Frankfurt lounge layover",
+    "place": "travel",
+    "lat": 50.0481,
+    "lng": 8.5679,
+    "added": "2026-08-25T10:00:00"
+  },
+  {
+    "src": "/photos/album/united-tarmac-burbank.jpg",
+    "caption": "First leg — United on the tarmac at Burbank",
+    "place": "travel",
+    "lat": 34.1955,
+    "lng": -118.3548,
+    "added": "2026-08-24T19:00:00"
+  },
+  {
+    "src": "/photos/album/lax-cheers.jpeg",
+    "caption": "Cheers before the flight — Guy Fieri’s, Burbank Airport",
+    "place": "travel",
+    "lat": 34.2006,
+    "lng": -118.3585,
+    "added": "2026-08-24T18:00:00"
   }
 ]
