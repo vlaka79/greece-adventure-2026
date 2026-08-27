@@ -2,7 +2,7 @@
 
 A public trip site for friends and family — Crete, Santorini, and Athens.
 
-**Live:** https://djboone-travels.netlify.app/
+**Live:** https://djbooneadventures.com
 
 **Repo Netlify should use:** https://github.com/vlaka79/greece-adventure-2026
 

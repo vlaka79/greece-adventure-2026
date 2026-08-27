@@ -56,6 +56,14 @@
     "added": "2026-08-25T20:30:00"
   },
   {
+    "src": "/photos/album/crete-hotel-raki-fruit.jpg",
+    "caption": "Hotel raki and fruit",
+    "place": "crete",
+    "lat": 35.5175,
+    "lng": 24.0217,
+    "added": "2026-08-25T20:35:00"
+  },
+  {
     "src": "/photos/album/crete-pork-to-beef-wild.jpg",
     "caption": "First meal in Greece — Pork to Beef Wild, near the hotel",
     "place": "crete",
@@ -72,7 +80,7 @@
     "added": "2026-08-26T12:00:00"
   },
   {
-    "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-greek-salad.jpg",
+    "src": "/photos/album/crete-chania-greek-salad.jpg",
     "caption": "Horiatiki by the water — lunch on Chania harbour",
     "place": "crete",
     "lat": 35.516,
@@ -80,7 +88,7 @@
     "added": "2026-08-26T14:00:00"
   },
   {
-    "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-souvlaki.jpg",
+    "src": "/photos/album/crete-chania-souvlaki.jpg",
     "caption": "Souvlaki, fries, and Alfa — Chania harbour lunch",
     "place": "crete",
     "lat": 35.516,
@@ -88,7 +96,7 @@
     "added": "2026-08-26T14:05:00"
   },
   {
-    "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-alfa-beers.jpg",
+    "src": "/photos/album/crete-chania-alfa-beers.jpg",
     "caption": "Two Alfa beers with a view of the old harbour",
     "place": "crete",
     "lat": 35.516,
@@ -96,7 +104,7 @@
     "added": "2026-08-26T14:10:00"
   },
   {
-    "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-egyptian-lighthouse.jpg",
+    "src": "/photos/album/crete-chania-egyptian-lighthouse.jpg",
     "caption": "The Egyptian lighthouse on Chania’s Venetian breakwater",
     "place": "crete",
     "lat": 35.5195,
@@ -104,7 +112,7 @@
     "added": "2026-08-26T16:00:00"
   },
   {
-    "src": "https://cdn.jsdelivr.net/gh/vlaka79/greece-adventure-2026@main/photos/album/crete-chania-lighthouse-selfie.jpg",
+    "src": "/photos/album/crete-chania-lighthouse-selfie.jpg",
     "caption": "Us at the harbour — Egyptian lighthouse behind us",
     "place": "crete",
     "lat": 35.5195,

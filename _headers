@@ -1,11 +1,32 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
 /intro.mp4
   Content-Type: video/mp4
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=604800
 
 /intro.jpg
   Content-Type: image/jpeg
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=604800
 
-/photos/*
+/photos/album.json
+  Content-Type: application/json
+  Cache-Control: public, max-age=300
+
+/photos/album/*
   Content-Type: image/jpeg
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=604800
+
+/photos/crete.jpg
+  Content-Type: image/jpeg
+  Cache-Control: public, max-age=604800
+
+/photos/santorini.jpg
+  Content-Type: image/jpeg
+  Cache-Control: public, max-age=604800
+
+/photos/athens.jpg
+  Content-Type: image/jpeg
+  Cache-Control: public, max-age=604800
