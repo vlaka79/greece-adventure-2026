@@ -40,11 +40,46 @@
       width: 100%; border-radius: 0.75rem; border: 1px solid rgba(0,0,0,0.08);
       background: #faf7f2; padding: 0.75rem 0.9rem; font: inherit;
     }
-    #updates-form button[type=submit], #share-btn {
+    #updates-form button[type=submit], #share-btn, #a2hs-btn {
       border: 0; border-radius: 999px; background: #1b6f66; color: #f4eee4;
       font: inherit; font-weight: 600; padding: 0.7rem 1.25rem; cursor: pointer;
     }
     #share-btn { background: #2c2a26; }
+    #a2hs-btn { background: #1b6f66; color: #f4eee4; }
+    #a2hs-btn[hidden] { display: none !important; }
+    #a2hs-sheet[hidden] { display: none !important; }
+    #a2hs-sheet {
+      position: fixed; inset: 0; z-index: 60; display: flex;
+      align-items: flex-end; justify-content: center;
+      padding: 0.85rem; background: rgba(42, 36, 28, 0.45);
+    }
+    #a2hs-sheet .a2hs-card {
+      width: min(26rem, 100%); background: #fffcf6; border-radius: 1.15rem;
+      padding: 1.15rem 1rem 1rem; box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+      font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+      color: #2a241c;
+    }
+    #a2hs-sheet .a2hs-top { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.9rem; }
+    #a2hs-sheet .a2hs-top img {
+      width: 3.5rem; height: 3.5rem; border-radius: 0.8rem; object-fit: cover; flex-shrink: 0;
+    }
+    #a2hs-sheet h2 {
+      margin: 0; font-family: "Playfair Display", ui-serif, Georgia, serif;
+      font-size: 1.25rem; font-weight: 600; line-height: 1.2;
+    }
+    #a2hs-sheet .a2hs-sub { margin: 0.15rem 0 0; color: #6f665b; font-size: 0.875rem; }
+    #a2hs-sheet ol { margin: 0; padding: 0 0 0 1.15em; }
+    #a2hs-sheet li { margin: 0.55em 0; font-size: 0.95rem; line-height: 1.4; }
+    #a2hs-sheet li strong { color: #1b6f66; }
+    #a2hs-sheet .a2hs-note {
+      margin: 0.75rem 0 0; font-size: 0.875rem; color: #6f665b; line-height: 1.4;
+    }
+    #a2hs-sheet .a2hs-note[hidden] { display: none !important; }
+    #a2hs-gotit {
+      display: block; width: 100%; margin-top: 0.9rem; min-height: 2.75rem;
+      border: 0; border-radius: 999px; background: #1b6f66; color: #f4eee4;
+      font: inherit; font-weight: 600; font-size: 1rem; cursor: pointer;
+    }
     .guestbook-reply { margin-top: 1rem; border-left: 2px solid rgba(27,111,102,0.4); padding-left: 0.85rem; }
     .photo-pin-count { position: absolute; right: 4px; bottom: 4px; min-width: 1.1rem; border-radius: 999px; background: #1b6f66; color: #f4eee4; font-size: 10px; font-weight: 700; line-height: 1.2rem; text-align: center; padding: 0 4px; }
     .photo-pin-card { position: relative; }
@@ -198,6 +233,7 @@
           </div>
           <p id="day-count" class="text-sm font-medium text-muted"></p>
           <button type="button" id="share-btn">Share this page</button>
+          <button type="button" id="a2hs-btn">Add to Home Screen</button>
         </div>
         <p id="share-status" class="mt-2 hidden text-sm text-primary"></p>
       </div>
@@ -392,6 +428,25 @@
     </main>
     <footer class="border-t border-border bg-bg-warm"><div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 text-sm text-muted"><p>Last updated: August 26, 2026</p><p>Made for friends & family</p></div></footer>
   </div>
+
+  <div id="a2hs-sheet" hidden role="dialog" aria-modal="true" aria-labelledby="a2hs-title">
+    <div class="a2hs-card">
+      <div class="a2hs-top">
+        <img src="/apple-touch-icon.png" width="56" height="56" alt="" />
+        <div>
+          <h2 id="a2hs-title">Add to Home Screen</h2>
+          <p class="a2hs-sub">Takes about five seconds.</p>
+        </div>
+      </div>
+      <ol id="a2hs-steps">
+        <li>Tap the <strong>Share</strong> button at the bottom of Safari (the square with the arrow).</li>
+        <li>Scroll and tap <strong>Add to Home Screen</strong>.</li>
+        <li>Tap <strong>Add</strong>. The lighthouse selfie becomes the icon.</li>
+      </ol>
+      <p id="a2hs-note" class="a2hs-note" hidden>This works best on your phone — open this page in Safari (iPhone) or Chrome (Android), then tap Add to Home Screen.</p>
+      <button type="button" id="a2hs-gotit">Got it</button>
+    </div>
+  </div>
   <div id="lb" class="fixed inset-0 z-50 hidden items-center justify-center bg-fg/80 p-4" role="dialog" aria-modal="true">
     <button type="button" id="lb-close" class="absolute right-4 top-3 z-10 text-4xl leading-none text-surface" aria-label="Close">×</button>
     <button type="button" id="lb-prev" hidden aria-label="Previous">‹</button>
@@ -409,6 +464,7 @@
   <script src="/today-strip.js"></script>
   <script src="/lightbox.js"></script>
   <script src="/app.js"></script>
+  <script src="/a2hs.js"></script>
   <script src="/photo-pin-pulse.js"></script>
   <script src="/map-config.js"></script>
   <script src="/map-rebuild.js"></script>
