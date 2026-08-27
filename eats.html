@@ -43,7 +43,7 @@
           return;
         }
         if (empty) empty.classList.add("hidden");
-        items.slice().reverse().forEach(function (e) {
+        items.forEach(function (e) {
           var li = document.createElement("li");
           li.className = "overflow-hidden rounded-xl bg-surface card-shadow";
           var html = "";
