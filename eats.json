@@ -1,33 +1,33 @@
 [
   {
-    "place": "Chania harbour waterfront",
-    "dish": "Alfa lager",
-    "note": "Two cold Alfas and a bowl of chips. Same table as the afternoon coffee, same view.",
-    "photo": "/photos/album/crete-chania-beer-harbour.jpg"
+    "place": "Mamaloukos, Chania",
+    "dish": "Loukoumades",
+    "note": "Best loukoumades in town.",
+    "photo": "/photos/album/crete-chania-loukoumades.jpg"
   },
   {
-    "place": "Guy Fieri’s Kitchen + Bar Express, Burbank Airport",
-    "dish": "Space Dust IPA",
-    "note": "Cold cans, gate-side, official DDIC kickoff before the flight to Crete.",
-    "photo": "/photos/album/lax-cheers.jpeg"
+    "place": "Orange Tree, Chania",
+    "dish": "Fresh pomegranate juice",
+    "note": "Fresh pomegranate juice. Best in Greece.",
+    "photo": "/photos/album/crete-chania-pomegranate-juice.jpg"
   },
   {
-    "place": "Pork to Beef Wild, Chania area",
-    "dish": "Grilled sandwich with fries",
-    "note": "First meal in Greece — juicy, herbed fries, and exactly what we needed after landing. Delicious.",
-    "photo": "/photos/album/crete-pork-to-beef-wild.jpg"
-  },
-  {
-    "place": "Neoria Fish Tavern, Chania harbour",
-    "dish": "Frappé (φραπέ)",
-    "note": "Two frothy iced coffees and cold mountain water with the Venetian harbour behind us. First proper morning in Crete.",
-    "photo": "/photos/album/crete-chania-harbor-freddo.jpg"
+    "place": "Ta Kalamakia, Chania",
+    "dish": "Souvlaki",
+    "note": "Best souvlaki in Chania. Five stars.",
+    "photo": "/photos/album/crete-chania-kalamakia.jpg"
   },
   {
     "place": "Chania harbour waterfront",
-    "dish": "Horiatiki (Greek salad)",
-    "note": "Tomatoes, onion, olives, and a slab of feta with oregano — proper village salad by the water.",
-    "photo": "/photos/album/crete-chania-greek-salad.jpg"
+    "dish": "Coffee to beer",
+    "note": "From coffee to beer, same table, same view. We haven't moved. Gotta love Crete.",
+    "photo": "/photos/album/crete-chania-coffee-to-beer.jpg"
+  },
+  {
+    "place": "La bodega, Chania harbour",
+    "dish": "Charcuterie board and wine",
+    "note": "Cured meats, cheese, figs, walnuts, olives — and a placemat that asked what a whole bottle could do for the heart.",
+    "photo": "/photos/album/crete-chania-labodega-board.jpg"
   },
   {
     "place": "Chania harbour waterfront",
@@ -36,9 +36,27 @@
     "photo": "/photos/album/crete-chania-souvlaki.jpg"
   },
   {
-    "place": "La bodega, Chania harbour",
-    "dish": "Charcuterie board and wine",
-    "note": "Cured meats, cheese, figs, walnuts, olives — and a placemat that asked what a whole bottle could do for the heart.",
-    "photo": "/photos/album/crete-chania-labodega-board.jpg"
+    "place": "Chania harbour waterfront",
+    "dish": "Horiatiki (Greek salad)",
+    "note": "Tomatoes, onion, olives, and a slab of feta with oregano — proper village salad by the water.",
+    "photo": "/photos/album/crete-chania-greek-salad.jpg"
+  },
+  {
+    "place": "Neoria Fish Tavern, Chania harbour",
+    "dish": "Frappé (φραπέ)",
+    "note": "Two frothy iced coffees and cold mountain water with the Venetian harbour behind us. First proper morning in Crete.",
+    "photo": "/photos/album/crete-chania-harbor-freddo.jpg"
+  },
+  {
+    "place": "Pork to Beef Wild, Chania area",
+    "dish": "Grilled sandwich with fries",
+    "note": "First meal in Greece — juicy, herbed fries, and exactly what we needed after landing. Delicious.",
+    "photo": "/photos/album/crete-pork-to-beef-wild.jpg"
+  },
+  {
+    "place": "Guy Fieri’s Kitchen + Bar Express, Burbank Airport",
+    "dish": "Space Dust IPA",
+    "note": "Cold cans, gate-side, official DDIC kickoff before the flight to Crete.",
+    "photo": "/photos/album/lax-cheers.jpeg"
   }
 ]
