@@ -33,7 +33,7 @@
           var more = document.createElement("p");
           more.id = "log-see-all";
           more.className = "mt-4";
-          more.innerHTML = '<a href="/log.html" class="text-sm font-semibold text-primary">See all adventures \u2192</a>';
+          more.innerHTML = '<a href="/log.html" class="tap-lg text-sm font-semibold text-primary">See all adventures \u2192</a>';
           list.parentNode.insertBefore(more, list.nextSibling);
         }
       })
@@ -71,7 +71,7 @@
           var more = document.createElement("p");
           more.id = "eats-see-all";
           more.className = "mt-4";
-          more.innerHTML = '<a href="/eats.html" class="text-sm font-semibold text-primary">See all eat & drink \u2192</a>';
+          more.innerHTML = '<a href="/eats.html" class="tap-lg text-sm font-semibold text-primary">See all eat & drink \u2192</a>';
           list.parentNode.insertBefore(more, list.nextSibling);
         }
         var i = 0;
@@ -185,7 +185,7 @@
       var pastBtn = document.createElement("button");
       pastBtn.type = "button";
       pastBtn.id = "word-past-btn";
-      pastBtn.className = "mt-3 text-sm font-semibold text-primary";
+      pastBtn.className = "tap-lg mt-3 text-sm font-semibold text-primary";
       pastBtn.textContent = "Past words";
       var pastList = document.createElement("ul");
       pastList.id = "word-past";

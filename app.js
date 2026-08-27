@@ -17,35 +17,56 @@
     var p = video.play();
     if (p && p.catch) p.catch(function () {});
   }
+  var isPhone = window.matchMedia("(max-width: 700px), (pointer: coarse)").matches;
   if (video) {
     video.muted = true;
     video.defaultMuted = true;
     video.playsInline = true;
     video.setAttribute("playsinline", "");
-    video.setAttribute("autoplay", "");
     video.loop = true;
-    video.removeAttribute("poster");
-    setMuted(true);
-    tryPlay();
-    video.addEventListener("canplay", tryPlay);
-    video.addEventListener("loadeddata", tryPlay);
-    document.addEventListener("visibilitychange", function () {
-      if (!document.hidden && video.muted) tryPlay();
-    });
+    if (reduce || isPhone) {
+      video.removeAttribute("autoplay");
+      video.preload = "metadata";
+      video.setAttribute("poster", "/intro.jpg");
+      video.pause();
+      if (soundBtn) soundBtn.textContent = "Tap to play";
+    } else {
+      video.setAttribute("autoplay", "");
+      video.preload = "auto";
+      video.removeAttribute("poster");
+      setMuted(true);
+      tryPlay();
+      video.addEventListener("canplay", tryPlay);
+      video.addEventListener("loadeddata", tryPlay);
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden && video.muted) tryPlay();
+      });
+    }
+  }
+  function startIntro() {
+    if (!video) return;
+    var p = video.play();
+    if (p && p.catch) p.catch(function () {});
   }
   function toggleSound(e) {
     if (e) { e.preventDefault(); e.stopPropagation(); }
     if (!video) return;
+    if (video.paused) {
+      video.muted = true;
+      setMuted(true);
+      startIntro();
+      return;
+    }
     if (video.muted) {
       video.muted = false;
       setMuted(false);
-      var p = video.play();
-      if (p && p.catch) p.catch(function () {});
+      startIntro();
     } else {
       setMuted(true);
     }
   }
   if (soundBtn) soundBtn.addEventListener("click", toggleSound);
+  if (video && isPhone) video.addEventListener("click", toggleSound);
 
   function startOfDay(d) {
     return new Date(d.getFullYear(), d.getMonth(), d.getDate());
