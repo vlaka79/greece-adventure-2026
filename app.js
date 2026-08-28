@@ -170,14 +170,6 @@
           }
         }
       }
-      var photoDay = document.getElementById("photo-day");
-      if (photoDay && card.photo) {
-        photoDay.classList.remove("hidden");
-        var pimg = document.getElementById("photo-day-img");
-        var pcap = document.getElementById("photo-day-caption");
-        if (pimg) { pimg.src = card.photo; pimg.alt = card.title || ""; }
-        if (pcap) pcap.textContent = (card.title ? card.title + " — " : "") + (card.note || "");
-      }
       var word = status.word || {};
       var wordCard = document.getElementById("word-card");
       if (wordCard && word.el) {
