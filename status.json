@@ -1,19 +1,20 @@
 {
-  "lat": 35.5167,
-  "lng": 24.0177,
+  "lat": 35.5183,
+  "lng": 24.0169,
   "location": "Western Crete",
-  "tomorrow": "More of Chania — old town lanes, a swim if the water calls, and whatever finds us.",
+  "tomorrow": "the best seafood in town.",
+  "tonight": "the best seafood in town.",
   "postcard": {
-    "date": "2026-08-27",
+    "date": "2026-08-28",
     "place": "Crete, Chania",
-    "title": "Coffee to beer",
-    "note": "From coffee to beer, same table, same view. We haven't moved. Gotta love Crete.",
-    "photo": "/photos/album/crete-chania-coffee-to-beer.jpg"
+    "title": "Captain",
+    "note": "He took the wheel. She took the bow. We rented a boat and borrowed the Mediterranean for a morning.",
+    "photo": "/photos/album/crete-chania-captain-postcard.jpg"
   },
   "word": {
-    "el": "Χουζούρι",
-    "en": "Houzouri",
-    "say": "hoo-ZOO-ree",
-    "meaning": "The cozy pleasure of doing nothing."
+    "el": "Καπετάνιος",
+    "en": "Kapetanios",
+    "say": "kah-peh-TAH-nyos",
+    "meaning": "Captain."
   }
 }
