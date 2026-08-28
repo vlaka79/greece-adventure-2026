@@ -1,5 +1,17 @@
 [
   {
+    "place": "Chania",
+    "dish": "Grilled fish",
+    "note": "Whole fish off the grill, lemon, tomato, herbs. Tonight's seafood.",
+    "photo": "/photos/album/crete-chania-julia-dinner.jpg"
+  },
+  {
+    "place": "Chania",
+    "dish": "Wine, dakos, bread",
+    "note": "Wine, a basket of bread, and dakos with tomato and cheese. The table before the fish.",
+    "photo": "/photos/album/crete-chania-wine-dakos.jpg"
+  },
+  {
     "place": "Mamaloukos, Chania",
     "dish": "Loukoumades",
     "note": "Still hot from the oil, drenched in honey, walnuts, and cinnamon. Best loukoumades in town. We ate them walking.",
