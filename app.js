@@ -145,7 +145,9 @@
     .then(function (status) {
       status = status || {};
       var tomorrow = document.getElementById("tomorrow-line");
-      if (tomorrow && status.tomorrow) {
+      if (tomorrow && status.tonight) {
+        tomorrow.textContent = "Tonight: " + status.tonight;
+      } else if (tomorrow && status.tomorrow) {
         tomorrow.textContent = "Tomorrow: " + status.tomorrow;
       }
       var card = status.postcard || {};
