@@ -1,5 +1,21 @@
 [
   {
+    "src": "/photos/album/crete-chania-julia-dinner.jpg",
+    "caption": "Tonight's fish",
+    "place": "crete",
+    "lat": 35.5161,
+    "lng": 24.0214,
+    "added": "2026-08-28T18:06:38"
+  },
+  {
+    "src": "/photos/album/crete-chania-wine-dakos.jpg",
+    "caption": "Wine, dakos, bread",
+    "place": "crete",
+    "lat": 35.5161,
+    "lng": 24.0214,
+    "added": "2026-08-28T17:42:56"
+  },
+  {
     "src": "/photos/album/crete-chania-cliff-from-boat.jpg",
     "caption": "From the boat",
     "place": "crete",
