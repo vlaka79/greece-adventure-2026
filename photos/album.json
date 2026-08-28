@@ -1,5 +1,21 @@
 [
   {
+    "src": "/photos/album/crete-chania-cliff-from-boat.jpg",
+    "caption": "From the boat",
+    "place": "crete",
+    "lat": 35.5229,
+    "lng": 24.0473,
+    "added": "2026-08-28T12:28:46"
+  },
+  {
+    "src": "/photos/album/crete-chania-swim.jpg",
+    "caption": "A dip in the Mediterranean",
+    "place": "crete",
+    "lat": 35.572,
+    "lng": 24.0763,
+    "added": "2026-08-28T11:16:47"
+  },
+  {
     "src": "/photos/album/crete-agii-theodori-cave.jpg",
     "caption": "Cave on Agii Theodori (Άγιοι Θεόδωροι)",
     "place": "crete",
