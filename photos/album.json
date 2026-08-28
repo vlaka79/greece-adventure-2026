@@ -1,5 +1,45 @@
 [
   {
+    "src": "/photos/album/crete-agii-theodori-cave.jpg",
+    "caption": "Cave on Agii Theodori (Άγιοι Θεόδωροι)",
+    "place": "crete",
+    "lat": 35.5308,
+    "lng": 23.925,
+    "added": "2026-08-28T10:03:24"
+  },
+  {
+    "src": "/photos/album/crete-chania-julia-bow.jpg",
+    "caption": "Julia on the bow",
+    "place": "crete",
+    "lat": 35.5276,
+    "lng": 23.9662,
+    "added": "2026-08-28T09:40:28"
+  },
+  {
+    "src": "/photos/album/crete-chania-captain-postcard.jpg",
+    "caption": "He took the wheel. She took the bow.",
+    "place": "crete",
+    "lat": 35.5183,
+    "lng": 24.0169,
+    "added": "2026-08-28T09:40:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-captain.jpg",
+    "caption": "Captain Daniel",
+    "place": "crete",
+    "lat": 35.5183,
+    "lng": 24.0169,
+    "added": "2026-08-28T09:30:11"
+  },
+  {
+    "src": "/photos/album/crete-chania-lighthouse-from-boat.jpg",
+    "caption": "The Venetian lighthouse from the water",
+    "place": "crete",
+    "lat": 35.5192,
+    "lng": 24.0165,
+    "added": "2026-08-28T09:12:03"
+  },
+  {
     "src": "/photos/album/crete-chania-loukoumades.jpg",
     "caption": "Best loukoumades in town",
     "place": "crete",
