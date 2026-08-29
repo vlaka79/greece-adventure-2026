@@ -1,5 +1,21 @@
 [
   {
+    "src": "/photos/album/crete-chania-souvlaki-opos-palia.jpg",
+    "caption": "Best gyros in town. Or second.",
+    "place": "crete",
+    "lat": 35.5142,
+    "lng": 24.0135,
+    "added": "2026-08-29T13:10:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-souvlaki-opos-palia-grill.jpg",
+    "caption": "Το Σουβλάκι Όπως Παλιά",
+    "place": "crete",
+    "lat": 35.5142,
+    "lng": 24.0135,
+    "added": "2026-08-29T13:05:00"
+  },
+  {
     "src": "/photos/album/crete-chania-market-grapes.jpg",
     "caption": "Saturday market",
     "place": "crete",
@@ -30,6 +46,30 @@
     "lat": 35.5135,
     "lng": 24.024,
     "added": "2026-08-29T10:05:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-fort-night.jpg",
+    "caption": "The fort at night",
+    "place": "crete",
+    "lat": 35.5167,
+    "lng": 24.0185,
+    "added": "2026-08-28T22:00:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-botanist.jpg",
+    "caption": "The Botanist",
+    "place": "crete",
+    "lat": 35.5175,
+    "lng": 24.0163,
+    "added": "2026-08-28T21:40:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-botanist-drinks.jpg",
+    "caption": "Aged Long Island, gin cucumber tonic",
+    "place": "crete",
+    "lat": 35.5175,
+    "lng": 24.0163,
+    "added": "2026-08-28T21:30:00"
   },
   {
     "src": "/photos/album/crete-chania-julia-dinner.jpg",
