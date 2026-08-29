@@ -1,5 +1,37 @@
 [
   {
+    "src": "/photos/album/crete-chania-market-grapes.jpg",
+    "caption": "Saturday market",
+    "place": "crete",
+    "lat": 35.5135,
+    "lng": 24.024,
+    "added": "2026-08-29T10:20:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-market-onions.jpg",
+    "caption": "Potatoes, sixty cents",
+    "place": "crete",
+    "lat": 35.5135,
+    "lng": 24.024,
+    "added": "2026-08-29T10:15:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-market-tomatoes.jpg",
+    "caption": "August tomatoes",
+    "place": "crete",
+    "lat": 35.5135,
+    "lng": 24.024,
+    "added": "2026-08-29T10:10:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-market-souvlaki.jpg",
+    "caption": "Street souvlaki",
+    "place": "crete",
+    "lat": 35.5135,
+    "lng": 24.024,
+    "added": "2026-08-29T10:05:00"
+  },
+  {
     "src": "/photos/album/crete-chania-julia-dinner.jpg",
     "caption": "Tonight's fish",
     "place": "crete",
