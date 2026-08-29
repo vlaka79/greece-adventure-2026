@@ -1,5 +1,23 @@
 [
   {
+    "place": "Το Σουβλάκι Όπως Παλιά, Chania",
+    "dish": "Gyros",
+    "note": "Best gyros in town, or a close second. We're not arguing with the pita.",
+    "photo": "/photos/album/crete-chania-souvlaki-opos-palia.jpg"
+  },
+  {
+    "place": "The Botanist, Chania",
+    "dish": "Aged Long Island iced tea",
+    "note": "Skip the Coke. Still the one. We'll be back.",
+    "photo": "/photos/album/crete-chania-botanist-drinks.jpg"
+  },
+  {
+    "place": "The Botanist, Chania",
+    "dish": "Gin cucumber tonic",
+    "note": "Julia's. Cool, clean, cucumber down the glass.",
+    "photo": "/photos/album/crete-chania-botanist-drinks.jpg"
+  },
+  {
     "place": "Chania",
     "dish": "Grilled fish",
     "note": "Whole fish off the grill, lemon, tomato, herbs. Tonight's seafood.",
