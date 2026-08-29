@@ -5,16 +5,16 @@
   "tomorrow": "the best seafood in town.",
   "tonight": "the best seafood in town.",
   "postcard": {
-    "date": "2026-08-28",
+    "date": "2026-08-29",
     "place": "Crete, Chania",
-    "title": "Captain",
-    "note": "He took the wheel. She took the bow. We rented a boat and borrowed the Mediterranean for a morning.",
-    "photo": "/photos/album/crete-chania-captain-postcard.jpg"
+    "title": "Saturday market",
+    "note": "Saturday in Chania is the market. Grapes by the crate, onions by the pile, smoke off a street grill. The best cheap feast we know.",
+    "photo": "/photos/album/crete-chania-market-postcard.jpg"
   },
   "word": {
-    "el": "Καπετάνιος",
-    "en": "Kapetanios",
-    "say": "kah-peh-TAH-nyos",
-    "meaning": "Captain."
+    "el": "Λαϊκή",
+    "en": "Laiki",
+    "say": "lah-ee-KEE",
+    "meaning": "Saturday market."
   }
 }
