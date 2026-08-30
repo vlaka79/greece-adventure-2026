@@ -1,5 +1,21 @@
 [
   {
+    "src": "/photos/album/crete-kandanos-platia-meatballs.jpg",
+    "caption": "Spicy meatballs at I Platia in Kandanos. Red sauce, a pile of fries. The best.",
+    "place": "crete",
+    "lat": 35.32723,
+    "lng": 23.74234,
+    "added": "2026-08-30T14:50:00"
+  },
+  {
+    "src": "/photos/album/crete-kandanos-platia-treat.jpg",
+    "caption": "After lunch at I Platia. Cinnamon-dusted sweet and a little raki.",
+    "place": "crete",
+    "lat": 35.32723,
+    "lng": 23.74234,
+    "added": "2026-08-30T14:45:00"
+  },
+  {
     "src": "/photos/album/crete-chania-cheers.jpg",
     "caption": "Two frappés by the harbour. Yia mas.",
     "place": "crete",
