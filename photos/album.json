@@ -1,5 +1,13 @@
 [
   {
+    "src": "/photos/album/crete-paleochora-wreck.jpg",
+    "caption": "Paleochora. A sinking ship off the coast.",
+    "place": "crete",
+    "lat": 35.2235,
+    "lng": 23.6818,
+    "added": "2026-08-30T18:19:00"
+  },
+  {
     "src": "/photos/album/crete-paleochora-balcony.jpg",
     "caption": "Paleochora. The view from our balcony.",
     "place": "crete",
