@@ -5,16 +5,16 @@
   "tomorrow": "the best seafood in town.",
   "tonight": "the best seafood in town.",
   "postcard": {
-    "date": "2026-08-29",
+    "date": "2026-08-30",
     "place": "Crete, Chania",
-    "title": "Saturday market",
-    "note": "Saturday in Chania is the market. Grapes by the crate, onions by the pile, smoke off a street grill. The best cheap feast we know.",
-    "photo": "/photos/album/crete-chania-market-postcard.jpg"
+    "title": "Cheers",
+    "note": "Two frappés by the harbour. Yia mas.",
+    "photo": "/photos/album/crete-chania-cheers.jpg"
   },
   "word": {
-    "el": "Λαϊκή",
-    "en": "Laiki",
-    "say": "lah-ee-KEE",
-    "meaning": "Saturday market."
+    "el": "Γεια μας",
+    "en": "Yia mas",
+    "say": "YAH-mas",
+    "meaning": "Cheers."
   }
 }
