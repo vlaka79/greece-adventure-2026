@@ -320,9 +320,17 @@
         if (role === "now") roleClass = " itin-block-now";
         else if (role === "prev" || role === "past") roleClass = " itin-block-past";
         li.className = "relative pl-9" + roleClass;
+        li.setAttribute("data-state", s.state || "upcoming");
+        li.setAttribute("data-title", s.title || "");
         var label = focusLabel(role);
         var labelHtml = label ? '<p class="itin-focus-label">' + label + "</p>" : "";
         var pinClass = role === "now" ? "border-primary bg-primary" : "border-accent bg-surface";
+        var nowBadge = (s.state === "now")
+          ? '<span class="it-now-label inline-flex min-h-7 items-center rounded-full px-2.5 text-xs font-semibold tracking-wide" style="background:#1b6f66;color:#f4eee4;">Here now</span>'
+          : "";
+        var doneBadge = (s.state === "done")
+          ? '<span class="it-done-label" style="margin-left:0.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#1b6f66;">Done</span>'
+          : "";
         li.innerHTML =
           '<span class="absolute left-0 top-5 size-5 rounded-full border-[3px] ' + pinClass + '"></span>' +
           '<article class="rounded-xl bg-surface p-5 card-shadow">' +
@@ -330,11 +338,36 @@
           '<div class="flex flex-wrap items-center gap-2">' +
           '<p class="text-sm font-semibold text-primary">' + (s.dates || "") + "</p>" +
           '<span class="inline-flex min-h-7 items-center rounded-full px-2.5 text-xs font-semibold tracking-wide ' + (toneClass[s.tone] || toneClass.muted) + '">' + (s.tag || "") + "</span>" +
+          nowBadge +
           "</div>" +
-          '<h3 class="mt-2 font-serif text-xl font-semibold text-fg">' + (s.title || "") + "</h3>" +
+          '<h3 class="mt-2 font-serif text-xl font-semibold text-fg">' + (s.title || "") + doneBadge + "</h3>" +
           '<p class="mt-1.5 text-base leading-relaxed text-fg/90">' + (s.blurb || "") + "</p>" +
           '<div class="itinerary-sub"><h4 class="text-primary">The plan</h4>' +
           '<p class="mt-1.5 text-base leading-relaxed text-fg/90">' + (s.plan || "") + "</p></div></article>";
+        var article = li.querySelector("article");
+        var dot = li.querySelector(":scope > span");
+        if (s.state === "done") {
+          if (article) article.style.opacity = "0.55";
+          if (dot) {
+            dot.style.background = "#1b6f66";
+            dot.style.borderColor = "#1b6f66";
+            dot.innerHTML = '<span style="display:block;width:100%;height:100%;border-radius:999px;background:#1b6f66;color:#f4eee4;font-size:10px;line-height:14px;text-align:center;font-weight:700;">\u2713</span>';
+            dot.style.display = "flex";
+            dot.style.alignItems = "center";
+            dot.style.justifyContent = "center";
+            dot.style.overflow = "hidden";
+          }
+        } else if (s.state === "now") {
+          if (article) {
+            article.style.boxShadow = "0 0 0 2px #1b6f66, 0 8px 24px rgba(27,111,102,0.15)";
+            article.style.background = "#f7faf9";
+          }
+          if (dot) {
+            dot.style.background = "#1b6f66";
+            dot.style.borderColor = "#1b6f66";
+            dot.style.boxShadow = "0 0 0 4px rgba(27,111,102,0.25)";
+          }
+        }
         return li;
       }
       function render() {
