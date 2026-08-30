@@ -1,5 +1,21 @@
 [
   {
+    "src": "/photos/album/crete-paleochora-cairn.jpg",
+    "caption": "Paleochora. Stones stacked on the sand.",
+    "place": "crete",
+    "lat": 35.224,
+    "lng": 23.6785,
+    "added": "2026-08-30T17:50:00"
+  },
+  {
+    "src": "/photos/album/crete-kandanos-church.jpg",
+    "caption": "The church over the square in Kandanos.",
+    "place": "crete",
+    "lat": 35.32723,
+    "lng": 23.74234,
+    "added": "2026-08-30T14:55:00"
+  },
+  {
     "src": "/photos/album/crete-kandanos-platia-meatballs.jpg",
     "caption": "Spicy meatballs at I Platia in Kandanos. Red sauce, a pile of fries. The best.",
     "place": "crete",
