@@ -127,13 +127,17 @@
       .then(function (stops) {
         var list = document.getElementById("itinerary-list");
         if (!list || !stops || !stops.length) return;
+        var byTitle = {};
+        stops.forEach(function (s) {
+          if (s && s.title) byTitle[s.title] = s;
+        });
         var items = list.querySelectorAll(":scope > li");
-        stops.forEach(function (s, idx) {
-          var li = items[idx];
-          if (!li) return;
+        items.forEach(function (li) {
+          var title = li.getAttribute("data-title") || "";
+          var s = byTitle[title];
           var article = li.querySelector("article");
           var dot = li.querySelector(":scope > span");
-          var state = s.state || "upcoming";
+          var state = (li.getAttribute("data-state") || (s && s.state) || "upcoming");
           if (state === "done") {
             if (article) article.style.opacity = "0.55";
             if (dot) {
