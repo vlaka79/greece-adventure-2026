@@ -1,10 +1,26 @@
 [
   {
-    "src": "/photos/album/crete-paleochora-wreck.jpg",
-    "caption": "Paleochora. A sinking ship off the coast.",
+    "src": "/photos/album/crete-north-coast-us.jpg",
+    "caption": "Us on the north coast.",
     "place": "crete",
-    "lat": 35.2235,
-    "lng": 23.6818,
+    "lat": 35.505,
+    "lng": 23.69,
+    "added": "2026-08-30T18:23:00"
+  },
+  {
+    "src": "/photos/album/crete-north-coast-shrines.jpg",
+    "caption": "Roadside shrines on the north coast.",
+    "place": "crete",
+    "lat": 35.5046,
+    "lng": 23.7131,
+    "added": "2026-08-30T18:22:00"
+  },
+  {
+    "src": "/photos/album/crete-kissamos-wreck.jpg",
+    "caption": "Sinking ship off the north coast. Kissamos Bay, Drapanias.",
+    "place": "crete",
+    "lat": 35.505,
+    "lng": 23.69,
     "added": "2026-08-30T18:19:00"
   },
   {
