@@ -1,33 +1,33 @@
 [
   {
-    "dates": "August 24\u201325",
+    "dates": "August 24–25",
     "tag": "Travel",
     "tone": "muted",
     "state": "done",
-    "title": "Burbank \u2192 Chania",
+    "title": "Burbank → Chania",
     "blurb": "Heading out Monday afternoon from Burbank. We land in Chania late Tuesday night.",
-    "plan": "Fly out Monday afternoon from Burbank and land in Chania late Tuesday. Keep the first night easy \u2014 bags, a late bite, sleep."
+    "plan": "Fly out Monday afternoon from Burbank and land in Chania late Tuesday. Keep the first night easy — bags, a late bite, sleep."
   },
   {
-    "dates": "August 25\u201330",
+    "dates": "August 25–30",
+    "tag": "Crete",
+    "tone": "crete",
+    "state": "done",
+    "title": "Chania, Crete",
+    "blurb": "Slow days by the harbour, and the Saturday market — Mercato del Sabato.",
+    "plan": "Ease into Crete. Harbour walks, a coffee in the old town, and Saturday’s market. No car yet — stay close and eat well."
+  },
+  {
+    "dates": "August 30 – September 1",
     "tag": "Crete",
     "tone": "crete",
     "state": "now",
-    "title": "Chania, Crete",
-    "blurb": "Slow days by the harbour, and the Saturday market \u2014 Mercato del Sabato.",
-    "plan": "Ease into Crete. Harbour walks, a coffee in the old town, and Saturday\u2019s market. No car yet \u2014 stay close and eat well."
-  },
-  {
-    "dates": "August 30 \u2013 September 1",
-    "tag": "Crete",
-    "tone": "crete",
-    "state": "upcoming",
     "title": "Paleochora",
     "blurb": "Down to the south coast. We pick up a car in Chania that morning, and plan to visit Elafonissi Beach.",
-    "plan": "Pick up the car in Chania and take the south-coast roads to Paleochora. Elafonissi if the day is kind \u2014 pink sand, a long swim, a slow drive back."
+    "plan": "Pick up the car in Chania and take the south-coast roads to Paleochora. Elafonissi if the day is kind — pink sand, a long swim, a slow drive back."
   },
   {
-    "dates": "September 1\u20134",
+    "dates": "September 1–4",
     "tag": "Crete",
     "tone": "crete",
     "state": "upcoming",
@@ -36,7 +36,7 @@
     "plan": "Three quiet nights in the hills. Village walks, a taverna table, and a swim on the north coast if we want one."
   },
   {
-    "dates": "September 4\u20136",
+    "dates": "September 4–6",
     "tag": "Crete",
     "tone": "crete",
     "state": "upcoming",
@@ -45,43 +45,43 @@
     "plan": "Two nights in Elounda. Spinalonga if we feel like the boat, an easy evening by the water, nothing rushed."
   },
   {
-    "dates": "September 6\u20139",
+    "dates": "September 6–9",
     "tag": "Crete",
     "tone": "crete",
     "state": "upcoming",
     "title": "Heraklion",
     "blurb": "Last stretch on Crete. We drop the car here on the 6th. One stop that matters to us: Saint Minas Cathedral, a family site.",
-    "plan": "Drop the car. Saint Minas Cathedral \u2014 family ground \u2014 then the old town, a market wander, and a last Cretan dinner before the ferry."
+    "plan": "Drop the car. Saint Minas Cathedral — family ground — then the old town, a market wander, and a last Cretan dinner before the ferry."
   },
   {
     "dates": "September 9",
     "tag": "Santorini",
     "tone": "island",
     "state": "upcoming",
-    "title": "Heraklion \u2192 Santorini",
-    "blurb": "Morning Seajets ferry, 8:00\u20139:35.",
+    "title": "Heraklion → Santorini",
+    "blurb": "Morning Seajets ferry, 8:00–9:35.",
     "plan": "WORLDCHAMPION JET, Club class. Heraklion 8:00, Santorini 9:35. At the port early, then up from Athinios to the caldera."
   },
   {
-    "dates": "September 9\u201312",
+    "dates": "September 9–12",
     "tag": "Santorini",
     "tone": "island",
     "state": "upcoming",
     "title": "Santorini",
     "blurb": "Three nights on the island.",
-    "plan": "Caldera light, an Oia wander before the crush, a winery for Assyrtiko, and dinners with a view. Heat in the middle of the day \u2014 we slow down."
+    "plan": "Caldera light, an Oia wander before the crush, a winery for Assyrtiko, and dinners with a view. Heat in the middle of the day — we slow down."
   },
   {
     "dates": "September 12",
     "tag": "Athens",
     "tone": "athens",
     "state": "upcoming",
-    "title": "Santorini \u2192 Athens",
-    "blurb": "Afternoon Seajets ferry to Piraeus, 12:55\u201318:30.",
+    "title": "Santorini → Athens",
+    "blurb": "Afternoon Seajets ferry to Piraeus, 12:55–18:30.",
     "plan": "EUROCHAMPION JET 2. Santorini 12:55, Piraeus 18:30. A long, easy crossing, then into Athens for the night."
   },
   {
-    "dates": "September 12\u201317",
+    "dates": "September 12–17",
     "tag": "Athens",
     "tone": "athens",
     "state": "upcoming",
@@ -94,7 +94,7 @@
     "tag": "Travel",
     "tone": "muted",
     "state": "upcoming",
-    "title": "Athens \u2192 Burbank",
+    "title": "Athens → Burbank",
     "blurb": "Early start from Athens. Back in Burbank that evening.",
     "plan": "Early start from Athens. A travel day, then home to Burbank that evening."
   }
