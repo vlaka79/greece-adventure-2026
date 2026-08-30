@@ -199,7 +199,7 @@
       maxBounds: [[34.5, 22.3], [38.85, 26.95]]
     });
     L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 }).addTo(greeceMap);
-    greeceMap.fitBounds([[35.45, 23.90], [35.60, 24.15]], { padding: [20, 20], animate: false });
+    greeceMap.fitBounds([[35.18, 23.55], [35.58, 24.12]], { padding: [24, 24], animate: false });
     photoLayer = L.layerGroup().addTo(greeceMap);
 
     Promise.all([
