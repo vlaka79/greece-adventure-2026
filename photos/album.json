@@ -1,5 +1,69 @@
 [
   {
+    "src": "/photos/album/crete-chania-cheers.jpg",
+    "caption": "Cheers",
+    "place": "crete",
+    "lat": 35.5168,
+    "lng": 24.0175,
+    "added": "2026-08-30T09:18:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-protest.jpg",
+    "caption": "It's not Greece without a protest",
+    "place": "crete",
+    "lat": 35.5162,
+    "lng": 24.018,
+    "added": "2026-08-29T23:30:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-full-moon.jpg",
+    "caption": "Full moon last night",
+    "place": "crete",
+    "lat": 35.5168,
+    "lng": 24.0175,
+    "added": "2026-08-29T23:00:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-film-festival.jpg",
+    "caption": "Chania film festival. Good times.",
+    "place": "crete",
+    "lat": 35.5165,
+    "lng": 24.0175,
+    "added": "2026-08-29T22:30:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-dinner-pair.jpg",
+    "caption": "Dinner at TAMAM",
+    "place": "crete",
+    "lat": 35.51653,
+    "lng": 24.01638,
+    "added": "2026-08-29T21:15:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-tamam-lamb.jpg",
+    "caption": "Lamb kabobs",
+    "place": "crete",
+    "lat": 35.51653,
+    "lng": 24.01638,
+    "added": "2026-08-29T21:10:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-tamam-octopus.jpg",
+    "caption": "Braised octopus",
+    "place": "crete",
+    "lat": 35.51653,
+    "lng": 24.01638,
+    "added": "2026-08-29T21:05:00"
+  },
+  {
+    "src": "/photos/album/crete-chania-tamam-dakos-fava.jpg",
+    "caption": "Dakos and fava",
+    "place": "crete",
+    "lat": 35.51653,
+    "lng": 24.01638,
+    "added": "2026-08-29T21:00:00"
+  },
+  {
     "src": "/photos/album/crete-chania-harbour-frappe.jpg",
     "caption": "Frappés by the harbour",
     "place": "crete",
