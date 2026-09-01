@@ -1,5 +1,23 @@
 [
   {
+    "src": "/photos/album/crete-douliana-heliostasi-grill.jpg",
+    "caption": "Mixed grill at Ηλιοστάσι (Heliostasi) — sausage, chops, herbed fries. Delicious. The huge Cretan salad still hanging around.",
+    "place": "crete",
+    "lat": 35.42744,
+    "lng": 24.19061,
+    "added": "2026-09-01T20:36:18",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-douliana-heliostasi-salad.jpg",
+    "caption": "Cretan salad the size of a small island at Ηλιοστάσι, creamy tzatziki crowding the plate.",
+    "place": "crete",
+    "lat": 35.42742,
+    "lng": 24.1906,
+    "added": "2026-09-01T20:24:22",
+    "date": "2026-09-01"
+  },
+  {
     "src": "/photos/album/crete-douliana-sunset.jpg",
     "caption": "Last light over Douliana. Us, the pool, and the hills catching fire.",
     "place": "crete",
