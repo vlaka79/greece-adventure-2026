@@ -1,5 +1,167 @@
 [
   {
+    "src": "/photos/album/crete-douliana-pool-view.jpg",
+    "caption": "Douliana pool, two floaties, mountains for a backsplash.",
+    "place": "crete",
+    "lat": 35.42726,
+    "lng": 24.19003,
+    "added": "2026-09-01T17:02:01",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-douliana-fireplace.jpg",
+    "caption": "Corner fireplace, wicker chairs, village light through the sheers.",
+    "place": "crete",
+    "lat": 35.42734,
+    "lng": 24.19014,
+    "added": "2026-09-01T17:00:15",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-douliana-raki-table.jpg",
+    "caption": "Raki glasses on the yellow cloth. Home for a minute.",
+    "place": "crete",
+    "lat": 35.42733,
+    "lng": 24.19012,
+    "added": "2026-09-01T17:00:07",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-gulf-overlook.jpg",
+    "caption": "Pulled over for the gulf. Town, sea, and that end-of-drive grin.",
+    "place": "crete",
+    "lat": 35.46552,
+    "lng": 24.03791,
+    "added": "2026-09-01T16:06:47",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-blue-church.jpg",
+    "caption": "Blue church, two bell towers, hibiscus on the fence.",
+    "place": "crete",
+    "lat": 35.45412,
+    "lng": 23.91166,
+    "added": "2026-09-01T15:42:10",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-stone-door.jpg",
+    "caption": "Stone doorway under a white-flower avalanche. Bottles waiting inside.",
+    "place": "crete",
+    "lat": 35.44954,
+    "lng": 23.88753,
+    "added": "2026-09-01T15:28:03",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-barrel-cellar.jpg",
+    "caption": "Barrels down a vaulted aisle. Cool, dark, and a little cinematic.",
+    "place": "crete",
+    "lat": 35.44949,
+    "lng": 23.88743,
+    "added": "2026-09-01T14:20:40",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-green-olives.jpg",
+    "caption": "Green olives still deciding. Spiderweb included, no extra charge.",
+    "place": "crete",
+    "lat": 35.44953,
+    "lng": 23.88771,
+    "added": "2026-09-01T13:50:55",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-prickly-pear.jpg",
+    "caption": "A prickly pear the size of a small car. Fruit everywhere.",
+    "place": "crete",
+    "lat": 35.44956,
+    "lng": 23.88781,
+    "added": "2026-09-01T13:40:11",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-giannaris.jpg",
+    "caption": "Hatzimichalis Giannaris in vraka, keeping watch over the village.",
+    "place": "crete",
+    "lat": 35.40167,
+    "lng": 23.94699,
+    "added": "2026-09-01T13:00:21",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-lakkoi-village.jpg",
+    "caption": "Red dome, white village, mountains stacked behind. Lakkoi from the road.",
+    "place": "crete",
+    "lat": 35.40066,
+    "lng": 23.9426,
+    "added": "2026-09-01T12:58:51",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-lakkoi-monument.jpg",
+    "caption": "Three fighters stacked like a toast. Lakkoi does not do small monuments.",
+    "place": "crete",
+    "lat": 35.39671,
+    "lng": 23.9415,
+    "added": "2026-09-01T12:57:01",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-lakkoi-hillside.jpg",
+    "caption": "White houses on a green hill. The mountains doing the rest.",
+    "place": "crete",
+    "lat": 35.39512,
+    "lng": 23.93794,
+    "added": "2026-09-01T12:55:29",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-gorge.jpg",
+    "caption": "A gorge that keeps going. Crete showing off its bones.",
+    "place": "crete",
+    "lat": 35.30786,
+    "lng": 23.91762,
+    "added": "2026-09-01T12:26:23",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-goats.jpg",
+    "caption": "Local committee inspecting the asphalt. We waited.",
+    "place": "crete",
+    "lat": 35.32579,
+    "lng": 23.86413,
+    "added": "2026-09-01T12:12:32",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-ridge-selfie.jpg",
+    "caption": "Ridge selfie — hills, a wink of sea, and us looking suspiciously pleased.",
+    "place": "crete",
+    "lat": 35.35247,
+    "lng": 23.84548,
+    "added": "2026-09-01T12:01:40",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-yellow-chapel.jpg",
+    "caption": "Yellow chapel, yellow phone booth. Even the mountains coordinate.",
+    "place": "crete",
+    "lat": 35.28908,
+    "lng": 23.78291,
+    "added": "2026-09-01T11:25:35",
+    "date": "2026-09-01"
+  },
+  {
+    "src": "/photos/album/crete-drive-olive-sheep.jpg",
+    "caption": "Sheep parked in the olive shade. Peak Cretan traffic.",
+    "place": "crete",
+    "lat": 35.28076,
+    "lng": 23.72454,
+    "added": "2026-09-01T11:04:32",
+    "date": "2026-09-01"
+  },
+  {
     "src": "/photos/album/crete-paleochora-caravella-dessert.jpg",
     "caption": "Watermelon and something sweet with raki. Caravella’s idea of a soft landing.",
     "place": "crete",
