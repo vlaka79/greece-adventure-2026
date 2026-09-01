@@ -1,5 +1,53 @@
 [
   {
+    "src": "/photos/album/crete-gialiskari-selfie.jpg",
+    "caption": "Us at Gialiskari Beach. Clear water, pebble shore, and that mid-afternoon grin.",
+    "lat": 35.23658,
+    "lng": 23.71916,
+    "added": "2026-08-31T15:21:38",
+    "place": "crete"
+  },
+  {
+    "src": "/photos/album/crete-gialiskari-wade.jpg",
+    "caption": "Waist-deep at Gialiskari. Pebbles underfoot, hillside behind, nowhere else to be.",
+    "lat": 35.23658,
+    "lng": 23.71916,
+    "added": "2026-08-31T15:14:02",
+    "place": "crete"
+  },
+  {
+    "src": "/photos/album/crete-drive-rock-pass.jpg",
+    "caption": "Threading the rocks toward Gialiskari. The kind of road that makes you slow down just to stare.",
+    "lat": 35.23947,
+    "lng": 23.71299,
+    "added": "2026-08-31T15:02:19",
+    "place": "crete"
+  },
+  {
+    "src": "/photos/album/crete-drive-coast-road.jpg",
+    "caption": "Dirt road, cliff on the left, sea on the right. Gialiskari is somewhere past that white car.",
+    "lat": 35.24003,
+    "lng": 23.70596,
+    "added": "2026-08-31T14:58:06",
+    "place": "crete"
+  },
+  {
+    "src": "/photos/album/crete-drive-mountain-road.jpg",
+    "caption": "White hood, rock shadows, and a road that keeps inventing new corners.",
+    "lat": 35.34828,
+    "lng": 23.67572,
+    "added": "2026-08-31T14:19:13",
+    "place": "crete"
+  },
+  {
+    "src": "/photos/album/crete-drive-overlook.jpg",
+    "caption": "Mountain hairpins and a first wink of sea. Crete does the long way on purpose.",
+    "lat": 35.36438,
+    "lng": 23.60546,
+    "added": "2026-08-31T13:59:15",
+    "place": "crete"
+  },
+  {
     "src": "/photos/album/crete-elafonissi-julia-shallows.jpg",
     "caption": "Julia in the shallows at Elafonissi. Smile, sunglasses, and water so clear the sand looks like a filter.",
     "place": "crete",
