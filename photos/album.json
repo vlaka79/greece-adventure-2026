@@ -1,11 +1,19 @@
 [
   {
-    "src": "/photos/album/crete-paleochora-caravella-evening.jpg",
-    "caption": "Caravella after the heat broke — table on the rocks, then watermelon and something sweet with raki.",
+    "src": "/photos/album/crete-paleochora-caravella-dessert.jpg",
+    "caption": "Watermelon and something sweet with raki. Caravella’s idea of a soft landing.",
+    "place": "crete",
     "lat": 35.22966,
     "lng": 23.68341,
-    "added": "2026-08-31T20:39:41",
-    "place": "crete"
+    "added": "2026-08-31T20:39:41"
+  },
+  {
+    "src": "/photos/album/crete-paleochora-caravella-table.jpg",
+    "caption": "Caravella after the heat broke — table on the rocks, mountains across the water.",
+    "place": "crete",
+    "lat": 35.22966,
+    "lng": 23.68341,
+    "added": "2026-08-31T19:02:10"
   },
   {
     "src": "/photos/album/crete-paleochora-livikon-gt.jpg",
