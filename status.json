@@ -1,15 +1,16 @@
 {
-  "lat": 35.4273,
-  "lng": 24.1901,
+  "lat": 35.42725,
+  "lng": 24.19017,
   "location": "Douliana",
   "tomorrow": "",
   "tonight": "",
   "postcard": {
-    "date": "2026-08-30",
-    "place": "Crete, Chania",
-    "title": "Cheers",
-    "note": "Two frappés by the harbour. Yia mas.",
-    "photo": "/photos/album/crete-chania-cheers.jpg"
+    "date": "2026-09-01",
+    "place": "Crete, Douliana",
+    "title": "Last light",
+    "note": "Made it over the mountains. Sunset from the new place, and the hills went gold.",
+    "photo": "/photos/album/crete-douliana-sunset.jpg",
+    "caption": "Last light over Douliana. Us, the pool, and the hills catching fire."
   },
   "word": {
     "el": "Θάλασσα",
