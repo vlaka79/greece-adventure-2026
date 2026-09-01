@@ -6,6 +6,8 @@
     travel: { title: "There & back", lead: "The road and the flights — going to Greece, and coming home." }
   };
   var NEW_MS = 48 * 60 * 60 * 1000;
+  var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var MONTHS_SHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   var id = (new URLSearchParams(location.search).get("place") || "crete").toLowerCase();
   if (!PLACES[id]) id = "crete";
   var meta = PLACES[id];
@@ -17,8 +19,14 @@
 
   var album = document.getElementById("place-album");
   var empty = document.getElementById("place-empty");
+  var chipBar = document.getElementById("place-chip-bar");
+  var chipRow = document.getElementById("place-chips");
+  var dayBanner = document.getElementById("place-day-banner");
   var shown = 0;
   var shotsForLb = [];
+  var allShots = [];
+  var logByDate = {};
+  var selected = "all";
 
   function parseAdded(item) {
     var raw = (item && item.added) || "";
@@ -31,8 +39,32 @@
     if (!t) return false;
     return Date.now() - t < NEW_MS;
   }
+  function photoDate(item) {
+    var d = (item && item.date) || "";
+    if (/^\d{4}-\d{2}-\d{2}$/.test(d)) return d;
+    var added = (item && item.added) || "";
+    if (added.length >= 10 && /^\d{4}-\d{2}-\d{2}/.test(added)) return added.slice(0, 10);
+    return "";
+  }
+  function chipLabel(iso) {
+    var p = iso.split("-");
+    var day = parseInt(p[2], 10);
+    var mon = MONTHS_SHORT[parseInt(p[1], 10) - 1] || "";
+    return day + " " + mon;
+  }
+  function longDate(iso) {
+    var p = iso.split("-");
+    var day = parseInt(p[2], 10);
+    var mon = MONTHS[parseInt(p[1], 10) - 1] || "";
+    return day + " " + mon;
+  }
+  function dayTitle(iso) {
+    var log = logByDate[iso];
+    if (log && log.title) return longDate(iso) + " \u00b7 " + log.title;
+    return longDate(iso);
+  }
 
-  function addPhoto(item, idx) {
+  function addPhoto(item, idx, grid) {
     var src = item.src;
     var caption = item.caption || "";
     var li = document.createElement("li");
@@ -71,31 +103,126 @@
       if (typeof window.__openLb === "function") window.__openLb(shotsForLb, idx);
     });
     li.appendChild(btn);
-    album.appendChild(li);
+    grid.appendChild(li);
   }
 
-  fetch("/photos/album.json", { cache: "no-store" })
-    .then(function (r) { return r.ok ? r.json() : []; })
-    .then(function (items) {
-      var shots = (items || []).filter(function (item) {
-        return (item.place || "").toLowerCase() === id;
-      });
-      shots.sort(function (a, b) {
-        return parseAdded(b) - parseAdded(a);
-      });
-      if (!shots.length) {
-        if (empty) empty.classList.remove("hidden");
-        return;
-      }
-      shotsForLb = shots.map(function (s) { return { src: s.src, caption: s.caption || "" }; });
-      shots.forEach(function (item, idx) {
-        if (item.src) addPhoto(item, idx);
-      });
-      setTimeout(function () {
-        if (!shown && empty) empty.classList.remove("hidden");
-      }, 800);
-    })
-    .catch(function () {
-      if (empty) empty.classList.remove("hidden");
+  function groupOrder(shots) {
+    var groups = {};
+    var undated = [];
+    shots.forEach(function (item) {
+      var d = photoDate(item);
+      if (!d) { undated.push(item); return; }
+      if (!groups[d]) groups[d] = [];
+      groups[d].push(item);
     });
+    var dates = Object.keys(groups).sort().reverse();
+    var out = dates.map(function (d) {
+      var items = groups[d].slice().sort(function (a, b) { return parseAdded(b) - parseAdded(a); });
+      return { date: d, items: items };
+    });
+    if (undated.length) {
+      undated.sort(function (a, b) { return parseAdded(b) - parseAdded(a); });
+      out.push({ date: "", items: undated, undated: true });
+    }
+    return out;
+  }
+
+  function setChips(dates) {
+    if (!chipRow || !chipBar) return;
+    chipRow.innerHTML = "";
+    if (!dates.length) {
+      chipBar.hidden = true;
+      return;
+    }
+    chipBar.hidden = false;
+    function addChip(value, label) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "place-chip";
+      b.setAttribute("aria-pressed", value === selected ? "true" : "false");
+      b.textContent = label;
+      b.addEventListener("click", function () {
+        selected = value;
+        render();
+      });
+      chipRow.appendChild(b);
+    }
+    addChip("all", "All");
+    dates.forEach(function (d) { addChip(d, chipLabel(d)); });
+  }
+
+  function render() {
+    if (!album) return;
+    album.innerHTML = "";
+    shown = 0;
+    var groups = groupOrder(allShots);
+    var datedKeys = groups.filter(function (g) { return !g.undated; }).map(function (g) { return g.date; });
+    setChips(datedKeys);
+
+    var visible = groups;
+    if (selected !== "all") {
+      visible = groups.filter(function (g) { return g.date === selected; });
+    }
+
+    if (dayBanner) {
+      if (selected !== "all" && visible.length && !visible[0].undated) {
+        dayBanner.hidden = false;
+        dayBanner.textContent = dayTitle(selected);
+      } else {
+        dayBanner.hidden = true;
+        dayBanner.textContent = "";
+      }
+    }
+
+    var lb = [];
+    visible.forEach(function (g) {
+      if (selected === "all") {
+        var h = document.createElement("h2");
+        h.className = "place-day-head";
+        h.textContent = g.undated ? "Undated" : dayTitle(g.date);
+        album.appendChild(h);
+      }
+      var grid = document.createElement("ul");
+      grid.className = "place-day-grid";
+      var base = lb.length;
+      g.items.forEach(function (item, i) {
+        if (!item.src) return;
+        lb.push({ src: item.src, caption: item.caption || "" });
+        addPhoto(item, base + i, grid);
+      });
+      album.appendChild(grid);
+    });
+    shotsForLb = lb;
+
+    if (!allShots.length) {
+      if (empty) empty.classList.remove("hidden");
+      if (chipBar) chipBar.hidden = true;
+    }
+  }
+
+  Promise.all([
+    fetch("/photos/album.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; }),
+    fetch("/log.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; })
+  ]).then(function (pair) {
+    var items = pair[0] || [];
+    var logs = pair[1] || [];
+    (logs || []).forEach(function (entry) {
+      if (entry && entry.date && !logByDate[entry.date]) logByDate[entry.date] = entry;
+    });
+    allShots = items.filter(function (item) {
+      return (item.place || "").toLowerCase() === id;
+    });
+    allShots.sort(function (a, b) { return parseAdded(b) - parseAdded(a); });
+    if (!allShots.length) {
+      if (empty) empty.classList.remove("hidden");
+      if (chipBar) chipBar.hidden = true;
+      return;
+    }
+    render();
+    setTimeout(function () {
+      if (!shown && empty) empty.classList.remove("hidden");
+    }, 800);
+  }).catch(function () {
+    if (empty) empty.classList.remove("hidden");
+  });
 })();

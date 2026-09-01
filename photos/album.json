@@ -1,19 +1,12 @@
 [
   {
-    "src": "/photos/album/crete-douliana-pool.jpg",
-    "caption": "First dip at the new place. Douliana pool, golden light, and that just-arrived grin.",
-    "place": "crete",
-    "lat": 35.42731,
-    "lng": 24.19017,
-    "added": "2026-09-01T18:36:05"
-  },
-  {
     "src": "/photos/album/crete-paleochora-caravella-dessert.jpg",
     "caption": "Watermelon and something sweet with raki. Caravella’s idea of a soft landing.",
     "place": "crete",
     "lat": 35.22966,
     "lng": 23.68341,
-    "added": "2026-08-31T20:39:41"
+    "added": "2026-08-31T20:39:41",
+    "date": "2026-08-31"
   },
   {
     "src": "/photos/album/crete-paleochora-caravella-table.jpg",
@@ -21,7 +14,8 @@
     "place": "crete",
     "lat": 35.22966,
     "lng": 23.68341,
-    "added": "2026-08-31T19:02:10"
+    "added": "2026-08-31T19:02:10",
+    "date": "2026-08-31"
   },
   {
     "src": "/photos/album/crete-paleochora-livikon-gt.jpg",
@@ -29,6 +23,7 @@
     "lat": 35.2305,
     "lng": 23.68293,
     "added": "2026-08-31T18:06:12",
+    "date": "2026-08-31",
     "place": "crete"
   },
   {
@@ -37,7 +32,8 @@
     "place": "crete",
     "lat": 35.22967,
     "lng": 23.68342,
-    "added": "2026-08-31T19:32:10"
+    "added": "2026-08-31T19:32:10",
+    "date": "2026-08-31"
   },
   {
     "src": "/photos/album/crete-gialiskari-fish-school.jpg",
@@ -45,7 +41,8 @@
     "place": "crete",
     "lat": 35.23658,
     "lng": 23.71916,
-    "added": "2026-08-31T15:14:31"
+    "added": "2026-08-31T15:14:31",
+    "date": "2026-08-31"
   },
   {
     "src": "/photos/album/crete-gialiskari-selfie.jpg",
@@ -53,6 +50,7 @@
     "lat": 35.23658,
     "lng": 23.71916,
     "added": "2026-08-31T15:21:38",
+    "date": "2026-08-31",
     "place": "crete"
   },
   {
@@ -61,6 +59,7 @@
     "lat": 35.23658,
     "lng": 23.71916,
     "added": "2026-08-31T15:14:02",
+    "date": "2026-08-31",
     "place": "crete"
   },
   {
@@ -69,6 +68,7 @@
     "lat": 35.23947,
     "lng": 23.71299,
     "added": "2026-08-31T15:02:19",
+    "date": "2026-08-31",
     "place": "crete"
   },
   {
@@ -77,6 +77,7 @@
     "lat": 35.24003,
     "lng": 23.70596,
     "added": "2026-08-31T14:58:06",
+    "date": "2026-08-31",
     "place": "crete"
   },
   {
@@ -85,6 +86,7 @@
     "lat": 35.34828,
     "lng": 23.67572,
     "added": "2026-08-31T14:19:13",
+    "date": "2026-08-31",
     "place": "crete"
   },
   {
@@ -93,6 +95,7 @@
     "lat": 35.36438,
     "lng": 23.60546,
     "added": "2026-08-31T13:59:15",
+    "date": "2026-08-31",
     "place": "crete"
   },
   {
@@ -101,7 +104,8 @@
     "place": "crete",
     "lat": 35.26954,
     "lng": 23.53686,
-    "added": "2026-08-31T12:24:37"
+    "added": "2026-08-31T12:24:37",
+    "date": "2026-08-31"
   },
   {
     "src": "/photos/album/crete-elafonissi-kiss-swim.jpg",
@@ -109,7 +113,8 @@
     "place": "crete",
     "lat": 35.26954,
     "lng": 23.53686,
-    "added": "2026-08-31T12:11:05"
+    "added": "2026-08-31T12:11:05",
+    "date": "2026-08-31"
   },
   {
     "src": "/photos/album/crete-elafonissi-fish.jpg",
@@ -117,7 +122,8 @@
     "place": "crete",
     "lat": 35.26954,
     "lng": 23.53686,
-    "added": "2026-08-31T11:40:50"
+    "added": "2026-08-31T11:40:50",
+    "date": "2026-08-31"
   },
   {
     "src": "/photos/album/crete-elafonissi-snorkel.jpg",
@@ -125,7 +131,8 @@
     "place": "crete",
     "lat": 35.26954,
     "lng": 23.53686,
-    "added": "2026-08-31T11:40:15"
+    "added": "2026-08-31T11:40:15",
+    "date": "2026-08-31"
   },
   {
     "src": "/photos/album/crete-elafonissi-shallows.jpg",
@@ -133,7 +140,8 @@
     "place": "crete",
     "lat": 35.27149,
     "lng": 23.54088,
-    "added": "2026-08-31T11:03:58"
+    "added": "2026-08-31T11:03:58",
+    "date": "2026-08-31"
   },
   {
     "src": "/photos/album/crete-paleochora-dinner-courtyard.jpg",
@@ -141,7 +149,8 @@
     "place": "crete",
     "lat": 35.2323,
     "lng": 23.68323,
-    "added": "2026-08-30T22:51:23"
+    "added": "2026-08-30T22:51:23",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-paleochora-dinner-board.jpg",
@@ -149,7 +158,8 @@
     "place": "crete",
     "lat": 35.23184,
     "lng": 23.68307,
-    "added": "2026-08-30T21:15:12"
+    "added": "2026-08-30T21:15:12",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-paleochora-two-wines.jpg",
@@ -157,7 +167,8 @@
     "place": "crete",
     "lat": 35.23179,
     "lng": 23.68305,
-    "added": "2026-08-30T20:48:50"
+    "added": "2026-08-30T20:48:50",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-paleochora-dusk-us.jpg",
@@ -165,7 +176,8 @@
     "place": "crete",
     "lat": 35.22539,
     "lng": 23.68235,
-    "added": "2026-08-30T19:39:11"
+    "added": "2026-08-30T19:39:11",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-paleochora-flag-chapel.jpg",
@@ -173,7 +185,8 @@
     "place": "crete",
     "lat": 35.22611,
     "lng": 23.68248,
-    "added": "2026-08-30T19:36:58"
+    "added": "2026-08-30T19:36:58",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-paleochora-scooter.jpg",
@@ -181,7 +194,8 @@
     "place": "crete",
     "lat": 35.22992,
     "lng": 23.68197,
-    "added": "2026-08-30T19:26:03"
+    "added": "2026-08-30T19:26:03",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-paleochora-waterfront-tables.jpg",
@@ -189,7 +203,8 @@
     "place": "crete",
     "lat": 35.23188,
     "lng": 23.68418,
-    "added": "2026-08-30T19:07:24"
+    "added": "2026-08-30T19:07:24",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-paleochora-balcony.jpg",
@@ -197,7 +212,8 @@
     "place": "crete",
     "lat": 35.23091,
     "lng": 23.68277,
-    "added": "2026-08-30T18:10:54"
+    "added": "2026-08-30T18:10:54",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-kandanos-church.jpg",
@@ -205,7 +221,8 @@
     "place": "crete",
     "lat": 35.32723,
     "lng": 23.74234,
-    "added": "2026-08-30T14:55:00"
+    "added": "2026-08-30T14:55:00",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-kandanos-platia-meatballs.jpg",
@@ -213,7 +230,8 @@
     "place": "crete",
     "lat": 35.32723,
     "lng": 23.74234,
-    "added": "2026-08-30T14:50:00"
+    "added": "2026-08-30T14:50:00",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-kandanos-platia-treat.jpg",
@@ -221,7 +239,8 @@
     "place": "crete",
     "lat": 35.32723,
     "lng": 23.74234,
-    "added": "2026-08-30T14:45:00"
+    "added": "2026-08-30T14:45:00",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-paleochora-cairn.jpg",
@@ -229,7 +248,8 @@
     "place": "crete",
     "lat": 35.49817,
     "lng": 23.6625,
-    "added": "2026-08-30T12:29:49"
+    "added": "2026-08-30T12:29:49",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-kissamos-wreck.jpg",
@@ -237,7 +257,8 @@
     "place": "crete",
     "lat": 35.50026,
     "lng": 23.68883,
-    "added": "2026-08-30T12:16:27"
+    "added": "2026-08-30T12:16:27",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-north-coast-us.jpg",
@@ -245,7 +266,8 @@
     "place": "crete",
     "lat": 35.53456,
     "lng": 23.81734,
-    "added": "2026-08-30T11:17:41"
+    "added": "2026-08-30T11:17:41",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-north-coast-shrines.jpg",
@@ -253,7 +275,8 @@
     "place": "crete",
     "lat": 35.53464,
     "lng": 23.81766,
-    "added": "2026-08-30T11:16:53"
+    "added": "2026-08-30T11:16:53",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-chania-cheers.jpg",
@@ -261,7 +284,8 @@
     "place": "crete",
     "lat": 35.5168,
     "lng": 24.0175,
-    "added": "2026-08-30T09:18:00"
+    "added": "2026-08-30T09:18:00",
+    "date": "2026-08-30"
   },
   {
     "src": "/photos/album/crete-chania-protest.jpg",
@@ -269,7 +293,8 @@
     "place": "crete",
     "lat": 35.5162,
     "lng": 24.018,
-    "added": "2026-08-29T23:30:00"
+    "added": "2026-08-29T23:30:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-full-moon.jpg",
@@ -277,7 +302,8 @@
     "place": "crete",
     "lat": 35.5168,
     "lng": 24.0175,
-    "added": "2026-08-29T23:00:00"
+    "added": "2026-08-29T23:00:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-film-festival.jpg",
@@ -285,7 +311,8 @@
     "place": "crete",
     "lat": 35.5165,
     "lng": 24.0175,
-    "added": "2026-08-29T22:30:00"
+    "added": "2026-08-29T22:30:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-dinner-pair.jpg",
@@ -293,7 +320,8 @@
     "place": "crete",
     "lat": 35.51653,
     "lng": 24.01638,
-    "added": "2026-08-29T21:15:00"
+    "added": "2026-08-29T21:15:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-tamam-lamb.jpg",
@@ -301,7 +329,8 @@
     "place": "crete",
     "lat": 35.51653,
     "lng": 24.01638,
-    "added": "2026-08-29T21:10:00"
+    "added": "2026-08-29T21:10:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-tamam-octopus.jpg",
@@ -309,7 +338,8 @@
     "place": "crete",
     "lat": 35.51653,
     "lng": 24.01638,
-    "added": "2026-08-29T21:05:00"
+    "added": "2026-08-29T21:05:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-tamam-dakos-fava.jpg",
@@ -317,7 +347,8 @@
     "place": "crete",
     "lat": 35.51653,
     "lng": 24.01638,
-    "added": "2026-08-29T21:00:00"
+    "added": "2026-08-29T21:00:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-harbour-frappe.jpg",
@@ -325,7 +356,8 @@
     "place": "crete",
     "lat": 35.5168,
     "lng": 24.0175,
-    "added": "2026-08-29T13:20:00"
+    "added": "2026-08-29T13:20:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-souvlaki-opos-palia.jpg",
@@ -333,7 +365,8 @@
     "place": "crete",
     "lat": 35.5142,
     "lng": 24.0135,
-    "added": "2026-08-29T13:10:00"
+    "added": "2026-08-29T13:10:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-souvlaki-opos-palia-grill.jpg",
@@ -341,7 +374,8 @@
     "place": "crete",
     "lat": 35.5142,
     "lng": 24.0135,
-    "added": "2026-08-29T13:05:00"
+    "added": "2026-08-29T13:05:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-market-grapes.jpg",
@@ -349,7 +383,8 @@
     "place": "crete",
     "lat": 35.5135,
     "lng": 24.024,
-    "added": "2026-08-29T10:20:00"
+    "added": "2026-08-29T10:20:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-market-onions.jpg",
@@ -357,7 +392,8 @@
     "place": "crete",
     "lat": 35.5135,
     "lng": 24.024,
-    "added": "2026-08-29T10:15:00"
+    "added": "2026-08-29T10:15:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-market-tomatoes.jpg",
@@ -365,7 +401,8 @@
     "place": "crete",
     "lat": 35.5135,
     "lng": 24.024,
-    "added": "2026-08-29T10:10:00"
+    "added": "2026-08-29T10:10:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-market-souvlaki.jpg",
@@ -373,7 +410,8 @@
     "place": "crete",
     "lat": 35.5135,
     "lng": 24.024,
-    "added": "2026-08-29T10:05:00"
+    "added": "2026-08-29T10:05:00",
+    "date": "2026-08-29"
   },
   {
     "src": "/photos/album/crete-chania-fort-night.jpg",
@@ -381,7 +419,8 @@
     "place": "crete",
     "lat": 35.5167,
     "lng": 24.0185,
-    "added": "2026-08-28T22:00:00"
+    "added": "2026-08-28T22:00:00",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-chania-botanist.jpg",
@@ -389,7 +428,8 @@
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0163,
-    "added": "2026-08-28T21:40:00"
+    "added": "2026-08-28T21:40:00",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-chania-botanist-drinks.jpg",
@@ -397,7 +437,8 @@
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0163,
-    "added": "2026-08-28T21:30:00"
+    "added": "2026-08-28T21:30:00",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-chania-julia-dinner.jpg",
@@ -405,7 +446,8 @@
     "place": "crete",
     "lat": 35.5161,
     "lng": 24.0214,
-    "added": "2026-08-28T18:06:38"
+    "added": "2026-08-28T18:06:38",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-chania-dakos.jpg",
@@ -413,7 +455,8 @@
     "place": "crete",
     "lat": 35.5161,
     "lng": 24.0214,
-    "added": "2026-08-28T17:42:56"
+    "added": "2026-08-28T17:42:56",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-chania-cliff-from-boat.jpg",
@@ -421,7 +464,8 @@
     "place": "crete",
     "lat": 35.5229,
     "lng": 24.0473,
-    "added": "2026-08-28T12:28:46"
+    "added": "2026-08-28T12:28:46",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-chania-swim.jpg",
@@ -429,7 +473,8 @@
     "place": "crete",
     "lat": 35.572,
     "lng": 24.0763,
-    "added": "2026-08-28T11:16:47"
+    "added": "2026-08-28T11:16:47",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-agii-theodori-cave.jpg",
@@ -437,7 +482,8 @@
     "place": "crete",
     "lat": 35.5308,
     "lng": 23.925,
-    "added": "2026-08-28T10:03:24"
+    "added": "2026-08-28T10:03:24",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-chania-julia-bow.jpg",
@@ -445,7 +491,8 @@
     "place": "crete",
     "lat": 35.5276,
     "lng": 23.9662,
-    "added": "2026-08-28T09:40:28"
+    "added": "2026-08-28T09:40:28",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-chania-captain-postcard.jpg",
@@ -453,7 +500,8 @@
     "place": "crete",
     "lat": 35.5183,
     "lng": 24.0169,
-    "added": "2026-08-28T09:40:00"
+    "added": "2026-08-28T09:40:00",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-chania-captain.jpg",
@@ -461,7 +509,8 @@
     "place": "crete",
     "lat": 35.5183,
     "lng": 24.0169,
-    "added": "2026-08-28T09:30:11"
+    "added": "2026-08-28T09:30:11",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-chania-lighthouse-from-boat.jpg",
@@ -469,7 +518,8 @@
     "place": "crete",
     "lat": 35.5192,
     "lng": 24.0165,
-    "added": "2026-08-28T09:12:03"
+    "added": "2026-08-28T09:12:03",
+    "date": "2026-08-28"
   },
   {
     "src": "/photos/album/crete-chania-loukoumades.jpg",
@@ -477,7 +527,8 @@
     "place": "crete",
     "lat": 35.5157,
     "lng": 24.0193,
-    "added": "2026-08-27T22:08:00"
+    "added": "2026-08-27T22:08:00",
+    "date": "2026-08-27"
   },
   {
     "src": "/photos/album/crete-chania-walk-old-town.jpg",
@@ -485,7 +536,8 @@
     "place": "crete",
     "lat": 35.5155,
     "lng": 24.0187,
-    "added": "2026-08-27T21:54:00"
+    "added": "2026-08-27T21:54:00",
+    "date": "2026-08-27"
   },
   {
     "src": "/photos/album/crete-chania-walk-musicians.jpg",
@@ -493,7 +545,8 @@
     "place": "crete",
     "lat": 35.5153,
     "lng": 24.0187,
-    "added": "2026-08-27T21:53:00"
+    "added": "2026-08-27T21:53:00",
+    "date": "2026-08-27"
   },
   {
     "src": "/photos/album/crete-chania-pomegranate-juice.jpg",
@@ -501,7 +554,8 @@
     "place": "crete",
     "lat": 35.5152,
     "lng": 24.0192,
-    "added": "2026-08-27T21:51:00"
+    "added": "2026-08-27T21:51:00",
+    "date": "2026-08-27"
   },
   {
     "src": "/photos/album/crete-chania-walk-alley-selfie.jpg",
@@ -509,7 +563,8 @@
     "place": "crete",
     "lat": 35.5158,
     "lng": 24.0163,
-    "added": "2026-08-27T21:38:00"
+    "added": "2026-08-27T21:38:00",
+    "date": "2026-08-27"
   },
   {
     "src": "/photos/album/crete-chania-kalamakia.jpg",
@@ -517,7 +572,8 @@
     "place": "crete",
     "lat": 35.5122,
     "lng": 24.0168,
-    "added": "2026-08-27T20:49:00"
+    "added": "2026-08-27T20:49:00",
+    "date": "2026-08-27"
   },
   {
     "src": "/photos/album/crete-chania-hollywood-set.jpg",
@@ -525,7 +581,8 @@
     "place": "crete",
     "lat": 35.5166,
     "lng": 24.0177,
-    "added": "2026-08-27T19:33:00"
+    "added": "2026-08-27T19:33:00",
+    "date": "2026-08-27"
   },
   {
     "src": "/photos/album/crete-chania-coffee-to-beer.jpg",
@@ -533,7 +590,8 @@
     "place": "crete",
     "lat": 35.5167,
     "lng": 24.0177,
-    "added": "2026-08-27T18:10:00"
+    "added": "2026-08-27T18:10:00",
+    "date": "2026-08-27"
   },
   {
     "src": "/photos/album/crete-chania-beer-harbour.jpg",
@@ -541,7 +599,8 @@
     "place": "crete",
     "lat": 35.5167,
     "lng": 24.0177,
-    "added": "2026-08-27T18:07:00"
+    "added": "2026-08-27T18:07:00",
+    "date": "2026-08-27"
   },
   {
     "src": "/photos/album/crete-chania-coffee-harbour.jpg",
@@ -549,7 +608,8 @@
     "place": "crete",
     "lat": 35.5167,
     "lng": 24.0177,
-    "added": "2026-08-27T16:58:00"
+    "added": "2026-08-27T16:58:00",
+    "date": "2026-08-27"
   },
   {
     "src": "/photos/album/crete-chania-lighthouse-night.jpg",
@@ -557,7 +617,8 @@
     "place": "crete",
     "lat": 35.5183,
     "lng": 24.0162,
-    "added": "2026-08-26T22:26:00"
+    "added": "2026-08-26T22:26:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-labodega-board.jpg",
@@ -565,7 +626,8 @@
     "place": "crete",
     "lat": 35.5176,
     "lng": 24.0168,
-    "added": "2026-08-26T21:08:00"
+    "added": "2026-08-26T21:08:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-labodega-placemat.jpg",
@@ -573,7 +635,8 @@
     "place": "crete",
     "lat": 35.5178,
     "lng": 24.0161,
-    "added": "2026-08-26T20:54:00"
+    "added": "2026-08-26T20:54:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-sunset-selfie.jpg",
@@ -581,7 +644,8 @@
     "place": "crete",
     "lat": 35.5187,
     "lng": 24.0188,
-    "added": "2026-08-26T19:49:00"
+    "added": "2026-08-26T19:49:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-harbour-sunset.jpg",
@@ -589,7 +653,8 @@
     "place": "crete",
     "lat": 35.5187,
     "lng": 24.0188,
-    "added": "2026-08-26T19:44:00"
+    "added": "2026-08-26T19:44:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-blue-boat.jpg",
@@ -597,7 +662,8 @@
     "place": "crete",
     "lat": 35.5185,
     "lng": 24.0221,
-    "added": "2026-08-26T19:38:00"
+    "added": "2026-08-26T19:38:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-old-town-ruins.jpg",
@@ -605,7 +671,8 @@
     "place": "crete",
     "lat": 35.5172,
     "lng": 24.0222,
-    "added": "2026-08-26T19:25:00"
+    "added": "2026-08-26T19:25:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-lighthouse-selfie.jpg",
@@ -613,7 +680,8 @@
     "place": "crete",
     "lat": 35.5195,
     "lng": 24.0153,
-    "added": "2026-08-26T16:05:00"
+    "added": "2026-08-26T16:05:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-egyptian-lighthouse.jpg",
@@ -621,7 +689,8 @@
     "place": "crete",
     "lat": 35.5195,
     "lng": 24.0153,
-    "added": "2026-08-26T16:00:00"
+    "added": "2026-08-26T16:00:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-alfa-beers.jpg",
@@ -629,7 +698,8 @@
     "place": "crete",
     "lat": 35.516,
     "lng": 24.0175,
-    "added": "2026-08-26T14:10:00"
+    "added": "2026-08-26T14:10:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-souvlaki.jpg",
@@ -637,7 +707,8 @@
     "place": "crete",
     "lat": 35.516,
     "lng": 24.0175,
-    "added": "2026-08-26T14:05:00"
+    "added": "2026-08-26T14:05:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-greek-salad.jpg",
@@ -645,7 +716,8 @@
     "place": "crete",
     "lat": 35.516,
     "lng": 24.0175,
-    "added": "2026-08-26T14:00:00"
+    "added": "2026-08-26T14:00:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-chania-harbor-freddo.jpg",
@@ -653,7 +725,8 @@
     "place": "crete",
     "lat": 35.516,
     "lng": 24.0175,
-    "added": "2026-08-26T12:00:00"
+    "added": "2026-08-26T12:00:00",
+    "date": "2026-08-26"
   },
   {
     "src": "/photos/album/crete-pork-to-beef-wild.jpg",
@@ -661,7 +734,8 @@
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
-    "added": "2026-08-25T21:00:00"
+    "added": "2026-08-25T21:00:00",
+    "date": "2026-08-25"
   },
   {
     "src": "/photos/album/crete-hotel-raki-fruit.jpg",
@@ -669,7 +743,8 @@
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
-    "added": "2026-08-25T20:35:00"
+    "added": "2026-08-25T20:35:00",
+    "date": "2026-08-25"
   },
   {
     "src": "/photos/album/crete-hotel-welcome-fruit.jpg",
@@ -677,7 +752,8 @@
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
-    "added": "2026-08-25T20:30:00"
+    "added": "2026-08-25T20:30:00",
+    "date": "2026-08-25"
   },
   {
     "src": "/photos/album/crete-hotel-bed.jpg",
@@ -685,7 +761,8 @@
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
-    "added": "2026-08-25T20:15:00"
+    "added": "2026-08-25T20:15:00",
+    "date": "2026-08-25"
   },
   {
     "src": "/photos/album/crete-hotel-jacuzzi.jpg",
@@ -693,7 +770,8 @@
     "place": "crete",
     "lat": 35.5175,
     "lng": 24.0217,
-    "added": "2026-08-25T20:00:00"
+    "added": "2026-08-25T20:00:00",
+    "date": "2026-08-25"
   },
   {
     "src": "/photos/album/plane-to-crete-priest.jpg",
@@ -701,7 +779,8 @@
     "place": "travel",
     "lat": 37.9411,
     "lng": 23.951,
-    "added": "2026-08-25T14:00:00"
+    "added": "2026-08-25T14:00:00",
+    "date": "2026-08-25"
   },
   {
     "src": "/photos/album/frankfurt-weissbier-pretzel.jpg",
@@ -709,7 +788,8 @@
     "place": "travel",
     "lat": 50.0481,
     "lng": 8.5679,
-    "added": "2026-08-25T10:00:00"
+    "added": "2026-08-25T10:00:00",
+    "date": "2026-08-25"
   },
   {
     "src": "/photos/album/united-tarmac-burbank.jpg",
@@ -717,7 +797,8 @@
     "place": "travel",
     "lat": 34.1955,
     "lng": -118.3548,
-    "added": "2026-08-24T19:00:00"
+    "added": "2026-08-24T19:00:00",
+    "date": "2026-08-24"
   },
   {
     "src": "/photos/album/lax-cheers.jpeg",
@@ -725,6 +806,7 @@
     "place": "travel",
     "lat": 34.2006,
     "lng": -118.3585,
-    "added": "2026-08-24T13:50:36"
+    "added": "2026-08-24T13:50:36",
+    "date": "2026-08-24"
   }
 ]
