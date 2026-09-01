@@ -1,5 +1,61 @@
 [
   {
+    "src": "/photos/album/crete-paleochora-dinner-courtyard.jpg",
+    "caption": "Dinner courtyard after dark.",
+    "place": "crete",
+    "lat": 35.2323,
+    "lng": 23.68323,
+    "added": "2026-08-30T22:51:23"
+  },
+  {
+    "src": "/photos/album/crete-paleochora-dinner-board.jpg",
+    "caption": "Meats, cheeses, grapes. Shared board for dinner.",
+    "place": "crete",
+    "lat": 35.23184,
+    "lng": 23.68307,
+    "added": "2026-08-30T21:15:12"
+  },
+  {
+    "src": "/photos/album/crete-paleochora-two-wines.jpg",
+    "caption": "Two red wines. Dinner in Paleochora.",
+    "place": "crete",
+    "lat": 35.23179,
+    "lng": 23.68305,
+    "added": "2026-08-30T20:48:50"
+  },
+  {
+    "src": "/photos/album/crete-paleochora-dusk-us.jpg",
+    "caption": "Us on the pebble beach at dusk.",
+    "place": "crete",
+    "lat": 35.22539,
+    "lng": 23.68235,
+    "added": "2026-08-30T19:39:11"
+  },
+  {
+    "src": "/photos/album/crete-paleochora-flag-chapel.jpg",
+    "caption": "Crete flag and a little chapel on the rocks at dusk.",
+    "place": "crete",
+    "lat": 35.22611,
+    "lng": 23.68248,
+    "added": "2026-08-30T19:36:58"
+  },
+  {
+    "src": "/photos/album/crete-paleochora-scooter.jpg",
+    "caption": "A scooter parked in a green courtyard.",
+    "place": "crete",
+    "lat": 35.22992,
+    "lng": 23.68197,
+    "added": "2026-08-30T19:26:03"
+  },
+  {
+    "src": "/photos/album/crete-paleochora-waterfront-tables.jpg",
+    "caption": "Blue tables by the water. A ferry in the bay.",
+    "place": "crete",
+    "lat": 35.23188,
+    "lng": 23.68418,
+    "added": "2026-08-30T19:07:24"
+  },
+  {
     "src": "/photos/album/crete-paleochora-balcony.jpg",
     "caption": "Paleochora. The view from our balcony.",
     "place": "crete",
