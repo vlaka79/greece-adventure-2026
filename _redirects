@@ -1,1 +1,3 @@
 # Static site — serve real files. Do not fall back HTML onto media paths.
+
+/trips  /trips.html  200

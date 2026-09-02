@@ -1,0 +1,12 @@
+{
+  "trips": [
+    {
+      "id": "greece-2026",
+      "title": "Greece Adventure 2026",
+      "dates": "August 24–September 17, 2026",
+      "href": "/",
+      "note": "Follow along now."
+    }
+  ],
+  "comingLater": "More trips will land here."
+}
