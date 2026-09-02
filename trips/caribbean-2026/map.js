@@ -5,8 +5,8 @@
   var photoItems = [];
   var photoLayer = null;
   var tripMap = null;
-  var PATH_URL = "/trips/caribbean-2026-path.json";
-  var ALBUM_URL = "/trips/caribbean-2026-album.json";
+  var PATH_URL = "/trips/caribbean-2026/path.json";
+  var ALBUM_URL = "/trips/caribbean-2026/album.json";
 
   if (!document.getElementById("photo-pin-click-style")) {
     var st = document.createElement("style");

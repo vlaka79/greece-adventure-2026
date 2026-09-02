@@ -15,7 +15,7 @@
       .replace(/"/g, "&quot;");
   }
 
-  fetch("/trips/caribbean-2026-log.json", { cache: "no-store" })
+  fetch("/trips/caribbean-2026/log.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : []; })
     .then(function (items) {
       var list = document.getElementById("trip-log");
@@ -36,7 +36,7 @@
     })
     .catch(function () {});
 
-  fetch("/trips/caribbean-2026-eats.json", { cache: "no-store" })
+  fetch("/trips/caribbean-2026/eats.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : []; })
     .then(function (items) {
       var list = document.getElementById("eats-list");
@@ -68,7 +68,7 @@
 
   var notesList = document.getElementById("guestbook-list");
   if (notesList) {
-    fetch("/trips/caribbean-2026-notes.json", { cache: "no-store" })
+    fetch("/trips/caribbean-2026/notes.json", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (items) {
         notesList.innerHTML = "";

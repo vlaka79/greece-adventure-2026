@@ -20,7 +20,7 @@ exports.handler = async function () {
   var pinned = [];
   try {
     var origin = process.env.URL || process.env.DEPLOY_PRIME_URL || "https://djbooneadventures.com";
-    var pinRes = await fetch(origin + "/trips/caribbean-2026-notes.json", { cache: "no-store" });
+    var pinRes = await fetch(origin + "/trips/caribbean-2026/notes.json", { cache: "no-store" });
     if (pinRes.ok) pinned = await pinRes.json();
   } catch (e) {}
 
