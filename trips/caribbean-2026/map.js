@@ -38,50 +38,60 @@
     return isNaN(t) ? 0 : t;
   }
 
+  function inPhotoBounds(lat, lng) {
+    return lat >= 9 && lat <= 28.5 && lng >= -85 && lng <= -68;
+  }
+
   function distM(a, b) {
     var dLat = (a.lat - b.lat) * 111320;
     var dLng = (a.lng - b.lng) * 111320 * Math.cos((a.lat * Math.PI) / 180);
     return Math.sqrt(dLat * dLat + dLng * dLng);
   }
 
-  function clusterRadiusM(zoom) {
-    if (zoom >= 16) return 45;
-    if (zoom >= 15) return 90;
-    if (zoom >= 14) return 160;
-    if (zoom >= 13) return 280;
-    if (zoom >= 12) return 550;
-    if (zoom >= 11) return 1200;
-    return 2500;
+  function clusterSpan(g) {
+    var items = g.items || [];
+    if (items.length < 2) return 0;
+    var minLat = items[0].lat, maxLat = items[0].lat, minLng = items[0].lng, maxLng = items[0].lng;
+    items.forEach(function (p) {
+      if (p.lat < minLat) minLat = p.lat;
+      if (p.lat > maxLat) maxLat = p.lat;
+      if (p.lng < minLng) minLng = p.lng;
+      if (p.lng > maxLng) maxLng = p.lng;
+    });
+    g._bounds = [[minLat, minLng], [maxLat, maxLng]];
+    return distM({ lat: minLat, lng: minLng }, { lat: maxLat, lng: maxLng });
   }
 
-  function inCaribbean(lat, lng) {
-    return lat >= 9 && lat <= 28.5 && lng >= -85 && lng <= -68;
-  }
-
-  function groupPhotos(items, zoom) {
-    var radius = clusterRadiusM(zoom);
+  function groupPhotos(items, map) {
     var pts = [];
     (items || []).forEach(function (item) {
       if (item.lat == null || item.lng == null || !item.src) return;
       var lat = Number(item.lat);
       var lng = Number(item.lng);
-      if (!inCaribbean(lat, lng)) return;
+      if (!inPhotoBounds(lat, lng)) return;
+      var ll = L.latLng(lat, lng);
+      var pt = map.latLngToLayerPoint(ll);
       pts.push({
         src: pinSrc(item.src),
         caption: item.caption || "",
         lat: lat,
         lng: lng,
-        added: addedTime(item)
+        added: addedTime(item),
+        _x: pt.x,
+        _y: pt.y
       });
     });
     pts.sort(function (a, b) { return b.added - a.added; });
 
+    var radius = 58;
     var clusters = [];
     pts.forEach(function (p) {
       var best = null;
       var bestD = radius;
       clusters.forEach(function (c) {
-        var d = distM(p, c);
+        var dx = p._x - c._x;
+        var dy = p._y - c._y;
+        var d = Math.sqrt(dx * dx + dy * dy);
         if (d < bestD) {
           bestD = d;
           best = c;
@@ -92,12 +102,16 @@
         var n = best.items.length;
         best.lat = (best.lat * (n - 1) + p.lat) / n;
         best.lng = (best.lng * (n - 1) + p.lng) / n;
+        var cpt = map.latLngToLayerPoint([best.lat, best.lng]);
+        best._x = cpt.x;
+        best._y = cpt.y;
       } else {
-        clusters.push({ lat: p.lat, lng: p.lng, items: [p] });
+        clusters.push({ lat: p.lat, lng: p.lng, _x: p._x, _y: p._y, items: [p] });
       }
     });
     clusters.forEach(function (c) {
       c.items.sort(function (a, b) { return b.added - a.added; });
+      c.span = clusterSpan(c);
     });
     return clusters;
   }
@@ -109,13 +123,34 @@
     if (!shots.length) return;
     if (typeof window.__openLb === "function") {
       window.__openLb(shots, 0);
+      return;
     }
+    var lb = document.getElementById("lb");
+    var lbImg = document.getElementById("lb-img");
+    if (!lb || !lbImg) return;
+    lbImg.src = shots[0].src;
+    lbImg.alt = shots[0].caption || "";
+    lb.classList.remove("hidden");
+    lb.classList.add("flex");
+  }
+
+  function onPhotoClusterClick(map, g) {
+    if (!g || !g.items || !g.items.length) return;
+    if (g.items.length === 1) {
+      openGroup(g);
+      return;
+    }
+    if (g.span > 35 && map.getZoom() < 18 && g._bounds) {
+      map.fitBounds(g._bounds, { padding: [48, 48], maxZoom: 18, animate: true });
+      return;
+    }
+    openGroup(g);
   }
 
   function renderPhotoPins() {
     if (!tripMap || !photoLayer) return;
     photoLayer.clearLayers();
-    var groups = groupPhotos(photoItems, tripMap.getZoom());
+    var groups = groupPhotos(photoItems, tripMap);
     groups.forEach(function (g, i) {
       var first = g.items[0];
       var n = g.items.length;
@@ -142,7 +177,7 @@
       });
       marker.on("click", function (ev) {
         if (ev && ev.originalEvent) L.DomEvent.stopPropagation(ev.originalEvent);
-        openGroup(g);
+        onPhotoClusterClick(tripMap, g);
       });
       photoLayer.addLayer(marker);
     });
