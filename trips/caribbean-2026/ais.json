@@ -1,6 +1,6 @@
 {
   "source": "NOAA Marine Cadastre AIS broadcast points, US coastal waters, March 2026",
-  "note": "Historical AIS, not live. Gaps where the ships were outside US AIS coverage.",
+  "note": "Solid lines are NOAA historical AIS (US coastal waters). Dashed lines are a likely sea route through the ports — not GPS, not live.",
   "tracks": [
     {
       "id": "brilliant-lady",
@@ -3705,6 +3705,146 @@
           "t": "2026-03-16T23:59:13Z",
           "lat": 26.56192,
           "lng": -79.80446
+        }
+      ]
+    }
+  ],
+  "likely": [
+    {
+      "id": "brilliant-lady-gap",
+      "label": "Brilliant Lady (likely route)",
+      "color": "#1b6f66",
+      "points": [
+        {
+          "lat": 24.47655,
+          "lng": -79.52405
+        },
+        {
+          "lat": 23.8,
+          "lng": -78.6
+        },
+        {
+          "lat": 22.9,
+          "lng": -77.4
+        },
+        {
+          "lat": 21.8,
+          "lng": -75.5
+        },
+        {
+          "lat": 20.2,
+          "lng": -74.0
+        },
+        {
+          "lat": 17.2,
+          "lng": -73.8
+        },
+        {
+          "lat": 15.2,
+          "lng": -72.2
+        },
+        {
+          "lat": 13.4,
+          "lng": -70.8
+        },
+        {
+          "lat": 12.524,
+          "lng": -70.027
+        },
+        {
+          "lat": 12.35,
+          "lng": -71.8
+        },
+        {
+          "lat": 12.05,
+          "lng": -73.3
+        },
+        {
+          "lat": 11.35,
+          "lng": -74.6
+        },
+        {
+          "lat": 10.411,
+          "lng": -75.536
+        },
+        {
+          "lat": 12.6,
+          "lng": -76.2
+        },
+        {
+          "lat": 14.8,
+          "lng": -76.5
+        },
+        {
+          "lat": 16.8,
+          "lng": -76.3
+        },
+        {
+          "lat": 17.7,
+          "lng": -76.15
+        },
+        {
+          "lat": 18.25,
+          "lng": -76.55
+        },
+        {
+          "lat": 18.403,
+          "lng": -77.105
+        },
+        {
+          "lat": 18.55,
+          "lng": -78.3
+        },
+        {
+          "lat": 18.75,
+          "lng": -79.6
+        },
+        {
+          "lat": 19.05,
+          "lng": -80.7
+        },
+        {
+          "lat": 19.297,
+          "lng": -81.381
+        },
+        {
+          "lat": 20.3,
+          "lng": -82.4
+        },
+        {
+          "lat": 21.5,
+          "lng": -84.15
+        },
+        {
+          "lat": 23.07071,
+          "lng": -84.03584
+        }
+      ]
+    },
+    {
+      "id": "paradise-gap",
+      "label": "Paradise (likely route)",
+      "color": "#c45c26",
+      "points": [
+        {
+          "lat": 26.2784,
+          "lng": -79.16373
+        },
+        {
+          "lat": 25.85,
+          "lng": -78.55
+        },
+        {
+          "lat": 25.35,
+          "lng": -77.85
+        },
+        {
+          "lat": 25.06,
+          "lng": -77.345
+        },
+        {
+          "lat": 25.26462,
+          "lng": -77.41097
         }
       ]
     }

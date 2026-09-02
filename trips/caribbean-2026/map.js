@@ -203,6 +203,17 @@
           }).addTo(tripMap).bindPopup(tr.label || "AIS");
         });
       });
+      (ais.likely || []).forEach(function (tr) {
+        var coords = (tr.points || []).map(function (p) { return [p.lat, p.lng]; }).filter(function (c) { return c[0] != null && c[1] != null; });
+        coords.forEach(function (c) { bounds.push(c); });
+        if (coords.length < 2) return;
+        L.polyline(coords, {
+          color: tr.color || "#1b6f66",
+          weight: 3,
+          opacity: 0.7,
+          dashArray: "10,8"
+        }).addTo(tripMap).bindPopup(tr.label || "Likely route");
+      });
       var line = path.line || [];
       var seen = {};
       var n = 0;

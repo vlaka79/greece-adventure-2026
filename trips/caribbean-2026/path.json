@@ -1,16 +1,56 @@
 {
   "label": "Ports",
-  "note": "Sea lines are NOAA AIS. Numbered pins are ports. Historical AIS, not live.",
+  "note": "Solid sea lines are NOAA AIS. Dashed is a likely route through the ports, not GPS. Numbered pins are ports. Not live.",
   "line": [
-    {"name": "Brickell, Miami", "lat": 25.766, "lng": -80.193},
-    {"name": "PortMiami", "lat": 25.779, "lng": -80.181},
-    {"name": "Oranjestad, Aruba", "lat": 12.524, "lng": -70.027},
-    {"name": "Cartagena", "lat": 10.411, "lng": -75.536},
-    {"name": "Ocho Rios", "lat": 18.403, "lng": -77.105},
-    {"name": "George Town, Grand Cayman", "lat": 19.297, "lng": -81.381},
-    {"name": "PortMiami", "lat": 25.779, "lng": -80.181},
-    {"name": "Riviera Beach", "lat": 26.78, "lng": -80.04},
-    {"name": "Port of Palm Beach", "lat": 26.773, "lng": -80.048},
-    {"name": "Nassau", "lat": 25.06, "lng": -77.345}
+    {
+      "name": "Brickell, Miami",
+      "lat": 25.766,
+      "lng": -80.193
+    },
+    {
+      "name": "PortMiami",
+      "lat": 25.779,
+      "lng": -80.181
+    },
+    {
+      "name": "Oranjestad, Aruba",
+      "lat": 12.524,
+      "lng": -70.027
+    },
+    {
+      "name": "Cartagena",
+      "lat": 10.411,
+      "lng": -75.536
+    },
+    {
+      "name": "Ocho Rios",
+      "lat": 18.403,
+      "lng": -77.105
+    },
+    {
+      "name": "George Town, Grand Cayman",
+      "lat": 19.297,
+      "lng": -81.381
+    },
+    {
+      "name": "PortMiami",
+      "lat": 25.779,
+      "lng": -80.181
+    },
+    {
+      "name": "Riviera Beach",
+      "lat": 26.78,
+      "lng": -80.04
+    },
+    {
+      "name": "Port of Palm Beach",
+      "lat": 26.773,
+      "lng": -80.048
+    },
+    {
+      "name": "Nassau",
+      "lat": 25.06,
+      "lng": -77.345
+    }
   ]
 }
