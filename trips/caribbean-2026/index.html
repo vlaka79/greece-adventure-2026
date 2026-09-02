@@ -114,17 +114,18 @@
   <div class="min-h-dvh bg-bg text-fg">
     <header class="relative overflow-hidden bg-bg">
       <div class="relative mx-auto max-w-3xl px-5 pb-6 pt-6 sm:pt-8">
-        <p class="text-xs font-semibold uppercase tracking-widest text-primary">A note for friends &amp; family</p>
+        <figure>
+          <div class="relative overflow-hidden rounded-xl bg-fg ring-1 ring-accent/35 card-shadow">
+            <video id="intro" class="aspect-video w-full cursor-pointer object-cover" muted loop playsinline preload="metadata" poster="/photos/trips/caribbean-2026/gopro.jpg">
+              <source src="/photos/trips/caribbean-2026/gopro.mp4" type="video/mp4" />
+            </video>
+            <button type="button" id="sound-btn" class="absolute bottom-3 right-3 z-20 rounded-full bg-surface/90 px-3.5 py-2 text-sm font-semibold text-fg card-shadow">Tap for sound</button>
+          </div>
+          <figcaption class="mt-3 text-center font-serif text-base italic text-muted">Grand Cayman. A stingray at arm’s length.</figcaption>
+        </figure>
+        <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-primary">A note for friends &amp; family</p>
         <h1 class="mt-3 font-serif text-4xl font-semibold leading-tight text-fg sm:text-5xl">Daniel &amp; Julia’s<span class="mt-1 block italic text-primary">Caribbean with Julia</span></h1>
         <p class="mt-2 text-base text-muted">February 26 – March 16, 2026</p>
-        <figure class="mt-6">
-          <div class="relative overflow-hidden rounded-xl bg-surface ring-1 ring-accent/35 card-shadow">
-            <div class="hero-wait px-6 text-center">
-              <p class="font-serif text-2xl font-semibold">Postcard on the way</p>
-              <p class="mt-2 max-w-sm text-sm font-medium text-muted">The hero photo lands here when we upload it. Nothing borrowed from Greece.</p>
-            </div>
-          </div>
-        </figure>
         <div class="stop-strip" aria-label="Stops">
           <span>Miami</span><span class="dot" aria-hidden="true">·</span>
           <span>Aruba</span><span class="dot" aria-hidden="true">·</span>
@@ -148,17 +149,17 @@
     <main class="mx-auto flex max-w-3xl flex-col gap-14 px-5 py-10 sm:gap-16 sm:py-14">
       <section id="story" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">The story</h2>
-        <p class="mt-2 text-muted">One trip. Miami first, then two ships.</p>
+        <p class="mt-2 text-muted">One trip. Miami first, then two ships. The days below are what we actually walked, drove, ate, and got in the water for.</p>
         <div class="mt-6 space-y-4 text-base leading-relaxed text-fg/90">
-          <p>Flew out of Burbank, through Denver, into Miami. A few nights at AC Hotel Brickell. Dinner at Crazy About You on the bay. A Big Bus ticket for the city, and a Key West day trip before we boarded.</p>
-          <p>Virgin Voyages Brilliant Lady, Miami to Miami, eleven nights on Southern Caribbean and Aruban Nights. Aruba we rented a car and drove the island. Cartagena overnight — a city tour on the 6th. A Shore Thing in Ocho Rios — river tubing, rafting, and Bamboo Beach. Grand Cayman for a snorkeling excursion. The meals that stuck: The Test Kitchen and Pink Agave.</p>
-          <p>Overnight in Riviera Beach, then Margaritaville at Sea Paradise out of Port of Palm Beach for a three-night Nassau escape. In Nassau we did a city-tour excursion. Home to LAX after that.</p>
+          <p>Flew BUR–DEN–MIA into Brickell. Crazy About You the first night. The next day was the city — Freedom Tower, Ferré Park, then Calle Ocho for guarapo, Old’s Havana, La Colada, and a Cuban at Sanguich. A Key West Express day down the Overseas Highway before we boarded.</p>
+          <p>Brilliant Lady, Miami to Miami. Aruba was a jeep: Baby Beach, Arikok, California Lighthouse, Eagle Beach. Cartagena was the fort, the cathedral, ceviche, siphon coffee. Ocho Rios was White River tubes and Bamboo Beach. Grand Cayman was a stingray in clear water, the Lady sitting out on the hook. Test Kitchen and Pink Agave are the ship meals that stuck.</p>
+          <p>A night in Riviera Beach, then Paradise to Nassau: Rum Cake Factory, Queen’s Staircase, tacos at John Watling’s, and into the water off West Bay. Home to LAX after that.</p>
         </div>
         <ol id="trip-log" class="mt-8 space-y-4"></ol>
       </section>
       <section id="map" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Photo map</h2>
-        <p class="mt-2 text-muted">Solid lines are NOAA AIS from that trip. Dashed lines are the likely sea route through the ports — not GPS, not live. Numbered pins are ports. When photos go up, tap a pin to open the picture.</p>
+        <p class="mt-2 text-muted">Solid lines are NOAA AIS from that trip. Dashed lines are the likely sea route through the ports — not GPS, not live. Numbered pins are ports. Tap a photo pin to open it. White lines on land are the days we drove or walked, from GPS.</p>
         <div class="mt-5">
           <div id="trip-map-shell"><div id="trip-map" class="absolute inset-0"></div></div>
         </div>
@@ -258,6 +259,7 @@
   </div>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>if (typeof L === "undefined") { document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"><\/script>'); }</script>
   <script src="/lightbox.js"></script>
   <script src="/map-config.js"></script>
   <script src="/trips/caribbean-2026/map.js"></script>

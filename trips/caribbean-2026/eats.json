@@ -1,77 +1,96 @@
 [
   {
     "place": "Crazy About You, Miami",
-    "dish": "Dinner on the bay",
-    "note": "First Miami night. Brickell, the water, and a proper sit-down after the flights."
-  },
-  {
-    "place": "The Test Kitchen, Brilliant Lady",
-    "dish": "The tasting room",
-    "note": "One of the two meals on Brilliant Lady that stuck."
-  },
-  {
-    "place": "Pink Agave, Brilliant Lady",
-    "dish": "Pink Agave",
-    "note": "The other one we kept talking about after the cruise."
-  },
-  {
-    "place": "Crazy About You, Miami",
     "dish": "Tostones",
-    "note": "First Miami night. Plantains before the ribs."
+    "note": "First Miami night. Plantains before the ribs.",
+    "photo": "/photos/trips/caribbean-2026/florida-crazy-about-you-tostones.jpg"
   },
   {
     "place": "Crazy About You, Miami",
     "dish": "BBQ ribs",
-    "note": "Brickell dinner. Ribs, onion straws, and a smoking glass."
+    "note": "Brickell dinner. Ribs, onion straws, and a smoking glass.",
+    "photo": "/photos/trips/caribbean-2026/florida-crazy-about-you-ribs.jpg"
   },
   {
-    "place": "Margaritaville, Key West",
-    "dish": "Margarita",
-    "note": "Duval Street. Salt, lime, and the house tequila sign."
-  },
-  {
-    "place": "Hard Rock Cafe, Miami",
-    "dish": "Burger and fries",
-    "note": "Bayside, boarding day. Standard fuel, better than it needed to be."
-  },
-  {
-    "place": "Passions on the Beach, Aruba",
-    "dish": "Steak and fries wrap",
-    "note": "Eagle Beach. After Arikok, anything with a green sauce counted."
-  },
-  {
-    "place": "La Cevicheria, Cartagena",
-    "dish": "Ceviche",
-    "note": "Walled city. The plate said the name before the food arrived."
-  },
-  {
-    "place": "Caf\u00e9 San Alberto, Cartagena",
-    "dish": "Siphon coffee",
-    "note": "Centro. They brew it like a lab, which is the point."
+    "place": "Crazy About You, Miami",
+    "dish": "The table",
+    "note": "Ribs, fish, wine. Paper liner spells the name out.",
+    "photo": "/photos/trips/caribbean-2026/florida-crazy-about-you-table.jpg"
   },
   {
     "place": "Old's Havana, Little Havana",
     "dish": "Mojitos",
-    "note": "Calle Ocho stop. Mint, cane, and a bar that was already prepping the next round."
+    "note": "Calle Ocho. Mint, cane, and a band already lining up the next round.",
+    "photo": "/photos/trips/caribbean-2026/florida-olds-havana-mojitos.jpg"
   },
   {
     "place": "Old's Havana, Little Havana",
     "dish": "Palomilla steak",
-    "note": "Little Havana lunch. Steak, black beans and rice, sweet plantains."
+    "note": "Steak, moros, maduros. The Cuban plate the way you want it.",
+    "photo": "/photos/trips/caribbean-2026/florida-olds-havana-palomilla.jpg"
   },
   {
     "place": "La Colada Gourmet, Little Havana",
-    "dish": "Espresso and caf\u00e9 con crema",
-    "note": "Calle Ocho coffee stop. Fresh roast, serious foam."
-  },
-  {
-    "place": "The Wandering Rooster, Key West",
-    "dish": "Conch fritters / Cuban mix",
-    "note": "Food truck in a Key West patio. The actual rooster was already there."
+    "dish": "Espresso and café con crema",
+    "note": "Calle Ocho coffee. Fresh roast, serious foam.",
+    "photo": "/photos/trips/caribbean-2026/florida-la-colada-coffee.jpg"
   },
   {
     "place": "Sanguich de Miami",
     "dish": "Cuban sandwich",
-    "note": "Pressed Cuban, wrapping paper with the name on it. The cheese did the work."
+    "note": "Pressed Cuban, wrapping paper with the name on it. The cheese did the work.",
+    "photo": "/photos/trips/caribbean-2026/florida-sanguich-cuban.jpg"
+  },
+  {
+    "place": "The Wandering Rooster, Key West",
+    "dish": "Conch fritters",
+    "note": "Food truck in a Key West patio. The actual rooster was already there.",
+    "photo": "/photos/trips/caribbean-2026/florida-key-west-fritters-burger.jpg"
+  },
+  {
+    "place": "Margaritaville, Key West",
+    "dish": "Margarita",
+    "note": "Duval Street. Salt, lime, chili on the rim.",
+    "photo": "/photos/trips/caribbean-2026/florida-key-west-margaritaville-drink.jpg"
+  },
+  {
+    "place": "Hard Rock Cafe, Miami",
+    "dish": "Burger and fries",
+    "note": "Bayside, boarding day.",
+    "photo": "/photos/trips/caribbean-2026/florida-hard-rock-miami-burger.jpg"
+  },
+  {
+    "place": "Passions on the Beach, Aruba",
+    "dish": "Steak and fries wrap",
+    "note": "Eagle Beach. After Arikok, anything with a green sauce counted.",
+    "photo": "/photos/trips/caribbean-2026/virgin-passions-steak-wrap.jpg"
+  },
+  {
+    "place": "La Cevicheria, Cartagena",
+    "dish": "Ceviche",
+    "note": "Walled city. The plate said the name before the food arrived.",
+    "photo": "/photos/trips/caribbean-2026/virgin-cartagena-la-cevicheria-plate.jpg"
+  },
+  {
+    "place": "Café San Alberto, Cartagena",
+    "dish": "Siphon coffee",
+    "note": "Centro. They brew it like a lab, which is the point.",
+    "photo": "/photos/trips/caribbean-2026/virgin-cartagena-san-alberto-siphon.jpg"
+  },
+  {
+    "place": "John Watling’s Distillery, Nassau",
+    "dish": "Tacos",
+    "note": "Plantains in the tortilla, lime soda, patio mesh table.",
+    "photo": "/photos/trips/caribbean-2026/nassau-watlings-tacos.jpg"
+  },
+  {
+    "place": "The Test Kitchen, Brilliant Lady",
+    "dish": "The tasting room",
+    "note": "One of the two meals on Brilliant Lady that stuck. Boat photos still coming."
+  },
+  {
+    "place": "Pink Agave, Brilliant Lady",
+    "dish": "Pink Agave",
+    "note": "The other one we kept talking about after the cruise. Boat photos still coming."
   }
 ]

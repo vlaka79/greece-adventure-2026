@@ -236,7 +236,7 @@
         }).addTo(tripMap);
       }
       var line = L.polyline(coords, {
-        color: "#f7f7f4",
+        color: "#e8f4f2",
         weight: weight,
         opacity: dashed ? 0.8 : 0.95,
         dashArray: dashed ? "7,9" : null,
@@ -262,13 +262,31 @@
     });
   }
 
+  function addBaseTiles(map) {
+    var osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 19
+    });
+    var esri = L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 });
+    var failed = 0;
+    esri.on("tileerror", function () {
+      failed += 1;
+      if (failed === 3 && map.hasLayer(esri)) {
+        map.removeLayer(esri);
+        osm.addTo(map);
+      }
+    });
+    esri.addTo(map);
+  }
+
   function rebuild() {
     var el = document.getElementById("trip-map");
     if (!el) return;
+    if (typeof L === "undefined") return;
     el.innerHTML = "";
     if (el._leaflet_id) delete el._leaflet_id;
-    tripMap = L.map(el, { scrollWheelZoom: true, zoomControl: true });
-    L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 }).addTo(tripMap);
+    tripMap = L.map(el, { scrollWheelZoom: true, zoomControl: true, preferCanvas: true });
+    addBaseTiles(tripMap);
     photoLayer = L.layerGroup().addTo(tripMap);
 
     Promise.all([
@@ -330,7 +348,7 @@
           dashArray: "10,8"
         }).addTo(tripMap).bindPopup(tr.label || "Likely route");
       });
-      drawDrives(drives);
+      try { drawDrives(drives); } catch (err) { console.warn(err); }
       var line = path.line || [];
       var seen = {};
       var n = 0;
@@ -365,7 +383,11 @@
       } else {
         tripMap.setView([23.5, -78.5], 5);
       }
-      setTimeout(function () { tripMap.invalidateSize(); }, 200);
+      setTimeout(function () { if (tripMap) tripMap.invalidateSize(); }, 200);
+      setTimeout(function () { if (tripMap) tripMap.invalidateSize(); }, 800);
+    }).catch(function (err) {
+      console.warn(err);
+      if (tripMap) tripMap.setView([23.5, -78.5], 5);
     });
   }
 

@@ -1,4 +1,68 @@
 (function () {
+  var video = document.getElementById("intro");
+  var soundBtn = document.getElementById("sound-btn");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function setMuted(muted) {
+    if (!video) return;
+    video.muted = muted;
+    if (soundBtn) {
+      soundBtn.textContent = muted ? "Tap for sound" : "Sound on";
+      soundBtn.setAttribute("aria-pressed", muted ? "false" : "true");
+    }
+  }
+  function tryPlay() {
+    if (!video || reduce) return;
+    if (!video.muted) return;
+    var p = video.play();
+    if (p && p.catch) p.catch(function () {});
+  }
+  var isPhone = window.matchMedia("(max-width: 700px), (pointer: coarse)").matches;
+  if (video) {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.setAttribute("playsinline", "");
+    video.loop = true;
+    if (reduce || isPhone) {
+      video.removeAttribute("autoplay");
+      video.preload = "metadata";
+      video.pause();
+      if (soundBtn) soundBtn.textContent = "Tap to play";
+    } else {
+      video.setAttribute("autoplay", "");
+      video.preload = "auto";
+      setMuted(true);
+      tryPlay();
+      video.addEventListener("canplay", tryPlay);
+      video.addEventListener("loadeddata", tryPlay);
+    }
+  }
+  function startIntro() {
+    if (!video) return;
+    var p = video.play();
+    if (p && p.catch) p.catch(function () {});
+  }
+  function toggleSound(e) {
+    if (e) { e.preventDefault(); e.stopPropagation(); }
+    if (!video) return;
+    if (video.paused) {
+      video.muted = true;
+      setMuted(true);
+      startIntro();
+      return;
+    }
+    if (video.muted) {
+      video.muted = false;
+      setMuted(false);
+      startIntro();
+    } else {
+      setMuted(true);
+    }
+  }
+  if (soundBtn) soundBtn.addEventListener("click", toggleSound);
+  if (video && isPhone) video.addEventListener("click", toggleSound);
+
+
   function formatDate(iso) {
     if (!iso) return "";
     try {
