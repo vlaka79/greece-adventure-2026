@@ -1,34 +1,43 @@
 (function () {
   if (typeof L === "undefined") return;
-  var TILES = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
-  var ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+  var TILES = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
+  var ATTR = 'Tiles &copy; <a href="https://www.esri.com/">Esri</a> — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community';
   var photoItems = [];
   var photoLayer = null;
   var tripMap = null;
   var PATH_URL = "/trips/caribbean-2026/path.json";
   var AIS_URL = "/trips/caribbean-2026/ais.json";
   var ALBUM_URL = "/trips/caribbean-2026/album.json";
+  var DRIVES_URL = "/trips/caribbean-2026/drives.json";
 
   if (!document.getElementById("photo-pin-click-style")) {
     var st = document.createElement("style");
     st.id = "photo-pin-click-style";
     st.textContent =
       ".photo-pin-icon{cursor:pointer;background:transparent;border:0;}" +
-      ".photo-pin-icon .photo-pin{pointer-events:auto;position:relative;width:48px;height:56px;}" +
-      ".photo-pin-stack{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:8px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.22);}" +
-      ".photo-pin-stack.s1{transform:translate(4px,-4px) rotate(6deg);z-index:1;}" +
-      ".photo-pin-stack.s2{transform:translate(-3px,-3px) rotate(-5deg);z-index:2;}" +
-      ".photo-pin-card{position:relative;z-index:3;width:48px;height:48px;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.28);background:#f4eee4;}" +
+      ".photo-pin-icon .photo-pin{pointer-events:auto;position:relative;width:48px;height:48px;}" +
+      ".photo-pin-stack{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.22);}" +
+      ".photo-pin-stack.s1{transform:translate(5px,-3px);z-index:1;}" +
+      ".photo-pin-stack.s2{transform:translate(-4px,-2px);z-index:2;}" +
+      ".photo-pin-card{position:relative;z-index:3;width:48px;height:48px;border-radius:50%;overflow:hidden;border:3px solid #fff;box-sizing:border-box;box-shadow:0 2px 10px rgba(0,0,0,.42);background:#f4eee4;}" +
       ".photo-pin-card img{width:100%;height:100%;object-fit:cover;display:block;}" +
-      ".photo-pin-count{position:absolute;right:3px;bottom:3px;z-index:4;min-width:1.1rem;border-radius:999px;background:#1b6f66;color:#f4eee4;font-size:10px;font-weight:700;line-height:1.2rem;text-align:center;padding:0 4px;}" +
-      ".trip-path-pin{width:22px;height:22px;border-radius:50%;background:#1b6f66;color:#f4eee4;font:700 11px/22px 'Source Sans 3',sans-serif;text-align:center;box-shadow:0 0 0 2px #fffcf6,0 2px 6px rgba(42,36,28,.3);}";
+      ".photo-pin-count{position:absolute;right:-2px;bottom:-2px;z-index:4;min-width:1.1rem;border-radius:999px;background:#1b6f66;color:#f4eee4;font-size:10px;font-weight:700;line-height:1.2rem;text-align:center;padding:0 4px;box-shadow:0 1px 3px rgba(0,0,0,.35);}" +
+      ".trip-path-pin{width:22px;height:22px;border-radius:50%;background:#1b6f66;color:#f4eee4;font:700 11px/22px 'Source Sans 3',sans-serif;text-align:center;box-shadow:0 0 0 2px #fffcf6,0 2px 6px rgba(42,36,28,.3);}" +
+      ".drive-car-icon{background:transparent;border:0;}" +
+      ".drive-car{width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;}" +
+      ".drive-car svg{width:11px;height:11px;display:block;}";
     document.head.appendChild(st);
   }
 
+  var CAR_SVG =
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#111" d="M5.2 13.1 6.6 8.8A1.8 1.8 0 0 1 8.3 7.5h7.4a1.8 1.8 0 0 1 1.7 1.3l1.4 4.3H5.2z"/><path fill="#111" d="M4.5 13.2h15v3.1h-15z"/><circle cx="7.4" cy="16.6" r="1.45" fill="#111"/><circle cx="16.6" cy="16.6" r="1.45" fill="#111"/></svg>';
+
   function pinSrc(src) {
     if (!src) return src;
-    var m = String(src).match(/\/photos\/album\/[^/?#]+/);
-    return m ? m[0] : src;
+    var s = String(src);
+    if (s.indexOf("/photos/") === 0) return s;
+    var m = s.match(/\/photos\/album\/[^/?#]+/);
+    return m ? m[0] : s;
   }
 
   function addedTime(item) {
@@ -167,8 +176,8 @@
         icon: L.divIcon({
           className: "photo-pin-icon",
           html: html,
-          iconSize: [56, 66],
-          iconAnchor: [28, 66]
+          iconSize: [52, 52],
+          iconAnchor: [26, 26]
         }),
         zIndexOffset: 900 + i,
         riseOnHover: true,
@@ -180,6 +189,76 @@
         onPhotoClusterClick(tripMap, g);
       });
       photoLayer.addLayer(marker);
+    });
+  }
+
+  function driveCoords(tr) {
+    return (tr.points || []).map(function (p) {
+      return [p.lat, p.lng];
+    }).filter(function (c) {
+      return c[0] != null && c[1] != null;
+    });
+  }
+
+  function carStopsAlong(coords, everyKm) {
+    var out = [];
+    if (coords.length < 2) return out;
+    var acc = 0;
+    var next = everyKm;
+    for (var i = 1; i < coords.length; i++) {
+      acc += distM(
+        { lat: coords[i - 1][0], lng: coords[i - 1][1] },
+        { lat: coords[i][0], lng: coords[i][1] }
+      ) / 1000;
+      if (acc >= next) {
+        out.push(coords[i]);
+        next += everyKm;
+      }
+    }
+    return out;
+  }
+
+  function drawDrives(drives) {
+    (drives.tracks || []).forEach(function (tr) {
+      var coords = driveCoords(tr);
+      if (coords.length < 2) return;
+      var dashed = tr.style === "dashed" || tr.mode === "bus";
+      var boat = tr.mode === "boat" || tr.style === "thin";
+      var weight = boat ? 2 : dashed ? 2.5 : (tr.mode === "car" ? 4 : 3);
+      if (!dashed && !boat) {
+        L.polyline(coords, {
+          color: "#1a1a1a",
+          weight: weight + 2,
+          opacity: 0.28,
+          lineJoin: "round",
+          lineCap: "round",
+          interactive: false
+        }).addTo(tripMap);
+      }
+      var line = L.polyline(coords, {
+        color: "#f7f7f4",
+        weight: weight,
+        opacity: dashed ? 0.8 : 0.95,
+        dashArray: dashed ? "7,9" : null,
+        lineJoin: "round",
+        lineCap: "round"
+      }).addTo(tripMap);
+      if (tr.label) line.bindPopup(tr.label);
+      if (tr.id === "aruba" || (tr.mode === "car" && tr.id === "aruba")) {
+        carStopsAlong(coords, 10).forEach(function (ll) {
+          L.marker(ll, {
+            icon: L.divIcon({
+              className: "drive-car-icon",
+              html: '<div class="drive-car">' + CAR_SVG + "</div>",
+              iconSize: [18, 18],
+              iconAnchor: [9, 9]
+            }),
+            interactive: false,
+            keyboard: false,
+            zIndexOffset: 250
+          }).addTo(tripMap);
+        });
+      }
     });
   }
 
@@ -195,11 +274,13 @@
     Promise.all([
       fetch(PATH_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
       fetch(ALBUM_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }),
-      fetch(AIS_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
-    ]).then(function (triple) {
-      var path = triple[0] || {};
-      photoItems = triple[1] || [];
-      var ais = triple[2] || {};
+      fetch(AIS_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
+      fetch(DRIVES_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+    ]).then(function (quad) {
+      var path = quad[0] || {};
+      photoItems = quad[1] || [];
+      var ais = quad[2] || {};
+      var drives = quad[3] || {};
       var bounds = [];
       var GAP_MS = 4 * 60 * 60 * 1000;
       (ais.tracks || []).forEach(function (tr) {
@@ -249,6 +330,7 @@
           dashArray: "10,8"
         }).addTo(tripMap).bindPopup(tr.label || "Likely route");
       });
+      drawDrives(drives);
       var line = path.line || [];
       var seen = {};
       var n = 0;
@@ -265,8 +347,16 @@
             html: '<div class="trip-path-pin">' + n + "</div>",
             iconSize: [22, 22],
             iconAnchor: [11, 11]
-          })
+          }),
+          zIndexOffset: 120
         }).addTo(tripMap).bindPopup(p.name || "");
+      });
+      photoItems.forEach(function (item) {
+        if (item.lat == null || item.lng == null) return;
+        var lat = Number(item.lat);
+        var lng = Number(item.lng);
+        if (!inPhotoBounds(lat, lng)) return;
+        bounds.push([lat, lng]);
       });
       renderPhotoPins();
       tripMap.on("zoomend", renderPhotoPins);

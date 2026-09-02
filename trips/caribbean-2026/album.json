@@ -1,1 +1,982 @@
-[]
+[
+  {
+    "src": "/photos/trips/caribbean-2026/nassau-west-bay-water.jpg",
+    "caption": "West Bay Street, in the water. Nassau doing the color it advertised.",
+    "place": "margaritaville",
+    "lat": 25.07105,
+    "lng": -77.389764,
+    "added": "2026-03-15T14:01:48",
+    "date": "2026-03-15",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/nassau-watlings-tacos.jpg",
+    "caption": "Tacos and a lime soda at John Watling\u2019s Distillery. Plantains in the tortilla, patio mesh table.",
+    "place": "margaritaville",
+    "lat": 25.074686,
+    "lng": -77.349144,
+    "added": "2026-03-15T12:34:58",
+    "date": "2026-03-15",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/nassau-colonial-house-flags.jpg",
+    "caption": "Red upper story, Bahamian flag, Union Jack. Nassau city tour, late morning light.",
+    "place": "margaritaville",
+    "lat": 25.075286,
+    "lng": -77.350394,
+    "added": "2026-03-15T12:14:22",
+    "date": "2026-03-15",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/nassau-queens-staircase.jpg",
+    "caption": "Queen\u2019s Staircase, limestone cut, Bahamian flag in the gorge. Nassau city tour, not subtle.",
+    "place": "margaritaville",
+    "lat": 25.073672,
+    "lng": -77.337647,
+    "added": "2026-03-15T10:49:59",
+    "date": "2026-03-15",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/nassau-rum-cake-factory.jpg",
+    "caption": "Bahamas Rum Cake Factory on Bay Street. Mandatory stop, city-tour pacing.",
+    "place": "margaritaville",
+    "lat": 25.077019,
+    "lng": -77.333197,
+    "added": "2026-03-15T10:25:27",
+    "date": "2026-03-15",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cayman-welcome-sign.jpg",
+    "caption": "Welcome to the Cayman Islands, coat of arms and all. Port building, then the water.",
+    "place": "virgin",
+    "lat": 19.295047,
+    "lng": -81.383264,
+    "added": "2026-03-10T13:39:19",
+    "date": "2026-03-10",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cayman-boat-adventures.jpg",
+    "caption": "Cayman Boat Adventures console sticker, turquoise water, condos on the beach. Snorkel day.",
+    "place": "virgin",
+    "lat": 19.321342,
+    "lng": -81.376817,
+    "added": "2026-03-10T12:56:23",
+    "date": "2026-03-10",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cayman-snorkel-boat.jpg",
+    "caption": "Out with the snorkel boat, mangroves on the shore. Grand Cayman, still close to land.",
+    "place": "virgin",
+    "lat": 19.320222,
+    "lng": -81.376336,
+    "added": "2026-03-10T09:54:24",
+    "date": "2026-03-10",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cayman-brilliant-lady-profile.jpg",
+    "caption": "Full profile of the Lady at the Cayman anchorage. Not a boat-interior shot \u2014 just the ship from the water.",
+    "place": "virgin",
+    "lat": 19.295317,
+    "lng": -81.390306,
+    "added": "2026-03-10T09:17:54",
+    "date": "2026-03-10",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cayman-brilliant-lady-bow.jpg",
+    "caption": "Brilliant Lady from the tender off George Town. Bow on, red letters, Cayman water.",
+    "place": "virgin",
+    "lat": 19.295953,
+    "lng": -81.393433,
+    "added": "2026-03-10T09:16:21",
+    "date": "2026-03-10",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cayman-tender-selfie.jpg",
+    "caption": "Tender into George Town. Ship in the sunglasses, North Church Street ahead.",
+    "place": "virgin",
+    "lat": 19.297842,
+    "lng": -81.383142,
+    "added": "2026-03-10T09:01:56",
+    "date": "2026-03-10",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-ocho-rios-pier-brilliant-lady.jpg",
+    "caption": "Ocho Rios cruise terminal. Brilliant Lady on the hook, pier in the foreground.",
+    "place": "virgin",
+    "lat": 18.409392,
+    "lng": -77.110581,
+    "added": "2026-03-09T16:05:02",
+    "date": "2026-03-09",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-ocho-rios-shuttle.jpg",
+    "caption": "Shuttle back from Bamboo Beach. Whole van accounted for.",
+    "place": "virgin",
+    "lat": 18.481078,
+    "lng": -77.479844,
+    "added": "2026-03-09T14:41:13",
+    "date": "2026-03-09",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-bamboo-beach-selfie.jpg",
+    "caption": "Us at the Bamboo Beach sign. White sails, lounge chairs, the easy part of the Shore Thing day.",
+    "place": "virgin",
+    "lat": 18.481133,
+    "lng": -77.47995,
+    "added": "2026-03-09T14:37:03",
+    "date": "2026-03-09",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-bamboo-beach-sign.jpg",
+    "caption": "Bamboo Beach Club, 2026 already on the board. Greetings from Jamaica, conch shells in the planters.",
+    "place": "virgin",
+    "lat": 18.481644,
+    "lng": -77.479753,
+    "added": "2026-03-09T14:36:26",
+    "date": "2026-03-09",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-ocho-rios-tubing-smile.jpg",
+    "caption": "Same river, still smiling. Turquoise water that looks like it belongs on a postcard, not a tube run.",
+    "place": "virgin",
+    "lat": 18.451753,
+    "lng": -77.453183,
+    "added": "2026-03-09T12:42:03",
+    "date": "2026-03-09",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-ocho-rios-tubing-bank.jpg",
+    "caption": "On the bank before the float. Helmets, green tubes, Jamaica heat.",
+    "place": "virgin",
+    "lat": 18.451747,
+    "lng": -77.453283,
+    "added": "2026-03-09T12:39:30",
+    "date": "2026-03-09",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-ocho-rios-tubing-river.jpg",
+    "caption": "White River tubing, Shore Thing. Green tube, blue vest, bamboo on the bank.",
+    "place": "virgin",
+    "lat": 18.451803,
+    "lng": -77.453328,
+    "added": "2026-03-09T12:35:15",
+    "date": "2026-03-09",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-ocho-rios-turtle-sign.jpg",
+    "caption": "Ocho Rios turtle sign at Island Village. Flags, wires, the usual Caribbean skyline of utilities.",
+    "place": "virgin",
+    "lat": 18.406328,
+    "lng": -77.109772,
+    "added": "2026-03-09T10:18:50",
+    "date": "2026-03-09",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cartagena-san-alberto-cake.jpg",
+    "caption": "San Alberto iced coffee and a slice of chocolate cake. God bless great coffee, says the coaster.",
+    "place": "virgin",
+    "lat": 10.424258,
+    "lng": -75.551986,
+    "added": "2026-03-06T15:54:35",
+    "date": "2026-03-06",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cartagena-san-alberto-siphon.jpg",
+    "caption": "Siphon brew at Caf\u00e9 San Alberto. Purple apron, blue flame, coffee as a science project.",
+    "place": "virgin",
+    "lat": 10.424267,
+    "lng": -75.551986,
+    "added": "2026-03-06T15:51:48",
+    "date": "2026-03-06",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cartagena-cathedral-sconce.jpg",
+    "caption": "Wrought-iron sconce inside the cathedral. Six candles, colonial hardware.",
+    "place": "virgin",
+    "lat": 10.423528,
+    "lng": -75.550614,
+    "added": "2026-03-06T15:24:21",
+    "date": "2026-03-06",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cartagena-cathedral-selfie.jpg",
+    "caption": "Cartagena Cathedral, pink dome, stone that holds the heat. Plaza selfie.",
+    "place": "virgin",
+    "lat": 10.423517,
+    "lng": -75.550628,
+    "added": "2026-03-06T15:09:21",
+    "date": "2026-03-06",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cartagena-la-cevicheria-plate.jpg",
+    "caption": "La Cevicheria, empty plate, lobster on the rim. San Diego, waiting on the first course.",
+    "place": "virgin",
+    "lat": 10.428119,
+    "lng": -75.548217,
+    "added": "2026-03-06T14:07:28",
+    "date": "2026-03-06",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cartagena-lunch-sandwich.jpg",
+    "caption": "Sandwich and paprika fries in Centro. Club Colombia still in the corner of the frame.",
+    "place": "virgin",
+    "lat": 10.424253,
+    "lng": -75.552056,
+    "added": "2026-03-06T12:57:49",
+    "date": "2026-03-06",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cartagena-club-colombia.jpg",
+    "caption": "Club Colombia Dorada in the walled city. Condensation doing the advertising.",
+    "place": "virgin",
+    "lat": 10.424208,
+    "lng": -75.551964,
+    "added": "2026-03-06T12:12:25",
+    "date": "2026-03-06",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cartagena-san-felipe-fort.jpg",
+    "caption": "The whole fort from the lawn. Blas de Lezo\u2019s hill, tourists for scale.",
+    "place": "virgin",
+    "lat": 10.421783,
+    "lng": -75.539947,
+    "added": "2026-03-06T10:26:23",
+    "date": "2026-03-06",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cartagena-san-felipe-selfie.jpg",
+    "caption": "Castillo San Felipe de Barajas. Hot, huge, the Spanish flag still on the wall.",
+    "place": "virgin",
+    "lat": 10.421319,
+    "lng": -75.539764,
+    "added": "2026-03-06T10:23:50",
+    "date": "2026-03-06",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-eagle-beach.jpg",
+    "caption": "Eagle Beach, blue tablecloths under the palapas, jet skis in the cut. End of the Aruba loop.",
+    "place": "virgin",
+    "lat": 12.553744,
+    "lng": -70.055442,
+    "added": "2026-03-04T15:31:58",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-passions-tuna-burrata.jpg",
+    "caption": "Tuna tartare and burrata on the same table. Passions doing both coasts of the menu.",
+    "place": "virgin",
+    "lat": 12.553583,
+    "lng": -70.055192,
+    "added": "2026-03-04T14:58:35",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-passions-steak-wrap.jpg",
+    "caption": "Steak, fries, salad on a tortilla at Passions on the Beach. Eagle Beach lunch after the drive.",
+    "place": "virgin",
+    "lat": 12.553578,
+    "lng": -70.055161,
+    "added": "2026-03-04T14:58:33",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-california-lighthouse-selfie.jpg",
+    "caption": "Same lighthouse, closer. Hudishibana, coconut stand somewhere behind us.",
+    "place": "virgin",
+    "lat": 12.613747,
+    "lng": -70.051689,
+    "added": "2026-03-04T14:13:09",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-california-lighthouse.jpg",
+    "caption": "California Lighthouse, Noord. White stone, no clouds, end of the island.",
+    "place": "virgin",
+    "lat": 12.613744,
+    "lng": -70.051689,
+    "added": "2026-03-04T14:11:44",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-malmok-boats.jpg",
+    "caption": "De Palm catamaran off Malmok. Tour boats on the calm side after a morning of dirt roads.",
+    "place": "virgin",
+    "lat": 12.601286,
+    "lng": -70.050956,
+    "added": "2026-03-04T14:05:20",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-natural-pool-surf.jpg",
+    "caption": "Surf hitting the black rock on the Natural Pool trail. Fence in the dirt, Atlantic doing the rest.",
+    "place": "virgin",
+    "lat": 12.523936,
+    "lng": -69.929956,
+    "added": "2026-03-04T12:59:45",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-natural-pool-coast.jpg",
+    "caption": "Windward coast toward the natural pool. Volcanic rock, white water, turbines on the ridge.",
+    "place": "virgin",
+    "lat": 12.523981,
+    "lng": -69.9302,
+    "added": "2026-03-04T12:56:26",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-jeep-driver.jpg",
+    "caption": "Arubajeeprent.com on the door, dust on the fender. This is the island the resorts don\u2019t show.",
+    "place": "virgin",
+    "lat": 12.510492,
+    "lng": -69.943572,
+    "added": "2026-03-04T12:38:14",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-arikok-track.jpg",
+    "caption": "Arikok track from the hood of the Jeep. Two concrete ribbons, cactus on the ridge.",
+    "place": "virgin",
+    "lat": 12.505728,
+    "lng": -69.938903,
+    "added": "2026-03-04T12:29:41",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-boca-prins.jpg",
+    "caption": "Boca Prins cove. Wind, kelp, a little beach the ocean is trying to take back.",
+    "place": "virgin",
+    "lat": 12.497742,
+    "lng": -69.907294,
+    "added": "2026-03-04T12:07:08",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-fontein-cave.jpg",
+    "caption": "Fontein Cave. Stalactites, a marked path, a break from the sun.",
+    "place": "virgin",
+    "lat": 12.492933,
+    "lng": -69.907342,
+    "added": "2026-03-04T11:56:50",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-baby-beach.jpg",
+    "caption": "Baby Beach palapa and that ridiculous turquoise. San Nicolaas end of the island.",
+    "place": "virgin",
+    "lat": 12.414839,
+    "lng": -69.882033,
+    "added": "2026-03-04T10:29:32",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-marktstraat-mural.jpg",
+    "caption": "Chemis mural on Marktstraat: Love the life you live, on a high-voltage box. Savaneta, not the postcard strip.",
+    "place": "virgin",
+    "lat": 12.435819,
+    "lng": -69.911675,
+    "added": "2026-03-04T09:55:07",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-savaneta-mangroves.jpg",
+    "caption": "Savaneta shoreline. Mangroves in the shallows, water going from milk to blue.",
+    "place": "virgin",
+    "lat": 12.452575,
+    "lng": -69.955589,
+    "added": "2026-03-04T09:39:37",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-jeep-rental.jpg",
+    "caption": "Jeep keys in Oranjestad. Top on, AC up, island day.",
+    "place": "virgin",
+    "lat": 12.52,
+    "lng": -70.041375,
+    "added": "2026-03-04T09:15:30",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-oranjestad-from-above.jpg",
+    "caption": "Oranjestad from the rental lot. Pink Dutch gables, a mural, too many parked cars.",
+    "place": "virgin",
+    "lat": 12.519236,
+    "lng": -70.042442,
+    "added": "2026-03-04T08:32:51",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-bayside-rain.jpg",
+    "caption": "Bayside squall from under the eaves. Palms sideways, the kind of rain that shuts a plaza down.",
+    "place": "florida",
+    "lat": 25.777803,
+    "lng": -80.186578,
+    "added": "2026-03-01T14:06:23",
+    "date": "2026-03-01",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-hard-rock-miami-burger.jpg",
+    "caption": "Hard Rock burger at Bayside before we boarded. Flag in the bun, fries with actual pepper.",
+    "place": "florida",
+    "lat": 25.777208,
+    "lng": -80.184478,
+    "added": "2026-03-01T12:56:55",
+    "date": "2026-03-01",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-sanguich-cuban.jpg",
+    "caption": "Sanguich de Miami. The cheese pull is the whole review.",
+    "place": "florida",
+    "lat": 25.776981,
+    "lng": -80.184806,
+    "added": "2026-03-01T12:19:08",
+    "date": "2026-03-01",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-hard-rock-key-west-beers.jpg",
+    "caption": "Two Hard Rock cups at the end of the Key West loop. Cold beer, Key West on the shirt behind them.",
+    "place": "florida",
+    "lat": 24.55775,
+    "lng": -81.8041,
+    "added": "2026-02-28T16:03:06",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-shipwreck-treasures-pirate.jpg",
+    "caption": "Pirate on the bench at Shipwreck Treasures. He had the better hat.",
+    "place": "florida",
+    "lat": 24.559136,
+    "lng": -81.806831,
+    "added": "2026-02-28T15:24:07",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-key-west-red-doors.jpg",
+    "caption": "The Red Doors, 1827, Caroline and William. White house, red shutters, Key West doing the postcard.",
+    "place": "florida",
+    "lat": 24.560342,
+    "lng": -81.800919,
+    "added": "2026-02-28T13:54:09",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-key-west-fritters-burger.jpg",
+    "caption": "Conch fritters and a cheeseburger, blender cup standing in as tableware. Key West, takeout boxes.",
+    "place": "florida",
+    "lat": 24.559797,
+    "lng": -81.804322,
+    "added": "2026-02-28T13:20:18",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-wandering-rooster-truck.jpg",
+    "caption": "The Wandering Rooster Citro\u00ebn on turf. Smash burgers, Cuban mix, conch fritters \u2014 and a live rooster.",
+    "place": "florida",
+    "lat": 24.559764,
+    "lng": -81.804292,
+    "added": "2026-02-28T13:14:36",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-key-west-blender-drink.jpg",
+    "caption": "Booze in the Blender cup, peach slush, parrot on the plastic. Key West Margaritaville souvenir whether you want it or not.",
+    "place": "florida",
+    "lat": 24.555719,
+    "lng": -81.802758,
+    "added": "2026-02-28T12:38:15",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-key-west-cuban-flatbread.jpg",
+    "caption": "Cuban flatbread on Duval \u2014 ham, pork, pickles, mustard drizzle. Lunch that made sense.",
+    "place": "florida",
+    "lat": 24.555703,
+    "lng": -81.802728,
+    "added": "2026-02-28T12:36:47",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-key-west-margaritaville-drink.jpg",
+    "caption": "Salt rim and a chili on Duval. Margaritaville Key West, Jimmy on the wall, Happy Gilmore on the TV.",
+    "place": "florida",
+    "lat": 24.555758,
+    "lng": -81.802772,
+    "added": "2026-02-28T12:11:57",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-key-west-hard-rock-gingerbread.jpg",
+    "caption": "Looking up at the Hard Rock\u2019s gingerbread. The sign is almost secondary.",
+    "place": "florida",
+    "lat": 24.557694,
+    "lng": -81.804061,
+    "added": "2026-02-28T11:59:40",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-key-west-hard-rock-house.jpg",
+    "caption": "Hard Rock Cafe, 313 Duval. Victorian gingerbread, blue paint, Key West heat.",
+    "place": "florida",
+    "lat": 24.557694,
+    "lng": -81.804117,
+    "added": "2026-02-28T11:52:59",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-key-west-city-marina.jpg",
+    "caption": "Marlin on the sign at Garrison Bight. Key West City Marina, charter boat row.",
+    "place": "florida",
+    "lat": 24.559794,
+    "lng": -81.783692,
+    "added": "2026-02-28T11:33:45",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-old-seven-mile-bridge.jpg",
+    "caption": "Old Seven Mile Bridge with trees growing on the deck. Nature keeping the railroad.",
+    "place": "florida",
+    "lat": 24.689586,
+    "lng": -81.202706,
+    "added": "2026-02-28T10:37:23",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-overseas-highway-marathon.jpg",
+    "caption": "US 1 over water at Marathon. The old span running parallel the whole way.",
+    "place": "florida",
+    "lat": 24.706497,
+    "lng": -81.127669,
+    "added": "2026-02-28T10:31:10",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-keys-channel-2-bridge.jpg",
+    "caption": "Channel 2 Bridge, Islamorada. New road, old arches, people fishing the gap.",
+    "place": "florida",
+    "lat": 24.842794,
+    "lng": -80.751244,
+    "added": "2026-02-28T09:56:39",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-key-west-express-bus.jpg",
+    "caption": "Key West Express+ bus in Key Largo. Top deck, Van Hool, day trip officially started.",
+    "place": "florida",
+    "lat": 25.109019,
+    "lng": -80.426978,
+    "added": "2026-02-28T09:01:18",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-key-largo-walk.jpg",
+    "caption": "Key Largo stop on the way down. Sun hat, sidewalk, Overseas Highway glare.",
+    "place": "florida",
+    "lat": 25.109047,
+    "lng": -80.426994,
+    "added": "2026-02-28T08:56:08",
+    "date": "2026-02-28",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-brickell-bomboloni.jpg",
+    "caption": "Bomboloni with lemon and pistachio cream. Same bakery, harder choice.",
+    "place": "florida",
+    "lat": 25.765969,
+    "lng": -80.193306,
+    "added": "2026-02-27T20:10:36",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-brickell-cannoli-case.jpg",
+    "caption": "Cannoli and cream puffs in the case near Brickell. Italian pastry after a Cuban afternoon.",
+    "place": "florida",
+    "lat": 25.765969,
+    "lng": -80.193306,
+    "added": "2026-02-27T20:10:31",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-brickell-village-pizza.jpg",
+    "caption": "Thin-crust pizza back in Brickell after Calle Ocho. White drizzle, herbs, no leftovers.",
+    "place": "florida",
+    "lat": 25.764958,
+    "lng": -80.194039,
+    "added": "2026-02-27T19:27:10",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-brickell-village-burrata.jpg",
+    "caption": "Burrata and tomatoes at Mary Brickell Village. Bread in a paper bag with a whole rosemary sprig.",
+    "place": "florida",
+    "lat": 25.764978,
+    "lng": -80.194108,
+    "added": "2026-02-27T19:15:23",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-calle-8-salao-mural.jpg",
+    "caption": "Welcome to Calle 8, mural edition. Sala\u2019O on the wall, Little Havana in neon paint.",
+    "place": "florida",
+    "lat": 25.765561,
+    "lng": -80.221244,
+    "added": "2026-02-27T15:26:36",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-calle-ocho-rooster.jpg",
+    "caption": "Calle Ocho rooster on the sidewalk. Heart on the chest, patio behind it.",
+    "place": "florida",
+    "lat": 25.765592,
+    "lng": -80.220489,
+    "added": "2026-02-27T15:23:53",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-la-colada-moka-pot.jpg",
+    "caption": "Man-sized moka pot and Celia Cruz on the orange wall. La Colada\u2019s idea of d\u00e9cor.",
+    "place": "florida",
+    "lat": 25.765594,
+    "lng": -80.220008,
+    "added": "2026-02-27T15:19:47",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-la-colada-roaster.jpg",
+    "caption": "The red roaster at La Colada. Freshly roasted at home, bags stacked behind it.",
+    "place": "florida",
+    "lat": 25.765581,
+    "lng": -80.219994,
+    "added": "2026-02-27T15:19:22",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-la-colada-coffee.jpg",
+    "caption": "Whipped cream architecture at La Colada Gourmet. Espresso on a Cuba saucer.",
+    "place": "florida",
+    "lat": 25.765553,
+    "lng": -80.220039,
+    "added": "2026-02-27T15:07:05",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-calle-8-mosaic.jpg",
+    "caption": "Calle 8 mosaic in Little Havana. Dominoes, fruit, and the neighborhood name in tile.",
+    "place": "florida",
+    "lat": 25.765639,
+    "lng": -80.219672,
+    "added": "2026-02-27T14:56:14",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-domino-park-entrance.jpg",
+    "caption": "Domino Park, Little Havana. The tables were full; we stayed at the arch.",
+    "place": "florida",
+    "lat": 25.765669,
+    "lng": -80.219444,
+    "added": "2026-02-27T14:44:13",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-olds-havana-band.jpg",
+    "caption": "Live band at Old\u2019s Havana. Fedora, guitar, Coca-Cola lamps, Bacardi on the wall.",
+    "place": "florida",
+    "lat": 25.765617,
+    "lng": -80.219253,
+    "added": "2026-02-27T14:43:37",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-olds-havana-palomilla.jpg",
+    "caption": "Palomilla, moros, maduros. Old\u2019s Havana does the Cuban plate the way you want it.",
+    "place": "florida",
+    "lat": 25.765617,
+    "lng": -80.219283,
+    "added": "2026-02-27T14:15:55",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-olds-havana-mojitos.jpg",
+    "caption": "Two mojitos at Old\u2019s Havana, cane garnish, mint lined up for the next round.",
+    "place": "florida",
+    "lat": 25.765628,
+    "lng": -80.219247,
+    "added": "2026-02-27T14:02:21",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-calle-ocho-tile-mural.jpg",
+    "caption": "Calle Ocho tile mural \u2014 guitar, maracas, flags in the letters. Bello \u201918.",
+    "place": "florida",
+    "lat": 25.765642,
+    "lng": -80.218719,
+    "added": "2026-02-27T13:46:53",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-calle-ocho-guarapo.jpg",
+    "caption": "Guarapo in a foam cup, cane stick for a stirrer. Little Havana sidewalk fuel.",
+    "place": "florida",
+    "lat": 25.765714,
+    "lng": -80.216828,
+    "added": "2026-02-27T13:40:38",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-calle-ocho-sugarcane-press.jpg",
+    "caption": "Sugarcane through the press on Calle Ocho. Loud machine, sweet juice.",
+    "place": "florida",
+    "lat": 25.765831,
+    "lng": -80.216919,
+    "added": "2026-02-27T13:38:18",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-miami-octopus-building.jpg",
+    "caption": "The Octopus Building on NW 36th. Mosaic tentacles, clay tile roof, no irony.",
+    "place": "florida",
+    "lat": 25.810358,
+    "lng": -80.198744,
+    "added": "2026-02-27T12:45:39",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-ferre-park-royal-palms.jpg",
+    "caption": "Royal palms in a grid at Maurice A. Ferr\u00e9 Park. Sign in the corner, sky doing the rest.",
+    "place": "florida",
+    "lat": 25.784364,
+    "lng": -80.189239,
+    "added": "2026-02-27T11:37:45",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-miami-one-thousand-museum.jpg",
+    "caption": "Zaha Hadid\u2019s One Thousand Museum from the street. The exoskeleton is the whole point.",
+    "place": "florida",
+    "lat": 25.783158,
+    "lng": -80.189269,
+    "added": "2026-02-27T11:35:51",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-miami-freedom-tower.jpg",
+    "caption": "Freedom Tower holding its own against the glass boxes. Miami Dade banners on the yellow stone.",
+    "place": "florida",
+    "lat": 25.779122,
+    "lng": -80.1884,
+    "added": "2026-02-27T11:33:23",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-bayside-el-loro.jpg",
+    "caption": "El Loro at Pier 5, Bayside. Red pirate hull, Miami skyline behind it. Big Bus day.",
+    "place": "florida",
+    "lat": 25.777636,
+    "lng": -80.185858,
+    "added": "2026-02-27T11:16:23",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-ferre-park-wave-sculpture.jpg",
+    "caption": "Wave sculpture at Maurice A. Ferr\u00e9 Park \u2014 dolphin, turtle, manatee in one foam curl.",
+    "place": "florida",
+    "lat": 25.773622,
+    "lng": -80.185578,
+    "added": "2026-02-27T11:05:40",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-miami-eggs-prosciutto.jpg",
+    "caption": "Eggs, greens, and a couple slices of ham on toast. Same breakfast table.",
+    "place": "florida",
+    "lat": 25.766997,
+    "lng": -80.195253,
+    "added": "2026-02-27T09:19:01",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-miami-waffles-breakfast.jpg",
+    "caption": "Waffles, berries, too much syrup. Fuel before the Big Bus loop.",
+    "place": "florida",
+    "lat": 25.767017,
+    "lng": -80.195144,
+    "added": "2026-02-27T09:18:59",
+    "date": "2026-02-27",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-brickell-city-centre-sign.jpg",
+    "caption": "From the window: BRICKELL in lights, Saks downstairs, traffic still moving.",
+    "place": "florida",
+    "lat": 25.767364,
+    "lng": -80.195069,
+    "added": "2026-02-26T23:02:57",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-brickell-moon-palms.jpg",
+    "caption": "Moon over Brickell, two palms doing the framing. Hotel-neighborhood night.",
+    "place": "florida",
+    "lat": 25.761658,
+    "lng": -80.189475,
+    "added": "2026-02-26T22:49:43",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-brickell-palms-towers.jpg",
+    "caption": "Looking up at Brickell from the sidewalk. Palms, white towers, still warm out.",
+    "place": "florida",
+    "lat": 25.76175,
+    "lng": -80.189217,
+    "added": "2026-02-26T22:48:03",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-crazy-about-you-table.jpg",
+    "caption": "The whole table at Crazy About You \u2014 ribs, fish, wine. Paper liner spells it out.",
+    "place": "florida",
+    "lat": 25.761889,
+    "lng": -80.188889,
+    "added": "2026-02-26T21:57:27",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-crazy-about-you-fish.jpg",
+    "caption": "Seared fish and a little potato gratin. The quieter plate on the Crazy About You table.",
+    "place": "florida",
+    "lat": 25.761867,
+    "lng": -80.188919,
+    "added": "2026-02-26T21:57:25",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-crazy-about-you-ribs.jpg",
+    "caption": "The ribs at Crazy About You came under a pile of onion straws. Dry ice on the tray for show.",
+    "place": "florida",
+    "lat": 25.761769,
+    "lng": -80.189025,
+    "added": "2026-02-26T21:57:16",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-crazy-about-you-goat-cheese.jpg",
+    "caption": "Honey, pistachios, and a slab of cheese. Crazy About You does not do small appetizers.",
+    "place": "florida",
+    "lat": 25.761861,
+    "lng": -80.188919,
+    "added": "2026-02-26T21:37:05",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-crazy-about-you-tostones.jpg",
+    "caption": "Tostones with tomato at Crazy About You. First plate of the trip, still in Brickell.",
+    "place": "florida",
+    "lat": 25.761833,
+    "lng": -80.188994,
+    "added": "2026-02-26T21:36:57",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-brickell-skyline-night.jpg",
+    "caption": "First night in Brickell. The bay, the high-rises, a little boat cutting the reflections.",
+    "place": "florida",
+    "lat": 25.761708,
+    "lng": -80.188811,
+    "added": "2026-02-26T21:11:53",
+    "date": "2026-02-26",
+    "new": true
+  }
+]

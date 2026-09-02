@@ -1,6 +1,6 @@
 {
   "label": "Ports",
-  "note": "Solid sea lines are NOAA AIS. Dashed is a likely route through the ports, not GPS. Numbered pins are ports. Not live.",
+  "note": "Solid sea lines are NOAA AIS. Dashed is a likely mid-Caribbean sea route, not GPS. Numbered pins are ports. Shore drives (drives.json) are photo GPS snapped to roads. Not live. Not Polarsteps.",
   "line": [
     {
       "name": "Brickell, Miami",
