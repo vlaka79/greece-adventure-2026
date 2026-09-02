@@ -1,0 +1,204 @@
+(function () {
+  if (typeof L === "undefined") return;
+  var TILES = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+  var ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+  var photoItems = [];
+  var photoLayer = null;
+  var tripMap = null;
+  var PATH_URL = "/trips/caribbean-2026-path.json";
+  var ALBUM_URL = "/trips/caribbean-2026-album.json";
+
+  if (!document.getElementById("photo-pin-click-style")) {
+    var st = document.createElement("style");
+    st.id = "photo-pin-click-style";
+    st.textContent =
+      ".photo-pin-icon{cursor:pointer;background:transparent;border:0;}" +
+      ".photo-pin-icon .photo-pin{pointer-events:auto;position:relative;width:48px;height:56px;}" +
+      ".photo-pin-stack{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:8px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.22);}" +
+      ".photo-pin-stack.s1{transform:translate(4px,-4px) rotate(6deg);z-index:1;}" +
+      ".photo-pin-stack.s2{transform:translate(-3px,-3px) rotate(-5deg);z-index:2;}" +
+      ".photo-pin-card{position:relative;z-index:3;width:48px;height:48px;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.28);background:#f4eee4;}" +
+      ".photo-pin-card img{width:100%;height:100%;object-fit:cover;display:block;}" +
+      ".photo-pin-count{position:absolute;right:3px;bottom:3px;z-index:4;min-width:1.1rem;border-radius:999px;background:#1b6f66;color:#f4eee4;font-size:10px;font-weight:700;line-height:1.2rem;text-align:center;padding:0 4px;}" +
+      ".trip-path-pin{width:22px;height:22px;border-radius:50%;background:#1b6f66;color:#f4eee4;font:700 11px/22px 'Source Sans 3',sans-serif;text-align:center;box-shadow:0 0 0 2px #fffcf6,0 2px 6px rgba(42,36,28,.3);}";
+    document.head.appendChild(st);
+  }
+
+  function pinSrc(src) {
+    if (!src) return src;
+    var m = String(src).match(/\/photos\/album\/[^/?#]+/);
+    return m ? m[0] : src;
+  }
+
+  function addedTime(item) {
+    if (!item || !item.added) return 0;
+    var a = String(item.added);
+    var t = Date.parse(a.length <= 10 ? a + "T12:00:00" : a);
+    return isNaN(t) ? 0 : t;
+  }
+
+  function distM(a, b) {
+    var dLat = (a.lat - b.lat) * 111320;
+    var dLng = (a.lng - b.lng) * 111320 * Math.cos((a.lat * Math.PI) / 180);
+    return Math.sqrt(dLat * dLat + dLng * dLng);
+  }
+
+  function clusterRadiusM(zoom) {
+    if (zoom >= 16) return 45;
+    if (zoom >= 15) return 90;
+    if (zoom >= 14) return 160;
+    if (zoom >= 13) return 280;
+    if (zoom >= 12) return 550;
+    if (zoom >= 11) return 1200;
+    return 2500;
+  }
+
+  function inCaribbean(lat, lng) {
+    return lat >= 17.5 && lat <= 27.8 && lng >= -81.6 && lng <= -76.2;
+  }
+
+  function groupPhotos(items, zoom) {
+    var radius = clusterRadiusM(zoom);
+    var pts = [];
+    (items || []).forEach(function (item) {
+      if (item.lat == null || item.lng == null || !item.src) return;
+      var lat = Number(item.lat);
+      var lng = Number(item.lng);
+      if (!inCaribbean(lat, lng)) return;
+      pts.push({
+        src: pinSrc(item.src),
+        caption: item.caption || "",
+        lat: lat,
+        lng: lng,
+        added: addedTime(item)
+      });
+    });
+    pts.sort(function (a, b) { return b.added - a.added; });
+
+    var clusters = [];
+    pts.forEach(function (p) {
+      var best = null;
+      var bestD = radius;
+      clusters.forEach(function (c) {
+        var d = distM(p, c);
+        if (d < bestD) {
+          bestD = d;
+          best = c;
+        }
+      });
+      if (best) {
+        best.items.push(p);
+        var n = best.items.length;
+        best.lat = (best.lat * (n - 1) + p.lat) / n;
+        best.lng = (best.lng * (n - 1) + p.lng) / n;
+      } else {
+        clusters.push({ lat: p.lat, lng: p.lng, items: [p] });
+      }
+    });
+    clusters.forEach(function (c) {
+      c.items.sort(function (a, b) { return b.added - a.added; });
+    });
+    return clusters;
+  }
+
+  function openGroup(g) {
+    var shots = (g.items || []).map(function (it) {
+      return { src: it.src, caption: it.caption || "" };
+    });
+    if (!shots.length) return;
+    if (typeof window.__openLb === "function") {
+      window.__openLb(shots, 0);
+    }
+  }
+
+  function renderPhotoPins() {
+    if (!tripMap || !photoLayer) return;
+    photoLayer.clearLayers();
+    var groups = groupPhotos(photoItems, tripMap.getZoom());
+    groups.forEach(function (g, i) {
+      var first = g.items[0];
+      var n = g.items.length;
+      var extra = n > 1 ? '<span class="photo-pin-count">' + n + "</span>" : "";
+      var stack = "";
+      if (n > 2) stack += '<span class="photo-pin-stack s1"></span>';
+      if (n > 1) stack += '<span class="photo-pin-stack s2"></span>';
+      var html =
+        '<div class="photo-pin">' + stack +
+        '<div class="photo-pin-card">' +
+        '<img src="' + first.src + '" alt="" />' + extra +
+        '</div></div>';
+      var marker = L.marker([g.lat, g.lng], {
+        icon: L.divIcon({
+          className: "photo-pin-icon",
+          html: html,
+          iconSize: [56, 66],
+          iconAnchor: [28, 66]
+        }),
+        zIndexOffset: 900 + i,
+        riseOnHover: true,
+        keyboard: true,
+        title: n > 1 ? n + " photos" : (first.caption || "Photo")
+      });
+      marker.on("click", function (ev) {
+        if (ev && ev.originalEvent) L.DomEvent.stopPropagation(ev.originalEvent);
+        openGroup(g);
+      });
+      photoLayer.addLayer(marker);
+    });
+  }
+
+  function rebuild() {
+    var el = document.getElementById("trip-map");
+    if (!el) return;
+    el.innerHTML = "";
+    if (el._leaflet_id) delete el._leaflet_id;
+    tripMap = L.map(el, { scrollWheelZoom: true, zoomControl: true });
+    L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 }).addTo(tripMap);
+    photoLayer = L.layerGroup().addTo(tripMap);
+
+    Promise.all([
+      fetch(PATH_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
+      fetch(ALBUM_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; })
+    ]).then(function (pair) {
+      var path = pair[0] || {};
+      photoItems = pair[1] || [];
+      var line = path.line || [];
+      var coords = line.map(function (p) { return [p.lat, p.lng]; });
+      if (coords.length > 1) {
+        L.polyline(coords, { color: "#1b6f66", weight: 4, opacity: 0.9 })
+          .addTo(tripMap)
+          .bindPopup(path.label || "Trip path");
+      }
+      var seen = {};
+      var n = 0;
+      line.forEach(function (p) {
+        var key = p.name + "|" + p.lat + "|" + p.lng;
+        if (seen[key]) return;
+        seen[key] = true;
+        n += 1;
+        L.marker([p.lat, p.lng], {
+          icon: L.divIcon({
+            className: "route-pin-icon",
+            html: '<div class="trip-path-pin">' + n + "</div>",
+            iconSize: [22, 22],
+            iconAnchor: [11, 11]
+          })
+        }).addTo(tripMap).bindPopup(p.name || "");
+      });
+      renderPhotoPins();
+      tripMap.on("zoomend", renderPhotoPins);
+      if (coords.length) {
+        tripMap.fitBounds(coords, { padding: [28, 28], animate: false, maxZoom: 7 });
+      } else {
+        tripMap.setView([23.5, -78.5], 5);
+      }
+      setTimeout(function () { tripMap.invalidateSize(); }, 200);
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () { setTimeout(rebuild, 200); });
+  } else {
+    setTimeout(rebuild, 200);
+  }
+})();

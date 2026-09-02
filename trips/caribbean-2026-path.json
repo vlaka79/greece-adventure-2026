@@ -1,0 +1,12 @@
+{
+  "label": "Trip path",
+  "note": "A simple line of the places we went. Not live, and not a GPS trace of the ships.",
+  "line": [
+    {"name": "Brickell, Miami", "lat": 25.766, "lng": -80.193},
+    {"name": "PortMiami", "lat": 25.779, "lng": -80.181},
+    {"name": "Ocho Rios", "lat": 18.403, "lng": -77.105},
+    {"name": "PortMiami", "lat": 25.779, "lng": -80.181},
+    {"name": "Riviera Beach", "lat": 26.78, "lng": -80.04},
+    {"name": "Nassau", "lat": 25.06, "lng": -77.345}
+  ]
+}

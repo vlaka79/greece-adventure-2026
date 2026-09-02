@@ -8,12 +8,26 @@
   var NEW_MS = 48 * 60 * 60 * 1000;
   var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   var MONTHS_SHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  var id = (new URLSearchParams(location.search).get("place") || "crete").toLowerCase();
-  if (!PLACES[id]) id = "crete";
-  var meta = PLACES[id];
-  document.title = meta.title + " \u2014 Greece Adventure 2026";
+  var cfg = window.PLACE_PAGE || {};
+  var albumUrl = cfg.albumUrl || "/photos/album.json";
+  var logUrl = cfg.logUrl || "/log.json";
+  var showAll = !!cfg.showAll;
+  var id, meta;
+  if (cfg.albumUrl) {
+    id = (cfg.place || "*").toLowerCase();
+    meta = { title: cfg.title || "Photos", lead: cfg.lead || "Shots from this trip." };
+  } else {
+    id = (new URLSearchParams(location.search).get("place") || "crete").toLowerCase();
+    if (!PLACES[id]) id = "crete";
+    meta = PLACES[id];
+  }
   var title = document.getElementById("place-title");
   var lead = document.getElementById("place-lead");
+  if (!cfg.albumUrl) {
+    document.title = meta.title + " \u2014 Greece Adventure 2026";
+  } else if (cfg.documentTitle) {
+    document.title = cfg.documentTitle;
+  }
   if (title) title.textContent = meta.title;
   if (lead) lead.textContent = meta.lead;
 
@@ -201,8 +215,8 @@
   }
 
   Promise.all([
-    fetch("/photos/album.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; }),
-    fetch("/log.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; })
+    fetch(albumUrl, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; }),
+    fetch(logUrl, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; })
   ]).then(function (pair) {
     var items = pair[0] || [];
     var logs = pair[1] || [];
@@ -210,6 +224,8 @@
       if (entry && entry.date && !logByDate[entry.date]) logByDate[entry.date] = entry;
     });
     allShots = items.filter(function (item) {
+      if (!item || !item.src) return false;
+      if (showAll || id === "*") return true;
       return (item.place || "").toLowerCase() === id;
     });
     allShots.sort(function (a, b) { return parseAdded(b) - parseAdded(a); });

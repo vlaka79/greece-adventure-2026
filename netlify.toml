@@ -11,6 +11,11 @@
   status = 200
 
 [[redirects]]
+  from = "/api/notes-caribbean-2026"
+  to = "/.netlify/functions/notes-caribbean-2026"
+  status = 200
+
+[[redirects]]
   from = "/inbox/*"
   to = "/404.html"
   status = 404
