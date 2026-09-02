@@ -54,7 +54,7 @@
   }
 
   function inCaribbean(lat, lng) {
-    return lat >= 17.5 && lat <= 27.8 && lng >= -81.6 && lng <= -76.2;
+    return lat >= 9.5 && lat <= 27.8 && lng >= -82.5 && lng <= -69.5;
   }
 
   function groupPhotos(items, zoom) {

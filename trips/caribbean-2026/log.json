@@ -25,26 +25,104 @@
   },
   {
     "date": "2026-03-01",
-    "tag": "Brilliant Lady",
-    "title": "Miami to Miami",
-    "body": "Boarded Virgin Voyages Brilliant Lady for eleven nights — Southern Caribbean & Aruban Nights. The meals that stuck: The Test Kitchen and Pink Agave. A Shore Thing in Ocho Rios."
+    "tag": "Miami",
+    "title": "On the Lady",
+    "body": "Boarded Virgin Voyages Brilliant Lady at PortMiami — eleven nights, Southern Caribbean & Aruban Nights. Late afternoon sail-away."
+  },
+  {
+    "date": "2026-03-02",
+    "tag": "At sea",
+    "title": "Southbound",
+    "body": "First full day at sea. The meals that stuck later: The Test Kitchen and Pink Agave."
+  },
+  {
+    "date": "2026-03-03",
+    "tag": "At sea",
+    "title": "Still water",
+    "body": "Another sea day, still heading south."
+  },
+  {
+    "date": "2026-03-04",
+    "tag": "Aruba",
+    "title": "Oranjestad",
+    "body": "Morning into Oranjestad. A day on Aruba, then back aboard."
+  },
+  {
+    "date": "2026-03-05",
+    "tag": "At sea",
+    "title": "Toward Colombia",
+    "body": "A sea day between Aruba and Cartagena."
+  },
+  {
+    "date": "2026-03-06",
+    "tag": "Cartagena",
+    "title": "In for the night",
+    "body": "Cartagena in the morning. The Lady stayed overnight."
+  },
+  {
+    "date": "2026-03-07",
+    "tag": "Cartagena",
+    "title": "Last light in port",
+    "body": "A second day in Cartagena. Afternoon departure."
+  },
+  {
+    "date": "2026-03-08",
+    "tag": "At sea",
+    "title": "North again",
+    "body": "At sea, Jamaica next."
+  },
+  {
+    "date": "2026-03-09",
+    "tag": "Ocho Rios",
+    "title": "River and beach",
+    "body": "Ocho Rios in the morning. Shore Thing: river tubing, rafting, and Bamboo Beach."
+  },
+  {
+    "date": "2026-03-10",
+    "tag": "Grand Cayman",
+    "title": "George Town",
+    "body": "Morning into George Town. A day on Grand Cayman."
+  },
+  {
+    "date": "2026-03-11",
+    "tag": "At sea",
+    "title": "Last night on the Lady",
+    "body": "Sea day back toward Miami."
+  },
+  {
+    "date": "2026-03-12",
+    "tag": "Miami",
+    "title": "Off the Lady",
+    "body": "Disembarked Brilliant Lady in Miami at first light."
   },
   {
     "date": "2026-03-12",
     "tag": "Palm Beach",
     "title": "One night ashore",
-    "body": "Off the Lady and overnight at Travel Inn Riviera Beach, between ships."
+    "body": "Overnight at Travel Inn Riviera Beach, between ships."
   },
   {
     "date": "2026-03-13",
-    "tag": "Paradise",
-    "title": "Nassau on Paradise",
-    "body": "Margaritaville at Sea Paradise from Port of Palm Beach — a three-night Nassau run."
+    "tag": "Palm Beach",
+    "title": "On Paradise",
+    "body": "Boarded Margaritaville at Sea Paradise at Port of Palm Beach — a three-night Nassau run."
+  },
+  {
+    "date": "2026-03-14",
+    "tag": "At sea",
+    "title": "A short hop",
+    "body": "Sea day on Paradise, Palm Beach toward Nassau."
+  },
+  {
+    "date": "2026-03-15",
+    "tag": "Nassau",
+    "title": "Nassau",
+    "body": "A day in Nassau, then back aboard."
   },
   {
     "date": "2026-03-16",
     "tag": "Home",
     "title": "West to LAX",
-    "body": "Trip’s end. Home to LAX after Nassau."
+    "body": "Off Paradise in Palm Beach. Trip’s end. Home to LAX."
   }
 ]
