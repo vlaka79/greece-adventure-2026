@@ -6,6 +6,7 @@
   var photoLayer = null;
   var tripMap = null;
   var PATH_URL = "/trips/caribbean-2026/path.json";
+  var AIS_URL = "/trips/caribbean-2026/ais.json";
   var ALBUM_URL = "/trips/caribbean-2026/album.json";
 
   if (!document.getElementById("photo-pin-click-style")) {
@@ -54,7 +55,7 @@
   }
 
   function inCaribbean(lat, lng) {
-    return lat >= 9.5 && lat <= 27.8 && lng >= -82.5 && lng <= -69.5;
+    return lat >= 9 && lat <= 28.5 && lng >= -85 && lng <= -68;
   }
 
   function groupPhotos(items, zoom) {
@@ -158,20 +159,56 @@
 
     Promise.all([
       fetch(PATH_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
-      fetch(ALBUM_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; })
-    ]).then(function (pair) {
-      var path = pair[0] || {};
-      photoItems = pair[1] || [];
+      fetch(ALBUM_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }),
+      fetch(AIS_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+    ]).then(function (triple) {
+      var path = triple[0] || {};
+      photoItems = triple[1] || [];
+      var ais = triple[2] || {};
+      var bounds = [];
+      var GAP_MS = 4 * 60 * 60 * 1000;
+      (ais.tracks || []).forEach(function (tr) {
+        var pts = tr.points || [];
+        var segs = [];
+        var cur = [];
+        var prevT = null;
+        pts.forEach(function (p) {
+          if (p.lat == null || p.lng == null) return;
+          var t = Date.parse(p.t || "") || 0;
+          if (cur.length && prevT && t - prevT > GAP_MS) {
+            segs.push(cur);
+            cur = [];
+          }
+          cur.push([p.lat, p.lng]);
+          bounds.push([p.lat, p.lng]);
+          prevT = t;
+        });
+        if (cur.length) segs.push(cur);
+        segs.forEach(function (coords) {
+          if (coords.length < 2) {
+            if (coords.length === 1) {
+              L.circleMarker(coords[0], {
+                radius: 4,
+                color: tr.color || "#1b6f66",
+                weight: 2,
+                fillOpacity: 0.85
+              }).addTo(tripMap).bindPopup(tr.label || "AIS");
+            }
+            return;
+          }
+          L.polyline(coords, {
+            color: tr.color || "#1b6f66",
+            weight: 4,
+            opacity: 0.9
+          }).addTo(tripMap).bindPopup(tr.label || "AIS");
+        });
+      });
       var line = path.line || [];
-      var coords = line.map(function (p) { return [p.lat, p.lng]; });
-      if (coords.length > 1) {
-        L.polyline(coords, { color: "#1b6f66", weight: 4, opacity: 0.9 })
-          .addTo(tripMap)
-          .bindPopup(path.label || "Trip path");
-      }
       var seen = {};
       var n = 0;
       line.forEach(function (p) {
+        if (p.lat == null || p.lng == null) return;
+        bounds.push([p.lat, p.lng]);
         var key = p.name + "|" + p.lat + "|" + p.lng;
         if (seen[key]) return;
         seen[key] = true;
@@ -187,8 +224,8 @@
       });
       renderPhotoPins();
       tripMap.on("zoomend", renderPhotoPins);
-      if (coords.length) {
-        tripMap.fitBounds(coords, { padding: [28, 28], animate: false, maxZoom: 7 });
+      if (bounds.length) {
+        tripMap.fitBounds(bounds, { padding: [28, 28], animate: false, maxZoom: 7 });
       } else {
         tripMap.setView([23.5, -78.5], 5);
       }

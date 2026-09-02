@@ -1,6 +1,6 @@
 {
-  "label": "Trip path",
-  "note": "A simple line of the places we went. Not live, and not a GPS trace of the ships.",
+  "label": "Ports",
+  "note": "Sea lines are NOAA AIS. Numbered pins are ports. Historical AIS, not live.",
   "line": [
     {"name": "Brickell, Miami", "lat": 25.766, "lng": -80.193},
     {"name": "PortMiami", "lat": 25.779, "lng": -80.181},
