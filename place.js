@@ -12,8 +12,15 @@
   var albumUrl = cfg.albumUrl || "/photos/album.json";
   var logUrl = cfg.logUrl || "/log.json";
   var showAll = !!cfg.showAll;
+  if (cfg.places) {
+    Object.keys(cfg.places).forEach(function (k) { PLACES[k] = cfg.places[k]; });
+  }
   var id, meta;
-  if (cfg.albumUrl) {
+  if (cfg.places) {
+    id = (new URLSearchParams(location.search).get("place") || Object.keys(cfg.places)[0] || "florida").toLowerCase();
+    if (!PLACES[id]) id = Object.keys(cfg.places)[0];
+    meta = PLACES[id];
+  } else if (cfg.albumUrl) {
     id = (cfg.place || "*").toLowerCase();
     meta = { title: cfg.title || "Photos", lead: cfg.lead || "Shots from this trip." };
   } else {
@@ -23,7 +30,14 @@
   }
   var title = document.getElementById("place-title");
   var lead = document.getElementById("place-lead");
-  if (!cfg.albumUrl) {
+  if (cfg.places) {
+    document.title = (cfg.documentTitle || (meta.title + " \u2014 Caribbean 2026"));
+    if (cfg.documentTitle && cfg.documentTitle.indexOf("{title}") >= 0) {
+      document.title = cfg.documentTitle.replace("{title}", meta.title);
+    } else if (!cfg.documentTitle) {
+      document.title = meta.title + " \u2014 Caribbean 2026";
+    }
+  } else if (!cfg.albumUrl) {
     document.title = meta.title + " \u2014 Greece Adventure 2026";
   } else if (cfg.documentTitle) {
     document.title = cfg.documentTitle;
