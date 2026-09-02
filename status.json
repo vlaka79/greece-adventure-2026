@@ -1,21 +1,21 @@
 {
-  "lat": 35.42725,
-  "lng": 24.19017,
-  "location": "Douliana",
+  "lat": 35.44965,
+  "lng": 24.19881,
+  "location": "Almyrida",
   "tomorrow": "",
   "tonight": "",
   "postcard": {
-    "date": "2026-09-01",
-    "place": "Crete, Douliana",
-    "title": "Last light",
-    "note": "Made it over the mountains. Sunset from the new place, and the hills went gold.",
-    "photo": "/photos/album/crete-douliana-sunset.jpg",
-    "caption": "Last light over Douliana. Us, the pool, and the hills catching fire."
+    "date": "2026-09-02",
+    "place": "Crete, Almyrida",
+    "title": "The view",
+    "note": "Down from Douliana to the water. Two chairs under a thatch umbrella, yellow buoys in a still bay, white houses climbing the hill.",
+    "photo": "/photos/album/crete-almyrida-chairs.jpg",
+    "caption": "Umbrella 3, two chairs, the bay still. White houses stacked up the hill at Almyrida."
   },
   "word": {
-    "el": "Θάλασσα",
-    "en": "Thalassa",
-    "say": "THA-lah-sah",
-    "meaning": "The sea. Simple, and it is the whole point of the day."
+    "el": "Θέα",
+    "en": "Thea",
+    "say": "THEH-ah",
+    "meaning": "The view. This morning, that’s the whole assignment."
   }
 }
