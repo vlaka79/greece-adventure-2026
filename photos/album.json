@@ -1,5 +1,115 @@
 [
   {
+    "src": "/photos/album/crete-douliana-melon.jpg",
+    "caption": "Cold melon after a long Apokoronas loop. Douliana knows how to end a day.",
+    "place": "crete",
+    "lat": 35.427278,
+    "lng": 24.190211,
+    "added": "2026-09-02T20:51:55",
+    "date": "2026-09-02",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-douliana-dusk-corner.jpg",
+    "caption": "The lamp comes on and Douliana leans a little. Village corners do that at dusk.",
+    "place": "crete",
+    "lat": 35.428275,
+    "lng": 24.191436,
+    "added": "2026-09-02T20:11:17",
+    "date": "2026-09-02",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-douliana-wall-cat.jpg",
+    "caption": "Village HR. A Douliana cat on the stone wall, reviewing our papers.",
+    "place": "crete",
+    "lat": 35.427417,
+    "lng": 24.189992,
+    "added": "2026-09-02T20:02:11",
+    "date": "2026-09-02",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-douliana-pool.jpg",
+    "caption": "Boonville hat, Douliana pool. Home came with us; the water is new.",
+    "place": "crete",
+    "lat": 35.427278,
+    "lng": 24.190208,
+    "added": "2026-09-02T18:15:02",
+    "date": "2026-09-02",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-xirosterni-fanourios.jpg",
+    "caption": "Roadside devotion in Xirosterni: Agios Fanourios in stacked stone, flags, and “love one another.”",
+    "place": "crete",
+    "lat": 35.411592,
+    "lng": 24.23515,
+    "added": "2026-09-02T17:28:51",
+    "date": "2026-09-02",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-drapanos-mill.jpg",
+    "caption": "A stone mill on the Kalyves–Kefalas road, roof long gone, sky doing the rest. Drapanos.",
+    "place": "crete",
+    "lat": 35.415761,
+    "lng": 24.243797,
+    "added": "2026-09-02T17:24:42",
+    "date": "2026-09-02",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-kokkino-chorio-zorbas.jpg",
+    "caption": "Taverna Zorbas, Kokkino Chorio. White chairs, a eucalyptus, and a table that would have kept us.",
+    "place": "crete",
+    "lat": 35.452928,
+    "lng": 24.225686,
+    "added": "2026-09-02T17:15:52",
+    "date": "2026-09-02",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-almyrida-tsunami-pizza.jpg",
+    "caption": "Ham and peppers, still bubbling. Pizza at Tsunami after the Almyrida swim.",
+    "place": "crete",
+    "lat": 35.449608,
+    "lng": 24.198669,
+    "added": "2026-09-02T13:53:37",
+    "date": "2026-09-02",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-almyrida-tsunami-mythos.jpg",
+    "caption": "Two Mythos under the thatch. Almyrida, Tsunami, DDIC hours.",
+    "place": "crete",
+    "lat": 35.449756,
+    "lng": 24.198769,
+    "added": "2026-09-02T13:41:23",
+    "date": "2026-09-02",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-almyrida-chapel-fans.jpg",
+    "caption": "Pocket chapel, a rock full of white fans, village stacked behind. Almyrida heat protocol.",
+    "place": "crete",
+    "lat": 35.450069,
+    "lng": 24.198678,
+    "added": "2026-09-02T10:37:54",
+    "date": "2026-09-02",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-almyrida-swim-rocks.jpg",
+    "caption": "Rocks in water that looks edited. Almyrida from the swim.",
+    "place": "crete",
+    "lat": 35.449964,
+    "lng": 24.198903,
+    "added": "2026-09-02T10:36:04",
+    "date": "2026-09-02",
+    "new": true
+  },
+  {
     "src": "/photos/album/crete-almyrida-chairs.jpg",
     "caption": "Two chairs under a thatch umbrella, a still bay, white houses climbing the hill. One of those would be a good contender for an investment. DDIC (Day Drinking In Crete) house? Who’s in?",
     "place": "crete",
