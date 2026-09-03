@@ -1,21 +1,21 @@
 {
-  "lat": 35.44965,
-  "lng": 24.19881,
-  "location": "Almyrida",
-  "tomorrow": "",
-  "tonight": "",
+  "lat": 35.3658,
+  "lng": 24.2615,
+  "location": "Georgioupolis",
+  "tonight": "Wind cut the beach short. Back to Douliana.",
+  "tomorrow": "Last morning in Douliana, then Elounda.",
   "postcard": {
-    "date": "2026-09-02",
-    "place": "Crete, Almyrida",
-    "title": "The view",
-    "note": "Two chairs under a thatch umbrella, a still bay, white houses climbing the hill. One of those would be a good contender for an investment. DDIC (Day Drinking In Crete) house? Who’s in?",
-    "photo": "/photos/album/crete-almyrida-chairs.jpg",
-    "caption": "Two chairs under a thatch umbrella, a still bay, white houses climbing the hill. One of those would be a good contender for an investment. DDIC (Day Drinking In Crete) house? Who’s in?"
+    "date": "2026-09-03",
+    "place": "Crete, Georgioupolis",
+    "title": "The dessert",
+    "note": "Best dessert in Crete isn’t baklava. It’s watermelon, melon, and a raki you didn’t order. Arkadi, Georgioupolis.",
+    "photo": "/photos/album/crete-georgioupolis-arkadi-dessert.jpg",
+    "caption": "Best dessert in Crete isn’t baklava. It’s watermelon, melon, and a raki you didn’t order. Arkadi, Georgioupolis."
   },
   "word": {
-    "el": "Θέα",
-    "en": "Thea",
-    "say": "THEH-ah",
-    "meaning": "The view. This morning, that’s the whole assignment."
+    "el": "Τσικουδιά",
+    "en": "Tsikoudia",
+    "say": "tsee-koo-DYAH",
+    "meaning": "Cretan raki. It arrives with the fruit, and that is the dessert."
   }
 }

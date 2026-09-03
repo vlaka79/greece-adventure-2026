@@ -1,5 +1,15 @@
 [
   {
+    "src": "/photos/album/crete-georgioupolis-arkadi-dessert.jpg",
+    "caption": "Best dessert in Crete isn’t baklava. It’s watermelon, melon, and a raki you didn’t order. Arkadi, Georgioupolis.",
+    "place": "crete",
+    "lat": 35.3658,
+    "lng": 24.2615,
+    "added": "2026-09-03T14:50:00",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
     "src": "/photos/album/crete-douliana-melon.jpg",
     "caption": "Cold melon after a long Apokoronas loop. Douliana knows how to end a day.",
     "place": "crete",
@@ -71,7 +81,7 @@
   },
   {
     "src": "/photos/album/crete-almyrida-tsunami-pizza.jpg",
-    "caption": "Ham and peppers, still bubbling. Pizza at Tsunami after the Almyrida swim.",
+    "caption": "Greek junkfood, and we meant it. Ham-and-pepper pizza at Tsunami after the Almyrida swim.",
     "place": "crete",
     "lat": 35.449608,
     "lng": 24.198669,

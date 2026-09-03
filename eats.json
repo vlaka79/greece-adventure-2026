@@ -1,8 +1,16 @@
 [
   {
+    "place": "Arkadi Fish Taverna, Georgioupolis",
+    "dish": "Watermelon, melon & raki",
+    "note": "The best Cretan dessert: fruit you didn’t order and raki you didn’t refuse.",
+    "photo": "/photos/album/crete-georgioupolis-arkadi-dessert.jpg",
+    "lat": 35.3658,
+    "lng": 24.2615
+  },
+  {
     "place": "Tsunami, Almyrida",
-    "dish": "Pizza (ham & peppers)",
-    "note": "After the swim. Still bubbling. Beach hours, pizza hours.",
+    "dish": "Greek junkfood pizza",
+    "note": "Ham and peppers. Beach pizza, no apologies.",
     "photo": "/photos/album/crete-almyrida-tsunami-pizza.jpg",
     "lat": 35.44961,
     "lng": 24.19867
