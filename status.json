@@ -1,9 +1,9 @@
 {
-  "lat": 35.097,
-  "lng": 24.688,
-  "location": "South road, Crete",
-  "tonight": "On the south road toward Elounda.",
-  "tomorrow": "Elounda nights.",
+  "lat": 35.2645,
+  "lng": 25.7171,
+  "location": "Kato Elounda",
+  "tonight": "First night on the Elounda side after a long south-road haul across Crete.",
+  "tomorrow": "Elounda days — photos still to come.",
   "postcard": {
     "date": "2026-09-03",
     "place": "Crete, Alikampos",
@@ -17,5 +17,9 @@
     "en": "Ambeli",
     "say": "ahm-BEH-lee",
     "meaning": "Vineyard. Alikampos afternoon, bloom still on the fruit."
-  }
+  },
+  "coords": [
+    35.2645,
+    25.7171
+  ]
 }
