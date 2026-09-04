@@ -10,35 +10,35 @@
     "title": "The vines",
     "note": "Dark grapes with the bloom still on. Alikampos vines doing September work.",
     "photo": "/photos/album/crete-alikampos-grapes.jpg",
-    "caption": "Dark grapes with the bloom still on. Alikampos vines doing September work."
+    "caption": "Dark grapes with the bloom still on. Alikampos vines doing September work.",
+    "conversation": {
+      "label": "Conversation of the day",
+      "title": "Hotel desk",
+      "lines": [
+        {
+          "who": "Hotel guest",
+          "text": "complaining about something"
+        },
+        {
+          "who": "Hotel reception",
+          "text": "Why are you yelling at me?"
+        },
+        {
+          "who": "Hotel guest",
+          "text": "Because you work here."
+        },
+        {
+          "who": "Hotel reception",
+          "text": "I’m enjoying my day here, why are you yelling at me? I don’t make the rules, that’s your problem."
+        }
+      ]
+    }
   },
   "word": {
-    "kind": "conversation",
-    "label": "Conversation",
-    "title": "Hotel desk",
-    "date": "2026-09-05",
-    "lines": [
-      {
-        "who": "Hotel guest",
-        "text": "complaining about something"
-      },
-      {
-        "who": "Hotel reception",
-        "text": "Why are you yelling at me?"
-      },
-      {
-        "who": "Hotel guest",
-        "text": "Because you work here."
-      },
-      {
-        "who": "Hotel reception",
-        "text": "I’m enjoying my day here, why are you yelling at me? I don’t make the rules, that’s your problem."
-      }
-    ],
-    "el": "",
-    "en": "",
-    "say": "",
-    "meaning": ""
+    "el": "Αμπέλι",
+    "en": "Ambeli",
+    "say": "ahm-BEH-lee",
+    "meaning": "Vineyard. Alikampos afternoon, bloom still on the fruit."
   },
   "coords": [
     35.2645,

@@ -207,9 +207,7 @@
         var todayEl = (document.getElementById("word-el") || {}).textContent || "";
         list.innerHTML = "";
         words.forEach(function (w) {
-          var isConvo = w.kind === "conversation" && w.lines && w.lines.length;
-          var headline = isConvo ? (w.title || "Conversation") : (w.el || "");
-          if (todayEl && headline && headline === todayEl) return;
+          if (todayEl && w.el === todayEl) return;
           var li = document.createElement("li");
           li.className = "rounded-lg bg-bg-warm px-3 py-2";
           var when = "";
@@ -218,21 +216,10 @@
               when = new Date(w.date + "T12:00:00").toLocaleDateString(undefined, { month: "short", day: "numeric" });
             } catch (e) { when = w.date; }
           }
-          if (isConvo) {
-            var bits = (w.lines || []).map(function (line) {
-              return "<p class=\"text-sm leading-relaxed text-fg/90\"><span class=\"font-semibold text-primary\">" +
-                (line.who || "") + ": </span>" + (line.text || "") + "</p>";
-            }).join("");
-            li.innerHTML =
-              '<p class="font-serif text-lg font-semibold text-fg">' + headline + "</p>" +
-              '<div class="mt-1 space-y-1">' + bits + "</div>" +
-              '<p class="mt-1 text-xs text-muted">' + (when || "") + "</p>";
-          } else {
-            li.innerHTML =
-              '<p class="font-serif text-lg font-semibold text-fg">' + (w.el || "") + "</p>" +
-              '<p class="text-sm text-fg/90">' + [w.en, w.meaning].filter(Boolean).join(" — ") + "</p>" +
-              '<p class="text-xs text-muted">' + (w.say ? ("Say it: " + w.say) : "") + (when ? " · " + when : "") + "</p>";
-          }
+          li.innerHTML =
+            '<p class="font-serif text-lg font-semibold text-fg">' + (w.el || "") + "</p>" +
+            '<p class="text-sm text-fg/90">' + [w.en, w.meaning].filter(Boolean).join(" — ") + "</p>" +
+            '<p class="text-xs text-muted">' + (w.say ? ("Say it: " + w.say) : "") + (when ? " · " + when : "") + "</p>";
           list.appendChild(li);
         });
         if (!list.children.length) {
