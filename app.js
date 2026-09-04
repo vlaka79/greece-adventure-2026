@@ -172,14 +172,46 @@
       }
       var word = status.word || {};
       var wordCard = document.getElementById("word-card");
-      if (wordCard && word.el) {
+      var isConvo = word && word.kind === "conversation" && word.lines && word.lines.length;
+      if (wordCard && (word.el || isConvo)) {
         wordCard.classList.remove("hidden");
+        var wlabel = document.getElementById("word-label");
         var wel = document.getElementById("word-el");
         var wen = document.getElementById("word-en");
         var wsay = document.getElementById("word-say");
-        if (wel) wel.textContent = word.el;
-        if (wen) wen.textContent = (word.en || "") + (word.meaning ? " — " + word.meaning : "");
-        if (wsay) wsay.textContent = word.say ? "Say: " + word.say : "";
+        if (isConvo) {
+          if (wlabel) wlabel.textContent = word.label || "Conversation";
+          if (wel) {
+            wel.textContent = word.title || "Overheard";
+            wel.className = "mt-2 font-serif text-2xl font-semibold text-fg";
+          }
+          if (wen) {
+            wen.innerHTML = "";
+            wen.className = "mt-3 space-y-3 text-base text-fg/90";
+            word.lines.forEach(function (line) {
+              var row = document.createElement("p");
+              row.className = "leading-relaxed";
+              var who = document.createElement("span");
+              who.className = "font-semibold text-primary";
+              who.textContent = (line.who || "") + ": ";
+              row.appendChild(who);
+              row.appendChild(document.createTextNode(line.text || ""));
+              wen.appendChild(row);
+            });
+          }
+          if (wsay) wsay.textContent = "";
+        } else {
+          if (wlabel) wlabel.textContent = "Greek word of the day";
+          if (wel) {
+            wel.textContent = word.el;
+            wel.className = "mt-2 font-serif text-3xl font-semibold text-fg";
+          }
+          if (wen) {
+            wen.className = "mt-1 text-base text-fg/90";
+            wen.textContent = (word.en || "") + (word.meaning ? " — " + word.meaning : "");
+          }
+          if (wsay) wsay.textContent = word.say ? "Say: " + word.say : "";
+        }
       }
       var lat = status.lat != null ? status.lat : 35.5162;
       var lng = status.lng != null ? status.lng : 24.0178;

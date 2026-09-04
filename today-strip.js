@@ -11,7 +11,8 @@
     var pc = status.postcard || {};
     var word = status.word || {};
     var photo = pc.photo || "";
-    if (!photo && !word.el && !pc.note) return;
+    var isConvo = word.kind === "conversation" && word.lines && word.lines.length;
+    if (!photo && !word.el && !isConvo && !pc.note) return;
     var loc = status.location || "";
     var place = (pc.place || "").split(",").pop().trim();
     var where = loc;
@@ -21,7 +22,12 @@
     if (whereEl) whereEl.textContent = where;
     if (wordEl) {
       wordEl.innerHTML = "";
-      if (word.el) {
+      if (isConvo) {
+        wordEl.appendChild(document.createTextNode((word.title || "Conversation") + " "));
+        var em = document.createElement("span");
+        em.textContent = "overheard at the desk";
+        wordEl.appendChild(em);
+      } else if (word.el) {
         wordEl.appendChild(document.createTextNode(word.el + " "));
         var em = document.createElement("span");
         em.textContent = (word.meaning || word.en || "").replace(/\.$/, "").toLowerCase();
