@@ -1,21 +1,21 @@
 {
-  "lat": 35.3658,
-  "lng": 24.2615,
-  "location": "Georgioupolis",
-  "tonight": "Wind cut the beach short. Back to Douliana.",
-  "tomorrow": "Last morning in Douliana, then Elounda.",
+  "lat": 35.097,
+  "lng": 24.688,
+  "location": "South road, Crete",
+  "tonight": "On the south road toward Elounda.",
+  "tomorrow": "Elounda nights.",
   "postcard": {
     "date": "2026-09-03",
     "place": "Crete, Georgioupolis",
-    "title": "The dessert",
-    "note": "Best dessert in Crete isn’t baklava. It’s watermelon, melon, and a raki you didn’t order. Arkadi, Georgioupolis.",
-    "photo": "/photos/album/crete-georgioupolis-arkadi-dessert.jpg",
-    "caption": "Best dessert in Crete isn’t baklava. It’s watermelon, melon, and a raki you didn’t order. Arkadi, Georgioupolis."
+    "title": "The chapel",
+    "note": "Georgioupolis jetty: white chapel, Greek flag, a skinny beacon that means business.",
+    "photo": "/photos/album/crete-georgioupolis-chapel-beacon.jpg",
+    "caption": "Georgioupolis jetty: white chapel, Greek flag, a skinny beacon that means business."
   },
   "word": {
-    "el": "Τσικουδιά",
-    "en": "Tsikoudia",
-    "say": "tsee-koo-DYAH",
-    "meaning": "Cretan raki. It arrives with the fruit, and that is the dessert."
+    "el": "Αμπέλι",
+    "en": "Ambeli",
+    "say": "ahm-BEH-lee",
+    "meaning": "Vineyard. Yesterday’s afternoon assignment in Alikampos."
   }
 }
