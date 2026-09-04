@@ -1,5 +1,195 @@
 [
   {
+    "src": "/photos/album/crete-vryses-church.jpg",
+    "caption": "Twin towers and terracotta roofs in Vryses. The church keeps time whether anyone asks.",
+    "place": "crete",
+    "lat": 35.377839,
+    "lng": 24.201306,
+    "added": "2026-09-03T17:52:16",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-vryses-ducks.jpg",
+    "caption": "Vryses: terraced water, a parliament of white ducks, Coca-Cola umbrellas. Soft landing after the hills.",
+    "place": "crete",
+    "lat": 35.376236,
+    "lng": 24.201003,
+    "added": "2026-09-03T17:50:31",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-alikampos-wood-board.jpg",
+    "caption": "Trophy board from Alikampos. Whatever was on it, the smile says it landed.",
+    "place": "crete",
+    "lat": 35.349342,
+    "lng": 24.202764,
+    "added": "2026-09-03T17:39:57",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-alikampos-from-doorway.jpg",
+    "caption": "Looking out the stone doorway into the light. Alikampos does exits well.",
+    "place": "crete",
+    "lat": 35.349364,
+    "lng": 24.202919,
+    "added": "2026-09-03T17:38:40",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-alikampos-vineyard.jpg",
+    "caption": "Hands in the grapes, hillside dry as toast. Alikampos harvest energy.",
+    "place": "crete",
+    "lat": 35.349167,
+    "lng": 24.203169,
+    "added": "2026-09-03T17:26:07",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-alikampos-grapes.jpg",
+    "caption": "Dark grapes with the bloom still on. Alikampos vines doing September work.",
+    "place": "crete",
+    "lat": 35.349189,
+    "lng": 24.203206,
+    "added": "2026-09-03T17:25:32",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-alikampos-stone-door.jpg",
+    "caption": "Stone arch, wooden door, Alikampos. The wall has better bones than most hotels.",
+    "place": "crete",
+    "lat": 35.349347,
+    "lng": 24.20325,
+    "added": "2026-09-03T17:24:05",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-alikampos-barrel-table.jpg",
+    "caption": "Barrel table under a big tree in Alikampos. Shade that earns its keep.",
+    "place": "crete",
+    "lat": 35.349364,
+    "lng": 24.202844,
+    "added": "2026-09-03T15:49:22",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-georgioupolis-pedalos.jpg",
+    "caption": "Turquoise canal, pedalos lined up like they have plans. Georgioupolis after lunch.",
+    "place": "crete",
+    "lat": 35.363983,
+    "lng": 24.259656,
+    "added": "2026-09-03T15:16:49",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-georgioupolis-pier-chapel.jpg",
+    "caption": "Table flowers, umbrella pole, and that little chapel on the rocks. Georgioupolis view for free.",
+    "place": "crete",
+    "lat": 35.365703,
+    "lng": 24.261733,
+    "added": "2026-09-03T13:32:17",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-georgioupolis-grilled-shrimp.jpg",
+    "caption": "Jumbo shrimp on a fish-shaped plate. The sea was right there. So was the beer.",
+    "place": "crete",
+    "lat": 35.3657,
+    "lng": 24.261658,
+    "added": "2026-09-03T13:04:01",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-georgioupolis-souvlaki-plate.jpg",
+    "caption": "Skewer, peppers, a mountain of fries. Georgioupolis does lunch properly.",
+    "place": "crete",
+    "lat": 35.365703,
+    "lng": 24.261656,
+    "added": "2026-09-03T13:03:47",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-georgioupolis-chapel-beacon.jpg",
+    "caption": "Georgioupolis jetty: white chapel, Greek flag, a skinny beacon that means business.",
+    "place": "crete",
+    "lat": 35.365692,
+    "lng": 24.26165,
+    "added": "2026-09-03T12:32:10",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-likotinarea-chapel.jpg",
+    "caption": "Likotinarea in black and white. Alpha, Omega, one bell. The chapel doesn’t need color.",
+    "place": "crete",
+    "lat": 35.393842,
+    "lng": 24.237792,
+    "added": "2026-09-03T12:01:59",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-georgioupolis-two-mythos.jpg",
+    "caption": "Two Mythos, sea behind the foam. Georgioupolis lunch hours.",
+    "place": "crete",
+    "lat": 35.3657,
+    "lng": 24.2617,
+    "added": "2026-09-03T12:00:00",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-kefalas-stone-corner.jpg",
+    "caption": "Corner of Kefalas. Stone house, iron balcony, mountains peeking like they own the street.",
+    "place": "crete",
+    "lat": 35.406769,
+    "lng": 24.249797,
+    "added": "2026-09-03T11:56:04",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-kefalas-stone-shrine.jpg",
+    "caption": "Stone flag and a roadside shrine for Vaggelis Dermitsis. Kefalas remembers in rock.",
+    "place": "crete",
+    "lat": 35.425122,
+    "lng": 24.258694,
+    "added": "2026-09-03T11:36:01",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-kefalas-swim-rocks.jpg",
+    "caption": "Rock ledge at Kefalas. Book open, ladder in, water so clear you can read the bottom.",
+    "place": "crete",
+    "lat": 35.425433,
+    "lng": 24.258583,
+    "added": "2026-09-03T11:33:01",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-kefalas-bay-cats.jpg",
+    "caption": "Kefalas bay from above. Turquoise shallows, navy deep, three white cats parked like they pay marina rent.",
+    "place": "crete",
+    "lat": 35.426,
+    "lng": 24.260811,
+    "added": "2026-09-03T11:21:17",
+    "date": "2026-09-03",
+    "new": true
+  },
+  {
     "src": "/photos/album/crete-georgioupolis-beached-boat.jpg",
     "caption": "Dry-docked in Georgioupolis, paint hanging off, red stripes still on. This hull is out of the water and still the thirstiest thing on the beach.",
     "place": "crete",

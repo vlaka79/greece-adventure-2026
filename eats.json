@@ -1,5 +1,29 @@
 [
   {
+    "place": "Georgioupolis",
+    "dish": "Mythos",
+    "note": "Two tall glasses, sea in soft focus. Official business.",
+    "photo": "/photos/album/crete-georgioupolis-two-mythos.jpg",
+    "lat": 35.3657,
+    "lng": 24.2617
+  },
+  {
+    "place": "Georgioupolis waterfront",
+    "dish": "Souvlaki skewer & fries",
+    "note": "Skewer, peppers, a mountain of fries. Georgioupolis does lunch properly.",
+    "photo": "/photos/album/crete-georgioupolis-souvlaki-plate.jpg",
+    "lat": 35.365703,
+    "lng": 24.261656
+  },
+  {
+    "place": "Georgioupolis waterfront",
+    "dish": "Grilled shrimp",
+    "note": "Jumbo shrimp on a fish-shaped plate. The sea was right there. So was the beer.",
+    "photo": "/photos/album/crete-georgioupolis-grilled-shrimp.jpg",
+    "lat": 35.3657,
+    "lng": 24.261658
+  },
+  {
     "place": "Arkadi Fish Taverna, Georgioupolis",
     "dish": "Watermelon, melon & raki",
     "note": "The best Cretan dessert: fruit you didn’t order and raki you didn’t refuse.",
