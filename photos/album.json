@@ -1,5 +1,25 @@
 [
   {
+    "src": "/photos/album/crete-demati-julia-fig-tree.jpg",
+    "caption": "Julia at our favorite store. No checkout — just reach into the fig tree.",
+    "place": "crete",
+    "lat": 35.033878,
+    "lng": 25.293167,
+    "added": "2026-09-05T05:05:39",
+    "date": "2026-09-04",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-demati-julia-figs.jpg",
+    "caption": "Julia shopping the fig aisle. Three green ones, sunglasses on, mission complete.",
+    "place": "crete",
+    "lat": 35.033867,
+    "lng": 25.293178,
+    "added": "2026-09-05T05:05:39",
+    "date": "2026-09-04",
+    "new": true
+  },
+  {
     "src": "/photos/album/crete-elounda-rakomelo-dinner.jpg",
     "caption": "Handshake dinner at Rakomelo. Octopus on fava, gyro board, Greek salad with the big feta slab.",
     "place": "crete",
