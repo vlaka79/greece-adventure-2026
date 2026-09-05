@@ -1,11 +1,12 @@
 [
   {
     "place": "Elounda",
-    "dish": "Rakomelo",
-    "note": "Ρακόμελο Κρητική Κουζίνα — dinner locked with a handshake. Nothing written down.",
+    "dish": "Octopus, gyro, Greek salad",
+    "note": "Rakomelo (Ρακόμελο Κρητική Κουζίνα) — reserved with a handshake. Octopus on fava, the gyro board, and a proper Greek salad.",
     "lat": 35.2604,
     "lng": 25.7265,
-    "date": "2026-09-04"
+    "date": "2026-09-04",
+    "photo": "/photos/album/crete-elounda-rakomelo-dinner.jpg"
   },
   {
     "place": "Georgioupolis",
