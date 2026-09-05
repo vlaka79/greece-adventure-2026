@@ -62,6 +62,12 @@
     var t = Date.parse(raw.length <= 10 ? raw + "T12:00:00" : raw);
     return isNaN(t) ? 0 : t;
   }
+  function parseTaken(item) {
+    var raw = (item && item.taken) || (item && item.added) || "";
+    if (!raw) return 0;
+    var t = Date.parse(raw.length <= 10 ? raw + "T12:00:00" : raw);
+    return isNaN(t) ? 0 : t;
+  }
   function isNew(item) {
     var t = parseAdded(item);
     if (!t) return false;
@@ -145,7 +151,11 @@
     });
     var dates = Object.keys(groups).sort().reverse();
     var out = dates.map(function (d) {
-      var items = groups[d].slice().sort(function (a, b) { return parseAdded(b) - parseAdded(a); });
+      var items = groups[d].slice().sort(function (a, b) {
+        var hasTaken = groups[d].some(function (it) { return !!(it && it.taken); });
+        if (hasTaken) return parseTaken(a) - parseTaken(b);
+        return parseAdded(b) - parseAdded(a);
+      });
       return { date: d, items: items };
     });
     if (undated.length) {

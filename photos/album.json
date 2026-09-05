@@ -1,193 +1,14 @@
 [
   {
-    "src": "/photos/album/crete-elounda-alikes-mythos.jpg",
-    "caption": "Two Mythos at Alikes Suites. Bay flat, hills dry, unicorns on the glass.",
+    "src": "/photos/album/crete-douliana-indoor-cat.jpg",
+    "caption": "Woke up with him inside. No key, no knock — just a tabby already on the tiles.",
     "place": "crete",
-    "lat": 35.258536,
-    "lng": 25.728911,
-    "added": "2026-09-05T05:55:44",
+    "lat": 35.4273,
+    "lng": 24.19016,
+    "added": "2026-09-04T07:00:00",
     "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-watermelon-crate.jpg",
-    "caption": "Watermelon in the blue crate — 3.50€. Maria called it.",
-    "place": "crete",
-    "lat": 35.26305,
-    "lng": 25.721189,
-    "added": "2026-09-05T05:55:44",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-harbor-kiss.jpg",
-    "caption": "Harbor almost-kiss. Fishing boats, Greek flag, hills across the water.",
-    "place": "crete",
-    "lat": 35.262128,
-    "lng": 25.722317,
-    "added": "2026-09-05T05:55:44",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-beach-table.jpg",
-    "caption": "Table for two on the pebbles. Little Bear Cabernet and the bay.",
-    "place": "crete",
-    "lat": 35.261697,
-    "lng": 25.724328,
-    "added": "2026-09-05T05:55:44",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-yoga-vodka.jpg",
-    "caption": "Yoga vs vodka. Same pose, different outcome.",
-    "place": "crete",
-    "lat": 35.261544,
-    "lng": 25.724603,
-    "added": "2026-09-05T05:55:44",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-bay-spinalonga-view.jpg",
-    "caption": "Bay overlook — Spinalonga out there in the water. Today’s island.",
-    "place": "crete",
-    "lat": 35.221042,
-    "lng": 25.713181,
-    "added": "2026-09-05T05:55:44",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-boat-manolis.jpg",
-    "caption": "Μανώλης at the dock. Tall mast, Greek flag on the line.",
-    "place": "crete",
-    "lat": 35.261036,
-    "lng": 25.725583,
-    "added": "2026-09-05T05:55:44",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-skiff-spinalonga.jpg",
-    "caption": "Small white skiff, Spinalonga’s walls on the point beyond.",
-    "place": "crete",
-    "lat": 35.261089,
-    "lng": 25.725594,
-    "added": "2026-09-05T05:55:44",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-flag-stairs.jpg",
-    "caption": "Greek-flag stairs in Elounda: smile, hope, love, peace, paradise.",
-    "place": "crete",
-    "lat": 35.261519,
-    "lng": 25.724669,
-    "added": "2026-09-05T05:55:44",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-cocktail-therapy.jpg",
-    "caption": "Cocktail Therapy Sessions. Athens 409 km — we’re closer than that.",
-    "place": "crete",
-    "lat": 35.261508,
-    "lng": 25.724644,
-    "added": "2026-09-05T05:55:44",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-model-boats.jpg",
-    "caption": "N°59 model sailboats on the table, bay doing the real work behind.",
-    "place": "crete",
-    "lat": 35.261561,
-    "lng": 25.724572,
-    "added": "2026-09-05T05:55:44",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-stair-cafe.jpg",
-    "caption": "Cafe tables on the stairs. Greek engineering: when the street is the seating chart.",
-    "place": "crete",
-    "lat": 35.261683,
-    "lng": 25.724206,
-    "added": "2026-09-05T05:55:44",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-church-dome.jpg",
-    "caption": "Cream walls, terracotta dome, Greek flag. Elounda church light.",
-    "place": "crete",
-    "lat": 35.262536,
-    "lng": 25.720914,
-    "added": "2026-09-05T05:55:45",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-windmill-selfie.jpg",
-    "caption": "Stone windmill selfie — bare spokes, bay and hills behind us.",
-    "place": "crete",
-    "lat": 35.265294,
-    "lng": 25.72205,
-    "added": "2026-09-05T05:55:45",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-elounda-rakomelo-thumbs-up.jpg",
-    "caption": "Handshake dinner follow-through. Thumbs up with Rakomelo — net shawl and all.",
-    "place": "crete",
-    "lat": 35.260442,
-    "lng": 25.7265,
-    "added": "2026-09-05T05:55:45",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-amiras-memorial-combo.jpg",
-    "caption": "Amiras. Monument for those executed by the German occupation forces — 14 Sep 1943.",
-    "place": "crete",
-    "lat": 35.039058,
-    "lng": 25.442869,
-    "added": "2026-09-05T05:43:08",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-myrtos-greek-engineering.jpg",
-    "caption": "Greek engineering: two planks and a rope into the sea, then stones spelling Kreta. Myrtos.",
-    "place": "crete",
-    "lat": 35.006775,
-    "lng": 25.604456,
-    "added": "2026-09-05T05:38:00",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-ierapetra-kales-combo.jpg",
-    "caption": "Kales at Ierapetra — sea wall on top, the fort from the courtyard below.",
-    "place": "crete",
-    "lat": 35.006519,
-    "lng": 25.739639,
-    "added": "2026-09-05T05:34:10",
-    "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-douliana-indoor-cat-close.jpg",
-    "caption": "Same indoor tabby, closer. Dirt on the nose, burrs on the back — he came in from a shift.",
-    "place": "crete",
-    "lat": 35.427289,
-    "lng": 24.190186,
-    "added": "2026-09-05T05:30:46",
-    "date": "2026-09-04",
-    "new": true
+    "new": true,
+    "taken": "2026-09-04T07:00:00"
   },
   {
     "src": "/photos/album/crete-karydi-agios-georgios.jpg",
@@ -195,9 +16,10 @@
     "place": "crete",
     "lat": 35.393325,
     "lng": 24.202219,
-    "added": "2026-09-05T05:30:47",
+    "added": "2026-09-04T07:31:00",
     "date": "2026-09-04",
-    "new": true
+    "new": true,
+    "taken": "2026-09-04T07:31:00"
   },
   {
     "src": "/photos/album/crete-petres-blue-dome-church.jpg",
@@ -205,9 +27,10 @@
     "place": "crete",
     "lat": 35.351025,
     "lng": 24.358222,
-    "added": "2026-09-05T05:30:47",
+    "added": "2026-09-04T08:02:00",
     "date": "2026-09-04",
-    "new": true
+    "new": true,
+    "taken": "2026-09-04T08:02:00"
   },
   {
     "src": "/photos/album/crete-armeni-tomb-dromos-down.jpg",
@@ -215,9 +38,10 @@
     "place": "crete",
     "lat": 35.317925,
     "lng": 24.463156,
-    "added": "2026-09-05T05:30:48",
+    "added": "2026-09-04T08:33:00",
     "date": "2026-09-04",
-    "new": true
+    "new": true,
+    "taken": "2026-09-04T08:33:00"
   },
   {
     "src": "/photos/album/crete-armeni-tomb-entrance-daniel.jpg",
@@ -225,19 +49,10 @@
     "place": "crete",
     "lat": 35.317883,
     "lng": 24.462919,
-    "added": "2026-09-05T05:30:49",
+    "added": "2026-09-04T09:04:00",
     "date": "2026-09-04",
-    "new": true
-  },
-  {
-    "src": "/photos/album/crete-asimi-melon-truck.jpg",
-    "caption": "Toyota full of melons in Asimi. Crete’s other archaeology — stacked to the rack.",
-    "place": "crete",
-    "lat": 35.044278,
-    "lng": 25.0955,
-    "added": "2026-09-05T05:30:50",
-    "date": "2026-09-04",
-    "new": true
+    "new": true,
+    "taken": "2026-09-04T09:04:00"
   },
   {
     "src": "/photos/album/crete-armeni-tomb-159-combo.jpg",
@@ -245,9 +60,21 @@
     "place": "crete",
     "lat": 35.317108,
     "lng": 24.462939,
-    "added": "2026-09-05T05:15:05",
+    "added": "2026-09-04T09:35:00",
     "date": "2026-09-04",
-    "new": true
+    "new": true,
+    "taken": "2026-09-04T09:35:00"
+  },
+  {
+    "src": "/photos/album/crete-asimi-melon-truck.jpg",
+    "caption": "Toyota full of melons in Asimi. Crete’s other archaeology — stacked to the rack.",
+    "place": "crete",
+    "lat": 35.044278,
+    "lng": 25.0955,
+    "added": "2026-09-04T10:06:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T10:06:00"
   },
   {
     "src": "/photos/album/crete-demati-julia-fig-tree.jpg",
@@ -255,9 +82,10 @@
     "place": "crete",
     "lat": 35.033878,
     "lng": 25.293167,
-    "added": "2026-09-05T05:05:39",
+    "added": "2026-09-04T10:37:00",
     "date": "2026-09-04",
-    "new": true
+    "new": true,
+    "taken": "2026-09-04T10:37:00"
   },
   {
     "src": "/photos/album/crete-demati-julia-figs.jpg",
@@ -265,9 +93,197 @@
     "place": "crete",
     "lat": 35.033867,
     "lng": 25.293178,
-    "added": "2026-09-05T05:05:39",
+    "added": "2026-09-04T11:08:00",
     "date": "2026-09-04",
-    "new": true
+    "new": true,
+    "taken": "2026-09-04T11:08:00"
+  },
+  {
+    "src": "/photos/album/crete-amiras-memorial-combo.jpg",
+    "caption": "Amiras. Monument for those executed by the German occupation forces — 14 Sep 1943.",
+    "place": "crete",
+    "lat": 35.039058,
+    "lng": 25.442869,
+    "added": "2026-09-04T11:40:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T11:40:00"
+  },
+  {
+    "src": "/photos/album/crete-myrtos-greek-engineering.jpg",
+    "caption": "Greek engineering: two planks and a rope into the sea, then stones spelling Kreta. Myrtos.",
+    "place": "crete",
+    "lat": 35.006775,
+    "lng": 25.604456,
+    "added": "2026-09-04T12:11:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T12:11:00"
+  },
+  {
+    "src": "/photos/album/crete-ierapetra-kales-combo.jpg",
+    "caption": "Kales at Ierapetra — sea wall on top, the fort from the courtyard below.",
+    "place": "crete",
+    "lat": 35.006519,
+    "lng": 25.739639,
+    "added": "2026-09-04T12:42:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T12:42:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-bay-spinalonga-view.jpg",
+    "caption": "Bay overlook — Spinalonga out there in the water. Today’s island.",
+    "place": "crete",
+    "lat": 35.221042,
+    "lng": 25.713181,
+    "added": "2026-09-04T13:13:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T13:13:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-windmill-selfie.jpg",
+    "caption": "Stone windmill selfie — bare spokes, bay and hills behind us.",
+    "place": "crete",
+    "lat": 35.265294,
+    "lng": 25.72205,
+    "added": "2026-09-04T13:44:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T13:44:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-church-dome.jpg",
+    "caption": "Cream walls, terracotta dome, Greek flag. Elounda church light.",
+    "place": "crete",
+    "lat": 35.262536,
+    "lng": 25.720914,
+    "added": "2026-09-04T14:15:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T14:15:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-flag-stairs.jpg",
+    "caption": "Greek-flag stairs in Elounda: smile, hope, love, peace, paradise.",
+    "place": "crete",
+    "lat": 35.261519,
+    "lng": 25.724669,
+    "added": "2026-09-04T14:46:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T14:46:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-cocktail-therapy.jpg",
+    "caption": "Cocktail Therapy Sessions. Athens 409 km — we’re closer than that.",
+    "place": "crete",
+    "lat": 35.261508,
+    "lng": 25.724644,
+    "added": "2026-09-04T15:17:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T15:17:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-model-boats.jpg",
+    "caption": "N°59 model sailboats on the table, bay doing the real work behind.",
+    "place": "crete",
+    "lat": 35.261561,
+    "lng": 25.724572,
+    "added": "2026-09-04T15:48:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T15:48:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-stair-cafe.jpg",
+    "caption": "Cafe tables on the stairs. Greek engineering: when the street is the seating chart.",
+    "place": "crete",
+    "lat": 35.261683,
+    "lng": 25.724206,
+    "added": "2026-09-04T16:20:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T16:20:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-yoga-vodka.jpg",
+    "caption": "Yoga vs vodka. Same pose, different outcome.",
+    "place": "crete",
+    "lat": 35.261544,
+    "lng": 25.724603,
+    "added": "2026-09-04T16:51:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T16:51:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-watermelon-crate.jpg",
+    "caption": "Watermelon in the blue crate — 3.50€. Maria called it.",
+    "place": "crete",
+    "lat": 35.26305,
+    "lng": 25.721189,
+    "added": "2026-09-04T17:22:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T17:22:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-harbor-kiss.jpg",
+    "caption": "Harbor almost-kiss. Fishing boats, Greek flag, hills across the water.",
+    "place": "crete",
+    "lat": 35.262128,
+    "lng": 25.722317,
+    "added": "2026-09-04T17:53:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T17:53:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-boat-manolis.jpg",
+    "caption": "Μανώλης at the dock. Tall mast, Greek flag on the line.",
+    "place": "crete",
+    "lat": 35.261036,
+    "lng": 25.725583,
+    "added": "2026-09-04T18:24:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T18:24:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-skiff-spinalonga.jpg",
+    "caption": "Small white skiff, Spinalonga’s walls on the point beyond.",
+    "place": "crete",
+    "lat": 35.261089,
+    "lng": 25.725594,
+    "added": "2026-09-04T18:55:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T18:55:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-beach-table.jpg",
+    "caption": "Table for two on the pebbles. Little Bear Cabernet and the bay.",
+    "place": "crete",
+    "lat": 35.261697,
+    "lng": 25.724328,
+    "added": "2026-09-04T19:26:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T19:26:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-alikes-mythos.jpg",
+    "caption": "Two Mythos at Alikes Suites. Bay flat, hills dry, unicorns on the glass.",
+    "place": "crete",
+    "lat": 35.258536,
+    "lng": 25.728911,
+    "added": "2026-09-04T19:57:00",
+    "date": "2026-09-04",
+    "new": true,
+    "taken": "2026-09-04T19:57:00"
   },
   {
     "src": "/photos/album/crete-elounda-rakomelo-dinner.jpg",
@@ -275,19 +291,21 @@
     "place": "crete",
     "lat": 35.2604,
     "lng": 25.7265,
-    "added": "2026-09-05T05:00:02",
+    "added": "2026-09-04T20:28:00",
     "date": "2026-09-04",
-    "new": true
+    "new": true,
+    "taken": "2026-09-04T20:28:00"
   },
   {
-    "src": "/photos/album/crete-douliana-indoor-cat.jpg",
-    "caption": "Woke up with him inside. No key, no knock — just a tabby already on the tiles.",
+    "src": "/photos/album/crete-elounda-rakomelo-thumbs-up.jpg",
+    "caption": "Handshake dinner follow-through. Thumbs up with Rakomelo — net shawl and all.",
     "place": "crete",
-    "lat": 35.4273,
-    "lng": 24.19016,
-    "added": "2026-09-04T19:01:01",
+    "lat": 35.260442,
+    "lng": 25.7265,
+    "added": "2026-09-04T21:00:00",
     "date": "2026-09-04",
-    "new": true
+    "new": true,
+    "taken": "2026-09-04T21:00:00"
   },
   {
     "src": "/photos/album/crete-vryses-church.jpg",
