@@ -1,6 +1,15 @@
 [
   {
     "place": "Elounda",
+    "dish": "Mythos",
+    "note": "Two glasses at Alikes Suites — bay view, unicorn logos on duty.",
+    "photo": "/photos/album/crete-elounda-alikes-mythos.jpg",
+    "lat": 35.258536,
+    "lng": 25.728911,
+    "date": "2026-09-04"
+  },
+  {
+    "place": "Elounda",
     "dish": "Octopus, gyro, Greek salad",
     "note": "Rakomelo (Ρακόμελο Κρητική Κουζίνα) — reserved with a handshake. Octopus on fava, the gyro board, and a proper Greek salad.",
     "lat": 35.2604,
