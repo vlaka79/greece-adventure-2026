@@ -1,5 +1,15 @@
 [
   {
+    "src": "/photos/album/crete-myrtos-greek-engineering.jpg",
+    "caption": "Greek engineering: two planks and a rope into the sea, then stones spelling Kreta. Myrtos.",
+    "place": "crete",
+    "lat": 35.006775,
+    "lng": 25.604456,
+    "added": "2026-09-05T05:38:00",
+    "date": "2026-09-04",
+    "new": true
+  },
+  {
     "src": "/photos/album/crete-ierapetra-kales-combo.jpg",
     "caption": "Kales at Ierapetra — sea wall on top, the fort from the courtyard below.",
     "place": "crete",
