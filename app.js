@@ -191,6 +191,12 @@
               row.appendChild(document.createTextNode(line.text || ""));
               convoLines.appendChild(row);
             });
+            if (convo.closer) {
+              var closer = document.createElement("p");
+              closer.className = "mt-3 text-base italic text-fg/80";
+              closer.textContent = convo.closer;
+              convoLines.appendChild(closer);
+            }
           } else {
             convoBox.classList.add("hidden");
             convoLines.innerHTML = "";
