@@ -2026,5 +2026,60 @@
     "date": null,
     "new": true,
     "taken": null
+  },
+  {
+    "src": "/photos/album/crete-elounda-magali-night-olive-tree.jpg",
+    "caption": "Magali Cretan Cooking, Elounda. An ancient olive tree under the night sky — dinner starts with the landscape.",
+    "place": "crete",
+    "lat": 35.2645,
+    "lng": 25.721671,
+    "added": "2026-09-06T06:14:46",
+    "date": null,
+    "new": true,
+    "taken": null
+  },
+  {
+    "src": "/photos/album/crete-elounda-magali-four-frame-feast.jpg",
+    "caption": "Magali Cretan Cooking, Elounda. A four-frame feast: crisp bites, meatballs, rosy roast, and fish with velvety sides — the kitchen did not believe in small plates.",
+    "place": "crete",
+    "lat": 35.2645,
+    "lng": 25.721671,
+    "added": "2026-09-06T06:14:46",
+    "date": null,
+    "new": true,
+    "taken": null
+  },
+  {
+    "src": "/photos/album/crete-elounda-magali-octopus-tart.jpg",
+    "caption": "Magali Cretan Cooking, Elounda. Octopus tart with capers, herbs, and a golden crust — Cretan coast energy in one beautiful bite.",
+    "place": "crete",
+    "lat": 35.2645,
+    "lng": 25.721671,
+    "added": "2026-09-06T06:14:46",
+    "date": null,
+    "new": true,
+    "taken": null
+  },
+  {
+    "src": "/photos/album/crete-elounda-magali-bread-and-hummus.jpg",
+    "caption": "Magali Cretan Cooking, Elounda. Fresh-baked bread on a bed of grain, hummus at the ready — the table had already made its case.",
+    "place": "crete",
+    "lat": 35.2645,
+    "lng": 25.721671,
+    "added": "2026-09-06T06:14:46",
+    "date": null,
+    "new": true,
+    "taken": null
+  },
+  {
+    "src": "/photos/album/crete-elounda-magali-issorropia-cabernet.jpg",
+    "caption": "Magali Cretan Cooking, Elounda. Issorropia Cabernet Sauvignon poured for two — the evening found its soundtrack.",
+    "place": "crete",
+    "lat": 35.2645,
+    "lng": 25.721671,
+    "added": "2026-09-06T06:14:46",
+    "date": null,
+    "new": true,
+    "taken": null
   }
 ]

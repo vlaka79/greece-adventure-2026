@@ -216,5 +216,13 @@
     "dish": "Space Dust IPA",
     "note": "Cold cans, gate-side, official DDIC kickoff before the flight to Crete.",
     "photo": "/photos/album/lax-cheers.jpeg"
+  },
+  {
+    "place": "Magali Cretan Cooking, Elounda",
+    "dish": "Cretan dinner & wine",
+    "note": "A warm, beautifully plated dinner: crisp bites, meatballs, octopus tart, fresh bread, and a Cretan red poured for the table.",
+    "photo": "/photos/album/crete-elounda-magali-four-frame-feast.jpg",
+    "lat": 35.2645,
+    "lng": 25.721671
   }
 ]
