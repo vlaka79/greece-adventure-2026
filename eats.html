@@ -46,6 +46,13 @@
           return;
         }
         if (empty) empty.classList.add("hidden");
+        items = items.slice().sort(function (a, b) {
+          var ta = (a && (a.taken || a.date)) || "";
+          var tb = (b && (b.taken || b.date)) || "";
+          if (ta.length === 10) ta += "T12:00:00";
+          if (tb.length === 10) tb += "T12:00:00";
+          return tb.localeCompare(ta);
+        });
         items.forEach(function (e) {
           var li = document.createElement("li");
           li.className = "overflow-hidden rounded-xl bg-surface card-shadow";

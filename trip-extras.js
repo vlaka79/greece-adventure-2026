@@ -47,6 +47,13 @@
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (items) {
         items = items || [];
+        items = items.slice().sort(function (a, b) {
+          var ta = (a && (a.taken || a.date)) || "";
+          var tb = (b && (b.taken || b.date)) || "";
+          if (ta.length === 10) ta += "T12:00:00";
+          if (tb.length === 10) tb += "T12:00:00";
+          return tb.localeCompare(ta);
+        });
         var list = document.getElementById("eats-list");
         var empty = document.getElementById("eats-empty");
         if (!list || !items.length) return;

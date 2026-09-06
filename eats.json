@@ -1,221 +1,13 @@
 [
   {
-    "place": "Elounda",
-    "dish": "Mythos",
-    "note": "Two glasses at Alikes Suites — bay view, unicorn logos on duty.",
-    "photo": "/photos/album/crete-elounda-alikes-mythos.jpg",
-    "lat": 35.258536,
-    "lng": 25.728911,
-    "date": "2026-09-04"
-  },
-  {
-    "place": "Elounda",
-    "dish": "Octopus, gyro, Greek salad",
-    "note": "Rakomelo (Ρακόμελο Κρητική Κουζίνα) — reserved with a handshake. Octopus on fava, the gyro board, and a proper Greek salad.",
-    "lat": 35.2604,
-    "lng": 25.7265,
-    "date": "2026-09-04",
-    "photo": "/photos/album/crete-elounda-rakomelo-dinner.jpg"
-  },
-  {
-    "place": "Georgioupolis",
-    "dish": "Mythos",
-    "note": "Two tall glasses, sea in soft focus. Official business.",
-    "photo": "/photos/album/crete-georgioupolis-two-mythos.jpg",
-    "lat": 35.3657,
-    "lng": 24.2617
-  },
-  {
-    "place": "Georgioupolis waterfront",
-    "dish": "Souvlaki skewer & fries",
-    "note": "Skewer, peppers, a mountain of fries. Georgioupolis does lunch properly.",
-    "photo": "/photos/album/crete-georgioupolis-souvlaki-plate.jpg",
-    "lat": 35.365703,
-    "lng": 24.261656
-  },
-  {
-    "place": "Georgioupolis waterfront",
-    "dish": "Grilled shrimp",
-    "note": "Jumbo shrimp on a fish-shaped plate. The sea was right there. So was the beer.",
-    "photo": "/photos/album/crete-georgioupolis-grilled-shrimp.jpg",
-    "lat": 35.3657,
-    "lng": 24.261658
-  },
-  {
-    "place": "Arkadi Fish Taverna, Georgioupolis",
-    "dish": "Watermelon, melon & raki",
-    "note": "The best Cretan dessert: fruit you didn’t order and raki you didn’t refuse.",
-    "photo": "/photos/album/crete-georgioupolis-arkadi-dessert.jpg",
-    "lat": 35.3658,
-    "lng": 24.2615
-  },
-  {
-    "place": "Tsunami, Almyrida",
-    "dish": "Greek junkfood pizza",
-    "note": "Ham and peppers. Beach pizza, no apologies.",
-    "photo": "/photos/album/crete-almyrida-tsunami-pizza.jpg",
-    "lat": 35.44961,
-    "lng": 24.19867
-  },
-  {
-    "place": "Tsunami, Almyrida",
-    "dish": "Mythos",
-    "note": "Two cold bottles under the thatch umbrellas. Official DDIC business.",
-    "photo": "/photos/album/crete-almyrida-tsunami-mythos.jpg",
-    "lat": 35.44976,
-    "lng": 24.19877
-  },
-  {
-    "place": "Ηλιοστάσι (Heliostasi), Douliana",
-    "dish": "Cretan salad & mixed grill",
-    "note": "The Cretan salad was huge, the mixed grill delicious, and the tzatziki creamy. First dinner from Douliana.",
-    "photo": "/photos/album/crete-douliana-heliostasi-grill.jpg",
-    "lat": 35.42744,
-    "lng": 24.19061
-  },
-  {
-    "place": "Livikon Day to Night, Paleochora",
-    "dish": "Gin & tonic",
-    "note": "Two balloon G&Ts with lemon and peppercorns, peanuts on the side, south-coast view for free.",
-    "photo": "/photos/album/crete-paleochora-livikon-gt.jpg",
-    "lat": 35.2305,
-    "lng": 23.68293
-  },
-  {
-    "place": "Caravella, Paleochora",
-    "dish": "Calamari, souvlaki & the steam table",
-    "note": "Last night in Paleochora. Grilled calamari with souvlaki and fries, and a walk past every tray behind the glass. We ate like we meant it.",
-    "photo": "/photos/album/crete-paleochora-caravella-meal.jpg",
-    "lat": 35.22967,
-    "lng": 23.68342
-  },
-  {
-    "place": "Romeiko Wine & Deli, Paleochora",
-    "dish": "Wine, meats & cheeses",
-    "note": "Two reds and a shared board in a courtyard that feels half village, half movie set. Evening in Paleochora.",
-    "photo": "/photos/album/crete-paleochora-dinner-board.jpg",
-    "lat": 35.23184,
-    "lng": 23.68307
-  },
-  {
-    "place": "I Platia (Η Πλατεία), Kandanos",
-    "dish": "Spicy meatballs",
-    "note": "The best. Tomato sauce, a pile of fries, salad on the side. Lunch stop in Kandanos on the way south.",
-    "photo": "/photos/album/crete-kandanos-platia-meatballs.jpg"
-  },
-  {
-    "place": "I Platia (Η Πλατεία), Kandanos",
-    "dish": "House treat",
-    "note": "Cinnamon-dusted sweet and a little raki after the meatballs.",
-    "photo": "/photos/album/crete-kandanos-platia-treat.jpg"
-  },
-  {
-    "place": "TAMAM, Chania",
-    "dish": "Dakos and fava",
-    "note": "Together on the table, with the wine. Excellent.",
-    "photo": "/photos/album/crete-chania-tamam-dakos-fava.jpg"
-  },
-  {
-    "place": "TAMAM, Chania",
-    "dish": "Braised octopus",
-    "note": "Wine-braised, fries on the side. Excellent.",
-    "photo": "/photos/album/crete-chania-tamam-octopus.jpg"
-  },
-  {
-    "place": "TAMAM, Chania",
-    "dish": "Lamb kabobs",
-    "note": "Grill marks, pita, a pile of fries. Excellent.",
-    "photo": "/photos/album/crete-chania-tamam-lamb.jpg"
-  },
-  {
-    "place": "Chania harbour",
-    "dish": "Frappé",
-    "note": "More frappés by the harbour. Two straws, one view.",
-    "photo": "/photos/album/crete-chania-harbour-frappe.jpg"
-  },
-  {
-    "place": "Το Σουβλάκι Όπως Παλιά, Chania",
-    "dish": "Gyros",
-    "note": "Best gyros in town, or a close second. We're not arguing with the pita.",
-    "photo": "/photos/album/crete-chania-souvlaki-opos-palia.jpg"
-  },
-  {
-    "place": "The Botanist, Chania",
-    "dish": "Aged Long Island iced tea",
-    "note": "Skip the Coke. Still the one. We'll be back.",
-    "photo": "/photos/album/crete-chania-botanist-drinks.jpg"
-  },
-  {
-    "place": "Chania",
-    "dish": "Grilled fish",
-    "note": "Whole fish off the grill, lemon, tomato, herbs. Tonight's seafood.",
-    "photo": "/photos/album/crete-chania-julia-dinner.jpg"
-  },
-  {
-    "place": "Chania",
-    "dish": "Dakos",
-    "note": "Barley rusks, tomato, onion, cucumber, and a pile of cheese. The table before the fish.",
-    "photo": "/photos/album/crete-chania-dakos.jpg"
-  },
-  {
-    "place": "Mamaloukos, Chania",
-    "dish": "Loukoumades",
-    "note": "Still hot from the oil, drenched in honey, walnuts, and cinnamon. Best loukoumades in town. We ate them walking.",
-    "photo": "/photos/album/crete-chania-loukoumades.jpg"
-  },
-  {
-    "place": "Orange Tree, Chania",
-    "dish": "Fresh pomegranate juice",
-    "note": "A whole wall of pomegranates, then they squeeze it in front of you. Bright, tart, no sugar needed. Best juice we've had in Greece.",
-    "photo": "/photos/album/crete-chania-pomegranate-juice.jpg"
-  },
-  {
-    "place": "Ta Kalamakia, Chania",
-    "dish": "Souvlaki",
-    "note": "Skewers and a charred sausage, thick fries, tzatziki, and grilled bread. The guy at the grill gave us two thumbs up. Best souvlaki in Chania. Five stars.",
-    "photo": "/photos/album/crete-chania-kalamakia.jpg"
-  },
-  {
-    "place": "Chania harbour waterfront",
-    "dish": "Coffee to beer",
-    "note": "From coffee to beer, same table, same view. We haven't moved. Gotta love Crete.",
-    "photo": "/photos/album/crete-chania-coffee-to-beer.jpg"
-  },
-  {
-    "place": "La bodega, Chania harbour",
-    "dish": "Charcuterie board and wine",
-    "note": "Cured meats, cheese, figs, walnuts, olives — and a placemat that asked what a whole bottle could do for the heart.",
-    "photo": "/photos/album/crete-chania-labodega-board.jpg"
-  },
-  {
-    "place": "Chania harbour waterfront",
-    "dish": "Souvlaki with fries & Alfa lager",
-    "note": "Grilled skewers, thick-cut fries, spicy dip, and cold Alfa with the old harbour behind us. Lunch done right.",
-    "photo": "/photos/album/crete-chania-souvlaki.jpg"
-  },
-  {
-    "place": "Chania harbour waterfront",
-    "dish": "Horiatiki (Greek salad)",
-    "note": "Tomatoes, onion, olives, and a slab of feta with oregano — proper village salad by the water.",
-    "photo": "/photos/album/crete-chania-greek-salad.jpg"
-  },
-  {
-    "place": "Neoria Fish Tavern, Chania harbour",
-    "dish": "Frappé (φραπέ)",
-    "note": "Two frothy iced coffees and cold mountain water with the Venetian harbour behind us. First proper morning in Crete.",
-    "photo": "/photos/album/crete-chania-harbor-freddo.jpg"
-  },
-  {
-    "place": "Pork to Beef Wild, Chania area",
-    "dish": "Grilled sandwich with fries",
-    "note": "First meal in Greece — juicy, herbed fries, and exactly what we needed after landing. Delicious.",
-    "photo": "/photos/album/crete-pork-to-beef-wild.jpg"
-  },
-  {
-    "place": "Guy Fieri’s Kitchen + Bar Express, Burbank Airport",
-    "dish": "Space Dust IPA",
-    "note": "Cold cans, gate-side, official DDIC kickoff before the flight to Crete.",
-    "photo": "/photos/album/lax-cheers.jpeg"
+    "place": "Olous taverna, Elounda",
+    "dish": "Night out — food & drink",
+    "note": "Packed terrace under the church dome — lanterns, palms, and a full Elounda evening.",
+    "photo": "/photos/album/crete-elounda-olous-taverna-night.jpg",
+    "lat": 35.2626,
+    "lng": 25.721683,
+    "date": "2026-09-05",
+    "taken": "2026-09-05T20:44:14"
   },
   {
     "place": "Magali Cretan Cooking, Elounda",
@@ -224,15 +16,287 @@
     "photo": "/photos/album/crete-elounda-magali-four-frame-feast.jpg",
     "lat": 35.2645,
     "lng": 25.721671,
-    "date": "2026-09-05"
+    "date": "2026-09-05",
+    "taken": "2026-09-05T20:16:00"
   },
   {
-    "place": "Olous taverna, Elounda",
-    "dish": "Night out — food & drink",
-    "note": "Packed terrace under the church dome — lanterns, palms, and a full Elounda evening.",
-    "photo": "/photos/album/crete-elounda-olous-taverna-night.jpg",
-    "lat": 35.2626,
-    "lng": 25.721683,
-    "date": "2026-09-05"
+    "place": "Elounda",
+    "dish": "Octopus, gyro, Greek salad",
+    "note": "Rakomelo (Ρακόμελο Κρητική Κουζίνα) — reserved with a handshake. Octopus on fava, the gyro board, and a proper Greek salad.",
+    "lat": 35.2604,
+    "lng": 25.7265,
+    "date": "2026-09-04",
+    "photo": "/photos/album/crete-elounda-rakomelo-dinner.jpg",
+    "taken": "2026-09-04T20:28:00"
+  },
+  {
+    "place": "Elounda",
+    "dish": "Mythos",
+    "note": "Two glasses at Alikes Suites — bay view, unicorn logos on duty.",
+    "photo": "/photos/album/crete-elounda-alikes-mythos.jpg",
+    "lat": 35.258536,
+    "lng": 25.728911,
+    "date": "2026-09-04",
+    "taken": "2026-09-04T19:57:00"
+  },
+  {
+    "place": "Arkadi Fish Taverna, Georgioupolis",
+    "dish": "Watermelon, melon & raki",
+    "note": "The best Cretan dessert: fruit you didn’t order and raki you didn’t refuse.",
+    "photo": "/photos/album/crete-georgioupolis-arkadi-dessert.jpg",
+    "lat": 35.3658,
+    "lng": 24.2615,
+    "taken": "2026-09-03T14:50:00",
+    "date": "2026-09-03"
+  },
+  {
+    "place": "Georgioupolis waterfront",
+    "dish": "Grilled shrimp",
+    "note": "Jumbo shrimp on a fish-shaped plate. The sea was right there. So was the beer.",
+    "photo": "/photos/album/crete-georgioupolis-grilled-shrimp.jpg",
+    "lat": 35.3657,
+    "lng": 24.261658,
+    "taken": "2026-09-03T13:04:01",
+    "date": "2026-09-03"
+  },
+  {
+    "place": "Georgioupolis waterfront",
+    "dish": "Souvlaki skewer & fries",
+    "note": "Skewer, peppers, a mountain of fries. Georgioupolis does lunch properly.",
+    "photo": "/photos/album/crete-georgioupolis-souvlaki-plate.jpg",
+    "lat": 35.365703,
+    "lng": 24.261656,
+    "taken": "2026-09-03T13:03:47",
+    "date": "2026-09-03"
+  },
+  {
+    "place": "Georgioupolis",
+    "dish": "Mythos",
+    "note": "Two tall glasses, sea in soft focus. Official business.",
+    "photo": "/photos/album/crete-georgioupolis-two-mythos.jpg",
+    "lat": 35.3657,
+    "lng": 24.2617,
+    "taken": "2026-09-03T12:00:00",
+    "date": "2026-09-03"
+  },
+  {
+    "place": "Tsunami, Almyrida",
+    "dish": "Greek junkfood pizza",
+    "note": "Ham and peppers. Beach pizza, no apologies.",
+    "photo": "/photos/album/crete-almyrida-tsunami-pizza.jpg",
+    "lat": 35.44961,
+    "lng": 24.19867,
+    "taken": "2026-09-02T13:53:37",
+    "date": "2026-09-02"
+  },
+  {
+    "place": "Tsunami, Almyrida",
+    "dish": "Mythos",
+    "note": "Two cold bottles under the thatch umbrellas. Official DDIC business.",
+    "photo": "/photos/album/crete-almyrida-tsunami-mythos.jpg",
+    "lat": 35.44976,
+    "lng": 24.19877,
+    "taken": "2026-09-02T13:41:23",
+    "date": "2026-09-02"
+  },
+  {
+    "place": "Ηλιοστάσι (Heliostasi), Douliana",
+    "dish": "Cretan salad & mixed grill",
+    "note": "The Cretan salad was huge, the mixed grill delicious, and the tzatziki creamy. First dinner from Douliana.",
+    "photo": "/photos/album/crete-douliana-heliostasi-grill.jpg",
+    "lat": 35.42744,
+    "lng": 24.19061,
+    "taken": "2026-09-01T20:36:18",
+    "date": "2026-09-01"
+  },
+  {
+    "place": "Caravella, Paleochora",
+    "dish": "Calamari, souvlaki & the steam table",
+    "note": "Last night in Paleochora. Grilled calamari with souvlaki and fries, and a walk past every tray behind the glass. We ate like we meant it.",
+    "photo": "/photos/album/crete-paleochora-caravella-meal.jpg",
+    "lat": 35.22967,
+    "lng": 23.68342,
+    "taken": "2026-08-31T19:32:10",
+    "date": "2026-08-31"
+  },
+  {
+    "place": "Livikon Day to Night, Paleochora",
+    "dish": "Gin & tonic",
+    "note": "Two balloon G&Ts with lemon and peppercorns, peanuts on the side, south-coast view for free.",
+    "photo": "/photos/album/crete-paleochora-livikon-gt.jpg",
+    "lat": 35.2305,
+    "lng": 23.68293,
+    "taken": "2026-08-31T18:06:12",
+    "date": "2026-08-31"
+  },
+  {
+    "place": "Romeiko Wine & Deli, Paleochora",
+    "dish": "Wine, meats & cheeses",
+    "note": "Two reds and a shared board in a courtyard that feels half village, half movie set. Evening in Paleochora.",
+    "photo": "/photos/album/crete-paleochora-dinner-board.jpg",
+    "lat": 35.23184,
+    "lng": 23.68307,
+    "taken": "2026-08-30T21:15:12",
+    "date": "2026-08-30"
+  },
+  {
+    "place": "I Platia (Η Πλατεία), Kandanos",
+    "dish": "Spicy meatballs",
+    "note": "The best. Tomato sauce, a pile of fries, salad on the side. Lunch stop in Kandanos on the way south.",
+    "photo": "/photos/album/crete-kandanos-platia-meatballs.jpg",
+    "taken": "2026-08-30T14:50:00",
+    "date": "2026-08-30"
+  },
+  {
+    "place": "I Platia (Η Πλατεία), Kandanos",
+    "dish": "House treat",
+    "note": "Cinnamon-dusted sweet and a little raki after the meatballs.",
+    "photo": "/photos/album/crete-kandanos-platia-treat.jpg",
+    "taken": "2026-08-30T14:45:00",
+    "date": "2026-08-30"
+  },
+  {
+    "place": "TAMAM, Chania",
+    "dish": "Lamb kabobs",
+    "note": "Grill marks, pita, a pile of fries. Excellent.",
+    "photo": "/photos/album/crete-chania-tamam-lamb.jpg",
+    "taken": "2026-08-29T21:10:00",
+    "date": "2026-08-29"
+  },
+  {
+    "place": "TAMAM, Chania",
+    "dish": "Braised octopus",
+    "note": "Wine-braised, fries on the side. Excellent.",
+    "photo": "/photos/album/crete-chania-tamam-octopus.jpg",
+    "taken": "2026-08-29T21:05:00",
+    "date": "2026-08-29"
+  },
+  {
+    "place": "TAMAM, Chania",
+    "dish": "Dakos and fava",
+    "note": "Together on the table, with the wine. Excellent.",
+    "photo": "/photos/album/crete-chania-tamam-dakos-fava.jpg",
+    "taken": "2026-08-29T21:00:00",
+    "date": "2026-08-29"
+  },
+  {
+    "place": "Chania harbour",
+    "dish": "Frappé",
+    "note": "More frappés by the harbour. Two straws, one view.",
+    "photo": "/photos/album/crete-chania-harbour-frappe.jpg",
+    "taken": "2026-08-29T13:20:00",
+    "date": "2026-08-29"
+  },
+  {
+    "place": "Το Σουβλάκι Όπως Παλιά, Chania",
+    "dish": "Gyros",
+    "note": "Best gyros in town, or a close second. We're not arguing with the pita.",
+    "photo": "/photos/album/crete-chania-souvlaki-opos-palia.jpg",
+    "taken": "2026-08-29T13:10:00",
+    "date": "2026-08-29"
+  },
+  {
+    "place": "The Botanist, Chania",
+    "dish": "Aged Long Island iced tea",
+    "note": "Skip the Coke. Still the one. We'll be back.",
+    "photo": "/photos/album/crete-chania-botanist-drinks.jpg",
+    "taken": "2026-08-28T21:30:00",
+    "date": "2026-08-28"
+  },
+  {
+    "place": "Chania",
+    "dish": "Grilled fish",
+    "note": "Whole fish off the grill, lemon, tomato, herbs. Tonight's seafood.",
+    "photo": "/photos/album/crete-chania-julia-dinner.jpg",
+    "taken": "2026-08-28T18:06:38",
+    "date": "2026-08-28"
+  },
+  {
+    "place": "Chania",
+    "dish": "Dakos",
+    "note": "Barley rusks, tomato, onion, cucumber, and a pile of cheese. The table before the fish.",
+    "photo": "/photos/album/crete-chania-dakos.jpg",
+    "taken": "2026-08-28T17:42:56",
+    "date": "2026-08-28"
+  },
+  {
+    "place": "Mamaloukos, Chania",
+    "dish": "Loukoumades",
+    "note": "Still hot from the oil, drenched in honey, walnuts, and cinnamon. Best loukoumades in town. We ate them walking.",
+    "photo": "/photos/album/crete-chania-loukoumades.jpg",
+    "taken": "2026-08-27T22:08:00",
+    "date": "2026-08-27"
+  },
+  {
+    "place": "Orange Tree, Chania",
+    "dish": "Fresh pomegranate juice",
+    "note": "A whole wall of pomegranates, then they squeeze it in front of you. Bright, tart, no sugar needed. Best juice we've had in Greece.",
+    "photo": "/photos/album/crete-chania-pomegranate-juice.jpg",
+    "taken": "2026-08-27T21:51:00",
+    "date": "2026-08-27"
+  },
+  {
+    "place": "Ta Kalamakia, Chania",
+    "dish": "Souvlaki",
+    "note": "Skewers and a charred sausage, thick fries, tzatziki, and grilled bread. The guy at the grill gave us two thumbs up. Best souvlaki in Chania. Five stars.",
+    "photo": "/photos/album/crete-chania-kalamakia.jpg",
+    "taken": "2026-08-27T20:49:00",
+    "date": "2026-08-27"
+  },
+  {
+    "place": "Chania harbour waterfront",
+    "dish": "Coffee to beer",
+    "note": "From coffee to beer, same table, same view. We haven't moved. Gotta love Crete.",
+    "photo": "/photos/album/crete-chania-coffee-to-beer.jpg",
+    "taken": "2026-08-27T18:10:00",
+    "date": "2026-08-27"
+  },
+  {
+    "place": "La bodega, Chania harbour",
+    "dish": "Charcuterie board and wine",
+    "note": "Cured meats, cheese, figs, walnuts, olives — and a placemat that asked what a whole bottle could do for the heart.",
+    "photo": "/photos/album/crete-chania-labodega-board.jpg",
+    "taken": "2026-08-26T21:08:00",
+    "date": "2026-08-26"
+  },
+  {
+    "place": "Chania harbour waterfront",
+    "dish": "Souvlaki with fries & Alfa lager",
+    "note": "Grilled skewers, thick-cut fries, spicy dip, and cold Alfa with the old harbour behind us. Lunch done right.",
+    "photo": "/photos/album/crete-chania-souvlaki.jpg",
+    "taken": "2026-08-26T14:05:00",
+    "date": "2026-08-26"
+  },
+  {
+    "place": "Chania harbour waterfront",
+    "dish": "Horiatiki (Greek salad)",
+    "note": "Tomatoes, onion, olives, and a slab of feta with oregano — proper village salad by the water.",
+    "photo": "/photos/album/crete-chania-greek-salad.jpg",
+    "taken": "2026-08-26T14:00:00",
+    "date": "2026-08-26"
+  },
+  {
+    "place": "Neoria Fish Tavern, Chania harbour",
+    "dish": "Frappé (φραπέ)",
+    "note": "Two frothy iced coffees and cold mountain water with the Venetian harbour behind us. First proper morning in Crete.",
+    "photo": "/photos/album/crete-chania-harbor-freddo.jpg",
+    "taken": "2026-08-26T12:00:00",
+    "date": "2026-08-26"
+  },
+  {
+    "place": "Pork to Beef Wild, Chania area",
+    "dish": "Grilled sandwich with fries",
+    "note": "First meal in Greece — juicy, herbed fries, and exactly what we needed after landing. Delicious.",
+    "photo": "/photos/album/crete-pork-to-beef-wild.jpg",
+    "taken": "2026-08-25T21:00:00",
+    "date": "2026-08-25"
+  },
+  {
+    "place": "Guy Fieri’s Kitchen + Bar Express, Burbank Airport",
+    "dish": "Space Dust IPA",
+    "note": "Cold cans, gate-side, official DDIC kickoff before the flight to Crete.",
+    "photo": "/photos/album/lax-cheers.jpeg",
+    "taken": "2026-08-24T13:50:36",
+    "date": "2026-08-24"
   }
 ]
