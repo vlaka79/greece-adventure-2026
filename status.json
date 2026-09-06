@@ -10,30 +10,7 @@
     "title": "Carbonana Gate",
     "note": "Carbonana Gate — selfie on the Venetian cobbles.",
     "photo": "/photos/album/crete-elounda-carbonana-gate-selfie.jpg",
-    "caption": "Carbonana Gate, Elounda. Cobblestones, a crooked tree, and us in matching sunglasses.",
-    "conversation": {
-      "label": "Conversation of the day",
-      "title": "Hotel desk",
-      "lines": [
-        {
-          "who": "Hotel guest",
-          "text": "complaining about something"
-        },
-        {
-          "who": "Hotel reception",
-          "text": "Why are you yelling at me?"
-        },
-        {
-          "who": "Hotel guest",
-          "text": "Because you work here."
-        },
-        {
-          "who": "Hotel reception",
-          "text": "I’m enjoying my day here, why are you yelling at me? I don’t make the rules, that’s your problem."
-        }
-      ],
-      "closer": "Gotta love Greece."
-    }
+    "caption": "Carbonana Gate, Elounda. Cobblestones, a crooked tree, and us in matching sunglasses."
   },
   "word": {
     "el": "Αυτοκίνητο",
