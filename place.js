@@ -152,9 +152,8 @@
     var dates = Object.keys(groups).sort().reverse();
     var out = dates.map(function (d) {
       var items = groups[d].slice().sort(function (a, b) {
-        var hasTaken = groups[d].some(function (it) { return !!(it && it.taken); });
-        if (hasTaken) return parseTaken(a) - parseTaken(b);
-        return parseAdded(b) - parseAdded(a);
+        // Morning → evening within each day (taken, else added).
+        return parseTaken(a) - parseTaken(b);
       });
       return { date: d, items: items };
     });
