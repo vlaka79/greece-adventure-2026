@@ -2033,10 +2033,10 @@
     "place": "crete",
     "lat": 35.2645,
     "lng": 25.721671,
-    "added": "2026-09-06T06:14:46",
-    "date": null,
+    "added": "2026-09-05T20:13:00",
+    "date": "2026-09-05",
     "new": true,
-    "taken": null
+    "taken": "2026-09-05T20:13:00"
   },
   {
     "src": "/photos/album/crete-elounda-magali-four-frame-feast.jpg",
@@ -2044,10 +2044,10 @@
     "place": "crete",
     "lat": 35.2645,
     "lng": 25.721671,
-    "added": "2026-09-06T06:14:46",
-    "date": null,
+    "added": "2026-09-05T20:16:00",
+    "date": "2026-09-05",
     "new": true,
-    "taken": null
+    "taken": "2026-09-05T20:16:00"
   },
   {
     "src": "/photos/album/crete-elounda-magali-octopus-tart.jpg",
@@ -2055,10 +2055,10 @@
     "place": "crete",
     "lat": 35.2645,
     "lng": 25.721671,
-    "added": "2026-09-06T06:14:46",
-    "date": null,
+    "added": "2026-09-05T20:19:00",
+    "date": "2026-09-05",
     "new": true,
-    "taken": null
+    "taken": "2026-09-05T20:19:00"
   },
   {
     "src": "/photos/album/crete-elounda-magali-bread-and-hummus.jpg",
@@ -2066,10 +2066,10 @@
     "place": "crete",
     "lat": 35.2645,
     "lng": 25.721671,
-    "added": "2026-09-06T06:14:46",
-    "date": null,
+    "added": "2026-09-05T20:22:00",
+    "date": "2026-09-05",
     "new": true,
-    "taken": null
+    "taken": "2026-09-05T20:22:00"
   },
   {
     "src": "/photos/album/crete-elounda-magali-issorropia-cabernet.jpg",
@@ -2077,9 +2077,9 @@
     "place": "crete",
     "lat": 35.2645,
     "lng": 25.721671,
-    "added": "2026-09-06T06:14:46",
-    "date": null,
+    "added": "2026-09-05T20:25:00",
+    "date": "2026-09-05",
     "new": true,
-    "taken": null
+    "taken": "2026-09-05T20:25:00"
   }
 ]
