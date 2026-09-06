@@ -1,9 +1,9 @@
 {
-  "lat": 35.2645,
-  "lng": 25.7171,
-  "location": "Elounda",
-  "tonight": "Carbonana Gate this morning — still on the Elounda side.",
-  "tomorrow": "Still on the Elounda side.",
+  "lat": 35.3387,
+  "lng": 25.1442,
+  "location": "Heraklion",
+  "tonight": "Elounda to Heraklion — drop the car, Saint Minas.",
+  "tomorrow": "Heraklion days — old town before the ferry.",
   "postcard": {
     "date": "2026-09-05",
     "place": "Crete, Elounda",
@@ -36,13 +36,13 @@
     }
   },
   "word": {
-    "el": "Νησί",
-    "en": "Nisi",
-    "say": "nee-SEE",
-    "meaning": "Island. Today that means Spinalonga — and the water around it."
+    "el": "Αυτοκίνητο",
+    "en": "Aftokinito",
+    "say": "af-toh-KEE-nee-toh",
+    "meaning": "Car. Dropping it in Heraklion — last drive on Crete."
   },
   "coords": [
-    35.2645,
-    25.7171
+    35.3387,
+    25.1442
   ]
 }
