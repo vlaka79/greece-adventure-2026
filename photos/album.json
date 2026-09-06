@@ -2081,5 +2081,27 @@
     "date": "2026-09-05",
     "new": true,
     "taken": "2026-09-05T20:25:00"
+  },
+  {
+    "src": "/photos/album/crete-elounda-agios-konstantinos-night.jpg",
+    "caption": "Agios Konstantinos & Eleni, Elounda. Night square — clock tower lit, palms glowing, dome on black sky.",
+    "place": "crete",
+    "lat": 35.262433,
+    "lng": 25.721625,
+    "added": "2026-09-05T20:44:52",
+    "date": "2026-09-05",
+    "new": true,
+    "taken": "2026-09-05T20:44:52"
+  },
+  {
+    "src": "/photos/album/crete-elounda-olous-taverna-night.jpg",
+    "caption": "Olous taverna, Elounda. FOOD DRINK under the church dome — lanterns, palms, full house.",
+    "place": "crete",
+    "lat": 35.2626,
+    "lng": 25.721683,
+    "added": "2026-09-05T20:44:14",
+    "date": "2026-09-05",
+    "new": true,
+    "taken": "2026-09-05T20:44:14"
   }
 ]
