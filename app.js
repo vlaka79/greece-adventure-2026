@@ -253,7 +253,7 @@
 
   var notesList = document.getElementById("guestbook-list");
   if (notesList) {
-    fetch("/guestbook.json", { cache: "no-store" })
+    fetch("/.netlify/functions/guestbook", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (items) {
         notesList.innerHTML = "";
