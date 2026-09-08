@@ -2616,7 +2616,7 @@
   },
   {
     "src": "/photos/album/crete-heraklion-iced-coffee-pastry.jpg",
-    "caption": "Two frothy iced coffees and a flaky pastry. Official fuel for a Heraklion wander.",
+    "caption": "Freddo espresso. The new Greek coffee — frothy, iced, and walk-ready.",
     "place": "crete",
     "lat": 35.3398806,
     "lng": 25.1335028,
@@ -2745,5 +2745,16 @@
     "date": "2026-09-07",
     "taken": "2026-09-07T20:38:53",
     "new": true
+  },
+  {
+    "src": "/photos/album/crete-heraklion-mamma-mio-pizza-tiramisu.jpg",
+    "caption": "Pizza and tiramisu. Great pie, house dessert — same last name privilege.",
+    "place": "crete",
+    "lat": 35.337025,
+    "lng": 25.1364056,
+    "added": "2026-09-06T18:48:36",
+    "date": "2026-09-06",
+    "new": true,
+    "taken": "2026-09-06T18:48:36"
   }
 ]
