@@ -275,39 +275,6 @@
     "new": true
   },
   {
-    "src": "/photos/album/crete-heraklion-hovoli-alfa.jpg",
-    "caption": "Two Alfas on the table. Cold lager, outdoor chairs, dinner officially open.",
-    "place": "crete",
-    "lat": 35.3377611,
-    "lng": 25.1352667,
-    "added": "2026-09-08T22:28:37",
-    "date": "2026-09-08",
-    "new": true,
-    "taken": "2026-09-08T17:59:45"
-  },
-  {
-    "src": "/photos/album/crete-heraklion-hovoli-dakos.jpg",
-    "caption": "Tomato, olives, and barley rusks. Giant Cretan salad energy before the main event.",
-    "place": "crete",
-    "lat": 35.3377611,
-    "lng": 25.1352667,
-    "added": "2026-09-08T22:28:37",
-    "date": "2026-09-08",
-    "new": true,
-    "taken": "2026-09-08T18:02:25"
-  },
-  {
-    "src": "/photos/album/crete-heraklion-hovoli-gyro-plate.jpg",
-    "caption": "Gyro plate that could feed a village. Pita, fries, tzatziki — portions with no chill.",
-    "place": "crete",
-    "lat": 35.3377333,
-    "lng": 25.1352583,
-    "added": "2026-09-08T22:28:37",
-    "date": "2026-09-08",
-    "new": true,
-    "taken": "2026-09-08T18:06:50"
-  },
-  {
     "src": "/photos/album/crete-heraklion-hovoli-four-frame-feast.jpg",
     "caption": "Four-frame feast at Hovoli. Alfa, dakos, a mountain of gyro, watermelon — giant portions, zero complaints.",
     "place": "crete",
@@ -317,17 +284,6 @@
     "date": "2026-09-08",
     "new": true,
     "taken": "2026-09-08T18:06:50"
-  },
-  {
-    "src": "/photos/album/crete-heraklion-hovoli-watermelon.jpg",
-    "caption": "Watermelon to finish. Two forks, one plate, zero leftovers plan.",
-    "place": "crete",
-    "lat": 35.3378194,
-    "lng": 25.1352111,
-    "added": "2026-09-08T22:28:37",
-    "date": "2026-09-08",
-    "new": true,
-    "taken": "2026-09-08T18:49:30"
   },
   {
     "src": "/photos/album/crete-heraklion-dolphin-sculpture.jpg",
