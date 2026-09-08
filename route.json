@@ -2362,6 +2362,8 @@
     "sailed": 2,
     "asOf": "2026-09-07",
     "unit": "mi",
-    "walkedSource": "Apple Health"
+    "walkedSource": "Apple Health",
+    "flown": 7306,
+    "flownSource": "Great-circle BUR–SFO–FRA–ATH–CHQ"
   }
 }

@@ -246,9 +246,9 @@
       var actual = route.actual || [];
       var miles = route.miles || {};
       var milesEl = document.getElementById("travel-miles");
-      if (milesEl && (miles.driven != null || miles.walked != null || miles.sailed != null)) {
+      if (milesEl && (miles.driven != null || miles.walked != null || miles.sailed != null || miles.flown != null)) {
         function n(v) { return (v == null || v === "") ? "—" : String(v); }
-        milesEl.textContent = "Driven " + n(miles.driven) + " mi · Walked " + n(miles.walked) + " mi · Sailed " + n(miles.sailed) + " mi";
+        milesEl.textContent = "Driven " + n(miles.driven) + " mi · Walked " + n(miles.walked) + " mi · Sailed " + n(miles.sailed) + " mi · Flown " + n(miles.flown) + " mi";
       }
 
       if (planned.length) {
