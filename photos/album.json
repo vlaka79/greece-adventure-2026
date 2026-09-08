@@ -1,16 +1,5 @@
 [
   {
-    "src": "/photos/album/crete-heraklion-museum-malia-bee-pendant.jpg",
-    "caption": "Malia bee pendant. Two bees, one drop of honey, and three thousand years of swagger.",
-    "place": "crete",
-    "lat": 35.33903888888889,
-    "lng": 25.13723611111111,
-    "added": "2026-09-08T21:41:56",
-    "date": "2026-09-08",
-    "new": true,
-    "taken": "2026-09-08T08:36:12"
-  },
-  {
     "src": "/photos/album/crete-heraklion-museum-octopus-pottery.jpg",
     "caption": "Octopus jar. Tentacles for days — Minoan marine style still owns the room.",
     "place": "crete",
@@ -22,17 +11,6 @@
     "taken": "2026-09-08T08:47:50"
   },
   {
-    "src": "/photos/album/crete-heraklion-museum-phaistos-disc.jpg",
-    "caption": "Phaistos Disc. A spiral of stamped mystery nobody has cracked yet.",
-    "place": "crete",
-    "lat": 35.33915277777778,
-    "lng": 25.137230555555554,
-    "added": "2026-09-08T21:41:56",
-    "date": "2026-09-08",
-    "new": true,
-    "taken": "2026-09-08T08:49:19"
-  },
-  {
     "src": "/photos/album/crete-heraklion-museum-snake-goddesses.jpg",
     "caption": "Snake goddesses. Raised snakes, flounced skirts, and zero chill for three millennia.",
     "place": "crete",
@@ -42,17 +20,6 @@
     "date": "2026-09-08",
     "new": true,
     "taken": "2026-09-08T09:03:09"
-  },
-  {
-    "src": "/photos/album/crete-heraklion-snake-goddess-mural.jpg",
-    "caption": "Snake goddess, street edition. Same pose, fresh paint, proper look up.",
-    "place": "crete",
-    "lat": 35.340575,
-    "lng": 25.135983333333332,
-    "added": "2026-09-08T21:41:56",
-    "date": "2026-09-08",
-    "new": true,
-    "taken": "2026-09-08T16:47:11"
   },
   {
     "src": "/photos/album/crete-heraklion-dolphin-sculpture.jpg",
