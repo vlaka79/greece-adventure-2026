@@ -1,9 +1,9 @@
 {
-  "lat": 35.3387,
-  "lng": 25.1442,
-  "location": "Heraklion",
-  "tonight": "Early ferry to Santorini — Worldchampion Jet 8:00.",
-  "tomorrow": "First full day on Santorini.",
+  "lat": 36.4165,
+  "lng": 25.4324,
+  "location": "Santorini",
+  "tonight": "First night on Santorini — caldera light, slow evening.",
+  "tomorrow": "Santorini on foot — heat midday, we take it easy.",
   "postcard": {
     "date": "2026-09-09",
     "place": "Crete, Heraklion",
@@ -19,7 +19,7 @@
     "meaning": "Two names, one city. Venetian Candia and modern Heraklion — saying goodbye under both."
   },
   "coords": [
-    35.3387,
-    25.1442
+    36.4165,
+    25.4324
   ]
 }
