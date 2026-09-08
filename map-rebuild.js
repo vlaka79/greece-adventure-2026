@@ -244,6 +244,12 @@
       var stops = route.stops || [];
       var visited = route.visited || [];
       var actual = route.actual || [];
+      var miles = route.miles || {};
+      var milesEl = document.getElementById("travel-miles");
+      if (milesEl && (miles.driven != null || miles.walked != null || miles.sailed != null)) {
+        function n(v) { return (v == null || v === "") ? "—" : String(v); }
+        milesEl.textContent = "Driven " + n(miles.driven) + " mi · Walked " + n(miles.walked) + " mi · Sailed " + n(miles.sailed) + " mi";
+      }
 
       if (planned.length) {
         L.polyline(planned, { color: "#1b6f66", weight: 3, opacity: 0.45, dashArray: "8 8" })
