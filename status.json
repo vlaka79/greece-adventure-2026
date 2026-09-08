@@ -2,21 +2,21 @@
   "lat": 35.3387,
   "lng": 25.1442,
   "location": "Heraklion",
-  "tonight": "Market and city walks, coffee, then more walking.",
-  "tomorrow": "Still Heraklion — on foot until the ferry.",
+  "tonight": "Museum today, then more walking around town.",
+  "tomorrow": "Still Heraklion on foot.",
   "postcard": {
     "date": "2026-09-06",
     "place": "Crete, Heraklion",
-    "title": "Four lions",
-    "note": "Four lions selfie — Heraklion square, stone cats still on duty.",
-    "photo": "/photos/album/crete-heraklion-four-lions-selfie.jpg",
-    "caption": "Four lions selfie. Us in the square — Morosini’s lions doing the serious work behind us."
+    "title": "Koules at night",
+    "note": "Koules fortress — lit up on the harbour.",
+    "photo": "/photos/album/crete-heraklion-koules-night.jpg",
+    "caption": "Fortress on the water. Heraklion’s Koules lit up and keeping watch."
   },
   "word": {
-    "el": "Περίπατος",
-    "en": "Peripatos",
-    "say": "peh-REE-pah-tos",
-    "meaning": "A walk. Heraklion on foot — old town, harbour, nowhere to rush."
+    "el": "Φρούριο",
+    "en": "Frourio",
+    "say": "FROO-ree-oh",
+    "meaning": "Fortress. Tonight that means Koules on the harbour — still keeping watch."
   },
   "coords": [
     35.3387,
