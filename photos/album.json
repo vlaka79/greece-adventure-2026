@@ -2701,5 +2701,49 @@
     "date": "2026-09-07",
     "taken": "2026-09-07T18:00:13",
     "new": true
+  },
+  {
+    "src": "/photos/album/crete-heraklion-peskesi-starters.jpg",
+    "caption": "Two tiny soups in crystal glasses — cream, crumb, and a green leaf. Peskesi saying hello before the real plates arrive.",
+    "place": "crete",
+    "lat": 35.3401972,
+    "lng": 25.1326278,
+    "added": "2026-09-08T07:50:00",
+    "date": "2026-09-07",
+    "taken": "2026-09-07T19:37:19",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-heraklion-peskesi-wine.jpg",
+    "caption": "Douloufakis Sangiovese–Cabernet. One bottle, one glass, and Peskesi’s placemat already making the case.",
+    "place": "crete",
+    "lat": 35.3401806,
+    "lng": 25.1325861,
+    "added": "2026-09-08T07:50:00",
+    "date": "2026-09-07",
+    "taken": "2026-09-07T19:54:57",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-heraklion-peskesi-four-frame-feast.jpg",
+    "caption": "Four-frame feast at Peskesi. Onion-topped meat on flatbread, beans in olive oil, snails with summer veg, and slow-roasted pork with bright purées.",
+    "place": "crete",
+    "lat": 35.3401667,
+    "lng": 25.1325556,
+    "added": "2026-09-08T07:50:00",
+    "date": "2026-09-07",
+    "taken": "2026-09-07T19:55:37",
+    "new": true
+  },
+  {
+    "src": "/photos/album/crete-heraklion-peskesi-halva.jpg",
+    "caption": "Semolina halva with cinnamon and nuts. Soft landing after a Cretan feast.",
+    "place": "crete",
+    "lat": 35.3401556,
+    "lng": 25.1325806,
+    "added": "2026-09-08T07:50:00",
+    "date": "2026-09-07",
+    "taken": "2026-09-07T20:38:53",
+    "new": true
   }
 ]
