@@ -209,6 +209,17 @@
     "new": true
   },
   {
+    "src": "/photos/album/crete-heraklion-kirkor-freddo-bougatsa.jpg",
+    "caption": "Freddo espresso and bougatsa. Frothy ice, powdered sugar — Kirkór knows the move.",
+    "place": "crete",
+    "lat": 35.3390972,
+    "lng": 25.1330556,
+    "added": "2026-09-08T22:35:17",
+    "date": "2026-09-08",
+    "new": true,
+    "taken": "2026-09-08T10:02:48"
+  },
+  {
     "src": "/photos/album/crete-heraklion-museum-burial-pithos.jpg",
     "caption": "Burial pithos. Not just for olive oil — some jars had a quieter job.",
     "place": "crete",
@@ -273,6 +284,61 @@
     "date": "2026-09-08",
     "taken": "2026-09-08T10:38:00",
     "new": true
+  },
+  {
+    "src": "/photos/album/crete-heraklion-snake-goddess-mural.jpg",
+    "caption": "Snake goddess, street edition. Same pose, fresh paint, proper look up.",
+    "place": "crete",
+    "lat": 35.3406611,
+    "lng": 25.1360722,
+    "added": "2026-09-08T22:35:17",
+    "date": "2026-09-08",
+    "new": true,
+    "taken": "2026-09-08T16:25:00"
+  },
+  {
+    "src": "/photos/album/crete-heraklion-archdiocese-gate.jpg",
+    "caption": "The gate. Olive pots, marble steps — Julia’s favorite stop of the walk.",
+    "place": "crete",
+    "lat": 35.3373139,
+    "lng": 25.1307417,
+    "added": "2026-09-08T22:35:17",
+    "date": "2026-09-08",
+    "new": true,
+    "taken": "2026-09-08T16:29:49"
+  },
+  {
+    "src": "/photos/album/crete-heraklion-agios-minas-iconostasis.jpg",
+    "caption": "Gilded iconostasis. Gold, icons, and flowers filling the quiet.",
+    "place": "crete",
+    "lat": 35.3374528,
+    "lng": 25.1304083,
+    "added": "2026-09-08T22:35:17",
+    "date": "2026-09-08",
+    "new": true,
+    "taken": "2026-09-08T16:33:34"
+  },
+  {
+    "src": "/photos/album/crete-heraklion-loggia-selfie.jpg",
+    "caption": "Loggia selfie. Arches, lanterns, and a pause in the shade.",
+    "place": "crete",
+    "lat": 35.3398167,
+    "lng": 25.1338222,
+    "added": "2026-09-08T22:35:17",
+    "date": "2026-09-08",
+    "new": true,
+    "taken": "2026-09-08T16:43:29"
+  },
+  {
+    "src": "/photos/album/crete-heraklion-craft-beer-kapheneion.jpg",
+    "caption": "Hazy Candia and Jasmine IPA. Craft Beer Kapheneion — patio beers after the walk.",
+    "place": "crete",
+    "lat": 35.3397,
+    "lng": 25.1360694,
+    "added": "2026-09-08T22:35:17",
+    "date": "2026-09-08",
+    "new": true,
+    "taken": "2026-09-08T16:56:52"
   },
   {
     "src": "/photos/album/crete-heraklion-hovoli-four-frame-feast.jpg",
