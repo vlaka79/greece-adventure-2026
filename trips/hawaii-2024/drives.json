@@ -1,0 +1,30 @@
+{
+  "note": "Polarsteps for this trip is step pins only (7 steps), not a dense locations track. Dashed lines are interisland hops from those steps. Mainland legs omitted on the public map.",
+  "tracks": [
+    {
+      "id": "polarsteps-interisland",
+      "label": "Polarsteps interisland hops",
+      "mode": "flight",
+      "style": "dashed",
+      "source": "Polarsteps",
+      "points": [
+        {
+          "lat": 19.64194,
+          "lng": -155.99693
+        },
+        {
+          "lat": 21.97696,
+          "lng": -159.36877
+        },
+        {
+          "lat": 19.64194,
+          "lng": -155.99693
+        },
+        {
+          "lat": 21.30455,
+          "lng": -157.85568
+        }
+      ]
+    }
+  ]
+}

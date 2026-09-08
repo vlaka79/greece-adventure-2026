@@ -1,0 +1,36 @@
+{
+  "label": "Stops",
+  "note": "Numbered pins from the road itinerary. White line is Polarsteps GPS (drives.json). Not live.",
+  "line": [
+    {
+      "name": "Socorro, NM",
+      "lat": 34.0584,
+      "lng": -106.8914
+    },
+    {
+      "name": "Colorado Springs",
+      "lat": 38.8339,
+      "lng": -104.8214
+    },
+    {
+      "name": "Oklahoma City",
+      "lat": 35.4676,
+      "lng": -97.5164
+    },
+    {
+      "name": "San Angelo",
+      "lat": 31.4638,
+      "lng": -100.437
+    },
+    {
+      "name": "Fargo",
+      "lat": 46.8772,
+      "lng": -96.7898
+    },
+    {
+      "name": "El Paso",
+      "lat": 31.7587,
+      "lng": -106.487
+    }
+  ]
+}

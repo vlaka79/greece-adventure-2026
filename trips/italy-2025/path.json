@@ -1,0 +1,32 @@
+{
+  "label": "Stops",
+  "note": "Stop pins from email-confirmed stays and day trips. No dense Polarsteps GPS yet — dashed connector only. Not live.",
+  "connectStops": true,
+  "line": [
+    {
+      "name": "Rome",
+      "lat": 41.901,
+      "lng": 12.501
+    },
+    {
+      "name": "Matera",
+      "lat": 40.6663,
+      "lng": 16.6043
+    },
+    {
+      "name": "Maiori",
+      "lat": 40.6484,
+      "lng": 14.6414
+    },
+    {
+      "name": "Pompeii",
+      "lat": 40.751,
+      "lng": 14.4869
+    },
+    {
+      "name": "Caserta",
+      "lat": 41.0732,
+      "lng": 14.3322
+    }
+  ]
+}

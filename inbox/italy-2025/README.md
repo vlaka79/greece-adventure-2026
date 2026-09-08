@@ -1,0 +1,1 @@
+Drop HEIC/JPEG originals here for the Feb–Apr 2025 Italy trip (Rome, Matera, Maiori, Pompeii, Caserta). Keep Location on. SITE pulls GPS, then deletes these files. This folder never goes live. Polarsteps GPS for this trip still needs a re-drop.

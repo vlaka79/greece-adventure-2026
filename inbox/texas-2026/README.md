@@ -1,0 +1,1 @@
+Drop HEIC/JPEG originals here for the Mar–Apr 2026 Texas & Fargo trip (Socorro, Colorado Springs, OKC, San Angelo, Fargo, El Paso). Keep Location on. SITE pulls GPS, then deletes these files. This folder never goes live.

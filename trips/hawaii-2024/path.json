@@ -1,0 +1,22 @@
+{
+  "label": "Islands",
+  "note": "Island stops from Polarsteps steps + email. No dense GPS track — dashed connector between islands. Not live.",
+  "connectStops": true,
+  "line": [
+    {
+      "name": "Kauai (Lihue)",
+      "lat": 21.977,
+      "lng": -159.3688
+    },
+    {
+      "name": "Big Island (Kailua-Kona)",
+      "lat": 19.6419,
+      "lng": -155.9969
+    },
+    {
+      "name": "Waikiki (Honolulu)",
+      "lat": 21.277,
+      "lng": -157.832
+    }
+  ]
+}

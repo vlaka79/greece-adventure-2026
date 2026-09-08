@@ -8,11 +8,32 @@
       "note": "Follow along now."
     },
     {
+      "id": "texas-2026",
+      "title": "Texas & Fargo 2026",
+      "dates": "March 31–April 27, 2026",
+      "href": "/trips/texas-2026/",
+      "note": "Road trip with a long San Angelo stay and a Fargo stretch."
+    },
+    {
       "id": "caribbean-2026",
       "title": "Caribbean with Julia",
       "dates": "February 26–March 16, 2026",
       "href": "/trips/caribbean-2026/",
       "note": "One trip, two ships: Miami, Aruba, Cartagena, Ocho Rios, Grand Cayman, then Nassau on Paradise."
+    },
+    {
+      "id": "italy-2025",
+      "title": "Italy with Julia",
+      "dates": "February–April 2025",
+      "href": "/trips/italy-2025/",
+      "note": "Rome, Matera, Maiori on the Amalfi coast, Pompeii, and Caserta."
+    },
+    {
+      "id": "hawaii-2024",
+      "title": "Hawaii with Julia",
+      "dates": "September 11–October 2, 2024",
+      "href": "/trips/hawaii-2024/",
+      "note": "Honeymoon: Kauai, Big Island, Waikiki."
     }
   ],
   "comingLater": "More trips will land here."
