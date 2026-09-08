@@ -61,8 +61,12 @@ exports.handler = async function () {
     } catch (e) {}
   }
 
+  function norm(s) {
+    return String(s || "").replace(/\s+/g, " ").trim().toLowerCase();
+  }
+
   function key(n) {
-    return String(n.name || "").trim().toLowerCase() + "|" + String(n.message || "").trim().toLowerCase();
+    return norm(n.name) + "|" + norm(n.message);
   }
 
   var seen = {};
