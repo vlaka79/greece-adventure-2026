@@ -1,9 +1,9 @@
 {
-  "note": "Polarsteps Italy 2025 step locations (116 steps). Gaps over ~100 mi start a new segment. Not a dense GPS track.",
+  "note": "Polarsteps Italy 2025 step locations. Walking/airport denseness stripped (Bari/BRI linger and tight revisit scribbles). Gaps over ~100 mi start a new segment. Not a dense GPS track.",
   "tracks": [
     {
       "id": "polarsteps-1",
-      "label": "Bari → Foggia",
+      "label": "Bari \u2192 Foggia",
       "mode": "travel",
       "source": "Polarsteps steps",
       "points": [
@@ -60,10 +60,6 @@
           "lng": 16.82532
         },
         {
-          "lat": 41.62547,
-          "lng": 15.90959
-        },
-        {
           "lat": 41.51082,
           "lng": 15.33794
         },
@@ -74,10 +70,6 @@
         {
           "lat": 41.62547,
           "lng": 15.90959
-        },
-        {
-          "lat": 41.46205,
-          "lng": 15.54326
         }
       ]
     },
@@ -95,7 +87,7 @@
     },
     {
       "id": "polarsteps-3",
-      "label": "Foggia → Bari airport",
+      "label": "Foggia \u2192 Bari airport",
       "mode": "travel",
       "source": "Polarsteps steps",
       "points": [
@@ -128,10 +120,6 @@
           "lng": 14.28175
         },
         {
-          "lat": 41.08208,
-          "lng": 14.33471
-        },
-        {
           "lat": 41.15952,
           "lng": 14.33148
         },
@@ -146,14 +134,6 @@
         {
           "lat": 41.20138,
           "lng": 14.39854
-        },
-        {
-          "lat": 41.19772,
-          "lng": 14.45295
-        },
-        {
-          "lat": 41.19772,
-          "lng": 14.45295
         },
         {
           "lat": 41.19772,
@@ -328,10 +308,6 @@
           "lng": 14.36678
         },
         {
-          "lat": 40.62991,
-          "lng": 14.37597
-        },
-        {
           "lat": 40.62033,
           "lng": 14.32401
         },
@@ -462,10 +438,6 @@
         {
           "lat": 40.74613,
           "lng": 14.50136
-        },
-        {
-          "lat": 40.85291,
-          "lng": 14.27399
         },
         {
           "lat": 41.06854,

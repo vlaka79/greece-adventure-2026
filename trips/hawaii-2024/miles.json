@@ -1,0 +1,10 @@
+{
+  "flown": 5782,
+  "driven": 0,
+  "walked": null,
+  "sailed": null,
+  "unit": "mi",
+  "flownSource": "Great-circle LA\u2013KOA + interisland KOA\u2013LIH\u2013KOA\u2013HNL + HNL\u2013LA (Polarsteps steps)",
+  "drivenSource": "No Polarsteps car track",
+  "asOf": "2026-09-09"
+}

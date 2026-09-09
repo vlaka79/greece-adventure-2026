@@ -9,6 +9,7 @@
   var AIS_URL = null;
   var ALBUM_URL = "/trips/italy-2025/album.json";
   var DRIVES_URL = "/trips/italy-2025/drives.json";
+  var MILES_URL = "/trips/italy-2025/miles.json";
 
   if (!document.getElementById("photo-pin-click-style")) {
     var st = document.createElement("style");
@@ -227,6 +228,20 @@
     esri.addTo(map);
   }
 
+  function fillTravelMiles(miles) {
+    var el = document.getElementById("travel-miles");
+    if (!el || !miles) return;
+    function n(v) { return (v == null || v === "") ? "\u2014" : String(v); }
+    var parts = [];
+    parts.push("Flown " + n(miles.flown) + " mi");
+    parts.push("Driven " + n(miles.driven) + " mi");
+    // Walked omitted until Daniel provides it
+    if (miles.sailed != null && miles.sailed !== "") {
+      parts.push("Sailed " + n(miles.sailed) + " mi");
+    }
+    el.textContent = parts.join(" \u00b7 ");
+  }
+
   function rebuild() {
     var el = document.getElementById("trip-map");
     if (!el) return;
@@ -243,7 +258,8 @@
       AIS_URL
         ? fetch(AIS_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
         : Promise.resolve({}),
-      fetch(DRIVES_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+      fetch(DRIVES_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
+      fetch(MILES_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
     ];
 
     Promise.all(fetches).then(function (quad) {
@@ -251,6 +267,8 @@
       photoItems = quad[1] || [];
       var ais = quad[2] || {};
       var drives = quad[3] || {};
+      var miles = quad[4] || {};
+      try { fillTravelMiles(miles); } catch (err) { console.warn(err); }
       var bounds = [];
       var GAP_MS = 4 * 60 * 60 * 1000;
       (ais.tracks || []).forEach(function (tr) {

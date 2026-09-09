@@ -1,0 +1,11 @@
+{
+  "flown": 12858,
+  "driven": 1477,
+  "walked": null,
+  "sailed": 19,
+  "unit": "mi",
+  "flownSource": "Great-circle LAX\u2013FCO inbound + BRI\u2013LAX outbound (itinerary estimate)",
+  "drivenSource": "Haversine along filtered Polarsteps travel step track",
+  "sailedSource": "TRAVELMAR Salerno\u2013Amalfi estimate (round trip)",
+  "asOf": "2026-09-09"
+}

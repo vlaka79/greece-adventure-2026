@@ -1,0 +1,10 @@
+{
+  "flown": 2395,
+  "driven": 2541,
+  "walked": null,
+  "sailed": null,
+  "unit": "mi",
+  "flownSource": "Great-circle SJT\u2013DFW\u2013FAR round trip (itinerary)",
+  "drivenSource": "Haversine along filtered Polarsteps car tracks",
+  "asOf": "2026-09-09"
+}

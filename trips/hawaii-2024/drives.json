@@ -1,5 +1,5 @@
 {
-  "note": "Polarsteps for this trip is step pins only (7 steps), not a dense locations track. Dashed lines are interisland hops from those steps. Mainland legs omitted on the public map.",
+  "note": "Polarsteps for this trip is step pins only (7 steps), not a dense locations track. Dashed lines are interisland hops from those steps. No walking clusters to strip. Mainland legs omitted on the public map.",
   "tracks": [
     {
       "id": "polarsteps-interisland",

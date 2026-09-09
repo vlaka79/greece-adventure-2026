@@ -1,0 +1,11 @@
+{
+  "flown": 5443,
+  "driven": 2191,
+  "walked": null,
+  "sailed": 4211,
+  "unit": "mi",
+  "flownSource": "Great-circle BUR\u2013DEN\u2013MIA + PBI\u2013ORD\u2013LAX (itinerary / Polarsteps)",
+  "drivenSource": "Haversine along filtered shore + Polarsteps car tracks",
+  "sailedSource": "NOAA AIS Brilliant Lady + likely mid-Caribbean gap + Paradise hop path",
+  "asOf": "2026-09-09"
+}
