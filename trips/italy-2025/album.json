@@ -1,1 +1,462 @@
-[]
+[
+  {
+    "src": "/photos/trips/italy-2025/maiori-vending-machine.jpg",
+    "caption": "Lit vending machine against a blue wall. Even Maiori has a snack mission.",
+    "place": "maiori",
+    "added": "2025-04-06T10:30:43",
+    "date": "2025-04-06",
+    "new": true,
+    "lat": 40.648839,
+    "lng": 14.641358
+  },
+  {
+    "src": "/photos/trips/italy-2025/travel-salerno-arechi-castle.jpg",
+    "caption": "Stone fortress on the cliff — Castello di Arechi above Salerno. One bird for scale.",
+    "place": "travel",
+    "added": "2025-04-06T11:25:37",
+    "date": "2025-04-06",
+    "new": true,
+    "lat": 40.675853,
+    "lng": 14.738461
+  },
+  {
+    "src": "/photos/trips/italy-2025/travel-postiglione-forest-road.jpg",
+    "caption": "Green tunnel of spring canopy over the road. Inland toward Basilicata.",
+    "place": "travel",
+    "added": "2025-04-06T13:19:51",
+    "date": "2025-04-06",
+    "new": true,
+    "lat": 40.620828,
+    "lng": 15.219922
+  },
+  {
+    "src": "/photos/trips/italy-2025/travel-melfi-ruins-mono.jpg",
+    "caption": "Lone ruin under a hard sky, black and white. Melfi countryside, quiet stop.",
+    "place": "travel",
+    "added": "2025-04-06T14:46:34",
+    "date": "2025-04-06",
+    "new": true,
+    "lat": 41.082547,
+    "lng": 15.739917
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-blossoms-bell-tower.jpg",
+    "caption": "Pink blossoms framing a bell tower. Spring on the coast, vertical crop and all.",
+    "place": "maiori",
+    "added": "2025-04-05T08:43:56",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.649242,
+    "lng": 14.641233
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-harbor-dinghy.jpg",
+    "caption": "White dinghy in turquoise water, town under the mountain. Maiori morning.",
+    "place": "maiori",
+    "added": "2025-04-05T09:23:10",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.647992,
+    "lng": 14.634114
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-amalfi-from-ferry.jpg",
+    "caption": "Amalfi from the water — Duomo stripe, boats, mountain wall behind the town.",
+    "place": "maiori",
+    "added": "2025-04-05T10:04:34",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.647775,
+    "lng": 14.627114
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-amalfi-fountain-bottle.jpg",
+    "caption": "Filling the bottle at the fountain by the Duomo. Al Duomo bistrot in the background.",
+    "place": "maiori",
+    "added": "2025-04-05T10:21:20",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.634258,
+    "lng": 14.602556
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-amalfi-duomo-selfie.jpg",
+    "caption": "Striped Duomo facade selfie. Amalfi’s front door, hard to miss.",
+    "place": "maiori",
+    "added": "2025-04-05T10:22:41",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.634347,
+    "lng": 14.602639
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-amalfi-cloister-arches.jpg",
+    "caption": "White interlaced arches, campanile through the gap. Cloister of Paradise.",
+    "place": "maiori",
+    "added": "2025-04-05T10:28:20",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.634772,
+    "lng": 14.603117
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-amalfi-cloister-peek.jpg",
+    "caption": "Julia peeking from a cloister column. Hide-and-seek in the Chiostro.",
+    "place": "maiori",
+    "added": "2025-04-05T10:29:55",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.634772,
+    "lng": 14.603117
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-amalfi-cathedral-ceiling.jpg",
+    "caption": "Looking straight up at the cathedral vault. Frescoes, gold, blue glass cross.",
+    "place": "maiori",
+    "added": "2025-04-05T10:37:09",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.633428,
+    "lng": 14.601133
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-amalfi-striped-stairs.jpg",
+    "caption": "Black-and-white striped stairs climbing to a crucifix. Duomo geometry in mono.",
+    "place": "maiori",
+    "added": "2025-04-05T10:38:54",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.634311,
+    "lng": 14.603436
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-amalfi-trefoil-cross.jpg",
+    "caption": "Stone cross through a trefoil window. Cloister detail, black and white.",
+    "place": "maiori",
+    "added": "2025-04-05T10:44:46",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.634194,
+    "lng": 14.603219
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-amalfi-campanile-kiss.jpg",
+    "caption": "Cheek kiss under the striped campanile. Amalfi blue sky doing overtime.",
+    "place": "maiori",
+    "added": "2025-04-05T10:48:07",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.634369,
+    "lng": 14.602889
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-positano-cliff-town.jpg",
+    "caption": "Positano stacked color on the cliff. The stairs are implied.",
+    "place": "maiori",
+    "added": "2025-04-05T12:34:09",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.626136,
+    "lng": 14.486069
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-catamaran-cliffs.jpg",
+    "caption": "White catamaran off limestone cliffs. Out on the water between stops.",
+    "place": "maiori",
+    "added": "2025-04-05T13:06:55",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.5699,
+    "lng": 14.320922
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-sorrento-cliff-buildings.jpg",
+    "caption": "Buildings hanging on the cliff above the ferry. Sorrento Marina Piccola.",
+    "place": "maiori",
+    "added": "2025-04-05T13:30:23",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.629936,
+    "lng": 14.375417
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-sorrento-wine-toast-vesuvius.jpg",
+    "caption": "White-wine cheers with Vesuvius across the bay. Rings clink optional.",
+    "place": "maiori",
+    "added": "2025-04-05T13:49:26",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.627786,
+    "lng": 14.366678
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-sorrento-alley-arch.jpg",
+    "caption": "Stone alley with an arch and a wall shrine. Sorrento side streets.",
+    "place": "maiori",
+    "added": "2025-04-05T15:30:49",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.627542,
+    "lng": 14.367397
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-sorrento-art-mural.jpg",
+    "caption": "SORRENTO ♥ ART mural on concrete. Street color between ferries.",
+    "place": "maiori",
+    "added": "2025-04-05T15:43:21",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.627786,
+    "lng": 14.373086
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-sorrento-vesuvius-selfie.jpg",
+    "caption": "Selfie with Vesuvius across the water. Clear day, big volcano.",
+    "place": "maiori",
+    "added": "2025-04-05T15:46:27",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.628158,
+    "lng": 14.372797
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-positano-approach-boat.jpg",
+    "caption": "Motorboat wake toward the cliff town. Coming back into Positano.",
+    "place": "maiori",
+    "added": "2025-04-05T17:34:06",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.624797,
+    "lng": 14.486542
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-positano-pastel-houses.jpg",
+    "caption": "Pastel terraces stacked tight. Positano up close from the water.",
+    "place": "maiori",
+    "added": "2025-04-05T17:34:40",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.626025,
+    "lng": 14.486731
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-positano-selfie.jpg",
+    "caption": "Us with Positano spilling down the hill behind. Required shot, still good.",
+    "place": "maiori",
+    "added": "2025-04-05T17:34:54",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.626389,
+    "lng": 14.486617
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-positano-anchored-boats.jpg",
+    "caption": "Boats at anchor off the dark beach. Late light on Positano’s bay.",
+    "place": "maiori",
+    "added": "2025-04-05T17:38:57",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.627669,
+    "lng": 14.4865
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-positano-sheer-cliff.jpg",
+    "caption": "Sheer rock rising out of deep blue. Houses clinging to the ledges.",
+    "place": "maiori",
+    "added": "2025-04-05T18:54:57",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.609675,
+    "lng": 14.507083
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-positano-coast-panorama.jpg",
+    "caption": "Coast panorama from the boat — town in the fold of the mountains.",
+    "place": "maiori",
+    "added": "2025-04-05T18:56:29",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.611242,
+    "lng": 14.514386
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-capo-di-conca-sunset.jpg",
+    "caption": "Sun dropping behind the headland. Capo di Conca gold on the water.",
+    "place": "maiori",
+    "added": "2025-04-05T19:06:15",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.608697,
+    "lng": 14.576031
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-ferry-julia-photographing.jpg",
+    "caption": "Julia aiming the phone from the ferry deck. Documenting the coast properly.",
+    "place": "maiori",
+    "added": "2025-04-05T19:14:14",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.632886,
+    "lng": 14.601353
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-atrani-hillside-arches.jpg",
+    "caption": "White arched balconies on the hillside town. Evening light, ferry pace.",
+    "place": "maiori",
+    "added": "2025-04-05T19:25:16",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.632381,
+    "lng": 14.601353
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-amalfi-harbor-dusk.jpg",
+    "caption": "Harbor lights coming on under the mountain. Amalfi at dusk from the water.",
+    "place": "maiori",
+    "added": "2025-04-05T19:30:17",
+    "date": "2025-04-05",
+    "new": true,
+    "lat": 40.628339,
+    "lng": 14.608617
+  },
+  {
+    "src": "/photos/trips/italy-2025/travel-calitri-hills-turbines.jpg",
+    "caption": "Hill town on the ridge, wind turbines in the green. Road day through Campania.",
+    "place": "travel",
+    "added": "2025-04-04T14:44:50",
+    "date": "2025-04-04",
+    "new": true,
+    "lat": 40.887097,
+    "lng": 15.432808
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-aperitivo-wine-flight.jpg",
+    "caption": "Six glasses, meats and cheese, late light on the terrace. Aperitivo done properly.",
+    "place": "maiori",
+    "added": "2025-04-04T18:50:06",
+    "date": "2025-04-04",
+    "new": true,
+    "lat": 40.648778,
+    "lng": 14.638744
+  },
+  {
+    "src": "/photos/trips/italy-2025/maiori-mare-luna-alley-dinner.jpg",
+    "caption": "Dinner under the Mare Luna Affittacamere sign. Cobblestones, waiter, night lamps.",
+    "place": "maiori",
+    "added": "2025-04-04T20:51:06",
+    "date": "2025-04-04",
+    "new": true,
+    "lat": 40.649069,
+    "lng": 14.641439
+  },
+  {
+    "src": "/photos/trips/italy-2025/puglia-siponto-poppies.jpg",
+    "caption": "Red poppies thick in the grass. Spring showing off near Siponto.",
+    "place": "puglia",
+    "added": "2025-04-03T10:11:06",
+    "date": "2025-04-03",
+    "new": true,
+    "lat": 41.620383,
+    "lng": 15.906625
+  },
+  {
+    "src": "/photos/trips/italy-2025/puglia-siponto-church-storm.jpg",
+    "caption": "Church facade under a bruising sky. Siponto before the rain decided.",
+    "place": "puglia",
+    "added": "2025-04-02T13:55:06",
+    "date": "2025-04-02",
+    "new": true,
+    "lat": 41.629158,
+    "lng": 15.917731
+  },
+  {
+    "src": "/photos/trips/italy-2025/puglia-polignano-ape-car.jpg",
+    "caption": "Blue Ape, Polignano lettering on the door. Our ride for the cliff town.",
+    "place": "puglia",
+    "added": "2025-03-30T12:37:12",
+    "date": "2025-03-30",
+    "new": true,
+    "lat": 41.01345,
+    "lng": 17.193575
+  },
+  {
+    "src": "/photos/trips/italy-2025/puglia-polignano-modugno-statue.jpg",
+    "caption": "Arms out with Domenico Modugno. Volare energy, Adriatic behind us.",
+    "place": "puglia",
+    "added": "2025-03-30T12:47:25",
+    "date": "2025-03-30",
+    "new": true,
+    "lat": 40.99725,
+    "lng": 17.217086
+  },
+  {
+    "src": "/photos/trips/italy-2025/puglia-polignano-cliff-town.jpg",
+    "caption": "White houses on limestone over turquoise water. Polignano doing the postcard.",
+    "place": "puglia",
+    "added": "2025-03-30T13:00:54",
+    "date": "2025-03-30",
+    "new": true,
+    "lat": 40.996564,
+    "lng": 17.223178
+  },
+  {
+    "src": "/photos/trips/italy-2025/puglia-polignano-cliff-sit.jpg",
+    "caption": "Sitting the cliff edge above the rocks. Adriatic wind included.",
+    "place": "puglia",
+    "added": "2025-03-30T13:13:50",
+    "date": "2025-03-30",
+    "new": true,
+    "lat": 40.990597,
+    "lng": 17.237817
+  },
+  {
+    "src": "/photos/trips/italy-2025/puglia-polignano-grilled-octopus.jpg",
+    "caption": "Grilled octopus, purple chips, rosemary on top. Julia already mid-smile.",
+    "place": "puglia",
+    "added": "2025-03-30T13:59:23",
+    "date": "2025-03-30",
+    "new": true,
+    "lat": 40.995494,
+    "lng": 17.218069
+  },
+  {
+    "src": "/photos/trips/italy-2025/puglia-polignano-cove-bridge.jpg",
+    "caption": "Stone bridge over the cove, town stacked white above the blue.",
+    "place": "puglia",
+    "added": "2025-03-30T14:38:37",
+    "date": "2025-03-30",
+    "new": true,
+    "lat": 40.997244,
+    "lng": 17.219064
+  },
+  {
+    "src": "/photos/trips/italy-2025/puglia-polignano-cliff-selfie.jpg",
+    "caption": "Cliff selfie with the town behind us. Wind in the hair, salt in the air.",
+    "place": "puglia",
+    "added": "2025-03-30T14:38:47",
+    "date": "2025-03-30",
+    "new": true,
+    "lat": 40.997292,
+    "lng": 17.219061
+  },
+  {
+    "src": "/photos/trips/italy-2025/puglia-polignano-lama-monachile.jpg",
+    "caption": "Looking down into Lama Monachile. Tiny beach wedged between the cliffs.",
+    "place": "puglia",
+    "added": "2025-03-30T14:40:35",
+    "date": "2025-03-30",
+    "new": true,
+    "lat": 40.997075,
+    "lng": 17.218719
+  },
+  {
+    "src": "/photos/trips/italy-2025/travel-tucson-airport-selfie.jpg",
+    "caption": "Airport selfie before wheels up. Arizona light, Italy on the calendar.",
+    "place": "travel",
+    "added": "2025-01-18T10:20:36",
+    "date": "2025-01-18",
+    "new": true,
+    "lat": 32.120503,
+    "lng": -110.936775
+  }
+]

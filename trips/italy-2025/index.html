@@ -55,12 +55,12 @@
       <div class="relative mx-auto max-w-3xl px-5 pb-6 pt-6 sm:pt-8">
         <figure>
           <div class="relative overflow-hidden rounded-xl bg-fg ring-1 ring-accent/35 card-shadow">
-            <div class="hero-wait" role="img" aria-label="Postcard placeholder">
-              <p class="font-serif text-2xl font-semibold">Postcard coming soon</p>
-              <p class="mt-2 text-sm opacity-80">Rome to the Amalfi coast. Pompeii in between.</p>
-            </div>
+            <video id="intro" class="aspect-video w-full cursor-pointer object-cover" muted loop playsinline preload="metadata" poster="/photos/trips/italy-2025/hero.jpg">
+              <source src="/photos/trips/italy-2025/hero.mp4" type="video/mp4" />
+            </video>
+            <button type="button" id="sound-btn" class="absolute bottom-3 right-3 z-20 rounded-full bg-surface/90 px-3.5 py-2 text-sm font-semibold text-fg card-shadow">Tap for sound</button>
           </div>
-          <figcaption class="mt-3 text-center font-serif text-base italic text-muted">Rome to the Amalfi coast. Pompeii in between.</figcaption>
+          <figcaption class="mt-3 text-center font-serif text-base italic text-muted">Balcony night — warm X-lights, neighbors waving from the rail.</figcaption>
         </figure>
         <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-primary">A note for friends &amp; family</p>
         <h1 class="mt-3 font-serif text-4xl font-semibold leading-tight text-fg sm:text-5xl">Daniel &amp; Julia’s<span class="mt-1 block italic text-primary">Italy with Julia</span></h1>
@@ -96,7 +96,7 @@
       </section>
       <section id="map" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Photo map</h2>
-        <p class="mt-2 text-muted">Numbered pins are the email-confirmed stops. Dashed line connects them in order — no dense Polarsteps GPS for this trip yet. Photo pins will appear when pictures land. Not live.</p>
+        <p class="mt-2 text-muted">Numbered pins are the email-confirmed stops. Dashed line connects them in order. Polarsteps steps are already on the map; photo pins come from this album. Not live.</p>
         <div class="mt-5">
           <div id="trip-map-shell"><div id="trip-map" class="absolute inset-0"></div></div>
         </div>
@@ -109,8 +109,36 @@
       </section>
       <section id="photos" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Photos</h2>
-        <p class="mt-2 text-muted">Pictures land here when we upload them.</p>
-        <p class="mt-6 rounded-xl bg-surface p-5 text-muted card-shadow">Album still empty — drop originals in the inbox when you’re ready.</p>
+        <p class="mt-2 text-muted">Tap a place to open its album. There &amp; back is the flights and road days.</p>
+        <ul class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <li>
+            <a href="/trips/italy-2025/place.html?place=puglia" class="relative block overflow-hidden rounded-xl bg-bg-warm card-shadow">
+              <img src="/photos/trips/italy-2025/puglia.jpg" alt="Puglia" class="aspect-photo w-full object-cover" />
+              <span class="absolute inset-0 flex flex-col items-center justify-center bg-fg/35 px-3 text-center">
+                <span class="font-serif text-lg font-semibold text-surface">Puglia</span>
+                <span class="mt-1 text-sm text-surface/90">Open album</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/trips/italy-2025/place.html?place=maiori" class="relative block overflow-hidden rounded-xl bg-bg-warm card-shadow">
+              <img src="/photos/trips/italy-2025/maiori.jpg" alt="Maiori" class="aspect-photo w-full object-cover" />
+              <span class="absolute inset-0 flex flex-col items-center justify-center bg-fg/35 px-3 text-center">
+                <span class="font-serif text-lg font-semibold text-surface">Maiori &amp; Amalfi</span>
+                <span class="mt-1 text-sm text-surface/90">Open album</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/trips/italy-2025/place.html?place=travel" class="relative block overflow-hidden rounded-xl bg-bg-warm card-shadow">
+              <img src="/photos/trips/italy-2025/travel.jpg" alt="There and back" class="aspect-photo w-full object-cover" />
+              <span class="absolute inset-0 flex flex-col items-center justify-center bg-fg/35 px-3 text-center">
+                <span class="font-serif text-lg font-semibold text-surface">There &amp; back</span>
+                <span class="mt-1 text-sm text-surface/90">Open album</span>
+              </span>
+            </a>
+          </li>
+        </ul>
       </section>
       <section id="eat" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Eat &amp; drink</h2>

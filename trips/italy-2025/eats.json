@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "place": "Polignano a Mare",
+    "dish": "Grilled octopus",
+    "note": "Thick tentacle, crispy purple chips, lemony sauce. Worth the cliff walk.",
+    "photo": "/photos/trips/italy-2025/puglia-polignano-grilled-octopus.jpg"
+  },
+  {
+    "place": "Maiori",
+    "dish": "Wine flight aperitivo",
+    "note": "White, rosé, red — plus cured meats, cheese, and little toasts on the terrace.",
+    "photo": "/photos/trips/italy-2025/maiori-aperitivo-wine-flight.jpg"
+  },
+  {
+    "place": "Mare Luna, Maiori",
+    "dish": "Alley dinner",
+    "note": "Outdoor table on the slope under the turquoise guest-house sign. Amalfi-coast evening.",
+    "photo": "/photos/trips/italy-2025/maiori-mare-luna-alley-dinner.jpg"
+  },
+  {
+    "place": "Sorrento waterfront",
+    "dish": "White wine toast",
+    "note": "Two glasses, Vesuvius on the horizon. Ferry-day fuel.",
+    "photo": "/photos/trips/italy-2025/maiori-sorrento-wine-toast-vesuvius.jpg"
+  }
+]

@@ -1,0 +1,662 @@
+{
+  "trip": "italy-2025",
+  "source": "inbox/italy-2025 JPEG EXIF (SITE batch)",
+  "note": "GPS pulled from JPEG EXIF before inbox originals were cleared. Album stills keep lat/lng too. Map photo pins read album.json.",
+  "count": 46,
+  "photos": [
+    {
+      "original": "IMG_0963.jpeg",
+      "src": "/photos/trips/italy-2025/travel-tucson-airport-selfie.jpg",
+      "lat": 32.120503,
+      "lng": -110.936775,
+      "datetime": "2025:01:18 10:20:36",
+      "place": "Pima County, Arizona",
+      "album": "travel",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 145.9
+    },
+    {
+      "original": "IMG_2930.jpeg",
+      "src": "/photos/trips/italy-2025/puglia-polignano-ape-car.jpg",
+      "lat": 41.01345,
+      "lng": 17.193575,
+      "datetime": "2025:03:30 12:37:12",
+      "place": "Polignano a Mare, Puglia",
+      "album": "puglia",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 149.8
+    },
+    {
+      "original": "IMG_2935.jpeg",
+      "src": "/photos/trips/italy-2025/puglia-polignano-modugno-statue.jpg",
+      "lat": 40.99725,
+      "lng": 17.217086,
+      "datetime": "2025:03:30 12:47:25",
+      "place": "Polignano a Mare, Puglia",
+      "album": "puglia",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 164.0
+    },
+    {
+      "original": "IMG_2947.jpeg",
+      "src": "/photos/trips/italy-2025/puglia-polignano-cliff-town.jpg",
+      "lat": 40.996564,
+      "lng": 17.223178,
+      "datetime": "2025:03:30 13:00:54",
+      "place": "Polignano a Mare, Puglia",
+      "album": "puglia",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 154.7
+    },
+    {
+      "original": "IMG_2954.jpeg",
+      "src": "/photos/trips/italy-2025/puglia-polignano-cliff-sit.jpg",
+      "lat": 40.990597,
+      "lng": 17.237817,
+      "datetime": "2025:03:30 13:13:50",
+      "place": "Polignano a Mare, Puglia",
+      "album": "puglia",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 168.0
+    },
+    {
+      "original": "IMG_2972.jpeg",
+      "src": "/photos/trips/italy-2025/puglia-polignano-grilled-octopus.jpg",
+      "lat": 40.995494,
+      "lng": 17.218069,
+      "datetime": "2025:03:30 13:59:23",
+      "place": "Polignano a Mare, Puglia",
+      "album": "puglia",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 127.6
+    },
+    {
+      "original": "IMG_2982.jpeg",
+      "src": "/photos/trips/italy-2025/puglia-polignano-cove-bridge.jpg",
+      "lat": 40.997244,
+      "lng": 17.219064,
+      "datetime": "2025:03:30 14:38:37",
+      "place": "Polignano a Mare, Puglia",
+      "album": "puglia",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 149.0
+    },
+    {
+      "original": "IMG_2983.jpeg",
+      "src": "/photos/trips/italy-2025/puglia-polignano-cliff-selfie.jpg",
+      "lat": 40.997292,
+      "lng": 17.219061,
+      "datetime": "2025:03:30 14:38:47",
+      "place": "Polignano a Mare, Puglia",
+      "album": "puglia",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 162.8
+    },
+    {
+      "original": "IMG_2989.jpeg",
+      "src": "/photos/trips/italy-2025/puglia-polignano-lama-monachile.jpg",
+      "lat": 40.997075,
+      "lng": 17.218719,
+      "datetime": "2025:03:30 14:40:35",
+      "place": "Lama Monachile, Polignano a Mare",
+      "album": "puglia",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 145.8
+    },
+    {
+      "original": "IMG_3137.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-aperitivo-wine-flight.jpg",
+      "lat": 40.648778,
+      "lng": 14.638744,
+      "datetime": "2025:04:04 18:50:06",
+      "place": "Maiori, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 146.1
+    },
+    {
+      "original": "IMG_3158.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-mare-luna-alley-dinner.jpg",
+      "lat": 40.649069,
+      "lng": 14.641439,
+      "datetime": "2025:04:04 20:51:06",
+      "place": "Maiori, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 113.2
+    },
+    {
+      "original": "IMG_3181.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-blossoms-bell-tower.jpg",
+      "lat": 40.649242,
+      "lng": 14.641233,
+      "datetime": "2025:04:05 08:43:56",
+      "place": "Maiori, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 123.0
+    },
+    {
+      "original": "IMG_3189.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-amalfi-from-ferry.jpg",
+      "lat": 40.647775,
+      "lng": 14.627114,
+      "datetime": "2025:04:05 10:04:34",
+      "place": "Amalfi, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 122.5
+    },
+    {
+      "original": "IMG_3194.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-amalfi-duomo-selfie.jpg",
+      "lat": 40.634347,
+      "lng": 14.602639,
+      "datetime": "2025:04:05 10:22:41",
+      "place": "Duomo di Amalfi",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 160.4
+    },
+    {
+      "original": "IMG_3201.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-amalfi-cloister-arches.jpg",
+      "lat": 40.634772,
+      "lng": 14.603117,
+      "datetime": "2025:04:05 10:28:20",
+      "place": "Chiostro del Paradiso, Amalfi",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1",
+        "brightness_1.04"
+      ],
+      "mean_after_levels": 105.7
+    },
+    {
+      "original": "IMG_3209.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-amalfi-cloister-peek.jpg",
+      "lat": 40.634772,
+      "lng": 14.603117,
+      "datetime": "2025:04:05 10:29:55",
+      "place": "Chiostro del Paradiso, Amalfi",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 155.4
+    },
+    {
+      "original": "IMG_3219.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-amalfi-cathedral-ceiling.jpg",
+      "lat": 40.633428,
+      "lng": 14.601133,
+      "datetime": "2025:04:05 10:37:09",
+      "place": "Duomo di Amalfi",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1",
+        "brightness_1.04"
+      ],
+      "mean_after_levels": 103.2
+    },
+    {
+      "original": "IMG_3223.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-amalfi-striped-stairs.jpg",
+      "lat": 40.634311,
+      "lng": 14.603436,
+      "datetime": "2025:04:05 10:38:54",
+      "place": "Duomo di Amalfi",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1",
+        "brightness_1.08"
+      ],
+      "mean_after_levels": 82.1
+    },
+    {
+      "original": "IMG_3241.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-amalfi-trefoil-cross.jpg",
+      "lat": 40.634194,
+      "lng": 14.603219,
+      "datetime": "2025:04:05 10:44:46",
+      "place": "Chiostro del Paradiso, Amalfi",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 116.6
+    },
+    {
+      "original": "IMG_3249.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-amalfi-campanile-kiss.jpg",
+      "lat": 40.634369,
+      "lng": 14.602889,
+      "datetime": "2025:04:05 10:48:07",
+      "place": "Amalfi, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 143.8
+    },
+    {
+      "original": "IMG_3263.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-catamaran-cliffs.jpg",
+      "lat": 40.5699,
+      "lng": 14.320922,
+      "datetime": "2025:04:05 13:06:55",
+      "place": "Massa Lubrense / Capri waters",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 165.1
+    },
+    {
+      "original": "IMG_3304.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-sorrento-art-mural.jpg",
+      "lat": 40.627786,
+      "lng": 14.373086,
+      "datetime": "2025:04:05 15:43:21",
+      "place": "Sorrento, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 147.7
+    },
+    {
+      "original": "IMG_3312.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-sorrento-vesuvius-selfie.jpg",
+      "lat": 40.628158,
+      "lng": 14.372797,
+      "datetime": "2025:04:05 15:46:27",
+      "place": "Sorrento, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 128.1
+    },
+    {
+      "original": "IMG_3346.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-positano-selfie.jpg",
+      "lat": 40.626389,
+      "lng": 14.486617,
+      "datetime": "2025:04:05 17:34:54",
+      "place": "Positano, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 129.8
+    },
+    {
+      "original": "IMG_3379.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-positano-sheer-cliff.jpg",
+      "lat": 40.609675,
+      "lng": 14.507083,
+      "datetime": "2025:04:05 18:54:57",
+      "place": "Nocelle / Positano cliffs",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 115.9
+    },
+    {
+      "original": "IMG_3380.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-positano-coast-panorama.jpg",
+      "lat": 40.611242,
+      "lng": 14.514386,
+      "datetime": "2025:04:05 18:56:29",
+      "place": "Positano coast",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 145.3
+    },
+    {
+      "original": "IMG_3408.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-ferry-julia-photographing.jpg",
+      "lat": 40.632886,
+      "lng": 14.601353,
+      "datetime": "2025:04:05 19:14:14",
+      "place": "Amalfi coast ferry",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 114.1
+    },
+    {
+      "original": "IMG_3419.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-atrani-hillside-arches.jpg",
+      "lat": 40.632381,
+      "lng": 14.601353,
+      "datetime": "2025:04:05 19:25:16",
+      "place": "Atrani / Ravello coast",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 144.3
+    },
+    {
+      "original": "IMG_3425.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-amalfi-harbor-dusk.jpg",
+      "lat": 40.628339,
+      "lng": 14.608617,
+      "datetime": "2025:04:05 19:30:17",
+      "place": "Amalfi harbor",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 126.5
+    },
+    {
+      "original": "IMG_5590.jpeg",
+      "src": "/photos/trips/italy-2025/puglia-siponto-church-storm.jpg",
+      "lat": 41.629158,
+      "lng": 15.917731,
+      "datetime": "2025:04:02 13:55:06",
+      "place": "Siponto, Manfredonia",
+      "album": "puglia",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 119.9
+    },
+    {
+      "original": "IMG_5601.jpeg",
+      "src": "/photos/trips/italy-2025/puglia-siponto-poppies.jpg",
+      "lat": 41.620383,
+      "lng": 15.906625,
+      "datetime": "2025:04:03 10:11:06",
+      "place": "Siponto, Manfredonia",
+      "album": "puglia",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1",
+        "brightness_1.08"
+      ],
+      "mean_after_levels": 72.2
+    },
+    {
+      "original": "IMG_5633.jpeg",
+      "src": "/photos/trips/italy-2025/travel-calitri-hills-turbines.jpg",
+      "lat": 40.887097,
+      "lng": 15.432808,
+      "datetime": "2025:04:04 14:44:50",
+      "place": "Calitri Scalo, Campania",
+      "album": "travel",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 113.4
+    },
+    {
+      "original": "IMG_5740.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-harbor-dinghy.jpg",
+      "lat": 40.647992,
+      "lng": 14.634114,
+      "datetime": "2025:04:05 09:23:10",
+      "place": "Maiori, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 111.9
+    },
+    {
+      "original": "IMG_5779.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-amalfi-fountain-bottle.jpg",
+      "lat": 40.634258,
+      "lng": 14.602556,
+      "datetime": "2025:04:05 10:21:20",
+      "place": "Amalfi, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1",
+        "brightness_1.04"
+      ],
+      "mean_after_levels": 109.4
+    },
+    {
+      "original": "IMG_5849.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-positano-cliff-town.jpg",
+      "lat": 40.626136,
+      "lng": 14.486069,
+      "datetime": "2025:04:05 12:34:09",
+      "place": "Positano, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1",
+        "brightness_1.08"
+      ],
+      "mean_after_levels": 90.7
+    },
+    {
+      "original": "IMG_5874.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-sorrento-cliff-buildings.jpg",
+      "lat": 40.629936,
+      "lng": 14.375417,
+      "datetime": "2025:04:05 13:30:23",
+      "place": "Sorrento, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1",
+        "brightness_1.04"
+      ],
+      "mean_after_levels": 109.3
+    },
+    {
+      "original": "IMG_5884.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-sorrento-wine-toast-vesuvius.jpg",
+      "lat": 40.627786,
+      "lng": 14.366678,
+      "datetime": "2025:04:05 13:49:26",
+      "place": "Marina Grande, Sorrento",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 126.3
+    },
+    {
+      "original": "IMG_5900.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-sorrento-alley-arch.jpg",
+      "lat": 40.627542,
+      "lng": 14.367397,
+      "datetime": "2025:04:05 15:30:49",
+      "place": "Sorrento, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 115.9
+    },
+    {
+      "original": "IMG_5954.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-positano-approach-boat.jpg",
+      "lat": 40.624797,
+      "lng": 14.486542,
+      "datetime": "2025:04:05 17:34:06",
+      "place": "Positano, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1",
+        "brightness_1.04"
+      ],
+      "mean_after_levels": 100.8
+    },
+    {
+      "original": "IMG_5956.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-positano-pastel-houses.jpg",
+      "lat": 40.626025,
+      "lng": 14.486731,
+      "datetime": "2025:04:05 17:34:40",
+      "place": "Positano, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 111.5
+    },
+    {
+      "original": "IMG_5959.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-positano-anchored-boats.jpg",
+      "lat": 40.627669,
+      "lng": 14.4865,
+      "datetime": "2025:04:05 17:38:57",
+      "place": "Positano, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 147.9
+    },
+    {
+      "original": "IMG_5972.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-capo-di-conca-sunset.jpg",
+      "lat": 40.608697,
+      "lng": 14.576031,
+      "datetime": "2025:04:05 19:06:15",
+      "place": "Capo di Conca, Conca dei Marini",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 139.6
+    },
+    {
+      "original": "IMG_5984.jpeg",
+      "src": "/photos/trips/italy-2025/maiori-vending-machine.jpg",
+      "lat": 40.648839,
+      "lng": 14.641358,
+      "datetime": "2025:04:06 10:30:43",
+      "place": "Maiori, Campania",
+      "album": "maiori",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1",
+        "brightness_1.08"
+      ],
+      "mean_after_levels": 88.9
+    },
+    {
+      "original": "IMG_6053.jpeg",
+      "src": "/photos/trips/italy-2025/travel-salerno-arechi-castle.jpg",
+      "lat": 40.675853,
+      "lng": 14.738461,
+      "datetime": "2025:04:06 11:25:37",
+      "place": "Castello di Arechi, Salerno",
+      "album": "travel",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 142.0
+    },
+    {
+      "original": "IMG_6075.jpeg",
+      "src": "/photos/trips/italy-2025/travel-postiglione-forest-road.jpg",
+      "lat": 40.620828,
+      "lng": 15.219922,
+      "datetime": "2025:04:06 13:19:51",
+      "place": "Postiglione, Campania",
+      "album": "travel",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1",
+        "brightness_1.04"
+      ],
+      "mean_after_levels": 107.1
+    },
+    {
+      "original": "IMG_6088.jpeg",
+      "src": "/photos/trips/italy-2025/travel-melfi-ruins-mono.jpg",
+      "lat": 41.082547,
+      "lng": 15.739917,
+      "datetime": "2025:04:06 14:46:34",
+      "place": "Melfi, Basilicata",
+      "album": "travel",
+      "at_sea": false,
+      "levels_applied": [
+        "autocontrast_cutoff_1"
+      ],
+      "mean_after_levels": 159.7
+    }
+  ]
+}
