@@ -1,32 +1,37 @@
 {
   "label": "Stops",
-  "note": "Stop pins from email-confirmed stays and day trips. No dense Polarsteps GPS yet — dashed connector only. Not live.",
+  "note": "Pins from Polarsteps steps (116). Drive line is step-to-step travel; gaps over ~100 mi start a new segment. Not live.",
   "connectStops": true,
   "line": [
     {
+      "name": "Puglia",
+      "lat": 41.62547,
+      "lng": 15.90959
+    },
+    {
       "name": "Rome",
-      "lat": 41.901,
-      "lng": 12.501
+      "lat": 41.89684,
+      "lng": 12.51927
     },
     {
       "name": "Matera",
-      "lat": 40.6663,
-      "lng": 16.6043
+      "lat": 40.66872,
+      "lng": 16.57346
     },
     {
       "name": "Maiori",
-      "lat": 40.6484,
-      "lng": 14.6414
+      "lat": 40.64779,
+      "lng": 14.64422
     },
     {
       "name": "Pompeii",
-      "lat": 40.751,
-      "lng": 14.4869
+      "lat": 40.74613,
+      "lng": 14.50136
     },
     {
       "name": "Caserta",
-      "lat": 41.0732,
-      "lng": 14.3322
+      "lat": 41.08208,
+      "lng": 14.33471
     }
   ]
 }
