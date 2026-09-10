@@ -230,7 +230,7 @@
       maxBounds: [[34.5, 22.3], [38.85, 26.95]]
     });
     L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 }).addTo(greeceMap);
-    greeceMap.fitBounds([[34.95, 23.55], [35.58, 25.85]], { padding: [24, 24], animate: false });
+    greeceMap.fitBounds([[36.33, 25.32], [36.48, 25.52]], { padding: [28, 28], animate: false });
     photoLayer = L.layerGroup().addTo(greeceMap);
 
     Promise.all([
@@ -258,6 +258,11 @@
       if (actual.length > 1) {
         L.polyline(actual, { color: "#1b6f66", weight: 4, opacity: 0.95 })
           .addTo(greeceMap).bindPopup("Actual path so far");
+      }
+      var actualSantorini = route.actualSantorini || [];
+      if (actualSantorini.length > 1) {
+        L.polyline(actualSantorini, { color: "#1b6f66", weight: 4, opacity: 0.95 })
+          .addTo(greeceMap).bindPopup("Santorini drive");
       }
       L.polyline(ferry, { color: "#c4a35a", weight: 3, dashArray: "7 7", opacity: 0.95 })
         .addTo(greeceMap).bindPopup("Ferry");
