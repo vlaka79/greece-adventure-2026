@@ -975,12 +975,8 @@
       25.1442
     ],
     [
-      36.4165,
-      25.4324
-    ],
-    [
-      37.9838,
-      23.7275
+      36.386,
+      25.431
     ]
   ],
   "stops": [
@@ -7288,12 +7284,13 @@
   "miles": {
     "driven": 413,
     "walked": 67.4,
-    "sailed": 2,
-    "asOf": "2026-09-09",
+    "sailed": 78,
+    "asOf": "2026-09-10",
     "unit": "mi",
     "walkedSource": "Apple Health",
     "flown": 7306,
-    "flownSource": "Great-circle BUR–SFO–FRA–ATH–CHQ"
+    "flownSource": "Great-circle BUR–SFO–FRA–ATH–CHQ",
+    "sailedSource": "Spinalonga boat + Seajets Heraklion→Athinios (great-circle)"
   },
   "actualSantorini": [
     [
@@ -7727,6 +7724,16 @@
     [
       36.415506,
       25.433907
+    ]
+  ],
+  "ferryPlanned": [
+    [
+      36.386,
+      25.431
+    ],
+    [
+      37.9838,
+      23.7275
     ]
   ]
 }

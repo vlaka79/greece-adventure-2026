@@ -230,7 +230,7 @@
       maxBounds: [[34.5, 22.3], [38.85, 26.95]]
     });
     L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 }).addTo(greeceMap);
-    greeceMap.fitBounds([[36.33, 25.32], [36.48, 25.52]], { padding: [28, 28], animate: false });
+    greeceMap.fitBounds([[35.30, 25.10], [36.52, 25.55]], { padding: [28, 28], animate: false });
     photoLayer = L.layerGroup().addTo(greeceMap);
 
     Promise.all([
@@ -240,7 +240,8 @@
       var route = pair[0] || {};
       photoItems = pair[1] || [];
       var planned = route.plannedCrete || [];
-      var ferry = route.ferry || [[35.3387, 25.1442], [36.4165, 25.4324], [37.9838, 23.7275]];
+      var ferry = route.ferry || [[35.3387, 25.1442], [36.386, 25.431]];
+      var ferryPlanned = route.ferryPlanned || [[36.386, 25.431], [37.9838, 23.7275]];
       var stops = route.stops || [];
       var visited = route.visited || [];
       var actual = route.actual || [];
@@ -264,8 +265,14 @@
         L.polyline(actualSantorini, { color: "#1b6f66", weight: 4, opacity: 0.95 })
           .addTo(greeceMap).bindPopup("Santorini drive");
       }
-      L.polyline(ferry, { color: "#c4a35a", weight: 3, dashArray: "7 7", opacity: 0.95 })
-        .addTo(greeceMap).bindPopup("Ferry");
+      if (ferry.length > 1) {
+        L.polyline(ferry, { color: "#c4a35a", weight: 3, dashArray: "7 7", opacity: 0.95 })
+          .addTo(greeceMap).bindPopup("Ferry \u00b7 Heraklion \u2192 Santorini");
+      }
+      if (ferryPlanned.length > 1) {
+        L.polyline(ferryPlanned, { color: "#c4a35a", weight: 2, dashArray: "4 10", opacity: 0.45 })
+          .addTo(greeceMap).bindPopup("Ferry planned \u00b7 Santorini \u2192 Athens");
+      }
 
       stops.forEach(function (s, i) {
         var done = visited.indexOf(s.id) >= 0;
