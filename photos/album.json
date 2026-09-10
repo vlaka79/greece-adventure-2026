@@ -1,5 +1,16 @@
 [
   {
+    "src": "/photos/album/santorini-oia-caldera-cocktails-selfie.jpg",
+    "caption": "Blue domes, caldera blue, and two anniversary cocktails. Oia doing exactly what it promised.",
+    "place": "santorini",
+    "lat": 36.460975,
+    "lng": 25.374,
+    "added": "2026-09-10T11:21:47",
+    "date": "2026-09-10",
+    "taken": "2026-09-10T12:41:53",
+    "new": true
+  },
+  {
     "src": "/photos/album/santorini-akrotiri-excavation-overview.jpg",
     "caption": "Akrotiri under the big roof. Streets and staircases frozen mid-day for 3,600 years.",
     "place": "santorini",
