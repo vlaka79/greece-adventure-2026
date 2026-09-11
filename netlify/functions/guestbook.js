@@ -61,8 +61,18 @@ exports.handler = async function () {
     } catch (e) {}
   }
 
+  function decodeEntities(s) {
+    return String(s || "")
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&apos;/g, "'");
+  }
+
   function norm(s) {
-    return String(s || "").replace(/\s+/g, " ").trim().toLowerCase();
+    return decodeEntities(s).replace(/\s+/g, " ").trim().toLowerCase();
   }
 
   function key(n) {
@@ -74,20 +84,34 @@ exports.handler = async function () {
   function add(n, fromLive) {
     if (!n || !n.message) return;
     var k = key(n);
-    if (seen[k]) return;
-    seen[k] = true;
+    if (seen[k]) {
+      // Prefer pinned reply / richer fields if live already added a shell
+      var prev = seen[k];
+      if (typeof prev === "object" && prev.index >= 0) {
+        var cur = out[prev.index];
+        if (cur && !cur.reply && (n.reply || replies[n.id] || replies[k])) {
+          cur.reply = n.reply || replies[n.id] || replies[k] || "";
+          if (!fromLive) delete cur.live;
+        }
+      }
+      return;
+    }
     var item = {
-      name: n.name || "Friend",
+      name: decodeEntities(n.name || "Friend"),
       date: n.date || "",
-      message: n.message,
+      message: fromLive ? n.message : (n.message || ""),
       reply: n.reply || replies[n.id] || replies[k] || ""
     };
+    // Display pinned message unescaped; live already escaped for safety — decode for display consistency
+    if (fromLive) item.message = decodeEntities(n.message);
     if (fromLive) item.live = true;
+    seen[k] = { index: out.length };
     out.push(item);
   }
 
-  live.forEach(function (n) { add(n, true); });
+  // Pinned first so replies win; live fills gaps
   (pinned || []).forEach(function (n) { add(n, false); });
+  live.forEach(function (n) { add(n, true); });
 
   out.sort(function (a, b) {
     return String(b.date || "").localeCompare(String(a.date || ""));
