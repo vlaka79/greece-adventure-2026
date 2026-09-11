@@ -7283,9 +7283,9 @@
   ],
   "miles": {
     "driven": 413,
-    "walked": 70.4,
+    "walked": 74.6,
     "sailed": 78,
-    "asOf": "2026-09-10",
+    "asOf": "2026-09-11",
     "unit": "mi",
     "walkedSource": "Apple Health",
     "flown": 7306,
