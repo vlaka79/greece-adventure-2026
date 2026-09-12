@@ -61,7 +61,20 @@ exports.handler = async function () {
     } catch (e) {}
   }
 
-  function decodeEntities(s) {
+  function isSpam(n) {
+    var blob = (String(n && n.name || "") + " " + String(n && n.message || "")).toLowerCase();
+    if (!blob.trim()) return true;
+    var hits = [
+      "organic traffic", "seo consultant", "site audit", "keyword targeting",
+      "monthly reports", "free audit", "santiag mkt", "backlink", "link building"
+    ];
+    for (var i = 0; i < hits.length; i++) {
+      if (blob.indexOf(hits[i]) >= 0) return true;
+    }
+    return false;
+  }
+
+    function decodeEntities(s) {
     return String(s || "")
       .replace(/&amp;/g, "&")
       .replace(/&lt;/g, "<")
@@ -83,6 +96,7 @@ exports.handler = async function () {
   var out = [];
   function add(n, fromLive) {
     if (!n || !n.message) return;
+    if (isSpam(n)) return;
     var k = key(n);
     if (seen[k]) {
       // Prefer pinned reply / richer fields if live already added a shell
