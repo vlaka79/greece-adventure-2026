@@ -1,11 +1,12 @@
 {
   "flown": 5443,
-  "driven": 2191,
-  "walked": null,
+  "driven": 1224,
+  "walked": 29,
   "sailed": 4211,
   "unit": "mi",
   "flownSource": "Great-circle BUR\u2013DEN\u2013MIA + PBI\u2013ORD\u2013LAX (itinerary / Polarsteps)",
-  "drivenSource": "Haversine along filtered shore + Polarsteps car tracks",
+  "drivenSource": "Haversine along OSRM road-snapped Polarsteps car tracks + curated aruba/keys/shuttle/bus",
   "sailedSource": "NOAA AIS Brilliant Lady + likely mid-Caribbean gap + Paradise hop path",
-  "asOf": "2026-09-09"
+  "asOf": "2026-09-12",
+  "walkedSource": "Haversine along walk tracks (Cartagena, Nassau, Simi, airports; short-hop filtered)"
 }

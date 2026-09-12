@@ -223,10 +223,14 @@
     (drives.tracks || []).forEach(function (tr) {
       var coords = driveCoords(tr);
       if (coords.length < 2) return;
-      var dashed = tr.style === "dashed" || tr.mode === "bus";
+      var walk = tr.mode === "walk";
+      var dashed = tr.style === "dashed" || tr.mode === "bus" || tr.mode === "train" || walk;
       var boat = tr.mode === "boat" || tr.style === "thin";
-      var weight = boat ? 2 : dashed ? 2.5 : (tr.mode === "car" ? 4 : 3);
-      if (!dashed && !boat) {
+      var weight = walk ? 2 : boat ? 2 : dashed ? 2.5 : (tr.mode === "car" ? 4 : 3);
+      var color = walk ? "#b7d8d3" : "#e8f4f2";
+      var opacity = walk ? 0.75 : dashed ? 0.8 : 0.95;
+      var dashArray = walk ? "3,7" : dashed ? "7,9" : null;
+      if (!dashed && !boat && !walk) {
         L.polyline(coords, {
           color: "#1a1a1a",
           weight: weight + 2,
@@ -237,10 +241,10 @@
         }).addTo(tripMap);
       }
       var line = L.polyline(coords, {
-        color: "#e8f4f2",
+        color: color,
         weight: weight,
-        opacity: dashed ? 0.8 : 0.95,
-        dashArray: dashed ? "7,9" : null,
+        opacity: opacity,
+        dashArray: dashArray,
         lineJoin: "round",
         lineCap: "round"
       }).addTo(tripMap);
@@ -287,7 +291,9 @@
     var parts = [];
     parts.push("Flown " + n(miles.flown) + " mi");
     parts.push("Driven " + n(miles.driven) + " mi");
-    // Walked omitted until Daniel provides it
+    if (miles.walked != null && miles.walked !== "") {
+      parts.push("Walked " + n(miles.walked) + " mi");
+    }
     if (miles.sailed != null && miles.sailed !== "") {
       parts.push("Sailed " + n(miles.sailed) + " mi");
     }
