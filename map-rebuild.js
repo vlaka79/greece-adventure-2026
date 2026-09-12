@@ -197,10 +197,11 @@
         var lat = st.lat != null ? st.lat : 35.5162;
         var lng = st.lng != null ? st.lng : 24.0178;
         clearMap(el);
-        var map = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView([lat, lng], 12);
+        var map = L.map(el, { scrollWheelZoom: false, zoomControl: true });
         L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 }).addTo(map);
+        map.fitBounds([[36.30, 23.45], [38.05, 25.60]], { padding: [28, 28], animate: false, maxZoom: 9 });
         L.circle([lat, lng], {
-          radius: 5000,
+          radius: 12000,
           color: "#1b6f66",
           weight: 1,
           fillColor: "#1b6f66",

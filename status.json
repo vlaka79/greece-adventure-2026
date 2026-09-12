@@ -1,16 +1,16 @@
 {
-  "lat": 36.4165,
-  "lng": 25.4324,
-  "location": "Santorini",
-  "tonight": "Ferry day toward Athens — Καλό ταξίδι.",
-  "tomorrow": "Athens days ahead.",
+  "lat": 37.17,
+  "lng": 24.55,
+  "location": "Aegean Sea",
+  "tonight": "On the ferry toward Athens — Καλό ταξίδι.",
+  "tomorrow": "First full day in Athens.",
   "postcard": {
     "date": "2026-09-11",
-    "place": "Santorini, Oia",
-    "title": "Anniversary sunset",
-    "note": "Us at golden hour by the windmill — Oia doing the whole show.",
-    "photo": "/photos/album/santorini-oia-sunset-embrace-windmill.jpg",
-    "caption": "Sunset embrace with the windmill behind us. Anniversary light doing overtime."
+    "place": "Santorini, Fira",
+    "title": "Caldera gold",
+    "note": "Fira balcony sunset — last island gold before the Athens ferry.",
+    "photo": "/photos/album/santorini-fira-balcony-sunset-couple.jpg",
+    "caption": "Sunset balcony stares — Aegean gold, us matching the glow."
   },
   "word": {
     "el": "Καλό ταξίδι",
