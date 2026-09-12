@@ -1,12 +1,33 @@
 {
   "flown": 5443,
   "driven": 1224,
-  "walked": 29,
+  "walked": 65.1,
   "sailed": 4211,
   "unit": "mi",
   "flownSource": "Great-circle BUR\u2013DEN\u2013MIA + PBI\u2013ORD\u2013LAX (itinerary / Polarsteps)",
   "drivenSource": "Haversine along OSRM road-snapped Polarsteps car tracks + curated aruba/keys/shuttle/bus",
   "sailedSource": "NOAA AIS Brilliant Lady + likely mid-Caribbean gap + Paradise hop path",
   "asOf": "2026-09-12",
-  "walkedSource": "Haversine along walk tracks (Cartagena, Nassau, Simi, airports; short-hop filtered)"
+  "walkedSource": "Apple Health Walking + Running Distance, Feb 26\u2013Mar 16 2026 (trip window)",
+  "walkedByDay": {
+    "2026-02-26": 2.0,
+    "2026-02-27": 3.4,
+    "2026-02-28": 4.7,
+    "2026-03-01": 3.8,
+    "2026-03-02": 3.4,
+    "2026-03-03": 4.6,
+    "2026-03-04": 4.6,
+    "2026-03-05": 4.0,
+    "2026-03-06": 5.0,
+    "2026-03-07": 2.7,
+    "2026-03-08": 3.6,
+    "2026-03-09": 3.7,
+    "2026-03-10": 1.7,
+    "2026-03-11": 2.4,
+    "2026-03-12": 3.3,
+    "2026-03-13": 3.5,
+    "2026-03-14": 2.7,
+    "2026-03-15": 3.6,
+    "2026-03-16": 2.4
+  }
 }
