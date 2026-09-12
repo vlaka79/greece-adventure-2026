@@ -2,7 +2,7 @@
   "trip": "caribbean-2026",
   "source": "Album GPS (EXIF + Brilliant Lady / Paradise AIS interpolation for boat stills)",
   "note": "Photos array rebuilt from album.json entries with lat/lng. Includes There & back travel pins, Virgin boat stills, and Margaritaville boat stills; AIS-filled points use Brilliant Lady / Paradise tracks (or likely dashed routes).",
-  "count": 153,
+  "count": 156,
   "photos": [
     {
       "src": "/photos/trips/caribbean-2026/travel-ord-united-pizza.jpg",
@@ -1072,6 +1072,27 @@
       "src": "/photos/trips/caribbean-2026/virgin-the-wake-breakfast-plates.jpg",
       "lat": 22.155675,
       "lng": -77.477478,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-rojo-starters.jpg",
+      "lat": 21.281133,
+      "lng": -75.429031,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-rojo-mains.jpg",
+      "lat": 21.281133,
+      "lng": -75.429031,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-rojo-desserts.jpg",
+      "lat": 21.281133,
+      "lng": -75.429031,
       "place": "virgin",
       "album": "virgin"
     }

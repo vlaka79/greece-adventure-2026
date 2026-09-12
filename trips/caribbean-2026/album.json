@@ -1536,5 +1536,35 @@
     "added": "2026-03-02T09:17:36",
     "date": "2026-03-02",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-rojo-starters.jpg",
+    "caption": "Octopus on puree with pork-and-cheese toasts, then jamón with almonds on black. Rojo starters, Night 2.",
+    "place": "virgin",
+    "lat": 21.281133,
+    "lng": -75.429031,
+    "added": "2026-03-02T18:10:18",
+    "date": "2026-03-02",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-rojo-mains.jpg",
+    "caption": "Fish fillet with artichokes and grilled lemon, then sliced steak with red relish and charred onion. Rojo mains.",
+    "place": "virgin",
+    "lat": 21.281133,
+    "lng": -75.429031,
+    "added": "2026-03-02T18:38:19",
+    "date": "2026-03-02",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-rojo-desserts.jpg",
+    "caption": "Basque-style cheesecake with raspberry coulis, then churros in chocolate sauce. Rojo desserts to close Night 2.",
+    "place": "virgin",
+    "lat": 21.281133,
+    "lng": -75.429031,
+    "added": "2026-03-02T18:54:50",
+    "date": "2026-03-02",
+    "new": true
   }
 ]
