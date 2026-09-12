@@ -1466,5 +1466,25 @@
     "added": "2026-03-08T13:19:17",
     "date": "2026-03-08",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-extra-virgin-wine-tasting.jpg",
+    "caption": "Extra Virgin wine tasting \u2014 flights lined up, bread on the side.",
+    "place": "virgin",
+    "lat": 16.58635,
+    "lng": -73.0408,
+    "added": "2026-03-03T13:25:03",
+    "date": "2026-03-03",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-sushi-making-class.jpg",
+    "caption": "Rice Rice Baby sushi-making class \u2014 setup, rolling, finished trays.",
+    "place": "virgin",
+    "lat": 23.380167,
+    "lng": -78.0715,
+    "added": "2026-03-02T12:00:00",
+    "date": "2026-03-02",
+    "new": true
   }
 ]
