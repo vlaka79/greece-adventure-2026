@@ -49,7 +49,7 @@
   }
 
   function inPhotoBounds(lat, lng) {
-    return lat >= 9 && lat <= 28.5 && lng >= -85 && lng <= -68;
+    return lat >= 9 && lat <= 42 && lng >= -125 && lng <= -68;
   }
 
   function distM(a, b) {
