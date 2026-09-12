@@ -17,14 +17,16 @@
     st.textContent =
       ".photo-pin-icon{cursor:pointer;background:transparent;border:0;}" +
       ".photo-pin-icon .photo-pin{pointer-events:auto;position:relative;width:48px;height:56px;}" +
-      ".photo-pin-stack{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:8px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.22);}" +
+      ".photo-pin-stack{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:8px;background:#fff8ee;box-shadow:0 2px 6px rgba(42,28,12,.18);}" +
       ".photo-pin-stack.s1{transform:translate(4px,-4px) rotate(6deg);z-index:1;}" +
       ".photo-pin-stack.s2{transform:translate(-3px,-3px) rotate(-5deg);z-index:2;}" +
-      ".photo-pin-card{position:relative;z-index:3;width:48px;height:48px;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.28);background:#f4eee4;}" +
+      ".photo-pin-card{position:relative;z-index:3;width:48px;height:48px;border-radius:8px;overflow:hidden;box-shadow:0 3px 10px rgba(42,28,12,.32),0 0 0 1.5px rgba(255,248,238,.9);background:#f4eee4;}" +
       ".photo-pin-card img{width:100%;height:100%;object-fit:cover;display:block;}" +
-      ".photo-pin-count{position:absolute;right:3px;bottom:3px;z-index:4;min-width:1.1rem;border-radius:999px;background:#1b6f66;color:#f4eee4;font-size:10px;font-weight:700;line-height:1.2rem;text-align:center;padding:0 4px;}" +
+      ".photo-pin-count{position:absolute;right:3px;bottom:3px;z-index:4;min-width:1.1rem;border-radius:999px;background:linear-gradient(135deg,#ff6a3d,#f0a020);color:#fffaf3;font-size:10px;font-weight:700;line-height:1.2rem;text-align:center;padding:0 4px;box-shadow:0 1px 3px rgba(0,0,0,.25);}" +
       ".photo-pin-tail{width:0;height:0;margin:-1px auto 0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:8px solid #fffcf6;filter:drop-shadow(0 1px 1px rgba(0,0,0,.2));}" +
-      ".trip-path-pin{width:22px;height:22px;border-radius:50%;background:#1b6f66;color:#f4eee4;font:700 11px/22px 'Source Sans 3',sans-serif;text-align:center;box-shadow:0 0 0 2px #fffcf6,0 2px 6px rgba(42,36,28,.3);}" +
+      ".trip-path-chip{display:inline-flex;align-items:center;gap:3px;max-width:110px;padding:3px 8px 3px 6px;border-radius:999px;background:rgba(255,252,246,.94);color:#2a241c;font:700 11px/1.2 'Source Sans 3',system-ui,sans-serif;white-space:nowrap;box-shadow:0 2px 8px rgba(20,16,12,.35),0 0 0 1px rgba(255,255,255,.55);backdrop-filter:blur(2px);}" +
+      ".trip-path-chip .chip-emoji{font-size:12px;line-height:1;}" +
+      ".trip-path-chip .chip-name{overflow:hidden;text-overflow:ellipsis;}" +
       ".drive-car-icon{background:transparent;border:0;}" +
       ".drive-car{width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;}" +
       ".drive-car svg{width:11px;height:11px;display:block;}";
@@ -220,22 +222,36 @@
     return out;
   }
 
+  var SHORE_KEEP = {
+    keys: 1,
+    "miami-to-riviera": 1,
+    aruba: 1,
+    "palm-beach-to-pbi": 1,
+    cartagena: 1,
+    nassau: 1,
+    "cayman-snorkel": 1,
+    "ocho-rios": 1,
+    "miami-big-bus": 1
+  };
+
   function drawDrives(drives) {
     (drives.tracks || []).forEach(function (tr) {
+      if (!tr || !SHORE_KEEP[tr.id]) return;
       var coords = driveCoords(tr);
       if (coords.length < 2) return;
       var walk = tr.mode === "walk";
       var dashed = tr.style === "dashed" || tr.mode === "bus" || tr.mode === "train" || walk;
       var boat = tr.mode === "boat" || tr.style === "thin";
-      var weight = walk ? 1.5 : boat ? 2 : dashed ? 2 : (tr.mode === "car" ? 2.25 : 2);
-      var color = walk ? "#b7d8d3" : "#e8f4f2";
-      var opacity = walk ? 0.7 : dashed ? 0.75 : 0.9;
+      var car = tr.mode === "car";
+      var weight = walk ? 1.5 : boat ? 2 : dashed ? 2 : (car ? 2.6 : 2);
+      var color = walk ? "#9ec9b8" : boat ? "#7ec8ff" : car ? "#e6b84d" : "#c9a227";
+      var opacity = walk ? 0.65 : dashed ? 0.8 : 0.92;
       var dashArray = walk ? "3,7" : dashed ? "7,9" : null;
-      if (!dashed && !boat && !walk) {
+      if (car && !dashed) {
         L.polyline(coords, {
-          color: "#1a1a1a",
-          weight: weight + 2,
-          opacity: 0.28,
+          color: "#3a2a10",
+          weight: weight + 2.5,
+          opacity: 0.35,
           lineJoin: "round",
           lineCap: "round",
           interactive: false
@@ -250,7 +266,7 @@
         lineCap: "round"
       }).addTo(tripMap);
       if (tr.label) line.bindPopup(tr.label);
-      if (tr.id === "aruba" || (tr.mode === "car" && tr.id === "aruba")) {
+      if (tr.id === "aruba") {
         carStopsAlong(coords, 10).forEach(function (ll) {
           L.marker(ll, {
             icon: L.divIcon({
@@ -283,6 +299,23 @@
       }
     });
     esri.addTo(map);
+  }
+
+  function placeChip(name) {
+    var n = String(name || "");
+    var lower = n.toLowerCase();
+    if (lower.indexOf("brickell") >= 0) return { emoji: "🌴", short: "Brickell" };
+    if (lower.indexOf("portmiami") >= 0 || lower === "port miami") return { emoji: "🚢", short: "PortMiami" };
+    if (lower.indexOf("aruba") >= 0 || lower.indexOf("oranjestad") >= 0) return { emoji: "🇦🇼", short: "Aruba" };
+    if (lower.indexOf("cartagena") >= 0) return { emoji: "🏛️", short: "Cartagena" };
+    if (lower.indexOf("ocho") >= 0) return { emoji: "🇯🇲", short: "Ocho Rios" };
+    if (lower.indexOf("cayman") >= 0 || lower.indexOf("george town") >= 0) return { emoji: "🤿", short: "Cayman" };
+    if (lower.indexOf("riviera") >= 0) return { emoji: "🏖️", short: "Riviera" };
+    if (lower.indexOf("palm beach") >= 0) return { emoji: "🚢", short: "Palm Beach" };
+    if (lower.indexOf("nassau") >= 0) return { emoji: "🇧🇸", short: "Nassau" };
+    var short = n.split(",")[0].trim() || n;
+    if (short.length > 12) short = short.slice(0, 11) + "…";
+    return { emoji: "📍", short: short };
   }
 
   var FRAME = [[9.5, -82.5], [27.5, -69.5]];
@@ -336,33 +369,64 @@
     });
   }
 
+  function funShipPopup(tr, gap) {
+    var id = tr && tr.id ? String(tr.id) : "";
+    if (id.indexOf("brilliant") === 0) {
+      return gap ? "Brilliant Lady · likely ocean gap" : "Brilliant Lady · Caribbean loop";
+    }
+    if (id.indexOf("paradise") === 0) {
+      return gap ? "Paradise · likely hop" : "Paradise · Nassau hop";
+    }
+    if (gap) return (tr.label || "Voyage") + " · likely";
+    return tr.label || "Voyage";
+  }
+
   function drawShipVoyages(ais) {
     (ais.tracks || []).forEach(function (tr) {
       var color = tr.color || TEAL;
-      var label = tr.label || "Voyage";
+      var popup = funShipPopup(tr, false);
+      var casing = {
+        color: "#0a1628",
+        weight: 7.5,
+        opacity: 0.5,
+        lineJoin: "round",
+        lineCap: "round",
+        interactive: false
+      };
       var solid = {
         color: color,
-        weight: 4,
-        opacity: 0.95,
+        weight: 5,
+        opacity: 0.98,
         lineJoin: "round",
         lineCap: "round"
       };
+      var dashCasing = {
+        color: "#0a1628",
+        weight: 7,
+        opacity: 0.42,
+        dashArray: "10,8",
+        lineJoin: "round",
+        lineCap: "round",
+        interactive: false
+      };
       var dashed = {
         color: color,
-        weight: 4,
-        opacity: 0.78,
+        weight: 5,
+        opacity: 0.82,
         dashArray: "10,8",
         lineJoin: "round",
         lineCap: "round"
       };
       var runs = splitAisRuns(tr.points || [], OCEAN_GAP_MS);
       runs.forEach(function (coords) {
-        drawStyledLine(coords, solid, label);
+        drawStyledLine(coords, casing, null);
+        drawStyledLine(coords, solid, popup);
       });
       likelyForShip(tr, ais.likely || []).forEach(function (gap) {
         var coords = (gap.points || []).map(llOf).filter(Boolean);
         if (coords.length < 2) return;
-        drawStyledLine(coords, dashed, gap.label || (label + " \u2014 likely"));
+        drawStyledLine(coords, dashCasing, null);
+        drawStyledLine(coords, dashed, funShipPopup(tr, true));
       });
     });
   }
@@ -411,19 +475,18 @@
       try { drawDrives(drives); } catch (err) { console.warn(err); }
       var line = path.line || [];
       var seen = {};
-      var n = 0;
       line.forEach(function (p) {
         if (p.lat == null || p.lng == null) return;
         var key = p.name + "|" + p.lat + "|" + p.lng;
         if (seen[key]) return;
         seen[key] = true;
-        n += 1;
+        var chip = placeChip(p.name || "");
         L.marker([p.lat, p.lng], {
           icon: L.divIcon({
             className: "route-pin-icon",
-            html: '<div class="trip-path-pin">' + n + "</div>",
-            iconSize: [22, 22],
-            iconAnchor: [11, 11]
+            html: '<div class="trip-path-chip"><span class="chip-emoji">' + chip.emoji + '</span><span class="chip-name">' + chip.short + "</span></div>",
+            iconSize: [100, 24],
+            iconAnchor: [50, 12]
           }),
           zIndexOffset: 120
         }).addTo(tripMap).bindPopup(p.name || "");

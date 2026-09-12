@@ -1,14 +1,14 @@
 {
   "flown": 5443,
-  "driven": 1224,
+  "driven": 247,
   "walked": 65.1,
   "sailed": 4211,
   "unit": "mi",
-  "flownSource": "Great-circle BUR\u2013DEN\u2013MIA + PBI\u2013ORD\u2013LAX (itinerary / Polarsteps)",
-  "drivenSource": "Haversine along OSRM road-snapped Polarsteps car tracks + curated aruba/keys/shuttle/bus",
+  "flownSource": "Great-circle BUR–DEN–MIA + PBI–ORD–LAX (itinerary / Polarsteps)",
+  "drivenSource": "Road-snapped Keys + Aruba + Miami→Riviera + Palm Beach→PBI (excludes Simi↔Tucson before/after trip)",
   "sailedSource": "NOAA AIS Brilliant Lady + likely mid-Caribbean gap + Paradise hop path",
   "asOf": "2026-09-12",
-  "walkedSource": "Apple Health Walking + Running Distance, Feb 26\u2013Mar 16 2026 (trip window)",
+  "walkedSource": "Apple Health Walking + Running Distance, Feb 26–Mar 16 2026 (trip window)",
   "walkedByDay": {
     "2026-02-26": 2.0,
     "2026-02-27": 3.4,
