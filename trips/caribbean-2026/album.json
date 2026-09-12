@@ -1,5 +1,43 @@
 [
   {
+    "src": "/photos/trips/caribbean-2026/travel-ord-united-pizza.jpg",
+    "caption": "United pizza and two beers at O’Hare, jet on the glass. Home day, still a couple of time zones short of California.",
+    "place": "travel",
+    "lat": 41.978231,
+    "lng": -87.907089,
+    "added": "2026-03-16T19:15:20",
+    "date": "2026-03-16",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/travel-united-economy-plus-selfie.jpg",
+    "caption": "Economy Plus duck faces. Cabin EXIT light for a halo.",
+    "place": "travel",
+    "added": "2026-03-16T16:30:00",
+    "date": "2026-03-16",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/travel-pbi-wing-storm.jpg",
+    "caption": "Blue winglet under a split sky at Palm Beach. Storm left, sun right — Caribbean trip packing up.",
+    "place": "travel",
+    "lat": 26.683703,
+    "lng": -80.094428,
+    "added": "2026-03-16T16:05:54",
+    "date": "2026-03-16",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/travel-pbi-chilis-burger-fries-eggrolls.jpg",
+    "caption": "Chili’s at PBI — Southwestern eggrolls and a burger with fries. Airport fuel before the next leg.",
+    "place": "travel",
+    "lat": 26.686036,
+    "lng": -80.089486,
+    "added": "2026-03-16T11:35:53",
+    "date": "2026-03-16",
+    "new": true
+  },
+  {
     "src": "/photos/trips/caribbean-2026/nassau-west-bay-water.jpg",
     "caption": "West Bay Street, in the water. Nassau doing the color it advertised.",
     "place": "margaritaville",
@@ -11,7 +49,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/nassau-watlings-tacos.jpg",
-    "caption": "Tacos and a lime soda at John Watling\u2019s Distillery. Plantains in the tortilla, patio mesh table.",
+    "caption": "Tacos and a lime soda at John Watling’s Distillery. Plantains in the tortilla, patio mesh table.",
     "place": "margaritaville",
     "lat": 25.074686,
     "lng": -77.349144,
@@ -31,7 +69,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/nassau-queens-staircase.jpg",
-    "caption": "Queen\u2019s Staircase, limestone cut, Bahamian flag in the gorge. Nassau city tour, not subtle.",
+    "caption": "Queen’s Staircase, limestone cut, Bahamian flag in the gorge. Nassau city tour, not subtle.",
     "place": "margaritaville",
     "lat": 25.073672,
     "lng": -77.337647,
@@ -81,7 +119,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-cayman-brilliant-lady-profile.jpg",
-    "caption": "Full profile of the Lady at the Cayman anchorage. Not a boat-interior shot \u2014 just the ship from the water.",
+    "caption": "Full profile of the Lady at the Cayman anchorage. Not a boat-interior shot — just the ship from the water.",
     "place": "virgin",
     "lat": 19.295317,
     "lng": -81.390306,
@@ -201,7 +239,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-cartagena-san-alberto-siphon.jpg",
-    "caption": "Siphon brew at Caf\u00e9 San Alberto. Purple apron, blue flame, coffee as a science project.",
+    "caption": "Siphon brew at Café San Alberto. Purple apron, blue flame, coffee as a science project.",
     "place": "virgin",
     "lat": 10.424267,
     "lng": -75.551986,
@@ -261,7 +299,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-cartagena-san-felipe-fort.jpg",
-    "caption": "The whole fort from the lawn. Blas de Lezo\u2019s hill, tourists for scale.",
+    "caption": "The whole fort from the lawn. Blas de Lezo’s hill, tourists for scale.",
     "place": "virgin",
     "lat": 10.421783,
     "lng": -75.539947,
@@ -361,7 +399,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-aruba-jeep-driver.jpg",
-    "caption": "Arubajeeprent.com on the door, dust on the fender. This is the island the resorts don\u2019t show.",
+    "caption": "Arubajeeprent.com on the door, dust on the fender. This is the island the resorts don’t show.",
     "place": "virgin",
     "lat": 12.510492,
     "lng": -69.943572,
@@ -521,7 +559,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-wandering-rooster-truck.jpg",
-    "caption": "The Wandering Rooster Citro\u00ebn on turf. Smash burgers, Cuban mix, conch fritters \u2014 and a live rooster.",
+    "caption": "The Wandering Rooster Citroën on turf. Smash burgers, Cuban mix, conch fritters — and a live rooster.",
     "place": "florida",
     "lat": 24.559764,
     "lng": -81.804292,
@@ -541,7 +579,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-key-west-cuban-flatbread.jpg",
-    "caption": "Cuban flatbread on Duval \u2014 ham, pork, pickles, mustard drizzle. Lunch that made sense.",
+    "caption": "Cuban flatbread on Duval — ham, pork, pickles, mustard drizzle. Lunch that made sense.",
     "place": "florida",
     "lat": 24.555703,
     "lng": -81.802728,
@@ -561,7 +599,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-key-west-hard-rock-gingerbread.jpg",
-    "caption": "Looking up at the Hard Rock\u2019s gingerbread. The sign is almost secondary.",
+    "caption": "Looking up at the Hard Rock’s gingerbread. The sign is almost secondary.",
     "place": "florida",
     "lat": 24.557694,
     "lng": -81.804061,
@@ -681,7 +719,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-calle-8-salao-mural.jpg",
-    "caption": "Welcome to Calle 8, mural edition. Sala\u2019O on the wall, Little Havana in neon paint.",
+    "caption": "Welcome to Calle 8, mural edition. Sala’O on the wall, Little Havana in neon paint.",
     "place": "florida",
     "lat": 25.765561,
     "lng": -80.221244,
@@ -701,7 +739,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-la-colada-moka-pot.jpg",
-    "caption": "Man-sized moka pot and Celia Cruz on the orange wall. La Colada\u2019s idea of d\u00e9cor.",
+    "caption": "Man-sized moka pot and Celia Cruz on the orange wall. La Colada’s idea of décor.",
     "place": "florida",
     "lat": 25.765594,
     "lng": -80.220008,
@@ -751,7 +789,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-olds-havana-band.jpg",
-    "caption": "Live band at Old\u2019s Havana. Fedora, guitar, Coca-Cola lamps, Bacardi on the wall.",
+    "caption": "Live band at Old’s Havana. Fedora, guitar, Coca-Cola lamps, Bacardi on the wall.",
     "place": "florida",
     "lat": 25.765617,
     "lng": -80.219253,
@@ -761,7 +799,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-olds-havana-palomilla.jpg",
-    "caption": "Palomilla, moros, maduros. Old\u2019s Havana does the Cuban plate the way you want it.",
+    "caption": "Palomilla, moros, maduros. Old’s Havana does the Cuban plate the way you want it.",
     "place": "florida",
     "lat": 25.765617,
     "lng": -80.219283,
@@ -771,7 +809,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-olds-havana-mojitos.jpg",
-    "caption": "Two mojitos at Old\u2019s Havana, cane garnish, mint lined up for the next round.",
+    "caption": "Two mojitos at Old’s Havana, cane garnish, mint lined up for the next round.",
     "place": "florida",
     "lat": 25.765628,
     "lng": -80.219247,
@@ -781,7 +819,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-calle-ocho-tile-mural.jpg",
-    "caption": "Calle Ocho tile mural \u2014 guitar, maracas, flags in the letters. Bello \u201918.",
+    "caption": "Calle Ocho tile mural — guitar, maracas, flags in the letters. Bello ’18.",
     "place": "florida",
     "lat": 25.765642,
     "lng": -80.218719,
@@ -821,7 +859,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-ferre-park-royal-palms.jpg",
-    "caption": "Royal palms in a grid at Maurice A. Ferr\u00e9 Park. Sign in the corner, sky doing the rest.",
+    "caption": "Royal palms in a grid at Maurice A. Ferré Park. Sign in the corner, sky doing the rest.",
     "place": "florida",
     "lat": 25.784364,
     "lng": -80.189239,
@@ -831,7 +869,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-miami-one-thousand-museum.jpg",
-    "caption": "Zaha Hadid\u2019s One Thousand Museum from the street. The exoskeleton is the whole point.",
+    "caption": "Zaha Hadid’s One Thousand Museum from the street. The exoskeleton is the whole point.",
     "place": "florida",
     "lat": 25.783158,
     "lng": -80.189269,
@@ -861,7 +899,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-ferre-park-wave-sculpture.jpg",
-    "caption": "Wave sculpture at Maurice A. Ferr\u00e9 Park \u2014 dolphin, turtle, manatee in one foam curl.",
+    "caption": "Wave sculpture at Maurice A. Ferré Park — dolphin, turtle, manatee in one foam curl.",
     "place": "florida",
     "lat": 25.773622,
     "lng": -80.185578,
@@ -921,7 +959,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/florida-crazy-about-you-table.jpg",
-    "caption": "The whole table at Crazy About You \u2014 ribs, fish, wine. Paper liner spells it out.",
+    "caption": "The whole table at Crazy About You — ribs, fish, wine. Paper liner spells it out.",
     "place": "florida",
     "lat": 25.761889,
     "lng": -80.188889,
@@ -976,6 +1014,56 @@
     "lat": 25.761708,
     "lng": -80.188811,
     "added": "2026-02-26T21:11:53",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/travel-den-shake-shack.jpg",
+    "caption": "Shake Shack at DEN. Two burgers, crinkle fries, layover doing what layovers do.",
+    "place": "travel",
+    "lat": 39.858619,
+    "lng": -104.673767,
+    "added": "2026-02-26T12:38:29",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/travel-bur-united-boarding.jpg",
+    "caption": "United on the tarmac at Hollywood Burbank, stairs in the sun. BUR to DEN the old-fashioned way — walk outside and climb.",
+    "place": "travel",
+    "lat": 34.195689,
+    "lng": -118.354636,
+    "added": "2026-02-26T08:32:07",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/travel-bur-guy-fieri-burrito.jpg",
+    "caption": "Guy Fieri’s Kitchen + Bar Express at BUR. Breakfast burrito and beer in plastic — first flight asked for it.",
+    "place": "travel",
+    "lat": 34.195983,
+    "lng": -118.354439,
+    "added": "2026-02-26T07:35:51",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/travel-simi-valley-platform.jpg",
+    "caption": "Simi Valley station at first light. Green shelters, yellow edge, tracks bending out toward the rest of the day.",
+    "place": "travel",
+    "lat": 34.270247,
+    "lng": -118.695358,
+    "added": "2026-02-26T06:22:09",
+    "date": "2026-02-26",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/travel-simi-valley-surfliner-selfie.jpg",
+    "caption": "Simi Valley platform, Pacific Surfliner timetable as the alibi. First move of the long way to Miami.",
+    "place": "travel",
+    "lat": 34.270247,
+    "lng": -118.695342,
+    "added": "2026-02-26T06:14:44",
     "date": "2026-02-26",
     "new": true
   }
