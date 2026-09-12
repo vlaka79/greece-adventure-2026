@@ -1736,5 +1736,95 @@
     "added": "2026-03-06T21:42:16",
     "date": "2026-03-06",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-dock-mezze-skewers.jpg",
+    "caption": "Shrimp, chicken, kofta, and mushroom skewers with two amber cocktails. Embark afternoon at The Dock.",
+    "place": "virgin",
+    "lat": 25.7885027777778,
+    "lng": -80.1798027777778,
+    "added": "2026-03-01T16:56:12",
+    "date": "2026-03-01",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-social-club-octopus-craft.jpg",
+    "caption": "Two glitter octopus bag charms from Social Club — googly eyes, rhinestones, carabiners. Ship craft hour.",
+    "place": "virgin",
+    "lat": 22.155675,
+    "lng": -77.477478,
+    "added": "2026-03-02T10:49:33",
+    "date": "2026-03-02",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-wake-breakfast-salmon-eggs.jpg",
+    "caption": "Smoked salmon, avocado, fried eggs, tomato, onion, capers. The Wake breakfast before Aruba.",
+    "place": "virgin",
+    "lat": 12.519236,
+    "lng": -70.042442,
+    "added": "2026-03-04T07:46:46",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-galley-whoopie-pies.jpg",
+    "caption": "Three red velvet whoopie pies with pastel sprinkles. Galley snack that needed no further argument.",
+    "place": "virgin",
+    "lat": 12.519236,
+    "lng": -70.042442,
+    "added": "2026-03-04T19:51:27",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-wake-breakfast-benedict.jpg",
+    "caption": "Eggs Benedict under hollandaise and shaved cheese. The Wake, sea-day morning.",
+    "place": "virgin",
+    "lat": 12.7171611111111,
+    "lng": -72.2645722222222,
+    "added": "2026-03-05T08:44:51",
+    "date": "2026-03-05",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-rojo-n5-starters.jpg",
+    "caption": "Jamón with almonds, patatas bravas, orange dip and crostini, gazpacho, grilled octopus, hot cheese bake. Rojo Night 5.",
+    "place": "virgin",
+    "lat": 12.0,
+    "lng": -73.5,
+    "added": "2026-03-05T20:30:40",
+    "date": "2026-03-05",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-rojo-n5-desserts.jpg",
+    "caption": "Basque burnt cheesecake with raspberries, then chocolate with gold leaf and toasted meringue. Rojo Night 5 desserts.",
+    "place": "virgin",
+    "lat": 12.0,
+    "lng": -73.5,
+    "added": "2026-03-05T21:29:15",
+    "date": "2026-03-05",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-wake-breakfast-steak-egg-tacos.jpg",
+    "caption": "Steak and corn tacos topped with poached eggs and hollandaise. The Wake breakfast in Cartagena.",
+    "place": "virgin",
+    "lat": 10.4052055555556,
+    "lng": -75.532075,
+    "added": "2026-03-07T09:36:04",
+    "date": "2026-03-07",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-pink-agave-crudo.jpg",
+    "caption": "Raw fish with radish, cucumber, microgreens, and citrus — rainbow fork on the side. Pink Agave afternoon bite.",
+    "place": "virgin",
+    "lat": 18.4245194444444,
+    "lng": -77.1559055555555,
+    "added": "2026-03-09T17:39:22",
+    "date": "2026-03-09",
+    "new": true
   }
 ]

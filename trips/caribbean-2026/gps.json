@@ -2,7 +2,7 @@
   "trip": "caribbean-2026",
   "source": "Album GPS (EXIF + Brilliant Lady / Paradise AIS interpolation for boat stills)",
   "note": "Photos array rebuilt from album.json entries with lat/lng. Includes There & back travel pins, Virgin boat stills, and Margaritaville boat stills; AIS-filled points use Brilliant Lady / Paradise tracks (or likely dashed routes).",
-  "count": 173,
+  "count": 182,
   "photos": [
     {
       "src": "/photos/trips/caribbean-2026/travel-ord-united-pizza.jpg",
@@ -1212,6 +1212,69 @@
       "src": "/photos/trips/caribbean-2026/virgin-pink-agave-n6-desserts.jpg",
       "lat": 10.4046861111111,
       "lng": -75.52665,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-dock-mezze-skewers.jpg",
+      "lat": 25.7885027777778,
+      "lng": -80.1798027777778,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-social-club-octopus-craft.jpg",
+      "lat": 22.155675,
+      "lng": -77.477478,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-wake-breakfast-salmon-eggs.jpg",
+      "lat": 12.519236,
+      "lng": -70.042442,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-galley-whoopie-pies.jpg",
+      "lat": 12.519236,
+      "lng": -70.042442,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-wake-breakfast-benedict.jpg",
+      "lat": 12.7171611111111,
+      "lng": -72.2645722222222,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-rojo-n5-starters.jpg",
+      "lat": 12.0,
+      "lng": -73.5,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-rojo-n5-desserts.jpg",
+      "lat": 12.0,
+      "lng": -73.5,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-wake-breakfast-steak-egg-tacos.jpg",
+      "lat": 10.4052055555556,
+      "lng": -75.532075,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-pink-agave-crudo.jpg",
+      "lat": 18.4245194444444,
+      "lng": -77.1559055555555,
       "place": "virgin",
       "album": "virgin"
     }
