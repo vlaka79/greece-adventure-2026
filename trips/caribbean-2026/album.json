@@ -1676,5 +1676,35 @@
     "added": "2026-03-07T21:37:16",
     "date": "2026-03-07",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-c-early.jpg",
+    "caption": "Seared bites under a black mandala tuile with amber spiral, then a charcoal tart with white cream, mushrooms, and glazed cherries. Test Kitchen Menu C.",
+    "place": "virgin",
+    "lat": 23.9376055555556,
+    "lng": -81.1434111111111,
+    "added": "2026-03-11T20:34:52",
+    "date": "2026-03-11",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-c-mains.jpg",
+    "caption": "Roasted poultry slices and a caramelized block on green puree, asparagus spears and ribbons, thin jus. Test Kitchen Menu C mains.",
+    "place": "virgin",
+    "lat": 23.9376055555556,
+    "lng": -81.1434111111111,
+    "added": "2026-03-11T21:24:54",
+    "date": "2026-03-11",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-c-desserts.jpg",
+    "caption": "Lemon-curd ring with meringue shards and zest, then chocolate soil under cream, vanilla sauce, berries, and a sugar shard. Test Kitchen Menu C desserts.",
+    "place": "virgin",
+    "lat": 23.9376055555556,
+    "lng": -81.1434111111111,
+    "added": "2026-03-11T21:47:11",
+    "date": "2026-03-11",
+    "new": true
   }
 ]
