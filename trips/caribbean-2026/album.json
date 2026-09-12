@@ -1706,5 +1706,35 @@
     "added": "2026-03-11T21:47:11",
     "date": "2026-03-11",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-pink-agave-n6-early.jpg",
+    "caption": "Yellow soup, ceviche with radish and tostadas, guac with pomegranate, esquites — then L.A. Cetto Cabernet from Valle de Guadalupe. Pink Agave.",
+    "place": "virgin",
+    "lat": 10.4046861111111,
+    "lng": -75.52665,
+    "added": "2026-03-06T20:46:05",
+    "date": "2026-03-06",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-pink-agave-n6-mains.jpg",
+    "caption": "Braised pork with pickled onion and radish, duck on yellow mash, then pork belly on mole with orange puree and chilies. Pink Agave mains.",
+    "place": "virgin",
+    "lat": 10.4046861111111,
+    "lng": -75.52665,
+    "added": "2026-03-06T21:12:09",
+    "date": "2026-03-06",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-pink-agave-n6-desserts.jpg",
+    "caption": "Chocolate cookie tacos stuffed with caramel cream, blue ramekin of dark sauce on the side. Pink Agave dessert.",
+    "place": "virgin",
+    "lat": 10.4046861111111,
+    "lng": -75.52665,
+    "added": "2026-03-06T21:42:16",
+    "date": "2026-03-06",
+    "new": true
   }
 ]
