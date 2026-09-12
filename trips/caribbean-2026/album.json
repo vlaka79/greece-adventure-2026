@@ -1486,5 +1486,35 @@
     "added": "2026-03-02T12:00:00",
     "date": "2026-03-02",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-the-wake-starters.jpg",
+    "caption": "Pull-apart rolls still steaming, then the corn bowl, then the crudo. The Wake, Night 1 starters.",
+    "place": "virgin",
+    "lat": 25.148676,
+    "lng": -79.79146,
+    "added": "2026-03-01T21:03:00",
+    "date": "2026-03-01",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-the-wake-mains.jpg",
+    "caption": "Seared steak and three lamb chops \u2014 roasted garlic, watercress, The Wake doing steakhouse right.",
+    "place": "virgin",
+    "lat": 25.086964,
+    "lng": -79.769233,
+    "added": "2026-03-01T21:26:54",
+    "date": "2026-03-01",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-the-wake-desserts.jpg",
+    "caption": "Chocolate hazelnut tart with a sail, then berries in a bronze bowl. The Wake saved dessert for last.",
+    "place": "virgin",
+    "lat": 24.935908,
+    "lng": -79.713014,
+    "added": "2026-03-01T21:48:43",
+    "date": "2026-03-01",
+    "new": true
   }
 ]
