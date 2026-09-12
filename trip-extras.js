@@ -1,4 +1,45 @@
 (function () {
+
+  function escText(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+  function logSummary(body) {
+    body = String(body || "").trim();
+    if (body.length <= 160) return { summary: body, expandable: false };
+    var cut = body.slice(0, 140);
+    var sp = cut.lastIndexOf(" ");
+    if (sp > 80) cut = cut.slice(0, sp);
+    return { summary: cut.replace(/[.,;:\s]+$/, "") + "…", expandable: true };
+  }
+  function bindLogExpand(root) {
+    (root || document).querySelectorAll("[data-log-expand]").forEach(function (btn) {
+      if (btn._logBound) return;
+      btn._logBound = true;
+      btn.addEventListener("click", function () {
+        var art = btn.closest("article");
+        if (!art) return;
+        var bodyEl = art.querySelector("[data-log-body]");
+        if (!bodyEl) return;
+        var open = art.getAttribute("data-expanded") === "1";
+        if (open) {
+          bodyEl.textContent = bodyEl.getAttribute("data-summary") || "";
+          art.setAttribute("data-expanded", "0");
+          btn.textContent = "Read more";
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          bodyEl.textContent = bodyEl.getAttribute("data-full") || "";
+          art.setAttribute("data-expanded", "1");
+          btn.textContent = "Show less";
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+  }
+
   function formatDate(iso) {
     if (!iso) return "";
     try {
@@ -18,17 +59,24 @@
         list.innerHTML = "";
         items.slice(0, 2).forEach(function (e) {
           var li = document.createElement("li");
-          li.innerHTML =
-            '<article class="rounded-xl bg-surface p-5 card-shadow">' +
+          var body = e.body || "";
+          var parts = logSummary(body);
+          var html =
+            '<article class="log-entry rounded-xl bg-surface p-5 card-shadow" data-expanded="0">' +
             '<div class="flex flex-wrap items-center gap-2">' +
-            '<time datetime="' + (e.date || "") + '" class="text-sm font-medium text-muted">' + formatDate(e.date) + "</time>" +
-            (e.tag ? '<span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">' + e.tag + "</span>" : "") +
+            '<time datetime="' + escText(e.date || "") + '" class="text-sm font-medium text-muted">' + escText(formatDate(e.date)) + "</time>" +
+            (e.tag ? '<span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">' + escText(e.tag) + "</span>" : "") +
             "</div>" +
-            '<h3 class="mt-3 font-serif text-2xl font-semibold text-fg">' + (e.title || "") + "</h3>" +
-            '<p class="mt-2 text-base leading-relaxed text-fg/90">' + (e.body || "") + "</p>" +
-            "</article>";
+            '<h3 class="mt-3 font-serif text-2xl font-semibold text-fg">' + escText(e.title || "") + "</h3>" +
+            '<p class="mt-2 text-base leading-relaxed text-fg/90" data-log-body data-summary="' + escText(parts.summary) + '" data-full="' + escText(body) + '">' + escText(parts.summary) + "</p>";
+          if (parts.expandable) {
+            html += '<button type="button" class="log-expand-btn tap-lg mt-2 min-h-11 text-sm font-semibold text-primary" data-log-expand aria-expanded="false">Read more</button>';
+          }
+          html += "</article>";
+          li.innerHTML = html;
           list.appendChild(li);
         });
+        bindLogExpand(list);
         if (items.length > 2 && !document.getElementById("log-see-all")) {
           var more = document.createElement("p");
           more.id = "log-see-all";

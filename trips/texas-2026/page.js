@@ -1,4 +1,5 @@
 (function () {
+  var TRIP_BASE = "/trips/texas-2026";
   var video = document.getElementById("intro");
   var soundBtn = document.getElementById("sound-btn");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -79,28 +80,72 @@
       .replace(/"/g, "&quot;");
   }
 
-  fetch("/trips/texas-2026/log.json", { cache: "no-store" })
+  function logSummary(body) {
+    body = String(body || "").trim();
+    if (body.length <= 160) return { summary: body, expandable: false };
+    var cut = body.slice(0, 140);
+    var sp = cut.lastIndexOf(" ");
+    if (sp > 80) cut = cut.slice(0, sp);
+    return { summary: cut.replace(/[.,;:\s]+$/, "") + "…", expandable: true };
+  }
+  function bindLogExpand(root) {
+    (root || document).querySelectorAll("[data-log-expand]").forEach(function (btn) {
+      if (btn._logBound) return;
+      btn._logBound = true;
+      btn.addEventListener("click", function () {
+        var art = btn.closest("article");
+        if (!art) return;
+        var bodyEl = art.querySelector("[data-log-body]");
+        if (!bodyEl) return;
+        var open = art.getAttribute("data-expanded") === "1";
+        if (open) {
+          bodyEl.textContent = bodyEl.getAttribute("data-summary") || "";
+          art.setAttribute("data-expanded", "0");
+          btn.textContent = "Read more";
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          bodyEl.textContent = bodyEl.getAttribute("data-full") || "";
+          art.setAttribute("data-expanded", "1");
+          btn.textContent = "Show less";
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+  }
+  function renderLogArticle(e, headingTag) {
+    headingTag = headingTag || "h3";
+    var body = e.body || "";
+    var parts = logSummary(body);
+    var html =
+      '<article class="log-entry rounded-xl bg-surface p-5 card-shadow" data-expanded="0">' +
+      '<div class="flex flex-wrap items-center gap-2">' +
+      '<time datetime="' + esc(e.date || "") + '" class="text-sm font-medium text-muted">' + esc(formatDate(e.date)) + "</time>" +
+      (e.tag ? '<span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">' + esc(e.tag) + "</span>" : "") +
+      "</div>" +
+      "<" + headingTag + ' class="mt-3 font-serif text-2xl font-semibold text-fg">' + esc(e.title || "") + "</" + headingTag + ">" +
+      '<p class="mt-2 text-base leading-relaxed text-fg/90" data-log-body data-summary="' + esc(parts.summary) + '" data-full="' + esc(body) + '">' + esc(parts.summary) + "</p>";
+    if (parts.expandable) {
+      html += '<button type="button" class="log-expand-btn tap-lg mt-2 min-h-11 text-sm font-semibold text-primary" data-log-expand aria-expanded="false">Read more</button>';
+    }
+    html += "</article>";
+    return html;
+  }
+
+    fetch(TRIP_BASE + "/log.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : []; })
     .then(function (items) {
       var list = document.getElementById("trip-log");
       if (!list) return;
       (items || []).forEach(function (e) {
         var li = document.createElement("li");
-        li.innerHTML =
-          '<article class="rounded-xl bg-surface p-5 card-shadow">' +
-          '<div class="flex flex-wrap items-center gap-2">' +
-          '<time datetime="' + esc(e.date || "") + '" class="text-sm font-medium text-muted">' + esc(formatDate(e.date)) + "</time>" +
-          (e.tag ? '<span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">' + esc(e.tag) + "</span>" : "") +
-          "</div>" +
-          '<h3 class="mt-3 font-serif text-2xl font-semibold text-fg">' + esc(e.title || "") + "</h3>" +
-          '<p class="mt-2 text-base leading-relaxed text-fg/90">' + esc(e.body || "") + "</p>" +
-          "</article>";
+        li.innerHTML = renderLogArticle(e, "h3");
         list.appendChild(li);
       });
+      bindLogExpand(list);
     })
     .catch(function () {});
 
-  fetch("/trips/texas-2026/eats.json", { cache: "no-store" })
+    fetch(TRIP_BASE + "/eats.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : []; })
     .then(function (items) {
       var list = document.getElementById("eats-list");
@@ -112,27 +157,77 @@
         return;
       }
       if (empty) empty.classList.add("hidden");
-      items.forEach(function (e) {
-        var li = document.createElement("li");
-        li.className = "overflow-hidden rounded-xl bg-surface card-shadow";
-        var html = "";
-        if (e.photo) {
-          html += '<img src="' + esc(e.photo) + '" alt="" class="aspect-video w-full object-cover" />';
+      list.innerHTML = "";
+      list.className = "mt-6";
+      var card = document.createElement("article");
+      card.id = "eats-rotator";
+      card.className = "overflow-hidden rounded-xl bg-surface card-shadow";
+      card.innerHTML =
+        '<div id="eats-rot-photo-wrap" class="hidden">' +
+        '<img id="eats-rot-photo" alt="" class="aspect-video w-full object-cover" />' +
+        "</div>" +
+        '<div class="p-5">' +
+        '<p id="eats-rot-place" class="text-xs font-semibold uppercase tracking-widest text-primary"></p>' +
+        '<h3 id="eats-rot-dish" class="mt-1 font-serif text-xl font-semibold text-fg"></h3>' +
+        '<p id="eats-rot-note" class="mt-1.5 text-base leading-relaxed text-fg/90"></p>' +
+        '<p id="eats-rot-dots" class="mt-3 flex flex-wrap gap-1.5" aria-hidden="false"></p>' +
+        "</div>";
+      list.appendChild(card);
+      if (!document.getElementById("eats-see-all")) {
+        var more = document.createElement("p");
+        more.id = "eats-see-all";
+        more.className = "mt-4";
+        more.innerHTML = '<a href="' + TRIP_BASE + '/eats.html" class="tap-lg inline-flex min-h-11 items-center text-sm font-semibold text-primary">See all eat & drink \u2192</a>';
+        list.parentNode.insertBefore(more, list.nextSibling);
+      }
+      var i = 0;
+      function show(idx) {
+        var e = items[idx];
+        if (!e) return;
+        var place = document.getElementById("eats-rot-place");
+        var dish = document.getElementById("eats-rot-dish");
+        var note = document.getElementById("eats-rot-note");
+        var photo = document.getElementById("eats-rot-photo");
+        var wrap = document.getElementById("eats-rot-photo-wrap");
+        var dots = document.getElementById("eats-rot-dots");
+        if (place) place.textContent = e.place || "Somewhere along the way";
+        if (dish) dish.textContent = e.dish || "";
+        if (note) note.textContent = e.note || "";
+        if (photo && wrap) {
+          if (e.photo) {
+            photo.src = e.photo;
+            photo.alt = e.dish || "";
+            wrap.classList.remove("hidden");
+          } else {
+            wrap.classList.add("hidden");
+          }
         }
-        html += '<div class="p-5">' +
-          '<p class="text-xs font-semibold uppercase tracking-widest text-primary">' + esc(e.place || "Somewhere along the way") + "</p>" +
-          '<h3 class="mt-1 font-serif text-2xl font-semibold text-fg">' + esc(e.dish || "") + "</h3>" +
-          (e.note ? '<p class="mt-2 text-base leading-relaxed text-fg/90">' + esc(e.note) + "</p>" : "") +
-          "</div>";
-        li.innerHTML = html;
-        list.appendChild(li);
-      });
+        if (dots) {
+          dots.innerHTML = "";
+          items.forEach(function (_, j) {
+            var d = document.createElement("button");
+            d.type = "button";
+            d.setAttribute("aria-label", "Show item " + (j + 1));
+            d.className = "size-2.5 min-h-0 rounded-full " + (j === idx ? "bg-primary" : "bg-fg/20");
+            d.addEventListener("click", function () { i = j; show(i); });
+            dots.appendChild(d);
+          });
+        }
+      }
+      show(0);
+      if (items.length > 1) {
+        setInterval(function () {
+          i = (i + 1) % items.length;
+          show(i);
+        }, 5500);
+      }
     })
     .catch(function () {});
 
+
   var notesList = document.getElementById("guestbook-list");
   if (notesList) {
-    fetch("/trips/texas-2026/notes.json", { cache: "no-store" })
+    fetch(TRIP_BASE + "/notes.json", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (items) {
         notesList.innerHTML = "";

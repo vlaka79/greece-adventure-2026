@@ -134,3 +134,20 @@
       html { scroll-behavior: auto; }
       .dot::after { animation: none; }
     }
+
+/* Adventure log expand/collapse (Greece + past trips) */
+.log-expand-btn {
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.log-expand-btn:focus-visible {
+  outline: 2px solid var(--primary, #1b6f66);
+  outline-offset: 3px;
+  border-radius: 0.35rem;
+}
+

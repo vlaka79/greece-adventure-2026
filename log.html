@@ -8,6 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
   <link rel="stylesheet" href="https://grove-amber-horizon-mist.grok.me/assets/styles-CM6tjZ7_.css" />
+  <link rel="stylesheet" href="/log-expand.css" />
   <script src="/ga.js"></script>
 </head>
 <body class="bg-bg text-fg">
@@ -41,6 +42,45 @@
         });
       } catch (e) { return iso; }
     }
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+    function logSummary(body) {
+      body = String(body || "").trim();
+      if (body.length <= 160) return { summary: body, expandable: false };
+      var cut = body.slice(0, 140);
+      var sp = cut.lastIndexOf(" ");
+      if (sp > 80) cut = cut.slice(0, sp);
+      return { summary: cut.replace(/[.,;:\s]+$/, "") + "\u2026", expandable: true };
+    }
+    function bindLogExpand(root) {
+      (root || document).querySelectorAll("[data-log-expand]").forEach(function (btn) {
+        if (btn._logBound) return;
+        btn._logBound = true;
+        btn.addEventListener("click", function () {
+          var art = btn.closest("article");
+          if (!art) return;
+          var bodyEl = art.querySelector("[data-log-body]");
+          if (!bodyEl) return;
+          var open = art.getAttribute("data-expanded") === "1";
+          if (open) {
+            bodyEl.textContent = bodyEl.getAttribute("data-summary") || "";
+            art.setAttribute("data-expanded", "0");
+            btn.textContent = "Read more";
+            btn.setAttribute("aria-expanded", "false");
+          } else {
+            bodyEl.textContent = bodyEl.getAttribute("data-full") || "";
+            art.setAttribute("data-expanded", "1");
+            btn.textContent = "Show less";
+            btn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+    }
     fetch("/log.json", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (items) {
@@ -48,17 +88,24 @@
         if (!list) return;
         (items || []).forEach(function (e) {
           var li = document.createElement("li");
-          li.innerHTML =
-            '<article class="rounded-xl bg-surface p-5 card-shadow">' +
+          var body = e.body || "";
+          var parts = logSummary(body);
+          var html =
+            '<article class="log-entry rounded-xl bg-surface p-5 card-shadow" data-expanded="0">' +
             '<div class="flex flex-wrap items-center gap-2">' +
-            '<time datetime="' + (e.date || "") + '" class="text-sm font-medium text-muted">' + formatDate(e.date) + "</time>" +
-            (e.tag ? '<span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">' + e.tag + "</span>" : "") +
+            '<time datetime="' + esc(e.date || "") + '" class="text-sm font-medium text-muted">' + esc(formatDate(e.date)) + "</time>" +
+            (e.tag ? '<span class="inline-flex min-h-7 items-center rounded-full bg-primary-soft px-2.5 text-xs font-semibold tracking-wide text-primary">' + esc(e.tag) + "</span>" : "") +
             "</div>" +
-            '<h2 class="mt-3 font-serif text-2xl font-semibold text-fg">' + (e.title || "") + "</h2>" +
-            '<p class="mt-2 text-base leading-relaxed text-fg/90">' + (e.body || "") + "</p>" +
-            "</article>";
+            '<h2 class="mt-3 font-serif text-2xl font-semibold text-fg">' + esc(e.title || "") + "</h2>" +
+            '<p class="mt-2 text-base leading-relaxed text-fg/90" data-log-body data-summary="' + esc(parts.summary) + '" data-full="' + esc(body) + '">' + esc(parts.summary) + "</p>";
+          if (parts.expandable) {
+            html += '<button type="button" class="log-expand-btn tap-lg mt-2 min-h-11 text-sm font-semibold text-primary" data-log-expand aria-expanded="false">Read more</button>';
+          }
+          html += "</article>";
+          li.innerHTML = html;
           list.appendChild(li);
         });
+        bindLogExpand(list);
       })
       .catch(function () {});
   })();
