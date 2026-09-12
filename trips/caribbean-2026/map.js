@@ -231,7 +231,8 @@
     nassau: 1,
     "cayman-snorkel": 1,
     "ocho-rios": 1,
-    "miami-big-bus": 1
+    "miami-big-bus": 1,
+    "metrolink-simi-bur": 1
   };
 
   function drawDrives(drives) {
@@ -240,11 +241,12 @@
       var coords = driveCoords(tr);
       if (coords.length < 2) return;
       var walk = tr.mode === "walk";
-      var dashed = tr.style === "dashed" || tr.mode === "bus" || tr.mode === "train" || walk;
+      var train = tr.mode === "train";
+      var dashed = tr.style === "dashed" || tr.mode === "bus" || train || walk;
       var boat = tr.mode === "boat" || tr.style === "thin";
       var car = tr.mode === "car";
-      var weight = walk ? 1.5 : boat ? 2 : dashed ? 2 : (car ? 2.6 : 2);
-      var color = walk ? "#9ec9b8" : boat ? "#7ec8ff" : car ? "#e6b84d" : "#c9a227";
+      var weight = walk ? 1.5 : boat ? 2 : train ? 3 : dashed ? 2 : (car ? 2.6 : 2);
+      var color = walk ? "#9ec9b8" : train ? "#7B5CFF" : boat ? "#7ec8ff" : car ? "#e6b84d" : "#c9a227";
       var opacity = walk ? 0.65 : dashed ? 0.8 : 0.92;
       var dashArray = walk ? "3,7" : dashed ? "7,9" : null;
       if (car && !dashed) {
@@ -438,12 +440,9 @@
     var parts = [];
     parts.push("Flown " + n(miles.flown) + " mi");
     parts.push("Driven " + n(miles.driven) + " mi");
-    if (miles.walked != null && miles.walked !== "") {
-      parts.push("Walked " + n(miles.walked) + " mi");
-    }
-    if (miles.sailed != null && miles.sailed !== "") {
-      parts.push("Sailed " + n(miles.sailed) + " mi");
-    }
+    parts.push("Railed " + n(miles.railed) + " mi");
+    parts.push("Walked " + n(miles.walked) + " mi");
+    parts.push("Sailed " + n(miles.sailed) + " mi");
     el.textContent = parts.join(" · ");
   }
 

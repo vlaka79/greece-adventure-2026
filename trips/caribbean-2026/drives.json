@@ -1,5 +1,5 @@
 {
-  "note": "Shore drives: curated photo-GPS road snaps (aruba/keys) + Polarsteps OSRM-snapped car legs (AZ\u2194CA, Miami\u2192Riviera, Palm Beach\u2192PBI). Walking clusters from Polarsteps (Simi, airports) + curated Cartagena/Nassau walks. Surfliner dashed train. Boat: Cayman snorkel only in drives; open-ocean = AIS (not Polarsteps chords). Walking clusters stripped from car lines. Open-ocean Polarsteps legs mislabeled as car removed. Not live.",
+  "note": "Shore drives: curated photo-GPS road snaps (aruba/keys) + Polarsteps OSRM-snapped car legs (AZ↔CA, Miami→Riviera, Palm Beach→PBI). Walking clusters from Polarsteps (Simi, airports) + curated Cartagena/Nassau walks. Surfliner dashed train. Boat: Cayman snorkel only in drives; open-ocean = AIS (not Polarsteps chords). Walking clusters stripped from car lines. Open-ocean Polarsteps legs mislabeled as car removed. Not live. Rail: Metrolink Simi Valley → Burbank (Feb 26 trip morning).",
   "tracks": [
     {
       "id": "aruba",
@@ -4209,7 +4209,7 @@
     },
     {
       "id": "az-ca-outbound",
-      "label": "Arizona to Simi Valley drive, Feb 19\u201320",
+      "label": "Arizona to Simi Valley drive, Feb 19–20",
       "mode": "car",
       "date": "2026-02-19",
       "points": [
@@ -5043,202 +5043,6 @@
       ]
     },
     {
-      "id": "surfliner-simi-sb",
-      "label": "Amtrak Surfliner Simi \u2194 Santa Barbara, Feb 23",
-      "mode": "train",
-      "style": "dashed",
-      "date": "2026-02-23",
-      "points": [
-        {
-          "lat": 34.27889904782253,
-          "lng": -118.76162989334921
-        },
-        {
-          "lat": 34.29255421194221,
-          "lng": -118.8276807297173
-        },
-        {
-          "lat": 34.278943211004204,
-          "lng": -118.88090030152541
-        },
-        {
-          "lat": 34.27628320359579,
-          "lng": -118.92574286147381
-        },
-        {
-          "lat": 34.26358374537362,
-          "lng": -118.98981874326962
-        },
-        {
-          "lat": 34.263736657758656,
-          "lng": -119.05385916505274
-        },
-        {
-          "lat": 34.256077697267415,
-          "lng": -119.10885206170195
-        },
-        {
-          "lat": 34.28240420246411,
-          "lng": -119.14900823291224
-        },
-        {
-          "lat": 34.269914419213514,
-          "lng": -119.22461196898263
-        },
-        {
-          "lat": 34.28286284215348,
-          "lng": -119.31718100682993
-        },
-        {
-          "lat": 34.32913768897552,
-          "lng": -119.39708981381219
-        },
-        {
-          "lat": 34.376006932701934,
-          "lng": -119.47614905629703
-        },
-        {
-          "lat": 34.41640793809885,
-          "lng": -119.56180308023694
-        },
-        {
-          "lat": 34.42294115710582,
-          "lng": -119.65501453632423
-        },
-        {
-          "lat": 34.41988623234084,
-          "lng": -119.69452398116972
-        },
-        {
-          "lat": 34.41988623234084,
-          "lng": -119.69452398116972
-        },
-        {
-          "lat": 34.419054645433924,
-          "lng": -119.69717866118495
-        },
-        {
-          "lat": 34.41934103169028,
-          "lng": -119.69740358268156
-        },
-        {
-          "lat": 34.41811015474634,
-          "lng": -119.68951316486711
-        },
-        {
-          "lat": 34.42108401540376,
-          "lng": -119.60943025503647
-        },
-        {
-          "lat": 34.39920442074496,
-          "lng": -119.51358988355754
-        },
-        {
-          "lat": 34.35580947448528,
-          "lng": -119.43341572054977
-        },
-        {
-          "lat": 34.30991580288561,
-          "lng": -119.35399389677848
-        },
-        {
-          "lat": 34.266998084171625,
-          "lng": -119.27104623587952
-        },
-        {
-          "lat": 34.249270967627105,
-          "lng": -119.2128034626649
-        },
-        {
-          "lat": 34.20465625578883,
-          "lng": -119.22107438471149
-        },
-        {
-          "lat": 34.17606069622106,
-          "lng": -119.22150331338167
-        },
-        {
-          "lat": 34.16842959476694,
-          "lng": -119.19605784880599
-        },
-        {
-          "lat": 34.16356042996563,
-          "lng": -119.19523000745438
-        },
-        {
-          "lat": 34.147398815811016,
-          "lng": -119.17911171640351
-        },
-        {
-          "lat": 34.146963905566736,
-          "lng": -119.11492361321427
-        },
-        {
-          "lat": 34.09199266382115,
-          "lng": -119.06639742063535
-        },
-        {
-          "lat": 34.066513975671505,
-          "lng": -119.00180478209582
-        },
-        {
-          "lat": 34.0798210982694,
-          "lng": -118.92107660976787
-        },
-        {
-          "lat": 34.08916748463494,
-          "lng": -118.89283368822522
-        },
-        {
-          "lat": 34.091945880264205,
-          "lng": -118.8654838986193
-        },
-        {
-          "lat": 34.11033243292532,
-          "lng": -118.8545111437208
-        },
-        {
-          "lat": 34.132719194732765,
-          "lng": -118.85313184931489
-        },
-        {
-          "lat": 34.15450648523152,
-          "lng": -118.8272721853434
-        },
-        {
-          "lat": 34.174310114910504,
-          "lng": -118.8204579420981
-        },
-        {
-          "lat": 34.21417912262144,
-          "lng": -118.82636668042028
-        },
-        {
-          "lat": 34.23324544868691,
-          "lng": -118.84022447945853
-        },
-        {
-          "lat": 34.253938087690564,
-          "lng": -118.81375564502227
-        },
-        {
-          "lat": 34.26441127762508,
-          "lng": -118.7878586363729
-        },
-        {
-          "lat": 34.26079318177423,
-          "lng": -118.75029779627654
-        },
-        {
-          "lat": 34.26986236492451,
-          "lng": -118.7248739475926
-        }
-      ],
-      "notes": [
-        "Polarsteps coastal GPS; dashed train (not road-snapped)"
-      ]
-    },
-    {
       "id": "simi-walk-1",
       "label": "Simi Valley walking, 02-21",
       "mode": "walk",
@@ -5266,7 +5070,7 @@
         }
       ],
       "notes": [
-        "Dense Polarsteps city cluster \u2192 walk",
+        "Dense Polarsteps city cluster → walk",
         "Tightened: short-hop walk filter"
       ]
     },
@@ -5330,7 +5134,7 @@
         }
       ],
       "notes": [
-        "Dense Polarsteps city cluster \u2192 walk",
+        "Dense Polarsteps city cluster → walk",
         "Tightened: short-hop walk filter"
       ]
     },
@@ -5394,7 +5198,7 @@
         }
       ],
       "notes": [
-        "Dense Polarsteps city cluster \u2192 walk",
+        "Dense Polarsteps city cluster → walk",
         "Tightened: short-hop walk filter"
       ]
     },
@@ -5494,7 +5298,7 @@
         }
       ],
       "notes": [
-        "Dense Polarsteps city cluster \u2192 walk",
+        "Dense Polarsteps city cluster → walk",
         "Tightened: short-hop walk filter"
       ]
     },
@@ -5526,7 +5330,7 @@
         }
       ],
       "notes": [
-        "Dense Polarsteps city cluster \u2192 walk",
+        "Dense Polarsteps city cluster → walk",
         "Tightened: short-hop walk filter"
       ]
     },
@@ -5570,7 +5374,7 @@
         }
       ],
       "notes": [
-        "Airport dense GPS \u2192 walk (stripped from car)",
+        "Airport dense GPS → walk (stripped from car)",
         "Tightened: short-hop walk filter"
       ]
     },
@@ -5602,7 +5406,7 @@
         }
       ],
       "notes": [
-        "Airport dense GPS \u2192 walk (stripped from car)",
+        "Airport dense GPS → walk (stripped from car)",
         "Tightened: short-hop walk filter"
       ]
     },
@@ -5662,7 +5466,7 @@
         }
       ],
       "notes": [
-        "Airport dense GPS \u2192 walk (stripped from car)",
+        "Airport dense GPS → walk (stripped from car)",
         "Tightened: short-hop walk filter"
       ]
     },
@@ -8069,6 +7873,42 @@
       ],
       "notes": [
         "Polarsteps GPS road-snapped via OSRM"
+      ]
+    },
+    {
+      "id": "metrolink-simi-bur",
+      "mode": "train",
+      "style": "dashed",
+      "label": "Metrolink Simi Valley → Burbank, Feb 26",
+      "points": [
+        {
+          "lat": 34.2704,
+          "lng": -118.6954
+        },
+        {
+          "lat": 34.252,
+          "lng": -118.598
+        },
+        {
+          "lat": 34.2528,
+          "lng": -118.5989
+        },
+        {
+          "lat": 34.2205,
+          "lng": -118.502
+        },
+        {
+          "lat": 34.1862,
+          "lng": -118.4489
+        },
+        {
+          "lat": 34.2003,
+          "lng": -118.3868
+        },
+        {
+          "lat": 34.1926,
+          "lng": -118.3534
+        }
       ]
     }
   ]
