@@ -16,13 +16,14 @@
     st.id = "photo-pin-click-style";
     st.textContent =
       ".photo-pin-icon{cursor:pointer;background:transparent;border:0;}" +
-      ".photo-pin-icon .photo-pin{pointer-events:auto;position:relative;width:48px;height:48px;}" +
-      ".photo-pin-stack{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.22);}" +
-      ".photo-pin-stack.s1{transform:translate(5px,-3px);z-index:1;}" +
-      ".photo-pin-stack.s2{transform:translate(-4px,-2px);z-index:2;}" +
-      ".photo-pin-card{position:relative;z-index:3;width:48px;height:48px;border-radius:50%;overflow:hidden;border:3px solid #fff;box-sizing:border-box;box-shadow:0 2px 10px rgba(0,0,0,.42);background:#f4eee4;}" +
+      ".photo-pin-icon .photo-pin{pointer-events:auto;position:relative;width:48px;height:56px;}" +
+      ".photo-pin-stack{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:8px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.22);}" +
+      ".photo-pin-stack.s1{transform:translate(4px,-4px) rotate(6deg);z-index:1;}" +
+      ".photo-pin-stack.s2{transform:translate(-3px,-3px) rotate(-5deg);z-index:2;}" +
+      ".photo-pin-card{position:relative;z-index:3;width:48px;height:48px;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.28);background:#f4eee4;}" +
       ".photo-pin-card img{width:100%;height:100%;object-fit:cover;display:block;}" +
-      ".photo-pin-count{position:absolute;right:-2px;bottom:-2px;z-index:4;min-width:1.1rem;border-radius:999px;background:#1b6f66;color:#f4eee4;font-size:10px;font-weight:700;line-height:1.2rem;text-align:center;padding:0 4px;box-shadow:0 1px 3px rgba(0,0,0,.35);}" +
+      ".photo-pin-count{position:absolute;right:3px;bottom:3px;z-index:4;min-width:1.1rem;border-radius:999px;background:#1b6f66;color:#f4eee4;font-size:10px;font-weight:700;line-height:1.2rem;text-align:center;padding:0 4px;}" +
+      ".photo-pin-tail{width:0;height:0;margin:-1px auto 0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:8px solid #fffcf6;filter:drop-shadow(0 1px 1px rgba(0,0,0,.2));}" +
       ".trip-path-pin{width:22px;height:22px;border-radius:50%;background:#1b6f66;color:#f4eee4;font:700 11px/22px 'Source Sans 3',sans-serif;text-align:center;box-shadow:0 0 0 2px #fffcf6,0 2px 6px rgba(42,36,28,.3);}" +
       ".drive-car-icon{background:transparent;border:0;}" +
       ".drive-car{width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;}" +
@@ -172,13 +173,13 @@
         '<div class="photo-pin">' + stack +
         '<div class="photo-pin-card">' +
         '<img src="' + first.src + '" alt="" />' + extra +
-        '</div></div>';
+        '</div><div class="photo-pin-tail"></div></div>';
       var marker = L.marker([g.lat, g.lng], {
         icon: L.divIcon({
           className: "photo-pin-icon",
           html: html,
-          iconSize: [52, 52],
-          iconAnchor: [26, 26]
+          iconSize: [56, 66],
+          iconAnchor: [28, 66]
         }),
         zIndexOffset: 900 + i,
         riseOnHover: true,
@@ -226,9 +227,9 @@
       var walk = tr.mode === "walk";
       var dashed = tr.style === "dashed" || tr.mode === "bus" || tr.mode === "train" || walk;
       var boat = tr.mode === "boat" || tr.style === "thin";
-      var weight = walk ? 2 : boat ? 2 : dashed ? 2.5 : (tr.mode === "car" ? 4 : 3);
+      var weight = walk ? 1.5 : boat ? 2 : dashed ? 2 : (tr.mode === "car" ? 2.25 : 2);
       var color = walk ? "#b7d8d3" : "#e8f4f2";
-      var opacity = walk ? 0.75 : dashed ? 0.8 : 0.95;
+      var opacity = walk ? 0.7 : dashed ? 0.75 : 0.9;
       var dashArray = walk ? "3,7" : dashed ? "7,9" : null;
       if (!dashed && !boat && !walk) {
         L.polyline(coords, {
@@ -284,6 +285,88 @@
     esri.addTo(map);
   }
 
+  var FRAME = [[9.5, -82.5], [27.5, -69.5]];
+  var TEAL = "#1b6f66";
+  var OCEAN_GAP_MS = 12 * 60 * 60 * 1000;
+
+  function frameCaribbean() {
+    if (!tripMap) return;
+    tripMap.fitBounds(FRAME, { padding: [24, 24], animate: false });
+  }
+
+  function llOf(p) {
+    if (!p || p.lat == null || p.lng == null) return null;
+    var lat = Number(p.lat);
+    var lng = Number(p.lng);
+    if (isNaN(lat) || isNaN(lng)) return null;
+    return [lat, lng];
+  }
+
+  function splitAisRuns(pts, gapMs) {
+    var runs = [];
+    var cur = [];
+    var prevT = null;
+    (pts || []).forEach(function (p) {
+      var ll = llOf(p);
+      if (!ll) return;
+      var t = Date.parse(p.t || "") || 0;
+      if (cur.length && prevT && t - prevT > gapMs) {
+        runs.push(cur);
+        cur = [];
+      }
+      cur.push(ll);
+      prevT = t;
+    });
+    if (cur.length) runs.push(cur);
+    return runs;
+  }
+
+  function drawStyledLine(coords, style, popup) {
+    if (!coords || coords.length < 2) return;
+    var line = L.polyline(coords, style).addTo(tripMap);
+    if (popup) line.bindPopup(popup);
+  }
+
+  function likelyForShip(track, likelyList) {
+    var id = track && track.id ? String(track.id) : "";
+    return (likelyList || []).filter(function (tr) {
+      if (!tr) return false;
+      if (tr.id && id && String(tr.id).indexOf(id) === 0) return true;
+      return false;
+    });
+  }
+
+  function drawShipVoyages(ais) {
+    (ais.tracks || []).forEach(function (tr) {
+      var color = tr.color || TEAL;
+      var label = tr.label || "Voyage";
+      var solid = {
+        color: color,
+        weight: 4,
+        opacity: 0.95,
+        lineJoin: "round",
+        lineCap: "round"
+      };
+      var dashed = {
+        color: color,
+        weight: 4,
+        opacity: 0.78,
+        dashArray: "10,8",
+        lineJoin: "round",
+        lineCap: "round"
+      };
+      var runs = splitAisRuns(tr.points || [], OCEAN_GAP_MS);
+      runs.forEach(function (coords) {
+        drawStyledLine(coords, solid, label);
+      });
+      likelyForShip(tr, ais.likely || []).forEach(function (gap) {
+        var coords = (gap.points || []).map(llOf).filter(Boolean);
+        if (coords.length < 2) return;
+        drawStyledLine(coords, dashed, gap.label || (label + " \u2014 likely"));
+      });
+    });
+  }
+
   function fillTravelMiles(miles) {
     var el = document.getElementById("travel-miles");
     if (!el || !miles) return;
@@ -309,6 +392,7 @@
     tripMap = L.map(el, { scrollWheelZoom: true, zoomControl: true, preferCanvas: true });
     addBaseTiles(tripMap);
     photoLayer = L.layerGroup().addTo(tripMap);
+    frameCaribbean();
 
     Promise.all([
       fetch(PATH_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
@@ -323,62 +407,13 @@
       var drives = quad[3] || {};
       var miles = quad[4] || {};
       try { fillTravelMiles(miles); } catch (err) { console.warn(err); }
-      var bounds = [];
-      var GAP_MS = 4 * 60 * 60 * 1000;
-      (ais.tracks || []).forEach(function (tr) {
-        var pts = tr.points || [];
-        var segs = [];
-        var cur = [];
-        var prevT = null;
-        pts.forEach(function (p) {
-          if (p.lat == null || p.lng == null) return;
-          var t = Date.parse(p.t || "") || 0;
-          if (cur.length && prevT && t - prevT > GAP_MS) {
-            segs.push(cur);
-            cur = [];
-          }
-          cur.push([p.lat, p.lng]);
-          bounds.push([p.lat, p.lng]);
-          prevT = t;
-        });
-        if (cur.length) segs.push(cur);
-        segs.forEach(function (coords) {
-          if (coords.length < 2) {
-            if (coords.length === 1) {
-              L.circleMarker(coords[0], {
-                radius: 4,
-                color: tr.color || "#1b6f66",
-                weight: 2,
-                fillOpacity: 0.85
-              }).addTo(tripMap).bindPopup(tr.label || "AIS");
-            }
-            return;
-          }
-          L.polyline(coords, {
-            color: tr.color || "#1b6f66",
-            weight: 4,
-            opacity: 0.9
-          }).addTo(tripMap).bindPopup(tr.label || "AIS");
-        });
-      });
-      (ais.likely || []).forEach(function (tr) {
-        var coords = (tr.points || []).map(function (p) { return [p.lat, p.lng]; }).filter(function (c) { return c[0] != null && c[1] != null; });
-        coords.forEach(function (c) { bounds.push(c); });
-        if (coords.length < 2) return;
-        L.polyline(coords, {
-          color: tr.color || "#1b6f66",
-          weight: 3,
-          opacity: 0.7,
-          dashArray: "10,8"
-        }).addTo(tripMap).bindPopup(tr.label || "Likely route");
-      });
+      try { drawShipVoyages(ais); } catch (err) { console.warn(err); }
       try { drawDrives(drives); } catch (err) { console.warn(err); }
       var line = path.line || [];
       var seen = {};
       var n = 0;
       line.forEach(function (p) {
         if (p.lat == null || p.lng == null) return;
-        bounds.push([p.lat, p.lng]);
         var key = p.name + "|" + p.lat + "|" + p.lng;
         if (seen[key]) return;
         seen[key] = true;
@@ -393,25 +428,14 @@
           zIndexOffset: 120
         }).addTo(tripMap).bindPopup(p.name || "");
       });
-      photoItems.forEach(function (item) {
-        if (item.lat == null || item.lng == null) return;
-        var lat = Number(item.lat);
-        var lng = Number(item.lng);
-        if (!inPhotoBounds(lat, lng)) return;
-        bounds.push([lat, lng]);
-      });
       renderPhotoPins();
       tripMap.on("zoomend", renderPhotoPins);
-      if (bounds.length) {
-        tripMap.fitBounds(bounds, { padding: [28, 28], animate: false, maxZoom: 7 });
-      } else {
-        tripMap.setView([23.5, -78.5], 5);
-      }
-      setTimeout(function () { if (tripMap) tripMap.invalidateSize(); }, 200);
-      setTimeout(function () { if (tripMap) tripMap.invalidateSize(); }, 800);
+      frameCaribbean();
+      setTimeout(function () { if (tripMap) { tripMap.invalidateSize(); frameCaribbean(); } }, 200);
+      setTimeout(function () { if (tripMap) { tripMap.invalidateSize(); frameCaribbean(); } }, 800);
     }).catch(function (err) {
       console.warn(err);
-      if (tripMap) tripMap.setView([23.5, -78.5], 5);
+      if (tripMap) frameCaribbean();
     });
   }
 
