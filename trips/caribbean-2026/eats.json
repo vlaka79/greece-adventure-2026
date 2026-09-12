@@ -31,7 +31,7 @@
   },
   {
     "place": "La Colada Gourmet, Little Havana",
-    "dish": "Espresso and café con crema",
+    "dish": "Espresso and caf\u00e9 con crema",
     "note": "Calle Ocho coffee. Fresh roast, serious foam.",
     "photo": "/photos/trips/caribbean-2026/florida-la-colada-coffee.jpg"
   },
@@ -72,7 +72,7 @@
     "photo": "/photos/trips/caribbean-2026/virgin-cartagena-la-cevicheria-plate.jpg"
   },
   {
-    "place": "Café San Alberto, Cartagena",
+    "place": "Caf\u00e9 San Alberto, Cartagena",
     "dish": "Siphon coffee",
     "note": "Centro. They brew it like a lab, which is the point.",
     "photo": "/photos/trips/caribbean-2026/virgin-cartagena-san-alberto-siphon.jpg"
@@ -84,7 +84,7 @@
     "photo": "/photos/trips/caribbean-2026/florida-west-palm-hot-pie-pizza-wings.jpg"
   },
   {
-    "place": "John Watling’s Distillery, Nassau",
+    "place": "John Watling\u2019s Distillery, Nassau",
     "dish": "Tacos",
     "note": "Plantains in the tortilla, lime soda, patio mesh table.",
     "photo": "/photos/trips/caribbean-2026/nassau-watlings-tacos.jpg"
@@ -98,5 +98,11 @@
     "place": "Pink Agave, Brilliant Lady",
     "dish": "Pink Agave",
     "note": "The other one we kept talking about after the cruise. Boat photos still coming."
+  },
+  {
+    "place": "The Pizza Place, Brilliant Lady",
+    "dish": "egg / pepperoni / basil pies",
+    "note": "Quick-dining oven on Deck 7. Egg with cracked pepper, pepperoni with roasted garlic, another egg with basil \u2014 worth the late-night reputation.",
+    "photo": "/photos/trips/caribbean-2026/virgin-brilliant-lady-ship-pizza-trio.jpg"
   }
 ]
