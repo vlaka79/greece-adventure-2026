@@ -1616,5 +1616,35 @@
     "added": "2026-03-06T14:06:15",
     "date": "2026-03-06",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-gunbae-banchan.jpg",
+    "caption": "Banchan tray by the grill — kimchi, lotus root, namul, and the rest. Gunbae, Night 4.",
+    "place": "virgin",
+    "lat": 12.520103,
+    "lng": -70.041786,
+    "added": "2026-03-04T20:32:12",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-gunbae-grill.jpg",
+    "caption": "Seafood on the circular grill, then beef and lettuce wraps, then the plated catch. Gunbae Korean BBQ, Night 4.",
+    "place": "virgin",
+    "lat": 12.519833,
+    "lng": -70.041442,
+    "added": "2026-03-04T21:26:24",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-gunbae-desserts.jpg",
+    "caption": "Charcoal soft-serve with toppings, then sugar-dusted pastries and raspberries. Gunbae desserts to close Night 4.",
+    "place": "virgin",
+    "lat": 12.518747,
+    "lng": -70.039994,
+    "added": "2026-03-04T21:52:27",
+    "date": "2026-03-04",
+    "new": true
   }
 ]

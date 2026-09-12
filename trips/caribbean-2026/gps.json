@@ -2,7 +2,7 @@
   "trip": "caribbean-2026",
   "source": "Album GPS (EXIF + Brilliant Lady / Paradise AIS interpolation for boat stills)",
   "note": "Photos array rebuilt from album.json entries with lat/lng. Includes There & back travel pins, Virgin boat stills, and Margaritaville boat stills; AIS-filled points use Brilliant Lady / Paradise tracks (or likely dashed routes).",
-  "count": 161,
+  "count": 164,
   "photos": [
     {
       "src": "/photos/trips/caribbean-2026/travel-ord-united-pizza.jpg",
@@ -1128,6 +1128,27 @@
       "src": "/photos/trips/caribbean-2026/virgin-cartagena-julia-mermaid.jpg",
       "lat": 10.428092,
       "lng": -75.548233,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-gunbae-banchan.jpg",
+      "lat": 12.520103,
+      "lng": -70.041786,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-gunbae-grill.jpg",
+      "lat": 12.519833,
+      "lng": -70.041442,
+      "place": "virgin",
+      "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/virgin-gunbae-desserts.jpg",
+      "lat": 12.518747,
+      "lng": -70.039994,
       "place": "virgin",
       "album": "virgin"
     }
