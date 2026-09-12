@@ -1646,5 +1646,35 @@
     "added": "2026-03-04T21:52:27",
     "date": "2026-03-04",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-b-early.jpg",
+    "caption": "Corn-kernel butter sticks on parchment, plated corn mousse with popcorn and herbs, neon-green puree under a bubbly tuile, then salmon with pickle ribbons and dill. Test Kitchen Menu B.",
+    "place": "virgin",
+    "lat": 10.883275,
+    "lng": -75.73655,
+    "added": "2026-03-07T20:04:13",
+    "date": "2026-03-07",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-b-mains.jpg",
+    "caption": "Shrimp and cherry tomatoes over wide pasta in amber broth, beet cylinders under pink foam on green sauce, then bone-in braised meat with pavé and jus. Test Kitchen Menu B mains.",
+    "place": "virgin",
+    "lat": 10.883275,
+    "lng": -75.73655,
+    "added": "2026-03-07T20:59:15",
+    "date": "2026-03-07",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-b-desserts.jpg",
+    "caption": "Yellow mango gel with white mousse and crumble, then strawberries with cream, red coulis, and fruit powder. Test Kitchen Menu B desserts.",
+    "place": "virgin",
+    "lat": 10.883275,
+    "lng": -75.73655,
+    "added": "2026-03-07T21:37:16",
+    "date": "2026-03-07",
+    "new": true
   }
 ]
