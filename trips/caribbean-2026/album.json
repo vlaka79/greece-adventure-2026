@@ -1366,5 +1366,75 @@
     "added": "2026-09-12T14:04:42",
     "date": "2026-03-09",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/margaritaville-boarding-jetbridge-selfie.jpg",
+    "caption": "Margaritaville on the hull, turtle lanyards on. Palm Beach boarding bridge.",
+    "place": "margaritaville",
+    "lat": 26.770333,
+    "lng": -80.052139,
+    "added": "2026-03-13T11:46:30",
+    "date": "2026-03-13",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/margaritaville-flipflop-lifebuoy.jpg",
+    "caption": "The mandatory giant flip-flop. Margaritaville at Sea, before we even sailed.",
+    "place": "margaritaville",
+    "lat": 26.770919,
+    "lng": -80.052125,
+    "added": "2026-03-13T11:46:46",
+    "date": "2026-03-13",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/margaritaville-cabin-nothin-but-a-breeze.jpg",
+    "caption": "Nothin' But a Breeze over the porthole. Cabin unlocked.",
+    "place": "margaritaville",
+    "lat": 26.772506,
+    "lng": -80.049522,
+    "added": "2026-03-13T13:45:26",
+    "date": "2026-03-13",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/margaritaville-at-sea-cups.jpg",
+    "caption": "Two cold cups, Margaritaville stamped on both. Ship-brand hydration.",
+    "place": "margaritaville",
+    "lat": 26.743707,
+    "lng": -79.938974,
+    "added": "2026-03-13T16:55:46",
+    "date": "2026-03-13",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/margaritaville-porthole-julia.jpg",
+    "caption": "Porthole seat, floral dress, Nothin' But a Breeze. Best chair on the ship.",
+    "place": "margaritaville",
+    "lat": 26.521372,
+    "lng": -79.754097,
+    "added": "2026-03-13T18:58:50",
+    "date": "2026-03-13",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/margaritaville-deck-sunset-kiss.jpg",
+    "caption": "Cheek kiss on deck under a stacked sky. Margaritaville evening.",
+    "place": "margaritaville",
+    "lat": 25.946592,
+    "lng": -77.968169,
+    "added": "2026-03-14T19:21:34",
+    "date": "2026-03-14",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/margaritaville-porthole-rescue-tug.jpg",
+    "caption": "RESCUE tug through the porthole. Palm Beach homecoming.",
+    "place": "margaritaville",
+    "lat": 26.769311,
+    "lng": -80.047661,
+    "added": "2026-03-16T07:33:03",
+    "date": "2026-03-16",
+    "new": true
   }
 ]

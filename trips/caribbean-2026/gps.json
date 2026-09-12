@@ -1,8 +1,8 @@
 {
   "trip": "caribbean-2026",
-  "source": "Album GPS (EXIF + Brilliant Lady AIS/likely interpolation for boat stills)",
-  "note": "Photos array rebuilt from album.json entries with lat/lng. Includes There & back travel pins and Virgin boat stills; AIS-filled points use Brilliant Lady track / likely dashed route.",
-  "count": 136,
+  "source": "Album GPS (EXIF + Brilliant Lady / Paradise AIS interpolation for boat stills)",
+  "note": "Photos array rebuilt from album.json entries with lat/lng. Includes There & back travel pins, Virgin boat stills, and Margaritaville boat stills; AIS-filled points use Brilliant Lady / Paradise tracks (or likely dashed routes).",
+  "count": 143,
   "photos": [
     {
       "src": "/photos/trips/caribbean-2026/travel-ord-united-pizza.jpg",
@@ -31,7 +31,7 @@
       "lat": 25.07105,
       "lng": -77.389764,
       "datetime": "2026:03:15 14:01:48",
-      "place": "West Bay Street / Cable Beach, Nassau",
+      "place": "margaritaville",
       "album": "margaritaville",
       "at_sea": false,
       "drive_id": "1zEtEZ4FRxl5hgzWUkFZtji34HCrJcV1V"
@@ -42,7 +42,7 @@
       "lat": 25.074686,
       "lng": -77.349144,
       "datetime": "2026:03:15 12:34:58",
-      "place": "John Watling's Distillery, Nassau",
+      "place": "margaritaville",
       "album": "margaritaville",
       "at_sea": false,
       "drive_id": "11qxd-SnGWQ9RhVwubqovPDp514h_DxxG"
@@ -53,7 +53,7 @@
       "lat": 25.075286,
       "lng": -77.350394,
       "datetime": "2026:03:15 12:14:22",
-      "place": "Nassau (Western Cemetery / Heritage Village area)",
+      "place": "margaritaville",
       "album": "margaritaville",
       "at_sea": false,
       "drive_id": "16yHWtpCxNE76HszI2A7hWk-m3Ymp-HGm"
@@ -64,7 +64,7 @@
       "lat": 25.073672,
       "lng": -77.337647,
       "datetime": "2026:03:15 10:49:59",
-      "place": "Queen's Staircase, Nassau",
+      "place": "margaritaville",
       "album": "margaritaville",
       "at_sea": false,
       "drive_id": "13VfogdPhO9Z0l_Gtxau3_CARU4tEs-RK"
@@ -75,7 +75,7 @@
       "lat": 25.077019,
       "lng": -77.333197,
       "datetime": "2026:03:15 10:25:27",
-      "place": "Bahamas Rum Cake Factory, Nassau",
+      "place": "margaritaville",
       "album": "margaritaville",
       "at_sea": false,
       "drive_id": "1fiGLYeoCh84wIzJsPy2-HwXXAvAj-sfl"
@@ -86,7 +86,7 @@
       "lat": 19.295047,
       "lng": -81.383264,
       "datetime": "2026:03:10 13:39:19",
-      "place": "Port Authority / George Town, Grand Cayman",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1Kb11L4wgb855PlxeSTooD-K2lRcPbMKg"
@@ -97,7 +97,7 @@
       "lat": 19.321342,
       "lng": -81.376817,
       "datetime": "2026:03:10 12:56:23",
-      "place": "Cayman Boat Adventures, Grand Cayman",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "10moaCWembaeP8RPIidTafa-emZpjmY1z"
@@ -108,7 +108,7 @@
       "lat": 19.320222,
       "lng": -81.376336,
       "datetime": "2026:03:10 09:54:24",
-      "place": "George Town / The Rock, Grand Cayman",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "18qxd9-2jhcSqmOeDqSbnsC0f2q2Eb7RP"
@@ -119,7 +119,7 @@
       "lat": 19.295317,
       "lng": -81.390306,
       "datetime": "2026:03:10 09:17:54",
-      "place": "George Town anchorage, Grand Cayman",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": true,
       "drive_id": "1RHiBM0bkXaTldKPyZWxp3JtCBF8Mn7Pn"
@@ -130,7 +130,7 @@
       "lat": 19.295953,
       "lng": -81.393433,
       "datetime": "2026:03:10 09:16:21",
-      "place": "George Town anchorage, Grand Cayman",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": true,
       "drive_id": "1uBkbqUe9wZVvMbECK0nfkMgWWqJp3jQa"
@@ -141,7 +141,7 @@
       "lat": 19.297842,
       "lng": -81.383142,
       "datetime": "2026:03:10 09:01:56",
-      "place": "George Town harbor, Grand Cayman",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1pyUIdLk1hSgoI9ED4MkOZauLEAEU88Z7"
@@ -152,7 +152,7 @@
       "lat": 18.409392,
       "lng": -77.110581,
       "datetime": "2026:03:09 16:05:02",
-      "place": "Ocho Rios Cruise Ship Terminal",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "17FL729YAXVhygzWm3UjyHuly-6PuYLe_"
@@ -163,7 +163,7 @@
       "lat": 18.481078,
       "lng": -77.479844,
       "datetime": "2026:03:09 14:41:13",
-      "place": "Bamboo Beach Club / Ocho Rios",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1-xWSKDx4B9UrrrqgdFwfERjd7vR62KOJ"
@@ -174,7 +174,7 @@
       "lat": 18.481133,
       "lng": -77.47995,
       "datetime": "2026:03:09 14:37:03",
-      "place": "Bamboo Beach Club",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1a2nSgohhh0aSMdBLEPle_VELgLU61arU"
@@ -185,7 +185,7 @@
       "lat": 18.481644,
       "lng": -77.479753,
       "datetime": "2026:03:09 14:36:26",
-      "place": "Bamboo Beach Club, Trelawny / Ocho Rios",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "10LA6CY3mAxmAvET84reo_c9gDRobpKIr"
@@ -196,7 +196,7 @@
       "lat": 18.451753,
       "lng": -77.453183,
       "datetime": "2026:03:09 12:42:03",
-      "place": "White River, Ocho Rios",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1fNmEVHhd5ZnJZZ8MdhyaxPpoSTi8_3Ns"
@@ -207,7 +207,7 @@
       "lat": 18.451747,
       "lng": -77.453283,
       "datetime": "2026:03:09 12:39:30",
-      "place": "White River, Ocho Rios",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false
     },
@@ -217,7 +217,7 @@
       "lat": 18.451803,
       "lng": -77.453328,
       "datetime": "2026:03:09 12:35:15",
-      "place": "White River / Woods Town, Ocho Rios",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1dU5C9cecZFjZIJyGKL_ujqGgf1T6W_7S",
@@ -229,7 +229,7 @@
       "lat": 18.406328,
       "lng": -77.109772,
       "datetime": "2026:03:09 10:18:50",
-      "place": "Island Village / Ocho Rios, Jamaica",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1dC6inaSbDjhbRVS3Q57_nq0deKXtKbZx"
@@ -240,7 +240,7 @@
       "lat": 10.424258,
       "lng": -75.551986,
       "datetime": "2026:03:06 15:54:35",
-      "place": "Café San Alberto, Cartagena",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1hEO2cPXfZ71kyOB2iIZ_o0mLjvJO77XX"
@@ -251,7 +251,7 @@
       "lat": 10.424267,
       "lng": -75.551986,
       "datetime": "2026:03:06 15:51:48",
-      "place": "Café San Alberto, Cartagena",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "10poykvJPMJSGQ3O9eZPzaqnNw-VJi6c4"
@@ -262,7 +262,7 @@
       "lat": 10.423528,
       "lng": -75.550614,
       "datetime": "2026:03:06 15:24:21",
-      "place": "Cartagena Cathedral",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1H9XlEfIDzGpWGkx1G6_baxG6tsF8fIQu"
@@ -273,7 +273,7 @@
       "lat": 10.423517,
       "lng": -75.550628,
       "datetime": "2026:03:06 15:09:21",
-      "place": "Catedral de Santa Catalina de Alejandría, Cartagena",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1Ajwz9iLwrGXUZWy5r7s4Ga4lVWCDuRKh"
@@ -284,7 +284,7 @@
       "lat": 10.428119,
       "lng": -75.548217,
       "datetime": "2026:03:06 14:07:28",
-      "place": "La Cevicheria, Cartagena",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1jVKbwr2hofwoN70AUd_aY7lSstoYrJZ5"
@@ -295,7 +295,7 @@
       "lat": 10.424253,
       "lng": -75.552056,
       "datetime": "2026:03:06 12:57:49",
-      "place": "Calle de Santo Domingo / Centro, Cartagena",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "18aovl3A0U__BZkufuBruLZOLxNkS_BBD"
@@ -306,7 +306,7 @@
       "lat": 10.424208,
       "lng": -75.551964,
       "datetime": "2026:03:06 12:12:25",
-      "place": "Centro, Cartagena",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1a9P2I5AxKZLs25VG1b6HCQKtqB_yJ9bO"
@@ -317,7 +317,7 @@
       "lat": 10.421783,
       "lng": -75.539947,
       "datetime": "2026:03:06 10:26:23",
-      "place": "Castillo San Felipe de Barajas, Cartagena",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1jx_zO9TqGX19EaF0xYj-dbvB-cwoaRMn"
@@ -328,7 +328,7 @@
       "lat": 10.421319,
       "lng": -75.539764,
       "datetime": "2026:03:06 10:23:50",
-      "place": "Castillo San Felipe de Barajas, Cartagena",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1F64MKbff6hiyNZTnTxyxAQUqOE3JcNm-"
@@ -339,7 +339,7 @@
       "lat": 12.553744,
       "lng": -70.055442,
       "datetime": "2026:03:04 15:31:58",
-      "place": "Eagle Beach / Passions on the Beach, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1cg7oXV-m70wMLww0sRh6mWzaRpDpMErm"
@@ -350,7 +350,7 @@
       "lat": 12.553583,
       "lng": -70.055192,
       "datetime": "2026:03:04 14:58:35",
-      "place": "Passions on the Beach, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1c3ADtAGTDyIolj2zbbGN8CpnV2q2hZe1"
@@ -361,7 +361,7 @@
       "lat": 12.553578,
       "lng": -70.055161,
       "datetime": "2026:03:04 14:58:33",
-      "place": "Passions on the Beach, Oranjestad / Eagle Beach",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1bGWTRkPVsSRb1UPRWy5GNkE5FFObdL6Z"
@@ -372,7 +372,7 @@
       "lat": 12.613747,
       "lng": -70.051689,
       "datetime": "2026:03:04 14:13:09",
-      "place": "California Lighthouse, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "14Q1K4kxK_1PuSkUXCms8HVMWPFiKebq3"
@@ -383,7 +383,7 @@
       "lat": 12.613744,
       "lng": -70.051689,
       "datetime": "2026:03:04 14:11:44",
-      "place": "California Lighthouse, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1rq_6gR7Z97GrnBOQeCGjgBvQjoblBn8A"
@@ -394,7 +394,7 @@
       "lat": 12.601286,
       "lng": -70.050956,
       "datetime": "2026:03:04 14:05:20",
-      "place": "Malmok Beach, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "14_ygR5virodB4cqQokw8dFNSOSwJjIrK"
@@ -405,7 +405,7 @@
       "lat": 12.523936,
       "lng": -69.929956,
       "datetime": "2026:03:04 12:59:45",
-      "place": "Natural Pool Trail, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1UznLMmsrWhMl2jkVDlCFy4rNshBZ2czL"
@@ -416,7 +416,7 @@
       "lat": 12.523981,
       "lng": -69.9302,
       "datetime": "2026:03:04 12:56:26",
-      "place": "Natural Pool Trail, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1SfRuAmb7q0MdoioisiLp_237U9E7wfd7"
@@ -427,7 +427,7 @@
       "lat": 12.510492,
       "lng": -69.943572,
       "datetime": "2026:03:04 12:38:14",
-      "place": "Arikok / Shete, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1812X7_PhcnJ5arCK72PjHZ8X-WyKWTOn"
@@ -438,7 +438,7 @@
       "lat": 12.505728,
       "lng": -69.938903,
       "datetime": "2026:03:04 12:29:41",
-      "place": "Arikok National Park, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1SSwFy1Q13TItZjQKOYLF0EsO8ORrex2m"
@@ -449,7 +449,7 @@
       "lat": 12.497742,
       "lng": -69.907294,
       "datetime": "2026:03:04 12:07:08",
-      "place": "Boca Prins, Arikok, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "12mJcT-I4nujphKY8Ntr0OeIuBfz3BGQG"
@@ -460,7 +460,7 @@
       "lat": 12.492933,
       "lng": -69.907342,
       "datetime": "2026:03:04 11:56:50",
-      "place": "Fontein Cave, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1g8my8XANlg3iYC1s7cFNiPPBKl9fNHld"
@@ -471,7 +471,7 @@
       "lat": 12.414839,
       "lng": -69.882033,
       "datetime": "2026:03:04 10:29:32",
-      "place": "Baby Beach, San Nicolaas, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1TXAsxA50wRPqeJzMev30llbCSNxxS35Z"
@@ -482,7 +482,7 @@
       "lat": 12.435819,
       "lng": -69.911675,
       "datetime": "2026:03:04 09:55:07",
-      "place": "Marktstraat, Savaneta, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1sxaq4YWwLyXiBU5Hcpr-4rHTFabMh8kl"
@@ -493,7 +493,7 @@
       "lat": 12.452575,
       "lng": -69.955589,
       "datetime": "2026:03:04 09:39:37",
-      "place": "Savaneta, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1VVeviMiW_FEEsgo1-ZSIgA5-UNrJDFqp"
@@ -504,7 +504,7 @@
       "lat": 12.52,
       "lng": -70.041375,
       "datetime": "2026:03:04 09:15:30",
-      "place": "Oranjestad car rental, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "1iuV8lFsaHWL3Rv9ZAU_E3WfD9ecsE4gf"
@@ -515,7 +515,7 @@
       "lat": 12.519236,
       "lng": -70.042442,
       "datetime": "2026:03:04 08:32:51",
-      "place": "Oranjestad, Aruba",
+      "place": "virgin",
       "album": "virgin",
       "at_sea": false,
       "drive_id": "15WgpbSpqQ4ITvrU8_K49_BV68NPuuETx"
@@ -526,7 +526,7 @@
       "lat": 25.777803,
       "lng": -80.186578,
       "datetime": "2026:03:01 14:06:23",
-      "place": "Bayside / Biscayne Boulevard, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1xvLgwTffbVPlwX4WfhjKMSRp-0P4R3WV"
@@ -537,7 +537,7 @@
       "lat": 25.777208,
       "lng": -80.184478,
       "datetime": "2026:03:01 12:56:55",
-      "place": "Hard Rock Cafe, Bayside Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1kIAWUhADsW1cabWV65P-c8bPK8QOUxxu"
@@ -548,7 +548,7 @@
       "lat": 25.776981,
       "lng": -80.184806,
       "datetime": "2026:03:01 12:19:08",
-      "place": "Sanguich de Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1XVUlT2niHTy5VoOroMazLMXYlRdTrvb7"
@@ -559,7 +559,7 @@
       "lat": 24.55775,
       "lng": -81.8041,
       "datetime": "2026:02:28 16:03:06",
-      "place": "Hard Rock Cafe, Key West",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1laQve4oQVpPP_k1jHcWdXx14r1cAfS1k"
@@ -570,7 +570,7 @@
       "lat": 24.559136,
       "lng": -81.806831,
       "datetime": "2026:02:28 15:24:07",
-      "place": "Shipwreck Treasures Museum, Key West",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1U8dFHL8Y7hEvyO2GtDoECF6ezvDHQozG"
@@ -581,7 +581,7 @@
       "lat": 24.560342,
       "lng": -81.800919,
       "datetime": "2026:02:28 13:54:09",
-      "place": "The Red Doors 1827, Key West",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1L-OJAIUtqrN6DSJWULpxKO2zygpCzyQ2"
@@ -592,7 +592,7 @@
       "lat": 24.559797,
       "lng": -81.804322,
       "datetime": "2026:02:28 13:20:18",
-      "place": "Key West (near Ana's / Margaritaville)",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1oLkrzSPiD9ADYxv_Hjrd-htokgp94SPc"
@@ -603,7 +603,7 @@
       "lat": 24.559764,
       "lng": -81.804292,
       "datetime": "2026:02:28 13:14:36",
-      "place": "The Wandering Rooster, Key West",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "16TAVskHo0rZOvzcUJJydlMUjRAloCBJr"
@@ -614,7 +614,7 @@
       "lat": 24.555719,
       "lng": -81.802758,
       "datetime": "2026:02:28 12:38:15",
-      "place": "Margaritaville, Key West",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1b-bLuLD0bToYc0NnLSqbZmOk4EtL-GJ5"
@@ -625,7 +625,7 @@
       "lat": 24.555703,
       "lng": -81.802728,
       "datetime": "2026:02:28 12:36:47",
-      "place": "Margaritaville / Duval Street, Key West",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "16F9CI7w-BgBtRl-gZXaKjYJskdQiN0vk"
@@ -636,7 +636,7 @@
       "lat": 24.555758,
       "lng": -81.802772,
       "datetime": "2026:02:28 12:11:57",
-      "place": "Margaritaville, Key West",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "18-ag0yyOVwlwnevKQX-vIpphOkqtLUQA"
@@ -647,7 +647,7 @@
       "lat": 24.557694,
       "lng": -81.804061,
       "datetime": "2026:02:28 11:59:40",
-      "place": "Hard Rock Cafe, Key West",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1zuybmv0pOs1L3UKXvNlP74zQcczVZeCl"
@@ -658,7 +658,7 @@
       "lat": 24.557694,
       "lng": -81.804117,
       "datetime": "2026:02:28 11:52:59",
-      "place": "Hard Rock Cafe, Key West",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1OTgEC2XSZSr0H7Sd5Gdg0mVhu14Hh_IO"
@@ -669,7 +669,7 @@
       "lat": 24.559794,
       "lng": -81.783692,
       "datetime": "2026:02:28 11:33:45",
-      "place": "Key West City Marina, Garrison Bight",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1w5el9MKhRuFEOkqTpDpCy-GEMTfWZhDL"
@@ -680,7 +680,7 @@
       "lat": 24.689586,
       "lng": -81.202706,
       "datetime": "2026:02:28 10:37:23",
-      "place": "Old Seven Mile Bridge, Florida Keys",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1X2nDmnBniGhmhZQzZR4BHlb0O1PTvE5s"
@@ -691,7 +691,7 @@
       "lat": 24.706497,
       "lng": -81.127669,
       "datetime": "2026:02:28 10:31:10",
-      "place": "Overseas Highway, Marathon",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1tcrX5uEmGPjhTn_O4Nz8HSUlVhbL3Nq7"
@@ -702,7 +702,7 @@
       "lat": 24.842794,
       "lng": -80.751244,
       "datetime": "2026:02:28 09:56:39",
-      "place": "Channel 2 Bridge, Islamorada",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1SUEl_auMbuJIHHbpgUFvKSDmBoySOWA2"
@@ -713,7 +713,7 @@
       "lat": 25.109019,
       "lng": -80.426978,
       "datetime": "2026:02:28 09:01:18",
-      "place": "Key West Express, Key Largo",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1GN4RqrRFK_YdijxyAKzZddTt5wnpFQ7w"
@@ -724,7 +724,7 @@
       "lat": 25.109047,
       "lng": -80.426994,
       "datetime": "2026:02:28 08:56:08",
-      "place": "Key Largo, Florida",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1DWgc2CdYKxbN9HQnqCnWj7yXLdJFxNw6"
@@ -735,7 +735,7 @@
       "lat": 25.765969,
       "lng": -80.193306,
       "datetime": "2026:02:27 20:10:36",
-      "place": "Brickell, Miami (South Miami Ave)",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "15AmEDPykPyKQN1dBYxHV8y6opOFl8m4T"
@@ -746,7 +746,7 @@
       "lat": 25.765969,
       "lng": -80.193306,
       "datetime": "2026:02:27 20:10:31",
-      "place": "Brickell, Miami (South Miami Ave)",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1c3X0ABKNrKh2eo0MhLd_5wRc-AvYgvbI"
@@ -757,7 +757,7 @@
       "lat": 25.764958,
       "lng": -80.194039,
       "datetime": "2026:02:27 19:27:10",
-      "place": "The Shops at Mary Brickell Village, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "17u0hBqe8NRPTBBLylfgo_eg3vOX-JWm1"
@@ -768,7 +768,7 @@
       "lat": 25.764978,
       "lng": -80.194108,
       "datetime": "2026:02:27 19:15:23",
-      "place": "The Shops at Mary Brickell Village, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1boOSqTYAh8f0eA8e1yPCiFHMSy90eTK8"
@@ -779,7 +779,7 @@
       "lat": 25.765561,
       "lng": -80.221244,
       "datetime": "2026:02:27 15:26:36",
-      "place": "Calle 8 / Sala'O, Little Havana, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1JwKL_c8OB3aSUtbLa_wH2pvx-QcO2Ukd"
@@ -790,7 +790,7 @@
       "lat": 25.765592,
       "lng": -80.220489,
       "datetime": "2026:02:27 15:23:53",
-      "place": "Calle Ocho, Little Havana, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1Qp7uf3uL7YafVQQX8jIvZv3Jg622DBnK"
@@ -801,7 +801,7 @@
       "lat": 25.765594,
       "lng": -80.220008,
       "datetime": "2026:02:27 15:19:47",
-      "place": "La Colada Gourmet, Little Havana",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1ZTTjTwOL5VUSEsxz-a3o-INBhJdsmQ6v"
@@ -812,7 +812,7 @@
       "lat": 25.765581,
       "lng": -80.219994,
       "datetime": "2026:02:27 15:19:22",
-      "place": "La Colada Gourmet, Little Havana",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1F--jgPRLHZ2bOj3cXzm-soXXICWhazX3"
@@ -823,7 +823,7 @@
       "lat": 25.765553,
       "lng": -80.220039,
       "datetime": "2026:02:27 15:07:05",
-      "place": "La Colada Gourmet, Little Havana",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1yCfyA5DEZGz-Dfbq0vziqQtLcu-J6PXu"
@@ -834,7 +834,7 @@
       "lat": 25.765639,
       "lng": -80.219672,
       "datetime": "2026:02:27 14:56:14",
-      "place": "Calle Ocho mosaic, Little Havana, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1gutGMvL4gHYJyRWp_um61r4GI8mBpQ6R"
@@ -845,7 +845,7 @@
       "lat": 25.765669,
       "lng": -80.219444,
       "datetime": "2026:02:27 14:44:13",
-      "place": "Domino Park (Máximo Gómez Park), Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1t_kD24UG03X_-Zpf31Y3eORYmy3p0P8h"
@@ -856,7 +856,7 @@
       "lat": 25.765617,
       "lng": -80.219253,
       "datetime": "2026:02:27 14:43:37",
-      "place": "Old's Havana Cuban Bar & Cocina, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1ZDVu7L598TabWfFNpmKGhdWtJTV1vz8A"
@@ -867,7 +867,7 @@
       "lat": 25.765617,
       "lng": -80.219283,
       "datetime": "2026:02:27 14:15:55",
-      "place": "Old's Havana Cuban Bar & Cocina, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1MWEjnfKpXhB_PBIrdNlTd1fXcn9TDVmX"
@@ -878,7 +878,7 @@
       "lat": 25.765628,
       "lng": -80.219247,
       "datetime": "2026:02:27 14:02:21",
-      "place": "Old's Havana Cuban Bar & Cocina, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "12g5UGj7SbS-j8mvrHKgI4jXzvOBzW0z5"
@@ -889,7 +889,7 @@
       "lat": 25.765642,
       "lng": -80.218719,
       "datetime": "2026:02:27 13:46:53",
-      "place": "Calle Ocho, Little Havana, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1MofhHIwZZc3jzSt66ytKK-ua-9Bp5gif"
@@ -900,7 +900,7 @@
       "lat": 25.765714,
       "lng": -80.216828,
       "datetime": "2026:02:27 13:40:38",
-      "place": "Calle Ocho / Little Havana, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1_phbksGuqC7jgyQeM22Xrzpfgi82pGUx"
@@ -911,7 +911,7 @@
       "lat": 25.765831,
       "lng": -80.216919,
       "datetime": "2026:02:27 13:38:18",
-      "place": "Calle Ocho / Little Havana, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1LBTFUVyixXcACndGNdm_IAy-JcJWUEpO"
@@ -922,7 +922,7 @@
       "lat": 25.810358,
       "lng": -80.198744,
       "datetime": "2026:02:27 12:45:39",
-      "place": "Octopus Building, Midtown Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1Jr2TU1xqn9NzZxMF9QzFYX-e9eIl7Uk3"
@@ -933,7 +933,7 @@
       "lat": 25.784364,
       "lng": -80.189239,
       "datetime": "2026:02:27 11:37:45",
-      "place": "Maurice A. Ferré Park, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "124RL9Rkj7XIDlT0VlgZ321uZUDILnlJZ"
@@ -944,7 +944,7 @@
       "lat": 25.783158,
       "lng": -80.189269,
       "datetime": "2026:02:27 11:35:51",
-      "place": "One Thousand Museum, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1Gou9jUXfaq6mtm41_EULWLPI9LalzkLQ"
@@ -955,7 +955,7 @@
       "lat": 25.779122,
       "lng": -80.1884,
       "datetime": "2026:02:27 11:33:23",
-      "place": "Freedom Tower, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1V93Ghf0iLagDZTa1LUdTyuVeJCvxjRVq"
@@ -966,7 +966,7 @@
       "lat": 25.777636,
       "lng": -80.185858,
       "datetime": "2026:02:27 11:16:23",
-      "place": "Bayside Marketplace / Pier 5, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1JwQslwkEwEgdLifz5ZCQdp2jZIfya0co"
@@ -977,7 +977,7 @@
       "lat": 25.773622,
       "lng": -80.185578,
       "datetime": "2026:02:27 11:05:40",
-      "place": "Maurice A. Ferré Park, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1OYYlTOIx16ta7vfg5QxUMH10c4NLIoJH"
@@ -988,7 +988,7 @@
       "lat": 25.766997,
       "lng": -80.195253,
       "datetime": "2026:02:27 09:19:01",
-      "place": "Miami (near SW 7th / Brickell)",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1s-8ob96Q12cirbhfvvxSEFihGaPpuvMG"
@@ -999,7 +999,7 @@
       "lat": 25.767017,
       "lng": -80.195144,
       "datetime": "2026:02:27 09:18:59",
-      "place": "Miami (near SW 7th / Brickell)",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1QrIIr1IwdoFXzjWCNUq12gUQfWNVuFw7"
@@ -1010,7 +1010,7 @@
       "lat": 25.767364,
       "lng": -80.195069,
       "datetime": "2026:02:26 23:02:57",
-      "place": "Brickell City Centre, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1Jh9TWZC-Tz2DcAJKzE1DBZs2vHHGibNf"
@@ -1021,7 +1021,7 @@
       "lat": 25.761658,
       "lng": -80.189475,
       "datetime": "2026:02:26 22:49:43",
-      "place": "AC Hotel Brickell / Brickell, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1CwZHuwwh9dpxjaglP5_lHJVmhd_KsE_Z"
@@ -1032,7 +1032,7 @@
       "lat": 25.76175,
       "lng": -80.189217,
       "datetime": "2026:02:26 22:48:03",
-      "place": "Brickell, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "17HEE8GXtPIQCBDmEFWGtwlhwSi7Ifh_-"
@@ -1043,7 +1043,7 @@
       "lat": 25.761889,
       "lng": -80.188889,
       "datetime": "2026:02:26 21:57:27",
-      "place": "Crazy About You, Miami Brickell",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1IuYoTMG-5MZyXMpApEPkSp36w67baR20"
@@ -1054,7 +1054,7 @@
       "lat": 25.761867,
       "lng": -80.188919,
       "datetime": "2026:02:26 21:57:25",
-      "place": "Crazy About You, Miami Brickell",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1BJ-MtN6-So5JVSPyx9yw-CXBLacBhZK-"
@@ -1065,7 +1065,7 @@
       "lat": 25.761769,
       "lng": -80.189025,
       "datetime": "2026:02:26 21:57:16",
-      "place": "Crazy About You, Miami Brickell",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "12n1iNkonQ0lGCyZkOoAA8pdbrESl4grL"
@@ -1076,7 +1076,7 @@
       "lat": 25.761861,
       "lng": -80.188919,
       "datetime": "2026:02:26 21:37:05",
-      "place": "Crazy About You, Miami Brickell",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1gVaXbXsA_ZmzgvBBTBA9ApF7lKb6jjPc"
@@ -1087,7 +1087,7 @@
       "lat": 25.761833,
       "lng": -80.188994,
       "datetime": "2026:02:26 21:36:57",
-      "place": "Crazy About You, Miami Brickell",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "1lswc724m8JxV-SEax1FxbwzsccqMZIcA"
@@ -1098,7 +1098,7 @@
       "lat": 25.761708,
       "lng": -80.188811,
       "datetime": "2026:02:26 21:11:53",
-      "place": "Brickell Baywalk, Miami",
+      "place": "florida",
       "album": "florida",
       "at_sea": false,
       "drive_id": "135O5Qp0Biy9Qa5Gos3iOK335cq6TRsir"
@@ -1407,6 +1407,69 @@
       "datetime": "2026:03:09 07:47:24",
       "place": "virgin",
       "album": "virgin"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/margaritaville-boarding-jetbridge-selfie.jpg",
+      "lat": 26.770333,
+      "lng": -80.052139,
+      "place": "margaritaville",
+      "album": "margaritaville",
+      "datetime": "2026:03:13 11:46:30",
+      "original": "IMG_3337.jpeg"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/margaritaville-flipflop-lifebuoy.jpg",
+      "lat": 26.770919,
+      "lng": -80.052125,
+      "place": "margaritaville",
+      "album": "margaritaville",
+      "datetime": "2026:03:13 11:46:46",
+      "original": "IMG_6380.jpeg"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/margaritaville-cabin-nothin-but-a-breeze.jpg",
+      "lat": 26.772506,
+      "lng": -80.049522,
+      "place": "margaritaville",
+      "album": "margaritaville",
+      "datetime": "2026:03:13 13:45:26",
+      "original": "IMG_6407.jpeg"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/margaritaville-at-sea-cups.jpg",
+      "lat": 26.743707,
+      "lng": -79.938974,
+      "place": "margaritaville",
+      "album": "margaritaville",
+      "datetime": "2026:03:13 16:55:46",
+      "original": "IMG_3356.jpeg"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/margaritaville-porthole-julia.jpg",
+      "lat": 26.521372,
+      "lng": -79.754097,
+      "place": "margaritaville",
+      "album": "margaritaville",
+      "datetime": "2026:03:13 18:58:50",
+      "original": "IMG_3374.jpeg"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/margaritaville-deck-sunset-kiss.jpg",
+      "lat": 25.946592,
+      "lng": -77.968169,
+      "place": "margaritaville",
+      "album": "margaritaville",
+      "datetime": "2026:03:14 19:21:34",
+      "original": "IMG_6484.jpeg"
+    },
+    {
+      "src": "/photos/trips/caribbean-2026/margaritaville-porthole-rescue-tug.jpg",
+      "lat": 26.769311,
+      "lng": -80.047661,
+      "place": "margaritaville",
+      "album": "margaritaville",
+      "datetime": "2026:03:16 07:33:03",
+      "original": "IMG_6692.jpeg"
     }
   ]
 }
