@@ -271,8 +271,9 @@
           .addTo(greeceMap).bindPopup("Ferry \u00b7 Heraklion \u2192 Santorini");
       }
       if (ferryPlanned.length > 1) {
-        L.polyline(ferryPlanned, { color: "#c4a35a", weight: 2, dashArray: "4 10", opacity: 0.45 })
-          .addTo(greeceMap).bindPopup("Ferry planned \u00b7 Santorini \u2192 Athens");
+        var ferryTodayLine = L.polyline(ferryPlanned, { color: "#c4a35a", weight: 3, dashArray: "7 7", opacity: 0.95 })
+          .addTo(greeceMap).bindPopup("Seajets Champions League Jet 2 \u00b7 Athinios \u2192 Piraeus via Ios, Naxos, Mykonos, Tinos, Syros");
+        try { greeceMap.fitBounds(ferryTodayLine.getBounds().pad(0.12), { padding: [28, 28], animate: false }); } catch (e) {}
       }
 
       stops.forEach(function (s, i) {

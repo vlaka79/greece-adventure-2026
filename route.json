@@ -7289,8 +7289,8 @@
     "unit": "mi",
     "walkedSource": "Apple Health",
     "flown": 7306,
-    "flownSource": "Great-circle BUR\u2013SFO\u2013FRA\u2013ATH\u2013CHQ",
-    "sailedSource": "Spinalonga boat + Seajets Heraklion\u2192Athinios (great-circle)"
+    "flownSource": "Great-circle BUR–SFO–FRA–ATH–CHQ",
+    "sailedSource": "Spinalonga boat + Seajets Heraklion→Athinios (great-circle)"
   },
   "actualSantorini": [
     [
@@ -9960,12 +9960,45 @@
   ],
   "ferryPlanned": [
     [
-      36.386,
-      25.431
+      36.385,
+      25.4285
     ],
     [
-      37.9838,
-      23.7275
+      36.7235,
+      25.271
+    ],
+    [
+      37.1045,
+      25.3725
+    ],
+    [
+      37.4505,
+      25.358
+    ],
+    [
+      37.539,
+      25.163
+    ],
+    [
+      37.4435,
+      24.9425
+    ],
+    [
+      37.941,
+      23.6445
     ]
-  ]
+  ],
+  "ferryToday": {
+    "label": "Seajets Champions League Jet 2 · Athinios → Piraeus",
+    "via": [
+      "Ios",
+      "Naxos",
+      "Mykonos",
+      "Tinos",
+      "Syros"
+    ],
+    "depart": "12:55",
+    "arrive": "~18:30",
+    "date": "2026-09-12"
+  }
 }
