@@ -1569,7 +1569,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-a-early.jpg",
-    "caption": "Orange soup with a quenelle in a rock-rim bowl, mushroom-shaped mousse, then an egg yolk ringed with peas. Test Kitchen Menu A.",
+    "caption": "Menu A openers: Mushroom, then Egg Yolk / Caviar with the pea ring. Lab stools, five courses, no pizza escape hatch needed yet.",
     "place": "virgin",
     "lat": 14.921675,
     "lng": -71.826897,
@@ -1579,7 +1579,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-a-mains.jpg",
-    "caption": "Green puree with asparagus ribbons, scallops and cured-meat ribbons in a rock bowl, then steak on magenta sauce with berries. Test Kitchen Menu A mains.",
+    "caption": "Menu A mains: Scallop / Ham, then Beef (or Venison) Tenderloin on that deep chocolate sauce. The highlight VV Insider keeps hyping — earned.",
     "place": "virgin",
     "lat": 14.921675,
     "lng": -71.826897,
@@ -1589,7 +1589,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-a-desserts.jpg",
-    "caption": "Twin chocolate-topped bars with red coulis, then a chocolate dome with white sponge and red currants. Test Kitchen Menu A desserts.",
+    "caption": "Menu A finish: Chocolate. Twin bars and a dome — same course, two plates, zero leftovers.",
     "place": "virgin",
     "lat": 14.921675,
     "lng": -71.826897,
@@ -1649,7 +1649,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-b-early.jpg",
-    "caption": "Corn-kernel butter sticks on parchment, plated corn mousse with popcorn and herbs, neon-green puree under a bubbly tuile, then salmon with pickle ribbons and dill. Test Kitchen Menu B.",
+    "caption": "Menu B openers: Corn / Truffle, then Salmon / Cucumber. Popcorn garnish on the corn, dill ribbons on the fish.",
     "place": "virgin",
     "lat": 10.883275,
     "lng": -75.73655,
@@ -1659,7 +1659,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-b-mains.jpg",
-    "caption": "Shrimp and cherry tomatoes over wide pasta in amber broth, beet cylinders under pink foam on green sauce, then bone-in braised meat with pavé and jus. Test Kitchen Menu B mains.",
+    "caption": "Menu B mains: Shrimp / Garlic, a Beet / Cashews swap from the veg side, then Lamb Rack. Mixing menus is allowed — we mixed.",
     "place": "virgin",
     "lat": 10.883275,
     "lng": -75.73655,
@@ -1669,7 +1669,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-b-desserts.jpg",
-    "caption": "Yellow mango gel with white mousse and crumble, then strawberries with cream, red coulis, and fruit powder. Test Kitchen Menu B desserts.",
+    "caption": "Menu B sweets: Strawberry / Pistachio, plus Mango / Chia from the veg list. Both finished.",
     "place": "virgin",
     "lat": 10.883275,
     "lng": -75.73655,
@@ -1679,7 +1679,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-c-early.jpg",
-    "caption": "Seared bites under a black mandala tuile with amber spiral, then a charcoal tart with white cream, mushrooms, and glazed cherries. Test Kitchen Menu C.",
+    "caption": "Menu C: Scallop / Black Garlic under the mandala tuile, then Cheese Tart with mushrooms and cherries. Eel / Soy didn’t make the camera roll.",
     "place": "virgin",
     "lat": 23.9376055555556,
     "lng": -81.1434111111111,
@@ -1689,7 +1689,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-c-mains.jpg",
-    "caption": "Roasted poultry slices and a caramelized block on green puree, asparagus spears and ribbons, thin jus. Test Kitchen Menu C mains.",
+    "caption": "Menu C’s Study of Chicken — slices, seared block, green puree, asparagus. The placard standout, and it looked the part.",
     "place": "virgin",
     "lat": 23.9376055555556,
     "lng": -81.1434111111111,
@@ -1699,7 +1699,7 @@
   },
   {
     "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-c-desserts.jpg",
-    "caption": "Lemon-curd ring with meringue shards and zest, then chocolate soil under cream, vanilla sauce, berries, and a sugar shard. Test Kitchen Menu C desserts.",
+    "caption": "Menu C close: Yuzu / Meringue, then Coconut / Berries from the veg side. Citrus ring, then the berry bowl with chocolate soil.",
     "place": "virgin",
     "lat": 23.9376055555556,
     "lng": -81.1434111111111,
@@ -1825,6 +1825,16 @@
     "lng": -77.1559055555555,
     "added": "2026-03-09T17:39:22",
     "date": "2026-03-09",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menus-abc.jpg",
+    "caption": "The Test Kitchen placards: Menu C (Mar 1–2 & 11), Menu A (Mar 3–6), Menu B (Mar 7–10). Fixed seasonal tasting — Escoffier lab energy, VV Insider style.",
+    "place": "virgin",
+    "lat": 14.921675,
+    "lng": -71.826897,
+    "added": "2026-03-03T19:00:00",
+    "date": "2026-03-03",
     "new": true
   }
 ]
