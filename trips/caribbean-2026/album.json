@@ -1596,5 +1596,25 @@
     "added": "2026-03-03T21:06:35",
     "date": "2026-03-03",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-aruba-passions-on-the-beach.jpg",
+    "caption": "Passions on the Beach — frozen drinks and a deck selfie.",
+    "place": "virgin",
+    "lat": 12.553697,
+    "lng": -70.055175,
+    "added": "2026-03-04T14:45:13",
+    "date": "2026-03-04",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-cartagena-julia-mermaid.jpg",
+    "caption": "Julia under the wooden mermaid. Cartagena lunch stop.",
+    "place": "virgin",
+    "lat": 10.428092,
+    "lng": -75.548233,
+    "added": "2026-03-06T14:06:15",
+    "date": "2026-03-06",
+    "new": true
   }
 ]
