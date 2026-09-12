@@ -1566,5 +1566,35 @@
     "added": "2026-03-02T18:54:50",
     "date": "2026-03-02",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-a-early.jpg",
+    "caption": "Orange soup with a quenelle in a rock-rim bowl, mushroom-shaped mousse, then an egg yolk ringed with peas. Test Kitchen Menu A.",
+    "place": "virgin",
+    "lat": 14.921675,
+    "lng": -71.826897,
+    "added": "2026-03-03T19:53:20",
+    "date": "2026-03-03",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-a-mains.jpg",
+    "caption": "Green puree with asparagus ribbons, scallops and cured-meat ribbons in a rock bowl, then steak on magenta sauce with berries. Test Kitchen Menu A mains.",
+    "place": "virgin",
+    "lat": 14.921675,
+    "lng": -71.826897,
+    "added": "2026-03-03T20:34:28",
+    "date": "2026-03-03",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-a-desserts.jpg",
+    "caption": "Twin chocolate-topped bars with red coulis, then a chocolate dome with white sponge and red currants. Test Kitchen Menu A desserts.",
+    "place": "virgin",
+    "lat": 14.921675,
+    "lng": -71.826897,
+    "added": "2026-03-03T21:06:35",
+    "date": "2026-03-03",
+    "new": true
   }
 ]
