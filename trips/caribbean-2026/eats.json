@@ -1,176 +1,205 @@
 [
   {
-    "place": "Crazy About You, Miami",
-    "dish": "Tostones",
-    "note": "First Miami night. Plantains before the ribs.",
-    "photo": "/photos/trips/caribbean-2026/florida-crazy-about-you-tostones.jpg"
-  },
-  {
-    "place": "Crazy About You, Miami",
-    "dish": "BBQ ribs",
-    "note": "Brickell dinner. Ribs, onion straws, and a smoking glass.",
-    "photo": "/photos/trips/caribbean-2026/florida-crazy-about-you-ribs.jpg"
-  },
-  {
-    "place": "Crazy About You, Miami",
-    "dish": "The table",
-    "note": "Ribs, fish, wine. Paper liner spells the name out.",
-    "photo": "/photos/trips/caribbean-2026/florida-crazy-about-you-table.jpg"
-  },
-  {
-    "place": "Old's Havana, Little Havana",
-    "dish": "Mojitos",
-    "note": "Calle Ocho. Mint, cane, and a band already lining up the next round.",
-    "photo": "/photos/trips/caribbean-2026/florida-olds-havana-mojitos.jpg"
-  },
-  {
-    "place": "Old's Havana, Little Havana",
-    "dish": "Palomilla steak",
-    "note": "Steak, moros, maduros. The Cuban plate the way you want it.",
-    "photo": "/photos/trips/caribbean-2026/florida-olds-havana-palomilla.jpg"
-  },
-  {
-    "place": "La Colada Gourmet, Little Havana",
-    "dish": "Espresso and café con crema",
-    "note": "Calle Ocho coffee. Fresh roast, serious foam.",
-    "photo": "/photos/trips/caribbean-2026/florida-la-colada-coffee.jpg"
-  },
-  {
-    "place": "Sanguich de Miami",
-    "dish": "Cuban sandwich",
-    "note": "Pressed Cuban, wrapping paper with the name on it. The cheese did the work.",
-    "photo": "/photos/trips/caribbean-2026/florida-sanguich-cuban.jpg"
-  },
-  {
-    "place": "The Wandering Rooster, Key West",
-    "dish": "Conch fritters",
-    "note": "Food truck in a Key West patio. The actual rooster was already there.",
-    "photo": "/photos/trips/caribbean-2026/florida-key-west-fritters-burger.jpg"
-  },
-  {
-    "place": "Margaritaville, Key West",
-    "dish": "Margarita",
-    "note": "Duval Street. Salt, lime, chili on the rim.",
-    "photo": "/photos/trips/caribbean-2026/florida-key-west-margaritaville-drink.jpg"
-  },
-  {
-    "place": "Hard Rock Cafe, Miami",
-    "dish": "Burger and fries",
-    "note": "Bayside, boarding day.",
-    "photo": "/photos/trips/caribbean-2026/florida-hard-rock-miami-burger.jpg"
-  },
-  {
-    "place": "Passions on the Beach, Aruba",
-    "dish": "Steak and fries wrap",
-    "note": "Eagle Beach. After Arikok, anything with a green sauce counted.",
-    "photo": "/photos/trips/caribbean-2026/virgin-passions-steak-wrap.jpg"
-  },
-  {
-    "place": "Passions on the Beach, Aruba",
-    "dish": "Frozen cocktails",
-    "note": "Eagle Beach. Orange and rum-float drinks on the menu, then a deck selfie under the awning.",
-    "photo": "/photos/trips/caribbean-2026/virgin-aruba-passions-on-the-beach.jpg"
-  },
-  {
-    "place": "La Cevicheria, Cartagena",
-    "dish": "Ceviche",
-    "note": "Walled city. The plate said the name before the food arrived.",
-    "photo": "/photos/trips/caribbean-2026/virgin-cartagena-la-cevicheria-plate.jpg"
-  },
-  {
-    "place": "Café San Alberto, Cartagena",
-    "dish": "Siphon coffee",
-    "note": "Centro. They brew it like a lab, which is the point.",
-    "photo": "/photos/trips/caribbean-2026/virgin-cartagena-san-alberto-siphon.jpg"
+    "place": "John Watling’s Distillery, Nassau",
+    "dish": "Tacos",
+    "note": "Plantains in the tortilla, lime soda, patio mesh table.",
+    "photo": "/photos/trips/caribbean-2026/nassau-watlings-tacos.jpg",
+    "date": "2026-03-15"
   },
   {
     "place": "Hot Pie Pizza, West Palm Beach",
     "dish": "pizza + wings",
     "note": "Thin crust and hot wings between Virgin and Margaritaville.",
-    "photo": "/photos/trips/caribbean-2026/florida-west-palm-hot-pie-pizza-wings.jpg"
-  },
-  {
-    "place": "John Watling’s Distillery, Nassau",
-    "dish": "Tacos",
-    "note": "Plantains in the tortilla, lime soda, patio mesh table.",
-    "photo": "/photos/trips/caribbean-2026/nassau-watlings-tacos.jpg"
-  },
-  {
-    "place": "The Test Kitchen, Brilliant Lady",
-    "dish": "Night 3 Menu A tasting",
-    "note": "Fixed seasonal tasting (VV Insider / onboard placards). Menu A Mar 3: Mushroom; Egg Yolk / Caviar; Scallop / Ham; Beef or Venison Tenderloin; Chocolate. Lab-style five courses on Brilliant Lady.",
-    "photo": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-a-mains.jpg"
-  },
-  {
-    "place": "Pink Agave, Brilliant Lady",
-    "dish": "Night 6 dinner",
-    "note": "Guacamole with pomegranate, Esquites, Aguachile / ceviche, Cabernet; Cochinita Pibil; Pato with mole ahumado and smoked yam puree; pork on mole as plated; Tacos de Chocolate.",
-    "photo": "/photos/trips/caribbean-2026/virgin-pink-agave-n6-mains.jpg"
-  },
-  {
-    "place": "The Pizza Place, Brilliant Lady",
-    "dish": "egg / pepperoni / basil pies",
-    "note": "Quick-dining oven on Deck 7. Egg with cracked pepper, pepperoni with roasted garlic, another egg with basil — worth the late-night reputation.",
-    "photo": "/photos/trips/caribbean-2026/virgin-brilliant-lady-ship-pizza-trio.jpg"
-  },
-  {
-    "place": "Extra Virgin, Brilliant Lady",
-    "dish": "wine tasting",
-    "note": "Extra Virgin wine tasting — flights lined up, bread on the side.",
-    "photo": "/photos/trips/caribbean-2026/virgin-extra-virgin-wine-tasting.jpg"
-  },
-  {
-    "place": "Rice Rice Baby, Brilliant Lady",
-    "dish": "sushi-making class",
-    "note": "Hands-on rolls in The Test Kitchen — mats, nori, fillings, then bento trays with ginger and seaweed salad.",
-    "photo": "/photos/trips/caribbean-2026/virgin-sushi-making-class.jpg"
-  },
-  {
-    "place": "The Wake, Brilliant Lady",
-    "dish": "Night 1 steakhouse dinner",
-    "note": "Corn Custard & Black Bean Salad, Hamachi Crudo, bone-marrow brioche rolls; Hanger Steak / Filet and New Zealand Lamb Chops; chocolate hazelnut tart and berry bowl.",
-    "photo": "/photos/trips/caribbean-2026/virgin-the-wake-mains.jpg"
-  },
-  {
-    "place": "The Wake, Brilliant Lady",
-    "dish": "breakfast / brunch",
-    "note": "Poached Shrimp cocktail and citrus salad; Steak & Eggs; The Wake Benedict under hollandaise.",
-    "photo": "/photos/trips/caribbean-2026/virgin-the-wake-breakfast-plates.jpg"
-  },
-  {
-    "place": "Rojo, Brilliant Lady",
-    "dish": "Night 2 Spanish dinner",
-    "note": "Pulpo a la Grill, Jamón Ibérico with marcona almonds, montaditos; Arctic Char with artichokes; grilled ribeye with chorizo piperade; Basque Cheesecake and Churros with chocolate hazelnut fondue.",
-    "photo": "/photos/trips/caribbean-2026/virgin-rojo-mains.jpg"
-  },
-  {
-    "place": "Gunbae, Brilliant Lady",
-    "dish": "Night 4 Korean BBQ",
-    "note": "Banchan by the grill; seafood combo / bulgogi / chef combo on the circular BBQ; charcoal soft-serve and Hotteok sweets.",
-    "photo": "/photos/trips/caribbean-2026/virgin-gunbae-grill.jpg"
-  },
-  {
-    "place": "The Test Kitchen, Brilliant Lady",
-    "dish": "Night 7 Menu B tasting",
-    "note": "Menu B Mar 7 (placards Mar 7–10): Corn / Truffle; Salmon / Cucumber; Shrimp / Garlic; Lamb Rack; Strawberry / Pistachio — plus Beet / Cashews and Mango / Chia from the veg list. Longer sailings get all three menus.",
-    "photo": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-b-mains.jpg"
+    "photo": "/photos/trips/caribbean-2026/florida-west-palm-hot-pie-pizza-wings.jpg",
+    "date": "2026-03-12"
   },
   {
     "place": "The Test Kitchen, Brilliant Lady",
     "dish": "Night 11 Menu C tasting",
     "note": "Menu C Mar 11 (placards Mar 1–2 & 11): Scallop / Black Garlic; Cheese Tart; Study of Chicken; Yuzu / Meringue — plus Coconut / Berries from the veg side. Study of Chicken is the standout.",
-    "photo": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-c-mains.jpg"
+    "photo": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-c-mains.jpg",
+    "date": "2026-03-11"
+  },
+  {
+    "place": "The Pizza Place, Brilliant Lady",
+    "dish": "egg / pepperoni / basil pies",
+    "note": "Quick-dining oven on Deck 7. Egg with cracked pepper, pepperoni with roasted garlic, another egg with basil — worth the late-night reputation.",
+    "photo": "/photos/trips/caribbean-2026/virgin-brilliant-lady-ship-pizza-trio.jpg",
+    "date": "2026-03-08"
+  },
+  {
+    "place": "The Test Kitchen, Brilliant Lady",
+    "dish": "Night 7 Menu B tasting",
+    "note": "Menu B Mar 7 (placards Mar 7–10): Corn / Truffle; Salmon / Cucumber; Shrimp / Garlic; Lamb Rack; Strawberry / Pistachio — plus Beet / Cashews and Mango / Chia from the veg list. Longer sailings get all three menus.",
+    "photo": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-b-mains.jpg",
+    "date": "2026-03-07"
+  },
+  {
+    "place": "Pink Agave, Brilliant Lady",
+    "dish": "Night 6 dinner",
+    "note": "Guacamole with pomegranate, Esquites, Aguachile / ceviche, Cabernet; Cochinita Pibil; Pato with mole ahumado and smoked yam puree; pork on mole as plated; Tacos de Chocolate.",
+    "photo": "/photos/trips/caribbean-2026/virgin-pink-agave-n6-mains.jpg",
+    "date": "2026-03-06"
+  },
+  {
+    "place": "La Cevicheria, Cartagena",
+    "dish": "Ceviche",
+    "note": "Walled city. The plate said the name before the food arrived.",
+    "photo": "/photos/trips/caribbean-2026/virgin-cartagena-la-cevicheria-plate.jpg",
+    "date": "2026-03-06"
+  },
+  {
+    "place": "Café San Alberto, Cartagena",
+    "dish": "Siphon coffee",
+    "note": "Centro. They brew it like a lab, which is the point.",
+    "photo": "/photos/trips/caribbean-2026/virgin-cartagena-san-alberto-siphon.jpg",
+    "date": "2026-03-06"
   },
   {
     "place": "Rojo, Brilliant Lady",
     "dish": "Night 5 dinner",
     "note": "Jamón, Patatas Bravas Ahumadas, Pimentón Cheese, Pulpo — Spanish specialty table; Basque Cheesecake and chocolate dessert to finish.",
-    "photo": "/photos/trips/caribbean-2026/virgin-rojo-n5-starters.jpg"
+    "photo": "/photos/trips/caribbean-2026/virgin-rojo-n5-starters.jpg",
+    "date": "2026-03-05"
+  },
+  {
+    "place": "Gunbae, Brilliant Lady",
+    "dish": "Night 4 Korean BBQ",
+    "note": "Banchan by the grill; seafood combo / bulgogi / chef combo on the circular BBQ; charcoal soft-serve and Hotteok sweets.",
+    "photo": "/photos/trips/caribbean-2026/virgin-gunbae-grill.jpg",
+    "date": "2026-03-04"
+  },
+  {
+    "place": "Passions on the Beach, Aruba",
+    "dish": "Steak and fries wrap",
+    "note": "Eagle Beach. After Arikok, anything with a green sauce counted.",
+    "photo": "/photos/trips/caribbean-2026/virgin-passions-steak-wrap.jpg",
+    "date": "2026-03-04"
+  },
+  {
+    "place": "Passions on the Beach, Aruba",
+    "dish": "Frozen cocktails",
+    "note": "Eagle Beach. Orange and rum-float drinks on the menu, then a deck selfie under the awning.",
+    "photo": "/photos/trips/caribbean-2026/virgin-aruba-passions-on-the-beach.jpg",
+    "date": "2026-03-04"
+  },
+  {
+    "place": "Extra Virgin, Brilliant Lady",
+    "dish": "wine tasting",
+    "note": "Extra Virgin wine tasting — flights lined up, bread on the side.",
+    "photo": "/photos/trips/caribbean-2026/virgin-extra-virgin-wine-tasting.jpg",
+    "date": "2026-03-03"
+  },
+  {
+    "place": "The Test Kitchen, Brilliant Lady",
+    "dish": "Night 3 Menu A tasting",
+    "note": "Fixed seasonal tasting (VV Insider / onboard placards). Menu A Mar 3: Mushroom; Egg Yolk / Caviar; Scallop / Ham; Beef or Venison Tenderloin; Chocolate. Lab-style five courses on Brilliant Lady.",
+    "photo": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-a-mains.jpg",
+    "date": "2026-03-03"
+  },
+  {
+    "place": "Rice Rice Baby, Brilliant Lady",
+    "dish": "sushi-making class",
+    "note": "Hands-on rolls in The Test Kitchen — mats, nori, fillings, then bento trays with ginger and seaweed salad.",
+    "photo": "/photos/trips/caribbean-2026/virgin-sushi-making-class.jpg",
+    "date": "2026-03-02"
+  },
+  {
+    "place": "The Wake, Brilliant Lady",
+    "dish": "breakfast / brunch",
+    "note": "Poached Shrimp cocktail and citrus salad; Steak & Eggs; The Wake Benedict under hollandaise.",
+    "photo": "/photos/trips/caribbean-2026/virgin-the-wake-breakfast-plates.jpg",
+    "date": "2026-03-02"
+  },
+  {
+    "place": "Rojo, Brilliant Lady",
+    "dish": "Night 2 Spanish dinner",
+    "note": "Pulpo a la Grill, Jamón Ibérico with marcona almonds, montaditos; Arctic Char with artichokes; grilled ribeye with chorizo piperade; Basque Cheesecake and Churros with chocolate hazelnut fondue.",
+    "photo": "/photos/trips/caribbean-2026/virgin-rojo-mains.jpg",
+    "date": "2026-03-02"
   },
   {
     "place": "The Dock, Brilliant Lady",
     "dish": "embark mezze skewers",
     "note": "Trumpet Royale Mushrooms, Grilled Shrimp, Fire-Roasted Chicken Thigh, Beef Kafta Skewer — open-fire grill on embark afternoon.",
-    "photo": "/photos/trips/caribbean-2026/virgin-dock-mezze-skewers.jpg"
+    "photo": "/photos/trips/caribbean-2026/virgin-dock-mezze-skewers.jpg",
+    "date": "2026-03-01"
+  },
+  {
+    "place": "The Wake, Brilliant Lady",
+    "dish": "Night 1 steakhouse dinner",
+    "note": "Corn Custard & Black Bean Salad, Hamachi Crudo, bone-marrow brioche rolls; Hanger Steak / Filet and New Zealand Lamb Chops; chocolate hazelnut tart and berry bowl.",
+    "photo": "/photos/trips/caribbean-2026/virgin-the-wake-mains.jpg",
+    "date": "2026-03-01"
+  },
+  {
+    "place": "Hard Rock Cafe, Miami",
+    "dish": "Burger and fries",
+    "note": "Bayside, boarding day.",
+    "photo": "/photos/trips/caribbean-2026/florida-hard-rock-miami-burger.jpg",
+    "date": "2026-03-01"
+  },
+  {
+    "place": "The Wandering Rooster, Key West",
+    "dish": "Conch fritters",
+    "note": "Food truck in a Key West patio. The actual rooster was already there.",
+    "photo": "/photos/trips/caribbean-2026/florida-key-west-fritters-burger.jpg",
+    "date": "2026-02-28"
+  },
+  {
+    "place": "Margaritaville, Key West",
+    "dish": "Margarita",
+    "note": "Duval Street. Salt, lime, chili on the rim.",
+    "photo": "/photos/trips/caribbean-2026/florida-key-west-margaritaville-drink.jpg",
+    "date": "2026-02-28"
+  },
+  {
+    "place": "Old's Havana, Little Havana",
+    "dish": "Mojitos",
+    "note": "Calle Ocho. Mint, cane, and a band already lining up the next round.",
+    "photo": "/photos/trips/caribbean-2026/florida-olds-havana-mojitos.jpg",
+    "date": "2026-02-27"
+  },
+  {
+    "place": "Old's Havana, Little Havana",
+    "dish": "Palomilla steak",
+    "note": "Steak, moros, maduros. The Cuban plate the way you want it.",
+    "photo": "/photos/trips/caribbean-2026/florida-olds-havana-palomilla.jpg",
+    "date": "2026-02-27"
+  },
+  {
+    "place": "La Colada Gourmet, Little Havana",
+    "dish": "Espresso and café con crema",
+    "note": "Calle Ocho coffee. Fresh roast, serious foam.",
+    "photo": "/photos/trips/caribbean-2026/florida-la-colada-coffee.jpg",
+    "date": "2026-02-27"
+  },
+  {
+    "place": "Sanguich de Miami",
+    "dish": "Cuban sandwich",
+    "note": "Pressed Cuban, wrapping paper with the name on it. The cheese did the work.",
+    "photo": "/photos/trips/caribbean-2026/florida-sanguich-cuban.jpg",
+    "date": "2026-02-27"
+  },
+  {
+    "place": "Crazy About You, Miami",
+    "dish": "Tostones",
+    "note": "First Miami night. Plantains before the ribs.",
+    "photo": "/photos/trips/caribbean-2026/florida-crazy-about-you-tostones.jpg",
+    "date": "2026-02-26"
+  },
+  {
+    "place": "Crazy About You, Miami",
+    "dish": "BBQ ribs",
+    "note": "Brickell dinner. Ribs, onion straws, and a smoking glass.",
+    "photo": "/photos/trips/caribbean-2026/florida-crazy-about-you-ribs.jpg",
+    "date": "2026-02-26"
+  },
+  {
+    "place": "Crazy About You, Miami",
+    "dish": "The table",
+    "note": "Ribs, fish, wine. Paper liner spells the name out.",
+    "photo": "/photos/trips/caribbean-2026/florida-crazy-about-you-table.jpg",
+    "date": "2026-02-26"
   }
 ]

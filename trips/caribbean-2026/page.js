@@ -152,6 +152,9 @@
       var empty = document.getElementById("eats-empty");
       if (!list) return;
       items = items || [];
+      items = items.slice().sort(function (a, b) {
+        return String(b.date || "").localeCompare(String(a.date || ""));
+      });
       if (!items.length) {
         if (empty) empty.classList.remove("hidden");
         return;
