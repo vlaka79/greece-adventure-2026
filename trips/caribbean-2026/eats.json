@@ -15,7 +15,7 @@
   },
   {
     "place": "The Test Kitchen, Brilliant Lady",
-    "dish": "Night 11 Menu C tasting",
+    "dish": "Menu C tasting",
     "note": "Menu C Mar 11 (placards Mar 1–2 & 11): Scallop / Black Garlic; Cheese Tart; Study of Chicken; Yuzu / Meringue — plus Coconut / Berries from the veg side. Study of Chicken is the standout.",
     "photo": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-c-mains.jpg",
     "date": "2026-03-11"
@@ -23,21 +23,21 @@
   {
     "place": "The Pizza Place, Brilliant Lady",
     "dish": "egg / pepperoni / basil pies",
-    "note": "Quick-dining oven on Deck 7. Egg with cracked pepper, pepperoni with roasted garlic, another egg with basil — worth the late-night reputation.",
+    "note": "Egg with cracked pepper, pepperoni with roasted garlic, another egg with basil — worth the late-night reputation.",
     "photo": "/photos/trips/caribbean-2026/virgin-brilliant-lady-ship-pizza-trio.jpg",
     "date": "2026-03-08"
   },
   {
     "place": "The Test Kitchen, Brilliant Lady",
-    "dish": "Night 7 Menu B tasting",
+    "dish": "Menu B tasting",
     "note": "Menu B Mar 7 (placards Mar 7–10): Corn / Truffle; Salmon / Cucumber; Shrimp / Garlic; Lamb Rack; Strawberry / Pistachio — plus Beet / Cashews and Mango / Chia from the veg list. Longer sailings get all three menus.",
     "photo": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-b-mains.jpg",
     "date": "2026-03-07"
   },
   {
     "place": "Pink Agave, Brilliant Lady",
-    "dish": "Night 6 dinner",
-    "note": "Guacamole with pomegranate, Esquites, Aguachile / ceviche, Cabernet; Cochinita Pibil; Pato with mole ahumado and smoked yam puree; pork on mole as plated; Tacos de Chocolate.",
+    "dish": "Cochinita Pibil & Pato",
+    "note": "Guacamole with pomegranate, Esquites, and Aguachile to start; Cochinita Pibil and Pato with mole ahumado; Tacos de Chocolate to finish.",
     "photo": "/photos/trips/caribbean-2026/virgin-pink-agave-n6-mains.jpg",
     "date": "2026-03-06"
   },
@@ -57,15 +57,15 @@
   },
   {
     "place": "Rojo, Brilliant Lady",
-    "dish": "Night 5 dinner",
-    "note": "Jamón, Patatas Bravas Ahumadas, Pimentón Cheese, Pulpo — Spanish specialty table; Basque Cheesecake and chocolate dessert to finish.",
+    "dish": "Jamón, Patatas Bravas & Pulpo",
+    "note": "Jamón Ibérico, Patatas Bravas Ahumadas, Pimentón Cheese, Pulpo a la Grill — Spanish specialty table; Basque Cheesecake and chocolate dessert to finish.",
     "photo": "/photos/trips/caribbean-2026/virgin-rojo-n5-starters.jpg",
     "date": "2026-03-05"
   },
   {
     "place": "Gunbae, Brilliant Lady",
-    "dish": "Night 4 Korean BBQ",
-    "note": "Banchan by the grill; seafood combo / bulgogi / chef combo on the circular BBQ; charcoal soft-serve and Hotteok sweets.",
+    "dish": "tabletop BBQ",
+    "note": "Banchan by the grill; seafood combo, bulgogi, and the chef combo on the circular BBQ; soft-serve and Hotteok sweets.",
     "photo": "/photos/trips/caribbean-2026/virgin-gunbae-grill.jpg",
     "date": "2026-03-04"
   },
@@ -86,14 +86,14 @@
   {
     "place": "Extra Virgin, Brilliant Lady",
     "dish": "wine tasting",
-    "note": "Extra Virgin wine tasting — flights lined up, bread on the side.",
+    "note": "Flights lined up, bread on the side. Extra Virgin doing the pour.",
     "photo": "/photos/trips/caribbean-2026/virgin-extra-virgin-wine-tasting.jpg",
     "date": "2026-03-03"
   },
   {
     "place": "The Test Kitchen, Brilliant Lady",
-    "dish": "Night 3 Menu A tasting",
-    "note": "Fixed seasonal tasting (VV Insider / onboard placards). Menu A Mar 3: Mushroom; Egg Yolk / Caviar; Scallop / Ham; Beef or Venison Tenderloin; Chocolate. Lab-style five courses on Brilliant Lady.",
+    "dish": "Menu A tasting",
+    "note": "Fixed seasonal tasting from the onboard placards: Mushroom; Egg Yolk / Caviar; Scallop / Ham; Beef or Venison Tenderloin; Chocolate. Lab-style five courses.",
     "photo": "/photos/trips/caribbean-2026/virgin-test-kitchen-menu-a-mains.jpg",
     "date": "2026-03-03"
   },
@@ -106,15 +106,15 @@
   },
   {
     "place": "The Wake, Brilliant Lady",
-    "dish": "breakfast / brunch",
-    "note": "Poached Shrimp cocktail and citrus salad; Steak & Eggs; The Wake Benedict under hollandaise.",
+    "dish": "Steak & Eggs / The Wake Benedict",
+    "note": "Poached Shrimp cocktail and citrus salad, then Steak & Eggs and The Wake Benedict under hollandaise.",
     "photo": "/photos/trips/caribbean-2026/virgin-the-wake-breakfast-plates.jpg",
     "date": "2026-03-02"
   },
   {
     "place": "Rojo, Brilliant Lady",
-    "dish": "Night 2 Spanish dinner",
-    "note": "Pulpo a la Grill, Jamón Ibérico with marcona almonds, montaditos; Arctic Char with artichokes; grilled ribeye with chorizo piperade; Basque Cheesecake and Churros with chocolate hazelnut fondue.",
+    "dish": "Arctic Char & grilled ribeye",
+    "note": "Pulpo a la Grill and Jamón Ibérico with marcona almonds first; Arctic Char with artichokes and ribeye with chorizo piperade; Basque Cheesecake and Churros to finish.",
     "photo": "/photos/trips/caribbean-2026/virgin-rojo-mains.jpg",
     "date": "2026-03-02"
   },
@@ -127,8 +127,8 @@
   },
   {
     "place": "The Wake, Brilliant Lady",
-    "dish": "Night 1 steakhouse dinner",
-    "note": "Corn Custard & Black Bean Salad, Hamachi Crudo, bone-marrow brioche rolls; Hanger Steak / Filet and New Zealand Lamb Chops; chocolate hazelnut tart and berry bowl.",
+    "dish": "Hanger Steak / Filet & NZ Lamb Chops",
+    "note": "Corn Custard & Black Bean Salad and Hamachi Crudo first, then the steakhouse mains. Chocolate hazelnut dessert saved for last.",
     "photo": "/photos/trips/caribbean-2026/virgin-the-wake-mains.jpg",
     "date": "2026-03-01"
   },
