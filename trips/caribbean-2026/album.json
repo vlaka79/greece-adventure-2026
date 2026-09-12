@@ -1436,5 +1436,25 @@
     "added": "2026-03-16T07:33:03",
     "date": "2026-03-16",
     "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/florida-west-palm-hot-pie-pizza-wings.jpg",
+    "caption": "Hot Pie Pizza in West Palm — thin crust and hot wings. Between Virgin and Margaritaville.",
+    "place": "florida",
+    "lat": 26.712719,
+    "lng": -80.052008,
+    "added": "2026-03-12T14:12:19",
+    "date": "2026-03-12",
+    "new": true
+  },
+  {
+    "src": "/photos/trips/caribbean-2026/nassau-julia-flower-wall.jpg",
+    "caption": "Julia against the coral flower wall. Nassau doing the tropical backdrop.",
+    "place": "margaritaville",
+    "lat": 25.074689,
+    "lng": -77.349136,
+    "added": "2026-03-15T12:57:29",
+    "date": "2026-03-15",
+    "new": true
   }
 ]
