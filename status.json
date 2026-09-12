@@ -2,8 +2,8 @@
   "lat": 36.4165,
   "lng": 25.4324,
   "location": "Santorini",
-  "tonight": "Fira sunset after a beach-and-relax day.",
-  "tomorrow": "Still Santorini — take it easy, more caldera light.",
+  "tonight": "Ferry day toward Athens — Καλό ταξίδι.",
+  "tomorrow": "Athens days ahead.",
   "postcard": {
     "date": "2026-09-11",
     "place": "Santorini, Oia",
@@ -13,10 +13,10 @@
     "caption": "Sunset embrace with the windmill behind us. Anniversary light doing overtime."
   },
   "word": {
-    "el": "Οία",
-    "en": "Oia",
-    "say": "EE-ah",
-    "meaning": "Oia. The north tip of Santorini — blue domes, windmills, and that sunset everyone came for."
+    "el": "Καλό ταξίδι",
+    "en": "Have a good trip",
+    "say": "kah-LO tah-KSEE-dee",
+    "meaning": "Have a good trip. The ferry-day blessing — Santorini to Athens, and the road keeps going."
   },
   "coords": [
     36.4165,
