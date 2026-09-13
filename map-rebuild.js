@@ -231,7 +231,7 @@
       maxBounds: [[34.5, 22.3], [38.85, 26.95]]
     });
     L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 }).addTo(greeceMap);
-    greeceMap.fitBounds([[37.955, 23.705], [37.990, 23.755]], { padding: [28, 28], animate: false });
+    greeceMap.fitBounds([[37.965, 23.718], [37.982, 23.742]], { padding: [28, 28], animate: false });
     photoLayer = L.layerGroup().addTo(greeceMap);
 
     Promise.all([
@@ -289,7 +289,12 @@
 
       renderPhotoPins();
       greeceMap.on("zoomend", renderPhotoPins);
-      setTimeout(function () { greeceMap.invalidateSize(); }, 200);
+      function frameAthensCentre() {
+        greeceMap.fitBounds([[37.965, 23.718], [37.982, 23.742]], { padding: [28, 28], animate: false });
+      }
+      frameAthensCentre();
+      setTimeout(function () { greeceMap.invalidateSize(); frameAthensCentre(); }, 200);
+      setTimeout(function () { if (greeceMap) frameAthensCentre(); }, 800);
     });
   }
 

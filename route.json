@@ -7284,14 +7284,21 @@
   ],
   "miles": {
     "driven": 413,
-    "walked": 74.6,
+    "walked": 83.9,
     "sailed": 224,
-    "asOf": "2026-09-12",
+    "asOf": "2026-09-13",
     "unit": "mi",
-    "walkedSource": "Apple Health",
+    "walkedSource": "Apple Health Walking + Running Distance",
     "flown": 7306,
     "flownSource": "Great-circle BUR–SFO–FRA–ATH–CHQ",
-    "sailedSource": "Spinalonga boat + Seajets Heraklion→Athinios + Seajets Athinios→Piraeus (great-circle)"
+    "sailedSource": "Spinalonga boat + Seajets Heraklion→Athinios + Seajets Athinios→Piraeus (great-circle)",
+    "walkedByDay": {
+      "2026-09-09": 6.4,
+      "2026-09-10": 3.0,
+      "2026-09-11": 4.2,
+      "2026-09-12": 3.8,
+      "2026-09-13": 5.5
+    }
   },
   "actualSantorini": [
     [
