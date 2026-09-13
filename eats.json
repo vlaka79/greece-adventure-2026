@@ -1,5 +1,25 @@
 [
   {
+    "place": "Nonnas, Plaka",
+    "dish": "Lemon chicken, calamari & two whites",
+    "note": "First Athens table: baby chicken in lemon sauce, grilled calamari with long beans, and two glasses throwing gold on the paper. Ferry day, closed properly.",
+    "photo": "/photos/album/athens-plaka-nonnas-lemon-chicken.jpg",
+    "lat": 37.971786,
+    "lng": 23.731108,
+    "date": "2026-09-12",
+    "taken": "2026-09-12T21:13:05"
+  },
+  {
+    "place": "Dock Cafe, Athinios",
+    "dish": "Amarenia Premium Pils",
+    "note": "Cold pils at the port while the switchbacks delivered the rest of the island. Last Santorini glass.",
+    "photo": "/photos/album/santorini-athinios-dock-cafe-amarenia.jpg",
+    "lat": 36.386039,
+    "lng": 25.429922,
+    "date": "2026-09-12",
+    "taken": "2026-09-12T11:52:15"
+  },
+  {
     "place": "Sergena Taverna, Santorini",
     "dish": "Calamari, skewers & ouzo feast",
     "note": "House wine and cloudy ouzo on the map-tablecloth, then grilled calamari with fries and a skewer platter with pita and tzatziki. Sergena hit every note.",

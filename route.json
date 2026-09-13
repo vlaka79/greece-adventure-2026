@@ -1029,7 +1029,8 @@
     "douliana",
     "elounda",
     "heraklion",
-    "santorini"
+    "santorini",
+    "athens"
   ],
   "actual": [
     [
@@ -7284,13 +7285,13 @@
   "miles": {
     "driven": 413,
     "walked": 74.6,
-    "sailed": 78,
-    "asOf": "2026-09-11",
+    "sailed": 224,
+    "asOf": "2026-09-12",
     "unit": "mi",
     "walkedSource": "Apple Health",
     "flown": 7306,
     "flownSource": "Great-circle BUR–SFO–FRA–ATH–CHQ",
-    "sailedSource": "Spinalonga boat + Seajets Heraklion→Athinios (great-circle)"
+    "sailedSource": "Spinalonga boat + Seajets Heraklion→Athinios + Seajets Athinios→Piraeus (great-circle)"
   },
   "actualSantorini": [
     [
@@ -9999,6 +10000,7 @@
     ],
     "depart": "12:55",
     "arrive": "~18:30",
-    "date": "2026-09-12"
+    "date": "2026-09-12",
+    "status": "done"
   }
 }

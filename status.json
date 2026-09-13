@@ -1,25 +1,25 @@
 {
-  "lat": 37.17,
-  "lng": 24.55,
-  "location": "Aegean Sea",
-  "tonight": "On the ferry toward Athens — Καλό ταξίδι.",
-  "tomorrow": "First full day in Athens.",
+  "lat": 37.9715,
+  "lng": 23.7267,
+  "location": "Athens",
+  "tonight": "First full day in Athens — Acropolis and the museum.",
+  "tomorrow": "More of the city. Nothing packed tight.",
   "postcard": {
-    "date": "2026-09-11",
-    "place": "Santorini, Fira",
-    "title": "Caldera gold",
-    "note": "Fira balcony sunset — last island gold before the Athens ferry.",
-    "photo": "/photos/album/santorini-fira-balcony-sunset-couple.jpg",
-    "caption": "Sunset balcony stares — Aegean gold, us matching the glow."
+    "date": "2026-09-12",
+    "place": "Athens",
+    "title": "The rock, lit",
+    "note": "Parthenon on night one — Athens left the light on.",
+    "photo": "/photos/album/athens-parthenon-night-from-rooftop.jpg",
+    "caption": "Parthenon on the rock, gold against black. Athens left the light on."
   },
   "word": {
-    "el": "Καλό ταξίδι",
-    "en": "Have a good trip",
-    "say": "kah-LO tah-KSEE-dee",
-    "meaning": "Have a good trip. The ferry-day blessing — Santorini to Athens, and the road keeps going."
+    "el": "Ακρόπολη",
+    "en": "Akropoli",
+    "say": "ah-KRO-po-lee",
+    "meaning": "The high city. Today's climb — Acropolis in the morning, the museum after."
   },
   "coords": [
-    36.4165,
-    25.4324
+    37.9715,
+    23.7267
   ]
 }

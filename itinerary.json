@@ -66,7 +66,7 @@
     "dates": "September 9–12",
     "tag": "Santorini",
     "tone": "island",
-    "state": "now",
+    "state": "done",
     "title": "Santorini",
     "blurb": "Three nights on the island.",
     "plan": "Caldera light, an Oia wander before the crush, a winery for Assyrtiko, and dinners with a view. Heat in the middle of the day — we slow down."
@@ -75,7 +75,7 @@
     "dates": "September 12",
     "tag": "Athens",
     "tone": "athens",
-    "state": "upcoming",
+    "state": "done",
     "title": "Santorini → Athens",
     "blurb": "Afternoon Seajets ferry to Piraeus, 12:55–18:30.",
     "plan": "EUROCHAMPION JET 2. Santorini 12:55, Piraeus 18:30. A long, easy crossing, then into Athens for the night."
@@ -84,10 +84,10 @@
     "dates": "September 12–17",
     "tag": "Athens",
     "tone": "athens",
-    "state": "upcoming",
+    "state": "now",
     "title": "Athens",
     "blurb": "Last days in the city. The Parthenon, a few museums, and hunting for hidden bars in the Plaka. Homeward on the 17th.",
-    "plan": "Acropolis in a cooler hour, a museum or two, Plaka and hidden bars, and enough time left to just sit. Nothing packed tight."
+    "plan": "Acropolis in the morning, then the museum. Plaka and hidden bars after, and enough time left to just sit. Nothing packed tight."
   },
   {
     "dates": "September 17",

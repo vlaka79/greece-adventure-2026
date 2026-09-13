@@ -199,9 +199,9 @@
         clearMap(el);
         var map = L.map(el, { scrollWheelZoom: false, zoomControl: true });
         L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 }).addTo(map);
-        map.fitBounds([[36.30, 23.45], [38.05, 25.60]], { padding: [28, 28], animate: false, maxZoom: 9 });
+        map.setView([lat, lng], 13);
         L.circle([lat, lng], {
-          radius: 12000,
+          radius: 5000,
           color: "#1b6f66",
           weight: 1,
           fillColor: "#1b6f66",
@@ -231,7 +231,7 @@
       maxBounds: [[34.5, 22.3], [38.85, 26.95]]
     });
     L.tileLayer(TILES, { attribution: ATTR, maxZoom: 19 }).addTo(greeceMap);
-    greeceMap.fitBounds([[36.33, 25.32], [36.48, 25.52]], { padding: [28, 28], animate: false });
+    greeceMap.fitBounds([[37.955, 23.705], [37.990, 23.755]], { padding: [28, 28], animate: false });
     photoLayer = L.layerGroup().addTo(greeceMap);
 
     Promise.all([
@@ -271,9 +271,8 @@
           .addTo(greeceMap).bindPopup("Ferry \u00b7 Heraklion \u2192 Santorini");
       }
       if (ferryPlanned.length > 1) {
-        var ferryTodayLine = L.polyline(ferryPlanned, { color: "#c4a35a", weight: 3, dashArray: "7 7", opacity: 0.95 })
-          .addTo(greeceMap).bindPopup("Seajets Champions League Jet 2 \u00b7 Athinios \u2192 Piraeus via Ios, Naxos, Mykonos, Tinos, Syros");
-        try { greeceMap.fitBounds(ferryTodayLine.getBounds().pad(0.12), { padding: [28, 28], animate: false }); } catch (e) {}
+        L.polyline(ferryPlanned, { color: "#c4a35a", weight: 3, dashArray: "7 7", opacity: 0.95 })
+          .addTo(greeceMap).bindPopup("Ferry \u00b7 Santorini \u2192 Piraeus via Ios, Naxos, Mykonos, Tinos, Syros");
       }
 
       stops.forEach(function (s, i) {
