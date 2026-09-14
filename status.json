@@ -2,8 +2,8 @@
   "lat": 37.9715,
   "lng": 23.7267,
   "location": "Athens",
-  "tonight": "Athens still. The climb is done; the alleys are not.",
-  "tomorrow": "More of the city. Nothing packed tight.",
+  "tonight": "Athens still. Lazy day in the city — alleys if we feel like it, nowhere we have to be.",
+  "tomorrow": "More of Athens. Same easy pace.",
   "postcard": {
     "date": "2026-09-13",
     "place": "Athens",
@@ -13,10 +13,10 @@
     "caption": "Julia and Daniel looking at the Parthenon. Twenty-four centuries, and it still does the looking-up."
   },
   "word": {
-    "el": "Ακρόπολη",
-    "en": "Akropoli",
-    "say": "ah-KRO-po-lee",
-    "meaning": "The high city. Yesterday's climb — still the word that fits."
+    "el": "Πλάκα",
+    "en": "Plaka",
+    "say": "PLAH-kah",
+    "meaning": "Plaka. The old neighborhood under the rock — alleys, cafés, and a day with nowhere to rush."
   },
   "coords": [
     37.9715,
