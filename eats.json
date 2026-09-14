@@ -1,5 +1,35 @@
 [
   {
+    "place": "Avli (Αυλή), Psyrri",
+    "dish": "Sausage, tzatziki & the grill",
+    "note": "Courtyard dinner: cucumber salad, loukaniko, tzatziki, grilled meat, wine in the little glass.",
+    "photo": "/photos/album/athens-avli-dinner.jpg",
+    "lat": 37.979606,
+    "lng": 23.725947,
+    "date": "2026-09-13",
+    "taken": "2026-09-13T19:44:54"
+  },
+  {
+    "place": "Ydria (Υδρία), Plaka",
+    "dish": "Tomato salad & rusks",
+    "note": "Chopped tomatoes, dark rusks, crumbled cheese. The rolls watching from the next plate.",
+    "photo": "/photos/album/athens-ydria-tomato-salad.jpg",
+    "lat": 37.974994,
+    "lng": 23.727497,
+    "date": "2026-09-13",
+    "taken": "2026-09-13T10:50:11"
+  },
+  {
+    "place": "Ydria (Υδρία), Plaka",
+    "dish": "Mamos",
+    "note": "Two cold glasses after the Acropolis. Lunch at Ydria, official business.",
+    "photo": "/photos/album/athens-ydria-mamos.jpg",
+    "lat": 37.975006,
+    "lng": 23.727411,
+    "date": "2026-09-13",
+    "taken": "2026-09-13T10:41:31"
+  },
+  {
     "place": "Nonnas, Plaka",
     "dish": "Lemon chicken, calamari & two whites",
     "note": "First Athens table: baby chicken in lemon sauce, grilled calamari with long beans, and two glasses throwing gold on the paper. Ferry day, closed properly.",

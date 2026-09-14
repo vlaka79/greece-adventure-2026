@@ -2,21 +2,21 @@
   "lat": 37.9715,
   "lng": 23.7267,
   "location": "Athens",
-  "tonight": "First full day in Athens — Acropolis and the museum.",
+  "tonight": "Athens still. The climb is done; the alleys are not.",
   "tomorrow": "More of the city. Nothing packed tight.",
   "postcard": {
-    "date": "2026-09-12",
+    "date": "2026-09-13",
     "place": "Athens",
-    "title": "The rock, lit",
-    "note": "Parthenon on night one — Athens left the light on.",
-    "photo": "/photos/album/athens-parthenon-night-from-rooftop.jpg",
-    "caption": "Parthenon on the rock, gold against black. Athens left the light on."
+    "title": "Looking up",
+    "note": "Julia and Daniel looking at the Parthenon. The high city, finally under our feet.",
+    "photo": "/photos/album/athens-parthenon-looking.jpg",
+    "caption": "Julia and Daniel looking at the Parthenon. Twenty-four centuries, and it still does the looking-up."
   },
   "word": {
     "el": "Ακρόπολη",
     "en": "Akropoli",
     "say": "ah-KRO-po-lee",
-    "meaning": "The high city. Today's climb — Acropolis in the morning, the museum after."
+    "meaning": "The high city. Yesterday's climb — still the word that fits."
   },
   "coords": [
     37.9715,
