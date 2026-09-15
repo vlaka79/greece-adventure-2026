@@ -1,5 +1,45 @@
 [
   {
+    "place": "Meat the Greek",
+    "dish": "Souvlaki plate",
+    "note": "Sign under the bougainvillea, then a fry mountain over the skewers — pita, tzatziki, lemon. Dinner locked.",
+    "photo": "/photos/album/athens-meat-the-greek-dinner-collage.jpg",
+    "lat": 37.97581,
+    "lng": 23.73057,
+    "date": "2026-09-14",
+    "taken": "2026-09-14T19:51:57"
+  },
+  {
+    "place": "The Clumsies",
+    "dish": "Pre-dinner cocktails",
+    "note": "Neon green and a blue-rim glass, şerefe on the napkin, peanuts in the middle. Warm-up before dinner.",
+    "photo": "/photos/album/athens-clumsies-cocktails.jpg",
+    "lat": 37.97913,
+    "lng": 23.73003,
+    "date": "2026-09-14",
+    "taken": "2026-09-14T18:27:51"
+  },
+  {
+    "place": "Krinos (Κρίνος)",
+    "dish": "Loukoumades with all the honey",
+    "note": "Since 1923: golden loukoumades absolutely drowning in honey. Sticky hands, historic sugar high.",
+    "photo": "/photos/album/athens-krinos-loukoumades-collage.jpg",
+    "lat": 37.98024,
+    "lng": 23.72851,
+    "date": "2026-09-14",
+    "taken": "2026-09-14T12:33:27"
+  },
+  {
+    "place": "Mokka",
+    "dish": "Sand-brewed Greek coffee",
+    "note": "Briki in the hot sand, then the cup with thick foam and loukoumi on the side. Old-school Athens coffee.",
+    "photo": "/photos/album/athens-mokka-coffee-collage.jpg",
+    "lat": 37.98075,
+    "lng": 23.72721,
+    "date": "2026-09-14",
+    "taken": "2026-09-14T11:22:30"
+  },
+  {
     "place": "Avli (Αυλή), Psyrri",
     "dish": "Sausage, tzatziki & the grill",
     "note": "Courtyard dinner: cucumber salad, loukaniko, tzatziki, grilled meat, wine in the little glass.",

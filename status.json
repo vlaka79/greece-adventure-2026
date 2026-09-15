@@ -1,25 +1,25 @@
 {
-  "lat": 37.9715,
-  "lng": 23.7267,
+  "lat": 37.9758,
+  "lng": 23.7306,
   "location": "Athens",
-  "tonight": "Athens still. Lazy day in the city — alleys if we feel like it, nowhere we have to be.",
-  "tomorrow": "More of Athens. Same easy pace.",
+  "tonight": "Athens still. Another easy city day — no ferry, no checklist, just wander.",
+  "tomorrow": "More Athens. Same unhurried pace.",
   "postcard": {
-    "date": "2026-09-14",
+    "date": "2026-09-15",
     "place": "Athens",
-    "title": "Looking up",
-    "note": "Julia and Daniel looking at the Parthenon. We forgot our chitons.",
-    "photo": "/photos/album/athens-parthenon-looking.jpg",
-    "caption": "Julia and Daniel looking at the Parthenon. We forgot our chitons. Twenty-four centuries, and it still does the looking-up."
+    "title": "All the honey",
+    "note": "Loukoumades at Krinos, drowning in honey.",
+    "photo": "/photos/album/athens-krinos-loukoumades.jpg",
+    "caption": "Loukoumades drowning in honey — all the honey. Sticky fingers, no regrets."
   },
   "word": {
-    "el": "Χιτών",
-    "en": "Chiton",
-    "say": "khee-TOHN",
-    "meaning": "Chiton — the ancient Greek tunic, usually white linen. We forgot ours at the Parthenon."
+    "el": "Λουκουμάδες",
+    "en": "Loukoumades",
+    "say": "loo-koo-MAH-thes",
+    "meaning": "Honey-soaked fried dough balls. Yesterday's assignment at Krinos — all the honey."
   },
   "coords": [
-    37.9715,
-    23.7267
+    37.9758,
+    23.7306
   ]
 }
