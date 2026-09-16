@@ -3,27 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Daniel & Julia · Trips</title>
-  <meta name="description" content="Trips from Daniel and Julia — start with Greece Adventure 2026." />
+  <title>Daniel &amp; Julia · Adventures</title>
+  <meta name="description" content="A map of Daniel and Julia’s trips — Greece Adventure 2026 is live, with Texas, Caribbean, Italy, and Hawaii behind it." />
   <meta name="theme-color" content="#f4eee4" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
   <link rel="stylesheet" href="https://grove-amber-horizon-mist.grok.me/assets/styles-CM6tjZ7_.css" />
+  <style>
+    #hub-map-shell {
+      height: 280px;
+      max-height: 280px;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      background: #ebe3d4;
+      box-shadow: 0 0 0 1px rgba(42,36,28,.06), 0 10px 28px -12px rgba(42,36,28,.14);
+    }
+    @media (min-width: 640px) {
+      #hub-map-shell { height: 320px; max-height: 320px; }
+    }
+    #hub-map { height: 100%; width: 100%; }
+    .leaflet-container { font-family: inherit; background: #ebe3d4; }
+    .leaflet-container img { max-width: none; }
+    .hub-pin { background: none !important; border: 0 !important; }
+    .hub-pin-dot {
+      width: 16px; height: 16px; border-radius: 50%;
+      background: #1b6f66; border: 2px solid #fffcf6;
+      box-shadow: 0 0 0 5px rgba(27,111,102,.22), 0 2px 6px rgba(42,36,28,.28);
+    }
+    .hub-pin-dot.is-live {
+      box-shadow: 0 0 0 6px rgba(27,111,102,.32), 0 2px 6px rgba(42,36,28,.28);
+    }
+    .hub-pin-dot.is-on {
+      background: #c4a35a;
+      box-shadow: 0 0 0 6px rgba(196,163,90,.35), 0 2px 6px rgba(42,36,28,.28);
+    }
+    .hub-pin-label {
+      background: #fffcf6;
+      color: #2a241c;
+      border: 0;
+      border-radius: 999px;
+      box-shadow: 0 1px 4px rgba(42,36,28,.18);
+      font-family: "Playfair Display", ui-serif, Georgia, serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      line-height: 1.15;
+      padding: 0.22rem 0.55rem;
+      white-space: nowrap;
+      max-width: 9.5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .hub-pin-label::before { display: none; }
+    .leaflet-tooltip-bottom.hub-pin-label { margin-top: 6px; }
+    .leaflet-tooltip-top.hub-pin-label { margin-bottom: 6px; }
+    .leaflet-tooltip-left.hub-pin-label { margin-right: 6px; }
+    .leaflet-tooltip-right.hub-pin-label { margin-left: 6px; }
+    .hub-popup .leaflet-popup-content-wrapper {
+      background: #fffcf6; color: #2a241c; border-radius: 0.85rem;
+      box-shadow: 0 0 0 1px rgba(42,36,28,.06), 0 10px 24px -12px rgba(42,36,28,.2);
+    }
+    .hub-popup .leaflet-popup-content { margin: 0.7rem 0.85rem; font-size: 0.9rem; }
+    .hub-popup .leaflet-popup-tip { background: #fffcf6; }
+    .hub-popup a { color: #1b6f66; font-weight: 600; }
+    .hub-card {
+      display: block; overflow: hidden; border-radius: 1.25rem;
+      background: #fffcf6; color: #2a241c; text-decoration: none;
+      box-shadow: 0 0 0 1px rgba(42,36,28,.06), 0 10px 28px -12px rgba(42,36,28,.14);
+      transition: box-shadow .2s ease, transform .2s ease;
+    }
+    .hub-card.is-active {
+      box-shadow: 0 0 0 2px #1b6f66, 0 12px 28px -10px rgba(27,111,102,.35);
+    }
+    .hub-cover { aspect-ratio: 16 / 9; background: #ebe3d4; overflow: hidden; }
+    .hub-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hub-stamp {
+      aspect-ratio: 16 / 9;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: linear-gradient(160deg, #d7ebe8 0%, #f4eee4 48%, #ebe3d4 100%);
+      color: #1b6f66; text-align: center; padding: 1rem;
+    }
+    .hub-stamp[hidden] { display: none !important; }
+    .hub-open {
+      display: inline-flex; align-items: center;
+      margin-top: 1rem; border-radius: 999px; background: #1b6f66; color: #f4eee4;
+      font-size: 0.9rem; font-weight: 600; padding: 0.55rem 1.1rem; text-decoration: none;
+    }
+    .hub-open:hover { color: #fffcf6; }
+    @media (prefers-reduced-motion: reduce) {
+      .hub-card { transition: none; }
+    }
+  </style>
   <script src="/ga.js"></script>
 </head>
 <body class="bg-bg text-fg">
   <div class="min-h-dvh bg-bg text-fg">
     <header class="border-b border-border/80 bg-bg/90">
       <div class="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
-        <a href="/" class="text-sm font-semibold text-primary">← Home</a>
+        <a href="/" class="text-sm font-semibold text-primary">← Greece Home</a>
       </div>
     </header>
-    <main class="mx-auto max-w-3xl px-5 py-10">
-      <p class="text-xs font-semibold uppercase tracking-widest text-primary">Daniel &amp; Julia</p>
-      <h1 class="mt-2 font-serif text-4xl font-semibold text-fg">Trips</h1>
-      <p class="mt-2 text-muted">Places we’ve been, and the one we’re on now.</p>
-      <ul id="trips-list" class="mt-8 space-y-6"></ul>
-      <p id="trips-later" class="mt-8 hidden text-sm text-muted"></p>
+    <main class="px-5 py-10">
+      <div class="mx-auto max-w-3xl">
+        <p class="text-xs font-semibold uppercase tracking-widest text-primary">Daniel &amp; Julia</p>
+        <h1 class="mt-2 font-serif text-4xl font-semibold text-fg">Adventures</h1>
+        <p class="mt-2 text-muted">Places we’ve been, and the one we’re on now.</p>
+      </div>
+      <section class="mx-auto mt-8 w-full max-w-5xl" aria-label="Trip map">
+        <div id="hub-map-shell">
+          <div id="hub-map" role="application" aria-label="World map of trips"></div>
+        </div>
+        <p class="mx-auto mt-3 max-w-3xl text-sm text-muted">A pin for each trip. Tap one to find its postcard.</p>
+      </section>
+      <div class="mx-auto mt-10 max-w-3xl">
+        <ul id="trips-list" class="space-y-6"></ul>
+        <p id="trips-later" class="mt-8 hidden text-sm text-muted"></p>
+      </div>
     </main>
     <footer class="border-t border-border bg-bg-warm">
       <div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 text-sm text-muted">
@@ -32,8 +126,17 @@
       </div>
     </footer>
   </div>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>if (typeof L === "undefined") { document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"><\/script>'); }</script>
   <script>
   (function () {
+    var TILES = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+    var ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var pinDots = {};
+    var activeTimer = 0;
+
     function esc(s) {
       return String(s == null ? "" : s)
         .replace(/&/g, "&amp;")
@@ -41,6 +144,140 @@
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;");
     }
+
+    function isLive(t) {
+      return t && (t.href === "/" || t.id === "greece-2026");
+    }
+
+    function labelDir(id) {
+      if (id === "italy-2025") return "left";
+      if (id === "greece-2026") return "right";
+      if (id === "caribbean-2026") return "bottom";
+      if (id === "texas-2026") return "top";
+      return "bottom";
+    }
+
+    function coverHtml(t) {
+      if (t.cover) {
+        return '<div class="hub-cover"><img src="' + esc(t.cover) + '" alt="' + esc(t.title || "") + '" loading="lazy" decoding="async" /></div>' +
+          '<div class="hub-stamp" hidden>' +
+          '<p class="font-serif text-2xl font-semibold">Postcard coming soon</p>' +
+          "</div>";
+      }
+      return '<div class="hub-stamp" role="img" aria-label="Postcard coming soon">' +
+        '<p class="font-serif text-2xl font-semibold">Postcard coming soon</p>' +
+        "</div>";
+    }
+
+    function renderCard(t) {
+      var live = isLive(t);
+      var li = document.createElement("li");
+      li.id = "trip-" + (t.id || "");
+      li.className = "scroll-mt-20";
+      li.innerHTML =
+        '<article class="hub-card">' +
+        coverHtml(t) +
+        '<div class="p-5">' +
+        '<p class="text-xs font-semibold uppercase tracking-widest text-primary">' + esc(t.dates || "") + "</p>" +
+        '<h2 class="mt-1 font-serif text-2xl font-semibold text-fg">' + esc(t.title || "") + "</h2>" +
+        (live ? '<p class="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-primary"><span class="inline-block size-2 rounded-full bg-primary"></span>Live trip</p>' : "") +
+        (t.note ? '<p class="mt-2 text-base leading-relaxed text-muted">' + esc(t.note) + "</p>" : "") +
+        '<a class="hub-open" href="' + esc(t.href) + '">Open trip</a>' +
+        "</div></article>";
+      if (t.cover) {
+        var img = li.querySelector(".hub-cover img");
+        var stamp = li.querySelector(".hub-stamp");
+        if (img && stamp) {
+          img.addEventListener("error", function () {
+            var cover = img.parentNode;
+            stamp.hidden = false;
+            stamp.removeAttribute("hidden");
+            if (cover && cover.parentNode) cover.parentNode.removeChild(cover);
+          });
+        }
+      }
+      return li;
+    }
+
+    function highlightCard(id) {
+      var cards = document.querySelectorAll(".hub-card");
+      cards.forEach(function (c) { c.classList.remove("is-active"); });
+      Object.keys(pinDots).forEach(function (k) {
+        pinDots[k].classList.toggle("is-on", k === id);
+      });
+      var li = document.getElementById("trip-" + id);
+      if (!li) return;
+      var card = li.querySelector(".hub-card");
+      if (card) card.classList.add("is-active");
+      li.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+      if (activeTimer) window.clearTimeout(activeTimer);
+      activeTimer = window.setTimeout(function () {
+        if (card) card.classList.remove("is-active");
+      }, 2800);
+    }
+
+    function initMap(trips) {
+      var el = document.getElementById("hub-map");
+      if (!el || typeof L === "undefined") return;
+      var map = L.map(el, {
+        scrollWheelZoom: false,
+        zoomControl: true,
+        minZoom: 1,
+        maxZoom: 6,
+        worldCopyJump: true
+      });
+      L.tileLayer(TILES, { attribution: ATTR, maxZoom: 6 }).addTo(map);
+
+      var bounds = [];
+      trips.forEach(function (t) {
+        if (t.lat == null || t.lng == null) return;
+        var lat = Number(t.lat);
+        var lng = Number(t.lng);
+        if (isNaN(lat) || isNaN(lng)) return;
+        bounds.push([lat, lng]);
+        var live = isLive(t);
+        var icon = L.divIcon({
+          className: "hub-pin",
+          html: '<div class="hub-pin-dot' + (live ? " is-live" : "") + '" data-trip="' + esc(t.id) + '"></div>',
+          iconSize: [16, 16],
+          iconAnchor: [8, 8]
+        });
+        var marker = L.marker([lat, lng], { icon: icon, title: t.title || "", keyboard: true, riseOnHover: true });
+        marker.bindTooltip(t.title || "", {
+          permanent: true,
+          direction: labelDir(t.id),
+          className: "hub-pin-label",
+          opacity: 1
+        });
+        marker.bindPopup(
+          "<p class=\"font-serif font-semibold\">" + esc(t.title || "") + "</p>" +
+          (t.dates ? "<p class=\"text-sm text-muted\">" + esc(t.dates) + "</p>" : "") +
+          '<p class="mt-2"><a href="' + esc(t.href) + '">Open trip</a></p>',
+          { className: "hub-popup", maxWidth: 220 }
+        );
+        marker.on("click", function () {
+          highlightCard(t.id);
+        });
+        marker.addTo(map);
+        var elDot = marker.getElement() && marker.getElement().querySelector(".hub-pin-dot");
+        if (elDot) pinDots[t.id] = elDot;
+      });
+
+      if (bounds.length) {
+        map.fitBounds(bounds, { padding: [48, 56], maxZoom: 3, animate: false });
+      } else {
+        map.setView([20, -40], 2);
+      }
+      setTimeout(function () {
+        map.invalidateSize();
+        trips.forEach(function (t) {
+          if (!t.id || pinDots[t.id]) return;
+          var found = el.querySelector('.hub-pin-dot[data-trip="' + t.id + '"]');
+          if (found) pinDots[t.id] = found;
+        });
+      }, 200);
+    }
+
     fetch("/trips.json", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : { trips: [] }; })
       .then(function (data) {
@@ -50,19 +287,13 @@
         var trips = (data && data.trips) || [];
         trips.forEach(function (t) {
           if (!t || !t.href) return;
-          var li = document.createElement("li");
-          li.innerHTML =
-            '<a href="' + esc(t.href) + '" class="block overflow-hidden rounded-xl bg-surface p-5 text-fg no-underline card-shadow">' +
-            '<p class="text-xs font-semibold uppercase tracking-widest text-primary">' + esc(t.dates || "") + "</p>" +
-            '<h2 class="mt-1 font-serif text-2xl font-semibold text-fg">' + esc(t.title || "") + "</h2>" +
-            (t.note ? '<p class="mt-2 text-base leading-relaxed text-muted">' + esc(t.note) + "</p>" : "") +
-            "</a>";
-          list.appendChild(li);
+          list.appendChild(renderCard(t));
         });
         if (later && data && data.comingLater) {
           later.textContent = data.comingLater;
           later.classList.remove("hidden");
         }
+        initMap(trips);
       })
       .catch(function () {});
   })();
