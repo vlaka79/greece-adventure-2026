@@ -25,6 +25,10 @@
     .leaflet-container { font-family: inherit; background: #ebe3d4; }
     .leaflet-container img { max-width: none; }
     .hub-pin { background: none !important; border: 0 !important; }
+    .hub-pin-hit {
+      width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+    }
     .hub-pin-dot {
       width: 16px; height: 16px; border-radius: 50%;
       background: #1b6f66; border: 2px solid #fffcf6;
@@ -52,6 +56,8 @@
       max-width: 9.5rem;
       overflow: hidden;
       text-overflow: ellipsis;
+      pointer-events: auto;
+      cursor: pointer;
     }
     .hub-pin-label::before { display: none; }
     .leaflet-tooltip-bottom.hub-pin-label { margin-top: 6px; }
@@ -213,7 +219,7 @@
       if (activeTimer) window.clearTimeout(activeTimer);
       activeTimer = window.setTimeout(function () {
         if (card) card.classList.remove("is-active");
-      }, 2800);
+      }, 4000);
     }
 
     function initMap(trips) {
@@ -227,6 +233,11 @@
         worldCopyJump: true
       });
       L.tileLayer(TILES, { attribution: ATTR, maxZoom: 6 }).addTo(map);
+      el.addEventListener("click", function (ev) {
+        var node = ev.target && ev.target.closest && ev.target.closest("[data-trip]");
+        if (!node) return;
+        highlightCard(node.getAttribute("data-trip"));
+      });
 
       var bounds = [];
       trips.forEach(function (t) {
@@ -238,13 +249,14 @@
         var live = isLive(t);
         var icon = L.divIcon({
           className: "hub-pin",
-          html: '<div class="hub-pin-dot' + (live ? " is-live" : "") + '" data-trip="' + esc(t.id) + '"></div>',
-          iconSize: [16, 16],
-          iconAnchor: [8, 8]
+          html: '<div class="hub-pin-hit"><div class="hub-pin-dot' + (live ? " is-live" : "") + '" data-trip="' + esc(t.id) + '"></div></div>',
+          iconSize: [28, 28],
+          iconAnchor: [14, 14]
         });
         var marker = L.marker([lat, lng], { icon: icon, title: t.title || "", keyboard: true, riseOnHover: true });
-        marker.bindTooltip(t.title || "", {
+        marker.bindTooltip('<span data-trip="' + esc(t.id) + '">' + esc(t.title || "") + "</span>", {
           permanent: true,
+          interactive: true,
           direction: labelDir(t.id),
           className: "hub-pin-label",
           opacity: 1
@@ -255,9 +267,9 @@
           '<p class="mt-2"><a href="' + esc(t.href) + '">Open trip</a></p>',
           { className: "hub-popup", maxWidth: 220 }
         );
-        marker.on("click", function () {
-          highlightCard(t.id);
-        });
+        function selectTrip() { highlightCard(t.id); }
+        marker.on("click", selectTrip);
+        marker.on("tooltipclick", selectTrip);
         marker.addTo(map);
         var elDot = marker.getElement() && marker.getElement().querySelector(".hub-pin-dot");
         if (elDot) pinDots[t.id] = elDot;
