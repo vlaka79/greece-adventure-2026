@@ -1,25 +1,17 @@
 {
-  "lat": 37.9758,
-  "lng": 23.7306,
-  "location": "Athens",
-  "tonight": "Athens still. Another easy city day — no ferry, no checklist, just wander.",
-  "tomorrow": "More Athens. Same unhurried pace.",
-  "postcard": {
-    "date": "2026-09-15",
-    "place": "Athens",
-    "title": "All the honey",
-    "note": "Loukoumades at Krinos, drowning in honey.",
-    "photo": "/photos/album/athens-krinos-loukoumades.jpg",
-    "caption": "Loukoumades drowning in honey — all the honey. Sticky fingers, no regrets."
-  },
+  "lat": 34.1808,
+  "lng": -118.309,
+  "location": "Home · Burbank",
+  "tonight": "Home. Greece in the rearview — trip over, couch claimed.",
+  "tomorrow": "Nothing on the itinerary but unpacking and telling the stories.",
   "word": {
-    "el": "Βόλτα",
-    "en": "Volta",
-    "say": "VOL-ta",
-    "meaning": "A stroll. Nowhere to be — just walking the city."
+    "el": "Νόστος",
+    "en": "Nostos",
+    "say": "NOS-tos",
+    "meaning": "Homecoming — the journey home. Odyssey word, our word today."
   },
   "coords": [
-    37.9758,
-    23.7306
+    34.1808,
+    -118.309
   ]
 }

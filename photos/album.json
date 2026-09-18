@@ -1,5 +1,104 @@
 [
   {
+    "src": "/photos/album/travel-frankfurt-homebound-selfie.jpg",
+    "caption": "Homebound selfie over Frankfurt. Tired smiles, Burbank next.",
+    "place": "travel",
+    "lat": 50.04915,
+    "lng": 8.59128,
+    "added": "2026-09-18T01:02:37",
+    "date": "2026-09-17",
+    "taken": "2026-09-17T08:41:00",
+    "new": true
+  },
+  {
+    "src": "/photos/album/athens-lego-corner-dome.jpg",
+    "caption": "Greek flag on the balcony, LEGO on the corner. Athens multitasking.",
+    "place": "athens",
+    "lat": 37.97514,
+    "lng": 23.7335,
+    "added": "2026-09-18T01:02:37",
+    "date": "2026-09-15",
+    "taken": "2026-09-15T12:43:00",
+    "new": true
+  },
+  {
+    "src": "/photos/album/athens-laduree-tea-macarons.jpg",
+    "caption": "Tea, a tiny cookie, and a silver tower of macarons. Ladurée afternoon.",
+    "place": "athens",
+    "lat": 37.97498,
+    "lng": 23.72958,
+    "added": "2026-09-18T01:02:37",
+    "date": "2026-09-15",
+    "taken": "2026-09-15T13:16:00",
+    "new": true
+  },
+  {
+    "src": "/photos/album/athens-laduree-macaron-case.jpg",
+    "caption": "Macaron rainbow behind glass — every shade of yes.",
+    "place": "athens",
+    "lat": 37.97517,
+    "lng": 23.7296,
+    "added": "2026-09-18T01:02:37",
+    "date": "2026-09-15",
+    "taken": "2026-09-15T14:04:00",
+    "new": true
+  },
+  {
+    "src": "/photos/album/athens-constantine-xi-statue.jpg",
+    "caption": "Constantine XI still on watch — sword up, double eagle on the helmet.",
+    "place": "athens",
+    "lat": 37.97543,
+    "lng": 23.72933,
+    "added": "2026-09-18T01:02:37",
+    "date": "2026-09-15",
+    "taken": "2026-09-15T14:06:00",
+    "new": true
+  },
+  {
+    "src": "/photos/album/athens-lantern-canopy-dinner.jpg",
+    "caption": "Dinner under a sky of silk lanterns. Soft glow, nowhere to rush.",
+    "place": "athens",
+    "lat": 37.97664,
+    "lng": 23.73135,
+    "added": "2026-09-18T01:02:37",
+    "date": "2026-09-15",
+    "taken": "2026-09-15T17:56:00",
+    "new": true
+  },
+  {
+    "src": "/photos/album/athens-crispy-chicken-noodles.jpg",
+    "caption": "Crispy chicken, noodles, little bowl of dark sauce. Comfort on a plate.",
+    "place": "athens",
+    "lat": 37.97664,
+    "lng": 23.73136,
+    "added": "2026-09-18T01:02:37",
+    "date": "2026-09-15",
+    "taken": "2026-09-15T18:06:00",
+    "new": true
+  },
+  {
+    "src": "/photos/album/athens-pho-bowl.jpg",
+    "caption": "A steaming bowl of pho, herbs piled high. Best medicine that isn’t Greek.",
+    "place": "athens",
+    "lat": 37.97666,
+    "lng": 23.73126,
+    "added": "2026-09-18T01:02:37",
+    "date": "2026-09-15",
+    "taken": "2026-09-15T18:06:00",
+    "new": true
+  },
+  {
+    "src": "/photos/album/athens-street-art-raindrop-fountain.jpg",
+    "caption": "Kids and a pigeon at a fountain, painted inside a raindrop. Street art after dinner.",
+    "place": "athens",
+    "lat": 37.97664,
+    "lng": 23.73133,
+    "added": "2026-09-18T01:02:37",
+    "date": "2026-09-15",
+    "taken": "2026-09-15T18:53:00",
+    "new": true
+  },
+  {
     "src": "/photos/album/athens-mokka-sand-coffee.jpg",
     "caption": "Briki nestled in hot sand. Mokka still brewing coffee the old way.",
     "place": "athens",

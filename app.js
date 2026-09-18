@@ -150,59 +150,6 @@
       } else if (tomorrow && status.tomorrow) {
         tomorrow.textContent = "Tomorrow: " + status.tomorrow;
       }
-      var card = status.postcard || {};
-      var postcard = document.getElementById("postcard");
-      var convo = card.conversation || null;
-      var hasConvo = convo && convo.lines && convo.lines.length;
-      if (postcard && (card.note || card.title || hasConvo)) {
-        postcard.classList.remove("hidden");
-        var title = document.getElementById("postcard-title");
-        var note = document.getElementById("postcard-note");
-        var date = document.getElementById("postcard-date");
-        if (title) title.textContent = card.title || "Postcard";
-        if (note) note.textContent = card.note || "";
-        if (date) date.textContent = formatDate(card.date);
-        if (card.photo) {
-          var wrap = document.getElementById("postcard-photo-wrap");
-          var img = document.getElementById("postcard-photo");
-          if (wrap && img) {
-            img.src = card.photo;
-            img.alt = card.title || "Postcard";
-            wrap.classList.remove("hidden");
-          }
-        }
-        var convoBox = document.getElementById("postcard-conversation");
-        var convoLabel = document.getElementById("postcard-convo-label");
-        var convoTitle = document.getElementById("postcard-convo-title");
-        var convoLines = document.getElementById("postcard-convo-lines");
-        if (convoBox && convoLines) {
-          if (hasConvo) {
-            convoBox.classList.remove("hidden");
-            if (convoLabel) convoLabel.textContent = convo.label || "Conversation of the day";
-            if (convoTitle) convoTitle.textContent = convo.title || "";
-            convoLines.innerHTML = "";
-            convo.lines.forEach(function (line) {
-              var row = document.createElement("p");
-              row.className = "leading-relaxed";
-              var who = document.createElement("span");
-              who.className = "font-semibold text-primary";
-              who.textContent = (line.who || "") + ": ";
-              row.appendChild(who);
-              row.appendChild(document.createTextNode(line.text || ""));
-              convoLines.appendChild(row);
-            });
-            if (convo.closer) {
-              var closer = document.createElement("p");
-              closer.className = "mt-3 text-base italic text-fg/80";
-              closer.textContent = convo.closer;
-              convoLines.appendChild(closer);
-            }
-          } else {
-            convoBox.classList.add("hidden");
-            convoLines.innerHTML = "";
-          }
-        }
-      }
       var word = status.word || {};
       var wordCard = document.getElementById("word-card");
       if (wordCard && word.el) {
