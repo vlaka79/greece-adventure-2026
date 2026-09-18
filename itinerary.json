@@ -5,17 +5,17 @@
     "tone": "muted",
     "state": "done",
     "title": "Burbank → Chania",
-    "blurb": "Heading out Monday afternoon from Burbank. We land in Chania late Tuesday night.",
-    "plan": "Fly out Monday afternoon from Burbank and land in Chania late Tuesday. Keep the first night easy — bags, a late bite, sleep."
+    "blurb": "West to Crete — long flight, late landing.",
+    "plan": "Flew Burbank–San Francisco–Frankfurt–Athens–Chania. Boots on Crete late Tuesday."
   },
   {
     "dates": "August 25–30",
     "tag": "Crete",
     "tone": "crete",
     "state": "done",
-    "title": "Chania, Crete",
-    "blurb": "Slow days by the harbour, and the Saturday market — Mercato del Sabato.",
-    "plan": "Ease into Crete. Harbour walks, a coffee in the old town, and Saturday’s market. No car yet — stay close and eat well."
+    "title": "Chania",
+    "blurb": "Old harbour, market mornings, easy first days.",
+    "plan": "Harbour walks, old-town coffee, Saturday market. No car yet — stayed close and ate well."
   },
   {
     "dates": "August 30 – September 1",
@@ -23,8 +23,8 @@
     "tone": "crete",
     "state": "done",
     "title": "Paleochora",
-    "blurb": "Down to the south coast. We pick up a car in Chania that morning, and plan to visit Elafonissi Beach.",
-    "plan": "Pick up the car in Chania and take the south-coast roads to Paleochora. Elafonissi if the day is kind — pink sand, a long swim, a slow drive back."
+    "blurb": "South coast with the car — Elafonisi in the mix.",
+    "plan": "Picked up the car in Chania, drove the south-coast roads to Paleochora, swam Elafonisi."
   },
   {
     "dates": "September 1–4",
@@ -32,8 +32,8 @@
     "tone": "crete",
     "state": "done",
     "title": "Douliana",
-    "blurb": "Three nights in a mountain village inland from the north coast.",
-    "plan": "Three quiet nights in the hills. Village walks, a taverna table, and a swim on the north coast if we want one."
+    "blurb": "Mountain village nights inland from the north coast.",
+    "plan": "Three quiet nights in the hills — village walks, taverna tables, a north-coast swim when we wanted one."
   },
   {
     "dates": "September 4–6",
@@ -41,8 +41,8 @@
     "tone": "crete",
     "state": "done",
     "title": "Elounda",
-    "blurb": "Two nights on the northeast coast, near Agios Nikolaos.",
-    "plan": "Two nights in Elounda. Spinalonga if we feel like the boat, an easy evening by the water, nothing rushed."
+    "blurb": "Northeast coast near Agios Nikolaos.",
+    "plan": "Two nights in Elounda — Spinalonga by boat, easy evenings by the water."
   },
   {
     "dates": "September 6–9",
@@ -50,8 +50,8 @@
     "tone": "crete",
     "state": "done",
     "title": "Heraklion",
-    "blurb": "Last stretch on Crete. We drop the car here on the 6th. One stop that matters to us: Saint Minas Cathedral, a family site.",
-    "plan": "Drop the car. Saint Minas Cathedral — family ground — then the old town, a market wander, and a last Cretan dinner before the ferry."
+    "blurb": "Last Crete stretch — car returned, city days.",
+    "plan": "Dropped the car. Agios Minas Cathedral (family stop), old town, market, last Cretan dinners before the ferry."
   },
   {
     "dates": "September 9",
@@ -59,8 +59,8 @@
     "tone": "island",
     "state": "done",
     "title": "Heraklion → Santorini",
-    "blurb": "Morning Seajets ferry, 8:00–9:35.",
-    "plan": "WORLDCHAMPION JET, Club class. Heraklion 8:00, Santorini 9:35. At the port early, then up from Athinios to the caldera."
+    "blurb": "Morning Seajets hop to the caldera.",
+    "plan": "Worldchampion Jet, club class — Heraklion 8:00, Santorini 9:35, then up from Athinios."
   },
   {
     "dates": "September 9–12",
@@ -68,8 +68,8 @@
     "tone": "island",
     "state": "done",
     "title": "Santorini",
-    "blurb": "Three nights on the island.",
-    "plan": "Caldera light, an Oia wander before the crush, a winery for Assyrtiko, and dinners with a view. Heat in the middle of the day — we slow down."
+    "blurb": "Caldera light, Oia anniversary, black-sand Perissa.",
+    "plan": "Three nights — Oia for the anniversary, Perissa beach, Fira wander, dinners with a view."
   },
   {
     "dates": "September 12",
@@ -77,8 +77,8 @@
     "tone": "athens",
     "state": "done",
     "title": "Santorini → Athens",
-    "blurb": "Afternoon Seajets ferry to Piraeus, 12:55–18:30.",
-    "plan": "EUROCHAMPION JET 2. Santorini 12:55, Piraeus 18:30. A long, easy crossing, then into Athens for the night."
+    "blurb": "Afternoon Seajets to Piraeus.",
+    "plan": "Eurochampion Jet 2 — Santorini 12:55, Piraeus 18:30, into Athens for the night."
   },
   {
     "dates": "September 12–17",
@@ -86,8 +86,8 @@
     "tone": "athens",
     "state": "done",
     "title": "Athens",
-    "blurb": "City days, then a soft landing into bed. Homeward on the 17th — done.",
-    "plan": "Relax and have a lazy day in the city. Plaka and the alleys if we wander; no tickets, no climb. Just sit."
+    "blurb": "Acropolis, markets, macarons, then two slow sick days.",
+    "plan": "Acropolis and museum, Plaka and Monastiraki, Krinos loukoumades, Ladurée and the best pho in town — then competitive Χουζούρι before the flight home."
   },
   {
     "dates": "September 17",
@@ -95,7 +95,7 @@
     "tone": "muted",
     "state": "done",
     "title": "Athens → Burbank",
-    "blurb": "Landed. Burbank, couch, Νόστος complete.",
-    "plan": "Early start from Athens. A travel day, then home to Burbank that evening."
+    "blurb": "Νόστος — wheels down home.",
+    "plan": "Athens–Frankfurt–San Francisco–Burbank. Couch claimed."
   }
 ]

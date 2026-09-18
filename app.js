@@ -330,7 +330,7 @@
           "</div>" +
           '<h3 class="mt-2 font-serif text-xl font-semibold text-fg">' + (s.title || "") + doneBadge + "</h3>" +
           '<p class="mt-1.5 text-base leading-relaxed text-fg/90">' + (s.blurb || "") + "</p>" +
-          '<div class="itinerary-sub"><h4 class="text-primary">The plan</h4>' +
+          '<div class="itinerary-sub"><h4 class="text-primary">What we did</h4>' +
           '<p class="mt-1.5 text-base leading-relaxed text-fg/90">' + (s.plan || "") + "</p></div></article>";
         var article = li.querySelector("article");
         var dot = li.querySelector(":scope > span");
