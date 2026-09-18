@@ -1,5 +1,25 @@
 [
   {
+    "place": "Athens",
+    "dish": "Pho",
+    "note": "Steaming bowl, herbs piled high — best medicine that isn’t Greek. Crispy noodles on the side under the lanterns.",
+    "photo": "/photos/album/athens-pho-bowl.jpg",
+    "lat": 37.97666,
+    "lng": 23.73126,
+    "date": "2026-09-15",
+    "taken": "2026-09-15T18:06:20"
+  },
+  {
+    "place": "Ladurée, Athens",
+    "dish": "Macarons & tea",
+    "note": "Tea, a tiny cookie, and a silver tower of every color yelling pick me. Afternoon well spent.",
+    "photo": "/photos/album/athens-laduree-tea-macarons.jpg",
+    "lat": 37.97498,
+    "lng": 23.72958,
+    "date": "2026-09-15",
+    "taken": "2026-09-15T13:16:44"
+  },
+  {
     "place": "Meat the Greek",
     "dish": "Souvlaki plate",
     "note": "Sign under the bougainvillea, then a fry mountain over the skewers — pita, tzatziki, lemon. Dinner locked.",
