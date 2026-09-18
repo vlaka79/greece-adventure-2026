@@ -182,6 +182,8 @@
       .then(function (stops) {
         var list = document.getElementById("itinerary-list");
         if (!list || !stops || !stops.length) return;
+        var tripComplete = stops.every(function (s) { return s && s.state === "done"; });
+        if (tripComplete) return;
         var byTitle = {};
         stops.forEach(function (s) {
           if (s && s.title) byTitle[s.title] = s;

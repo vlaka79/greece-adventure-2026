@@ -120,7 +120,11 @@ def inject_og() -> None:
     pc = status.get("postcard") or {}
     loc = (status.get("location") or "").strip()
     place = (pc.get("place") or "").split(",")[-1].strip() or loc
-    title = f"Daniel & Julia · {place or loc or 'Greece'}"
+    # Finished-trip archive: keep the Greece title, not "Home · Burbank"
+    if not place or place.lower().startswith("home") or loc.lower().startswith("home"):
+        title = "Daniel & Julia · Greece Adventure 2026"
+    else:
+        title = f"Daniel & Julia · {place or loc or 'Greece'}"
     desc = (pc.get("note") or pc.get("title") or "Greece Adventure 2026").strip()
     photo = pc.get("photo") or "/photos/album/crete-chania-lighthouse-selfie.jpg"
     if photo.startswith("/"):

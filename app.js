@@ -158,7 +158,7 @@
         var wel = document.getElementById("word-el");
         var wen = document.getElementById("word-en");
         var wsay = document.getElementById("word-say");
-        if (wlabel) wlabel.textContent = "Greek word of the day";
+        if (wlabel) wlabel.textContent = "Greek word of the trip";
         if (wel) {
           wel.textContent = word.el;
           wel.className = "mt-2 font-serif text-3xl font-semibold text-fg";
@@ -283,6 +283,7 @@
         island: "bg-accent-soft text-fg",
         athens: "bg-primary/15 text-primary"
       };
+      var tripComplete = stops.length > 0 && stops.every(function (s) { return s.state === "done"; });
       var nowIdx = -1;
       for (var i = 0; i < stops.length; i++) {
         if (stops[i].state === "now") { nowIdx = i; break; }
@@ -293,10 +294,11 @@
         }
       }
       if (nowIdx < 0) nowIdx = Math.max(0, stops.length - 1);
-      var showEarlier = false;
-      var showLater = false;
+      var showEarlier = tripComplete; // finished trip: show the whole outline
+      var showLater = tripComplete;
 
       function focusLabel(role) {
+        if (tripComplete) return "";
         if (role === "prev") return "Previous";
         if (role === "now") return "Now";
         if (role === "next") return "Next up";
@@ -316,7 +318,7 @@
         var nowBadge = (s.state === "now")
           ? '<span class="it-now-label inline-flex min-h-7 items-center rounded-full px-2.5 text-xs font-semibold tracking-wide" style="background:#1b6f66;color:#f4eee4;">Here now</span>'
           : "";
-        var doneBadge = (s.state === "done")
+        var doneBadge = (!tripComplete && s.state === "done")
           ? '<span class="it-done-label" style="margin-left:0.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#1b6f66;">Done</span>'
           : "";
         li.innerHTML =
@@ -335,7 +337,7 @@
         var article = li.querySelector("article");
         var dot = li.querySelector(":scope > span");
         if (s.state === "done") {
-          if (article) article.style.opacity = "0.55";
+          if (article && !tripComplete) article.style.opacity = "0.55";
           if (dot) {
             dot.style.background = "#1b6f66";
             dot.style.borderColor = "#1b6f66";
@@ -360,6 +362,12 @@
       }
       function render() {
         list.innerHTML = "";
+        if (tripComplete) {
+          if (btnEarlier) btnEarlier.hidden = true;
+          if (btnLater) btnLater.hidden = true;
+          for (var t = 0; t < stops.length; t++) list.appendChild(buildItem(stops[t], ""));
+          return;
+        }
         var earlierCount = nowIdx > 1 ? nowIdx - 1 : 0;
         var laterCount = Math.max(0, stops.length - (nowIdx + 2));
         if (btnEarlier) {
