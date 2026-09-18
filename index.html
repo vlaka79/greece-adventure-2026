@@ -202,14 +202,16 @@
         <li class="flex-1 sm:flex-none"><a href="#greece" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Greece</a></li>
         <li class="flex-1 sm:flex-none"><a href="#log" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Log</a></li>
         <li class="flex-1 sm:flex-none"><a href="#photos" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Photos</a></li>
-        <li class="flex-1 sm:flex-none"><a href="#plan" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Plan</a></li>
+        <li class="flex-1 sm:flex-none"><a href="#plan" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Outline</a></li>
         <li class="flex-1 sm:flex-none"><a href="#notes" class="flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-fg/80 hover:text-primary sm:px-3">Notes</a></li>
       </ul>
     </nav>
     <main class="mx-auto flex max-w-3xl flex-col gap-14 px-5 py-10 sm:gap-16 sm:py-14">
 
-      <section id="where" class="scroll-mt-16">
-        <div class="mt-0"><div class="relative h-96 overflow-hidden rounded-xl bg-bg-warm card-shadow"><div id="greece-map" class="absolute inset-0"></div></div></div>
+      <section id="greece" class="scroll-mt-16">
+        <h2 class="font-serif text-3xl font-semibold text-fg">Greece</h2>
+        <p class="mt-2 text-muted">Crete to Santorini to Athens — the path we took, filled in from the road.</p>
+        <div class="mt-6"><div class="relative h-96 overflow-hidden rounded-xl bg-bg-warm card-shadow"><div id="greece-map" class="absolute inset-0"></div></div></div>
         <p id="travel-miles" class="mt-3 text-sm text-fg/90">Flown — mi · Driven — mi · Walked — mi · Sailed — mi</p>
         <ul class="mt-2 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted">
           <li class="inline-flex items-center gap-2"><span class="inline-block w-6 border-t-2 border-dashed border-primary/70"></span>Planned (roads)</li>
@@ -223,20 +225,15 @@
           <p id="word-say" class="mt-1 text-sm text-muted"></p>
         </article>
       </section>
-
-      <section id="greece" class="scroll-mt-16">
-        <h2 class="font-serif text-3xl font-semibold text-fg">Greece</h2>
-        <p class="mt-2 text-muted">Crete to Santorini to Athens — the path we took, filled in from the road.</p>
-      </section>
       <section id="log" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Adventure log</h2>
-        <p class="mt-2 text-muted">Newest first. Short notes from the road.</p>
+        <p class="mt-2 text-muted">Newest first. Short notes from the trip.</p>
         <ol class="mt-6 space-y-4" id="log-fallback"></ol>
       </section>
       <section id="table" class="scroll-mt-16">
         <h2 class="font-serif text-3xl font-semibold text-fg">Eat & drink</h2>
         <p class="mt-2 text-muted">The plates and glasses worth remembering.</p>
-        <p id="eats-empty" class="mt-6 rounded-xl bg-surface p-5 text-muted card-shadow">First notes once we sit down in Greece.</p>
+        <p id="eats-empty" class="mt-6 rounded-xl bg-surface p-5 text-muted card-shadow">The plates and glasses from this trip live in the list below.</p>
         <ul id="eats-list" class="mt-6 space-y-3"></ul>
       </section>
       <section id="photos" class="scroll-mt-16">
@@ -301,8 +298,8 @@
         </div>
       </section>
       <section id="notes" class="scroll-mt-16">
-        <h2 class="font-serif text-3xl font-semibold text-fg">A note for the road</h2>
-        <p class="mt-2 text-muted">If you’re thinking of us, say hello. A wish, a memory, a restaurant tip — we’ll read every one, and write back when we can.</p>
+        <h2 class="font-serif text-3xl font-semibold text-fg">A note from home</h2>
+        <p class="mt-2 text-muted">If you’re thinking of us, say hello. A wish, a memory, a favorite stop — we’ll read every one.</p>
         <form id="guestbook-form" name="guestbook" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/#notes" class="mt-6 space-y-4 rounded-xl bg-surface p-5 card-shadow">
           <input type="hidden" name="form-name" value="guestbook" />
           <input type="hidden" name="subject" value="New note on the Greece trip site" />
@@ -321,8 +318,8 @@
           <input type="hidden" name="form-name" value="updates" />
           <input type="hidden" name="subject" value="New updates signup on the Greece trip site" />
           <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-          <p class="font-serif text-xl font-semibold text-fg">Want a tap when we post?</p>
-          <p class="text-sm text-muted">Leave an email or a phone number. No spam — just a short hello when we add a day.</p>
+          <p class="font-serif text-xl font-semibold text-fg">Want a tap if we add more?</p>
+          <p class="text-sm text-muted">Leave an email or a phone number. No spam — just a short hello if we add something new.</p>
           <div>
             <label for="update-name">Name</label>
             <input id="update-name" name="name" type="text" required maxlength="80" autocomplete="name" placeholder="Your name" />
@@ -340,7 +337,7 @@
         <ul id="guestbook-list" class="mt-8 space-y-4"></ul>
       </section>
     </main>
-    <footer class="border-t border-border bg-bg-warm"><div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 text-sm text-muted"><p>Last updated: August 26, 2026</p><p>Made for friends & family</p><p><a href="/trips.html" class="text-muted no-underline">Past trips</a></p></div></footer>
+    <footer class="border-t border-border bg-bg-warm"><div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 text-sm text-muted"><p>Last updated: September 17, 2026</p><p>Made for friends & family</p><p><a href="/trips.html" class="text-muted no-underline">Past trips</a></p></div></footer>
   </div>
 
   <div id="a2hs-sheet" hidden role="dialog" aria-modal="true" aria-labelledby="a2hs-title">
