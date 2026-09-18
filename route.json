@@ -7289,8 +7289,8 @@
     "asOf": "2026-09-13",
     "unit": "mi",
     "walkedSource": "Apple Health Walking + Running Distance (Sep 2–17 refresh; earlier days kept from prior trip total)",
-    "flown": 7306,
-    "flownSource": "Great-circle BUR–SFO–FRA–ATH–CHQ",
+    "flown": 14476,
+    "flownSource": "Great Circle Mapper statute mi; TRAVEL from Gmail CL7366/CEI8BT — outbound BUR–SFO–FRA–ATH–CHQ 7321 + return ATH–FRA–SFO–BUR 7155",
     "sailedSource": "Spinalonga boat + Seajets Heraklion→Athinios + Seajets Athinios→Piraeus (great-circle)",
     "walkedByDay": {
       "2026-09-02": 1.6,
@@ -7309,7 +7309,9 @@
       "2026-09-15": 1.3,
       "2026-09-16": 1.6,
       "2026-09-17": 2.6
-    }
+    },
+    "flownOutbound": 7321,
+    "flownReturn": 7155
   },
   "actualSantorini": [
     [
