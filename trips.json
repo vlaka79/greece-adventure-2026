@@ -60,13 +60,13 @@
       "cover": "/photos/trips/italy-2025/hero.jpg"
     },
     {
-      "id": "japan-misawa-2024",
-      "title": "Misawa 2024",
+      "id": "japan-hachinohe-2024",
+      "title": "Hachinohe 2024",
       "dates": "May 28–August 24, 2024",
-      "href": "/trips/japan-misawa-2024/",
-      "note": "Misawa deploy — Julia joined mid-tour. Stub.",
-      "lat": 40.7,
-      "lng": 141.37,
+      "href": "/trips/japan-hachinohe-2024/",
+      "note": "Hachinohe deploy — Julia joined mid-June. Misawa Airport for transit. Stub.",
+      "lat": 40.51,
+      "lng": 141.49,
       "status": "stub"
     },
     {
