@@ -11,6 +11,16 @@
       "cover": "/intro.jpg"
     },
     {
+      "id": "japan-2026-27",
+      "title": "Third Time's the Charm: Japan",
+      "dates": "October 6, 2026 – January 3, 2027",
+      "href": "/trips/japan-2026-27/",
+      "note": "Future Kitakyushu deploy with Julia — Vessel Kanda. Weekly updates. Provisional title.",
+      "lat": 33.84,
+      "lng": 130.85,
+      "status": "upcoming"
+    },
+    {
       "id": "japan-kitakyushu-2026",
       "title": "Kitakyushu 2026",
       "dates": "May 6–August 1, 2026",

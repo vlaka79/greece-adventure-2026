@@ -1,4 +1,4 @@
-# Misawa 2024 (stub)
+# Third Time’s the Charm: Japan (stub)
 
 Scaffolded from TRAVEL pack. Greece stays homepage.
 Do not Netlify-publish until Daniel says "deploy this".
