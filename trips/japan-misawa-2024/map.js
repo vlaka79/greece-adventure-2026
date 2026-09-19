@@ -5,11 +5,11 @@
   var photoItems = [];
   var photoLayer = null;
   var tripMap = null;
-  var PATH_URL = "/trips/japan-kitakyushu-2026/path.json";
+  var PATH_URL = "/trips/japan-misawa-2024/path.json";
   var AIS_URL = null;
-  var ALBUM_URL = "/trips/japan-kitakyushu-2026/album.json";
-  var DRIVES_URL = "/trips/japan-kitakyushu-2026/drives.json";
-  var MILES_URL = "/trips/japan-kitakyushu-2026/miles.json";
+  var ALBUM_URL = "/trips/japan-misawa-2024/album.json";
+  var DRIVES_URL = "/trips/japan-misawa-2024/drives.json";
+  var MILES_URL = "/trips/japan-misawa-2024/miles.json";
 
   if (!document.getElementById("photo-pin-click-style")) {
     var st = document.createElement("style");
@@ -355,13 +355,13 @@
       if (bounds.length) {
         tripMap.fitBounds(bounds, { padding: [28, 28], animate: false, maxZoom: 6 });
       } else {
-        tripMap.setView([33.84, 130.85], 9);
+        tripMap.setView([40.7, 141.37], 8);
       }
       setTimeout(function () { if (tripMap) tripMap.invalidateSize(); }, 200);
       setTimeout(function () { if (tripMap) tripMap.invalidateSize(); }, 800);
     }).catch(function (err) {
       console.warn(err);
-      if (tripMap) tripMap.setView([33.84, 130.85], 9);
+      if (tripMap) tripMap.setView([40.7, 141.37], 8);
     });
   }
 

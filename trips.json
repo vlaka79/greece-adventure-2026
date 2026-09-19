@@ -12,10 +12,10 @@
     },
     {
       "id": "japan-kitakyushu-2026",
-      "title": "Japan Kitakyushu 2026",
-      "dates": "May 4–August 1, 2026",
+      "title": "Kitakyushu 2026",
+      "dates": "May 6–August 1, 2026",
       "href": "/trips/japan-kitakyushu-2026/",
-      "note": "Kitakyushu deploy — Vessel Hotel Kanda Kitakyushu Airport. Stub; album and log to follow.",
+      "note": "Kitakyushu deploy with Julia — Vessel Hotel Kanda Kitakyushu Airport, short Hiroshima finish. Stub.",
       "lat": 33.84,
       "lng": 130.85,
       "status": "stub"
@@ -48,6 +48,16 @@
       "lat": 41.9,
       "lng": 12.5,
       "cover": "/photos/trips/italy-2025/hero.jpg"
+    },
+    {
+      "id": "japan-misawa-2024",
+      "title": "Misawa 2024",
+      "dates": "May 28–August 24, 2024",
+      "href": "/trips/japan-misawa-2024/",
+      "note": "Misawa deploy — Julia joined mid-tour. Stub.",
+      "lat": 40.7,
+      "lng": 141.37,
+      "status": "stub"
     },
     {
       "id": "hawaii-2024",
