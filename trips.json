@@ -11,6 +11,16 @@
       "cover": "/intro.jpg"
     },
     {
+      "id": "japan-kitakyushu-2026",
+      "title": "Japan Kitakyushu 2026",
+      "dates": "May 4–August 1, 2026",
+      "href": "/trips/japan-kitakyushu-2026/",
+      "note": "Kitakyushu deploy — Vessel Hotel Kanda Kitakyushu Airport. Stub; album and log to follow.",
+      "lat": 33.84,
+      "lng": 130.85,
+      "status": "stub"
+    },
+    {
       "id": "texas-2026",
       "title": "Texas & Fargo 2026",
       "dates": "March 31–April 27, 2026",
