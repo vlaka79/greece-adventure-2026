@@ -56,7 +56,7 @@
         recent.forEach(function (it) {
           var a = document.createElement("a");
           a.className = "just-added-card";
-          a.href = "/place.html?place=" + encodeURIComponent((it.place || "crete").toLowerCase());
+          a.href = "/trips/greece-2026/place.html?place=" + encodeURIComponent((it.place || "crete").toLowerCase());
           var img = document.createElement("img");
           img.src = it.src;
           img.alt = "";

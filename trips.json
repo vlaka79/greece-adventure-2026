@@ -1,16 +1,6 @@
 {
   "trips": [
     {
-      "id": "greece-2026",
-      "title": "Greece Adventure 2026",
-      "dates": "August 24–September 17, 2026",
-      "href": "/",
-      "note": "Follow along now.",
-      "lat": 37.98,
-      "lng": 23.73,
-      "cover": "/intro.jpg"
-    },
-    {
       "id": "japan-2026-27",
       "title": "Kanda Calling",
       "dates": "October 6, 2026 – January 3, 2027",
@@ -19,6 +9,16 @@
       "lat": 33.84,
       "lng": 130.85,
       "status": "upcoming"
+    },
+    {
+      "id": "greece-2026",
+      "title": "Greece Adventure 2026",
+      "dates": "August 24–September 17, 2026",
+      "href": "/trips/greece-2026/",
+      "note": "Crete • Santorini • Athens",
+      "lat": 37.98,
+      "lng": 23.73,
+      "cover": "/intro.jpg"
     },
     {
       "id": "japan-kitakyushu-2026",

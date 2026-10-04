@@ -104,13 +104,17 @@ def main() -> None:
 
 
 def inject_og() -> None:
-    """Stamp Open Graph tags from status.json so link previews stay current."""
+    """Stamp Open Graph tags on the Greece trip page, not the adventures homepage.
+
+    status.json location is "Home · Burbank" now that the trip is over. That
+    must not become the share title.
+    """
     import json
     import re
     status_path = Path("status.json")
-    index_path = Path("index.html")
+    index_path = Path("trips/greece-2026/index.html")
     if not status_path.is_file() or not index_path.is_file():
-        print("og skip: missing status.json or index.html")
+        print("og skip: missing status.json or trips/greece-2026/index.html")
         return
     try:
         status = json.loads(status_path.read_text())
@@ -120,15 +124,9 @@ def inject_og() -> None:
     pc = status.get("postcard") or {}
     loc = (status.get("location") or "").strip()
     place = (pc.get("place") or "").split(",")[-1].strip() or loc
-    # Finished-trip archive: keep the Greece title, not "Home · Burbank"
-    if not place or place.lower().startswith("home") or loc.lower().startswith("home"):
-        title = "Daniel & Julia · Greece Adventure 2026"
-    else:
-        title = f"Daniel & Julia · {place or loc or 'Greece'}"
-    desc = (pc.get("note") or pc.get("title") or "Greece Adventure 2026").strip()
-    photo = pc.get("photo") or "/photos/album/crete-chania-lighthouse-selfie.jpg"
-    if photo.startswith("/"):
-        photo = "https://djbooneadventures.com" + photo
+    # Finished-trip archive: keep the Greece share card. Do not stamp
+    # status.json's "Home · Burbank" onto the title, description, or image.
+    finished = (not place) or place.lower().startswith("home") or loc.lower().startswith("home")
 
     def attr(s: str) -> str:
         return (
@@ -143,6 +141,24 @@ def inject_og() -> None:
         return re.sub(pattern, lambda m: m.group(1) + attr(value) + m.group(2), doc, count=1)
 
     html = index_path.read_text()
+    if finished:
+        title = "Daniel & Julia · Greece Adventure 2026"
+        head = html.split("</head>", 1)[0]
+        if "Home · Burbank" in head or "Home &middot; Burbank" in head:
+            html = stamp(html, "property", "og:title", title)
+            html = stamp(html, "name", "twitter:title", title)
+            index_path.write_text(html)
+            print(f"og restored greece title: {title}")
+            return
+        print(f"og kept: {title}")
+        return
+
+    title = f"Daniel & Julia · {place or loc or 'Greece'}"
+    desc = (pc.get("note") or pc.get("title") or "Greece Adventure 2026").strip()
+    photo = pc.get("photo") or "/photos/album/crete-chania-lighthouse-selfie.jpg"
+    if photo.startswith("/"):
+        photo = "https://djbooneadventures.com" + photo
+
     html = stamp(html, "property", "og:title", title)
     html = stamp(html, "property", "og:description", desc)
     html = stamp(html, "property", "og:image", photo)
