@@ -5,17 +5,18 @@
       "title": "Kanda Calling",
       "dates": "October 6, 2026 – January 3, 2027",
       "href": "/trips/japan-2026-27/",
-      "note": "Future Kitakyushu deploy with Julia — Vessel Kanda. Weekly updates. Title: Kanda Calling.",
+      "note": "Kitakyushu, Vessel Kanda",
       "lat": 33.84,
       "lng": 130.85,
-      "status": "upcoming"
+      "status": "upcoming",
+      "cover": "/photos/trips/japan-2026-27/sea-guardian.jpg"
     },
     {
       "id": "greece-2026",
       "title": "Greece Adventure 2026",
       "dates": "August 24–September 17, 2026",
       "href": "/trips/greece-2026/",
-      "note": "Crete • Santorini • Athens",
+      "note": "Crete, Santorini, Athens",
       "lat": 37.98,
       "lng": 23.73,
       "cover": "/intro.jpg"
@@ -25,7 +26,7 @@
       "title": "Kitakyushu 2026",
       "dates": "May 6–August 1, 2026",
       "href": "/trips/japan-kitakyushu-2026/",
-      "note": "Kitakyushu deploy with Julia — Vessel Hotel Kanda Kitakyushu Airport, short Hiroshima finish. Stub.",
+      "note": "Haneda, Kitakyushu, Vessel Kanda, Hiroshima",
       "lat": 33.84,
       "lng": 130.85,
       "status": "stub"
@@ -35,7 +36,7 @@
       "title": "Texas & Fargo 2026",
       "dates": "March 31–April 27, 2026",
       "href": "/trips/texas-2026/",
-      "note": "Road trip with a long San Angelo stay and a Fargo stretch.",
+      "note": "Socorro, Colorado Springs, OKC, San Angelo, Fargo, El Paso",
       "lat": 31.4,
       "lng": -100.5
     },
@@ -44,7 +45,7 @@
       "title": "Caribbean Adventures @ Sea",
       "dates": "February 26–March 16, 2026",
       "href": "/trips/caribbean-2026/",
-      "note": "Two ships, one long loop — Miami to Aruba, Cartagena, Jamaica, Cayman, then Paradise to Nassau.",
+      "note": "Miami, Aruba, Cartagena, Ocho Rios, Grand Cayman, Palm Beach, Nassau",
       "lat": 18,
       "lng": -77,
       "cover": "/photos/trips/caribbean-2026/gopro.jpg"
@@ -54,7 +55,7 @@
       "title": "Italy with Julia",
       "dates": "January 18–April 19, 2025",
       "href": "/trips/italy-2025/",
-      "note": "Puglia base, Rome, Matera, Maiori on the Amalfi coast, Pompeii, and Caserta.",
+      "note": "Puglia, Rome, Matera, Maiori, Pompeii, Caserta",
       "lat": 41.9,
       "lng": 12.5,
       "cover": "/photos/trips/italy-2025/hero.jpg"
@@ -64,7 +65,7 @@
       "title": "Hachinohe 2024",
       "dates": "May 28–August 24, 2024",
       "href": "/trips/japan-hachinohe-2024/",
-      "note": "Hachinohe deploy — Julia joined mid-June. Misawa Airport for transit. Stub.",
+      "note": "Haneda, Hachinohe, Misawa Airport",
       "lat": 40.51,
       "lng": 141.49,
       "status": "stub"
@@ -74,7 +75,7 @@
       "title": "Hawaii with Julia",
       "dates": "September 11–October 2, 2024",
       "href": "/trips/hawaii-2024/",
-      "note": "Honeymoon: Kauai, Big Island, Waikiki.",
+      "note": "Kauai, Big Island, Waikiki",
       "lat": 21.3,
       "lng": -157.8
     }
