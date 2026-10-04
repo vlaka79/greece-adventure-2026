@@ -106,7 +106,7 @@
   }
   if (shareBtn) {
     shareBtn.addEventListener("click", function () {
-      var url = location.origin + "/";
+      var url = location.origin + "/trips/greece-2026/";
       var text = "Follow Daniel and Julia through Crete, Santorini, and Athens — Aug 24 to Sep 17.";
       var payload = { title: "Daniel & Julia’s Greece Adventure", text: text, url: url };
       if (navigator.share) {

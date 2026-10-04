@@ -1,6 +1,12 @@
 # Static site — serve real files. Do not fall back HTML onto media paths.
+# Do not add a splat redirect onto /index.html. That made Netlify serve HTML as the video and photos.
 
 /trips  /trips.html  200
+
+# Greece used to live at the site root. These pages moved with the trip.
+/log.html    /trips/greece-2026/log.html    301
+/eats.html   /trips/greece-2026/eats.html   301
+/place.html  /trips/greece-2026/place.html  301
 
 /trips/caribbean-2026.html  /trips/caribbean-2026/  301
 /trips/texas-2026.html  /trips/texas-2026/  301
