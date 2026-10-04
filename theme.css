@@ -1,0 +1,15 @@
+/* Night map. Utility colors on this site read --color-* tokens. */
+html[data-theme="night"] {
+  color-scheme: dark;
+  --color-bg: #101614;
+  --color-bg-warm: #182220;
+  --color-surface: #1c2926;
+  --color-fg: #f6f1e8;
+  --color-muted: #c9bfb2;
+  --color-primary: #8ed0c8;
+  --color-primary-soft: #1e3c38;
+  --color-accent: #e4c57a;
+  --color-accent-soft: #3d3424;
+  --color-sea: #9fd9d1;
+  --color-border: #3a4e49;
+}

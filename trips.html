@@ -4,105 +4,279 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Daniel &amp; Julia · Adventures</title>
-  <meta name="description" content="A map of Daniel and Julia’s trips." />
+  <meta name="description" content="Places we’ve been, and the one coming up." />
   <link rel="canonical" href="https://djbooneadventures.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://djbooneadventures.com/" />
   <meta property="og:title" content="Daniel &amp; Julia · Adventures" />
-  <meta property="og:description" content="A map of Daniel and Julia’s trips." />
+  <meta property="og:description" content="Places we’ve been, and the one coming up." />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Daniel &amp; Julia · Adventures" />
-  <meta name="twitter:description" content="A map of Daniel and Julia’s trips." />
+  <meta name="twitter:description" content="Places we’ve been, and the one coming up." />
   <meta name="theme-color" content="#f4eee4" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem("dj-theme"); } catch (e) {}
+    var night = saved === "night" || (saved !== "day" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    document.documentElement.setAttribute("data-theme", night ? "night" : "day");
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta && night) meta.setAttribute("content", "#101614");
+  })();
+  </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
   <link rel="stylesheet" href="https://grove-amber-horizon-mist.grok.me/assets/styles-CM6tjZ7_.css" />
+  <link rel="stylesheet" href="/theme.css" />
   <style>
     #hub-map-shell {
-      height: 280px;
-      max-height: 280px;
+      height: 320px;
+      max-height: 320px;
       border-radius: 1.25rem;
       overflow: hidden;
-      background: #ebe3d4;
-      box-shadow: 0 0 0 1px rgba(42,36,28,.06), 0 10px 28px -12px rgba(42,36,28,.14);
+      background: var(--color-bg-warm);
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-fg) 8%, transparent), 0 10px 28px -12px color-mix(in srgb, var(--color-fg) 22%, transparent);
     }
     @media (min-width: 640px) {
-      #hub-map-shell { height: 320px; max-height: 320px; }
+      #hub-map-shell { height: 380px; max-height: 380px; }
     }
     #hub-map { height: 100%; width: 100%; }
-    .leaflet-container { font-family: inherit; background: #ebe3d4; }
+    .leaflet-container { font-family: inherit; background: var(--color-bg-warm); }
     .leaflet-container img { max-width: none; }
+    html[data-theme="night"] .leaflet-bar a {
+      background: var(--color-surface);
+      color: var(--color-fg);
+      border-color: var(--color-border);
+    }
+    html[data-theme="night"] .leaflet-control-attribution {
+      background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+      color: var(--color-muted);
+    }
+    html[data-theme="night"] .leaflet-control-attribution a { color: var(--color-primary); }
     .hub-pin { background: none !important; border: 0 !important; }
     .hub-pin-hit {
       width: 28px; height: 28px;
       display: flex; align-items: center; justify-content: center;
     }
+    .hub-pin-hit.is-nudge { transform: translate(-42px, 14px); }
     .hub-pin-dot {
-      width: 16px; height: 16px; border-radius: 50%;
-      background: #1b6f66; border: 2px solid #fffcf6;
-      box-shadow: 0 0 0 5px rgba(27,111,102,.22), 0 2px 6px rgba(42,36,28,.28);
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--color-primary);
+      border: 2px solid var(--color-surface);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-primary) 28%, transparent);
     }
-    .hub-pin-dot.is-live {
-      box-shadow: 0 0 0 6px rgba(27,111,102,.32), 0 2px 6px rgba(42,36,28,.28);
+    .hub-pin-dot.is-next {
+      width: 18px; height: 18px;
+      background: var(--color-accent);
+      box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-accent) 42%, transparent);
     }
     .hub-pin-dot.is-on {
-      background: #c4a35a;
-      box-shadow: 0 0 0 6px rgba(196,163,90,.35), 0 2px 6px rgba(42,36,28,.28);
+      box-shadow: 0 0 0 7px color-mix(in srgb, var(--color-accent) 55%, transparent);
     }
     .hub-pin-label {
-      background: #fffcf6;
-      color: #2a241c;
+      background: var(--color-surface);
+      color: var(--color-fg);
       border: 0;
       border-radius: 999px;
-      box-shadow: 0 1px 4px rgba(42,36,28,.18);
+      box-shadow: 0 1px 4px color-mix(in srgb, var(--color-fg) 18%, transparent);
       font-family: "Playfair Display", ui-serif, Georgia, serif;
       font-size: 0.72rem;
       font-weight: 600;
       line-height: 1.15;
       padding: 0.22rem 0.55rem;
       white-space: nowrap;
-      max-width: 9.5rem;
+      max-width: 11rem;
       overflow: hidden;
       text-overflow: ellipsis;
       pointer-events: auto;
       cursor: pointer;
     }
+    .hub-pin-label.is-next { color: var(--color-fg); }
     .hub-pin-label::before { display: none; }
     .leaflet-tooltip-bottom.hub-pin-label { margin-top: 6px; }
     .leaflet-tooltip-top.hub-pin-label { margin-bottom: 6px; }
     .leaflet-tooltip-left.hub-pin-label { margin-right: 6px; }
     .leaflet-tooltip-right.hub-pin-label { margin-left: 6px; }
     .hub-popup .leaflet-popup-content-wrapper {
-      background: #fffcf6; color: #2a241c; border-radius: 0.85rem;
-      box-shadow: 0 0 0 1px rgba(42,36,28,.06), 0 10px 24px -12px rgba(42,36,28,.2);
+      background: var(--color-surface);
+      color: var(--color-fg);
+      border-radius: 0.85rem;
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-fg) 8%, transparent), 0 10px 24px -12px color-mix(in srgb, var(--color-fg) 28%, transparent);
     }
     .hub-popup .leaflet-popup-content { margin: 0.7rem 0.85rem; font-size: 0.9rem; }
-    .hub-popup .leaflet-popup-tip { background: #fffcf6; }
-    .hub-popup a { color: #1b6f66; font-weight: 600; }
+    .hub-popup .leaflet-popup-tip { background: var(--color-surface); }
+    .hub-popup a { color: var(--color-primary); font-weight: 600; }
+    .hub-popup .popup-kicker {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--color-primary);
+    }
     .hub-card {
-      display: block; overflow: hidden; border-radius: 1.25rem;
-      background: #fffcf6; color: #2a241c; text-decoration: none;
-      box-shadow: 0 0 0 1px rgba(42,36,28,.06), 0 10px 28px -12px rgba(42,36,28,.14);
-      transition: box-shadow .2s ease, transform .2s ease;
+      display: block; overflow: hidden; border-radius: 1.15rem;
+      background: var(--color-surface); color: var(--color-fg); text-decoration: none;
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-fg) 8%, transparent), 0 10px 28px -12px color-mix(in srgb, var(--color-fg) 18%, transparent);
     }
+    a.hub-card:hover { color: var(--color-fg); }
     .hub-card.is-active {
-      box-shadow: 0 0 0 2px #1b6f66, 0 12px 28px -10px rgba(27,111,102,.35);
+      box-shadow: 0 0 0 2px var(--color-primary), 0 12px 28px -10px color-mix(in srgb, var(--color-primary) 35%, transparent);
     }
-    .hub-cover { aspect-ratio: 16 / 9; background: #ebe3d4; overflow: hidden; }
+    .hub-cover { aspect-ratio: 16 / 9; background: var(--color-bg-warm); overflow: hidden; }
+    .hub-card.compact .hub-cover,
+    .hub-card.compact .hub-stamp { aspect-ratio: 3 / 2; }
     .hub-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hub-stamp[hidden] { display: none !important; }
     .hub-stamp {
       aspect-ratio: 16 / 9;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      background: linear-gradient(160deg, #d7ebe8 0%, #f4eee4 48%, #ebe3d4 100%);
-      color: #1b6f66; text-align: center; padding: 1rem;
+      background: linear-gradient(160deg, var(--color-primary-soft) 0%, var(--color-bg) 55%, var(--color-bg-warm) 100%);
+      color: var(--color-primary); text-align: center; padding: 0.85rem;
     }
-    .hub-stamp[hidden] { display: none !important; }
+    .hub-card.compact .hub-stamp { aspect-ratio: 3 / 2; }
+    .hub-stamp p {
+      margin: 0;
+      font-family: "Playfair Display", ui-serif, Georgia, serif;
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+    .path {
+      margin-top: 0.35rem;
+      font-family: "Playfair Display", ui-serif, Georgia, serif;
+      color: var(--color-sea);
+      font-size: 1.2rem;
+      line-height: 1.35;
+    }
+    .hub-card.compact .path { font-size: 0.98rem; }
+    .hub-card.compact h3 { font-size: 1.35rem; }
     .hub-open {
       display: inline-flex; align-items: center;
-      margin-top: 1rem; border-radius: 999px; background: #1b6f66; color: #f4eee4;
+      margin-top: 1rem; border-radius: 999px; background: #145e57; color: #f4eee4;
       font-size: 0.9rem; font-weight: 600; padding: 0.55rem 1.1rem; text-decoration: none;
     }
+    html[data-theme="night"] .hub-open { background: #8ed0c8; color: #10201e; }
     .hub-open:hover { color: #fffcf6; }
+    html[data-theme="night"] .hub-open:hover { color: #10201e; }
+    .theme-toggle {
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      color: var(--color-fg);
+      border-radius: 999px;
+      font: 600 0.85rem "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+      padding: 0.45rem 0.9rem;
+      min-height: 44px;
+      cursor: pointer;
+    }
+    .theme-toggle:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+    }
+    .map-legend { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; margin: 0.85rem 0 0; padding: 0; list-style: none; }
+    .map-legend li { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; color: var(--color-muted); }
+    .legend-dot { width: 0.7rem; height: 0.7rem; border-radius: 50%; display: inline-block; }
+    .legend-dot.next { background: var(--color-accent); }
+    .legend-dot.been { background: var(--color-primary); }
+    .totals { margin-top: 0.85rem; font-size: 0.95rem; font-weight: 600; color: var(--color-fg); }
+    .countries { margin-top: 0.2rem; font-size: 0.9rem; color: var(--color-muted); }
+    .memory {
+      display: grid; gap: 0.9rem; margin-top: 1.35rem;
+    }
+    @media (min-width: 720px) {
+      .memory { grid-template-columns: 1.35fr 0.85fr; align-items: stretch; }
+    }
+    .memory-photo {
+      display: block; border-radius: 1.15rem; overflow: hidden;
+      background: var(--color-bg-warm);
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-fg) 8%, transparent);
+    }
+    .memory-photo img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+    .memory-word {
+      background: var(--color-surface);
+      border-radius: 1.15rem;
+      padding: 1.15rem 1.25rem;
+      display: flex; flex-direction: column; justify-content: center;
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-fg) 8%, transparent);
+    }
+    .memory-word .el {
+      margin: 0.25rem 0 0;
+      font-family: "Playfair Display", ui-serif, Georgia, serif;
+      font-size: clamp(2.4rem, 5vw, 3.2rem);
+      line-height: 1.05;
+      color: var(--color-fg);
+    }
+    .memory-caption { margin-top: 0.75rem; color: var(--color-muted); font-size: 0.95rem; }
+    .greece-note {
+      margin-top: 0.9rem;
+      padding: 0.15rem 0 0;
+    }
+    .greece-note blockquote { margin: 0; }
+    .greece-note p {
+      margin: 0;
+      font-family: "Playfair Display", ui-serif, Georgia, serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.4;
+      color: var(--color-fg);
+    }
+    .greece-note figcaption { margin-top: 0.45rem; font-size: 0.9rem; color: var(--color-muted); }
+    .greece-note a { font-weight: 600; }
+    .year-block { margin-top: 1.75rem; }
+    .year-block h3 {
+      font-family: "Playfair Display", ui-serif, Georgia, serif;
+      font-size: 1.65rem;
+      margin: 0;
+    }
+    .year-grid {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 0.75rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) {
+      .year-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .now-slot { margin-top: 1rem; }
+    .now-slot[hidden] { display: none !important; }
+    .now-kicker {
+      margin: 0;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+    }
+    .now-body {
+      display: grid;
+      grid-template-columns: 7.25rem 1fr;
+      gap: 0.8rem;
+      align-items: center;
+      margin-top: 0.4rem;
+    }
+    .now-body img,
+    .now-empty {
+      width: 7.25rem;
+      height: 5.1rem;
+      border-radius: 0.6rem;
+      object-fit: cover;
+      display: block;
+    }
+    .now-empty {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.35rem;
+      font-size: 0.72rem;
+      line-height: 1.3;
+      color: var(--color-muted);
+      background: var(--color-bg);
+      border: 1px dashed var(--color-border);
+    }
+    .now-line { margin: 0; color: var(--color-fg); font-size: 0.98rem; line-height: 1.4; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+    }
     @media (prefers-reduced-motion: reduce) {
       .hub-card { transition: none; }
     }
@@ -112,29 +286,62 @@
 <body class="bg-bg text-fg">
   <div class="min-h-dvh bg-bg text-fg">
     <header class="border-b border-border/80 bg-bg/90">
-      <div class="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
+      <div class="mx-auto flex max-w-5xl items-center justify-between gap-3 px-5 py-4">
         <a href="/" class="text-sm font-semibold text-primary">Daniel &amp; Julia</a>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Night map</button>
       </div>
     </header>
     <main class="px-5 py-10">
-      <div class="mx-auto max-w-3xl">
+      <div class="mx-auto max-w-5xl">
         <p class="text-xs font-semibold uppercase tracking-widest text-primary">Daniel &amp; Julia</p>
         <h1 class="mt-2 font-serif text-4xl font-semibold text-fg">Adventures</h1>
         <p class="mt-2 text-muted">Places we’ve been, and the one coming up.</p>
       </div>
+
       <section class="mx-auto mt-8 w-full max-w-5xl" aria-label="Trip map">
         <div id="hub-map-shell">
-          <div id="hub-map" role="application" aria-label="World map of trips"></div>
+          <div id="hub-map" role="application" aria-label="World map of trips. Gold is next. Teal is somewhere we’ve already been."></div>
         </div>
-        <p class="mx-auto mt-3 max-w-3xl text-sm text-muted">A pin for each trip. Tap one to find its postcard.</p>
+        <ul class="map-legend">
+          <li><span class="legend-dot next" aria-hidden="true"></span> Next</li>
+          <li><span class="legend-dot been" aria-hidden="true"></span> Been</li>
+        </ul>
+        <p id="hub-totals" class="totals">8 trips · 9 countries</p>
+        <p id="hub-countries" class="countries">Greece, Japan, Italy, the United States, Aruba, Colombia, Jamaica, the Cayman Islands, the Bahamas.</p>
+        <p class="mt-2 text-sm text-muted">Tap a pin to find its card, then open the trip.</p>
+
+        <div class="memory">
+          <a class="memory-photo" href="/trips/greece-2026/">
+            <img src="/photos/album/athens-parthenon-looking.jpg" alt="Julia and Daniel looking at the Parthenon." />
+          </a>
+          <div class="memory-word">
+            <p class="section-label">Greek word of the trip</p>
+            <p id="greece-word" class="el" lang="el">Νόστος</p>
+            <p class="memory-caption">Julia and Daniel looking at the Parthenon.</p>
+          </div>
+        </div>
+        <figure id="greece-note" class="greece-note" hidden>
+          <blockquote>
+            <p data-quote></p>
+          </blockquote>
+          <figcaption><span data-by></span> · <a href="/trips/greece-2026/#notes">Greece notes</a></figcaption>
+        </figure>
       </section>
-      <div class="mx-auto mt-10 max-w-3xl">
-        <ul id="trips-list" class="space-y-6"></ul>
+
+      <div class="mx-auto mt-12 max-w-5xl">
+        <section aria-label="Next up">
+          <h2 class="font-serif text-3xl font-semibold text-fg">Next up</h2>
+          <div id="next-up" class="mt-3"></div>
+        </section>
+        <section class="mt-12" aria-label="Been there">
+          <h2 class="font-serif text-3xl font-semibold text-fg">Been there</h2>
+          <div id="year-chapters"></div>
+        </section>
         <p id="trips-later" class="mt-8 hidden text-sm text-muted"></p>
       </div>
     </main>
     <footer class="border-t border-border bg-bg-warm">
-      <div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 text-sm text-muted">
+      <div class="mx-auto flex max-w-5xl flex-col gap-1 px-5 py-8 text-sm text-muted">
         <p>Made for friends &amp; family</p>
       </div>
     </footer>
@@ -142,13 +349,30 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>if (typeof L === "undefined") { document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"><\/script>'); }</script>
+  <script src="/kanda-now.js"></script>
   <script>
   (function () {
-    var TILES = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
-    var ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+    var DAY_TILES = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+    var NIGHT_TILES = "https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
+    var DAY_ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+    var NIGHT_ATTR = DAY_ATTR + ' &copy; <a href="https://carto.com/attributions">CARTO</a>';
+    /* Countries named on the trip pages. Japan miles are still empty, so this line does not add a mile total. */
+    var COUNTRIES = [
+      "Greece",
+      "Japan",
+      "Italy",
+      "the United States",
+      "Aruba",
+      "Colombia",
+      "Jamaica",
+      "the Cayman Islands",
+      "the Bahamas"
+    ];
     var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var pinDots = {};
     var activeTimer = 0;
+    var tileLayer = null;
+    var hubMap = null;
 
     function esc(s) {
       return String(s == null ? "" : s)
@@ -158,93 +382,164 @@
         .replace(/"/g, "&quot;");
     }
 
-    function isLive(t) {
-      return !!(t && t.status === "live");
+    function isUpcoming(t) {
+      return !!(t && t.status === "upcoming");
+    }
+
+    function nightOn() {
+      return document.documentElement.getAttribute("data-theme") === "night";
+    }
+
+    function pathText(t) {
+      return String((t && t.note) || "")
+        .split(",")
+        .map(function (part) { return part.trim(); })
+        .filter(Boolean)
+        .join(" · ");
+    }
+
+    function startYear(t) {
+      var m = String((t && t.dates) || "").match(/20\d{2}/);
+      return m ? m[0] : "";
     }
 
     function labelDir(id) {
+      if (id === "japan-2026-27") return "right";
+      if (id === "japan-kitakyushu-2026") return "left";
+      if (id === "japan-hachinohe-2024") return "top";
       if (id === "italy-2025") return "left";
       if (id === "greece-2026") return "right";
       if (id === "caribbean-2026") return "bottom";
-      if (id === "texas-2026") return "top";
-      return "bottom";
+      if (id === "texas-2026") return "left";
+      if (id === "hawaii-2024") return "bottom";
+      return "top";
+    }
+
+    function sharesPin(t, trips) {
+      if (!t || isUpcoming(t)) return false;
+      var lat = Number(t.lat);
+      var lng = Number(t.lng);
+      var twins = trips.filter(function (o) {
+        return o && Number(o.lat) === lat && Number(o.lng) === lng;
+      });
+      return twins.length > 1;
     }
 
     function coverHtml(t) {
-      if (t.cover) {
-        return '<div class="hub-cover"><img src="' + esc(t.cover) + '" alt="' + esc(t.title || "") + '" loading="lazy" decoding="async" /></div>' +
-          '<div class="hub-stamp" hidden>' +
-          '<p class="font-serif text-2xl font-semibold">Postcard coming soon</p>' +
-          "</div>";
-      }
-      return '<div class="hub-stamp" role="img" aria-label="Postcard coming soon">' +
-        '<p class="font-serif text-2xl font-semibold">Postcard coming soon</p>' +
+      var stamp = '<div class="hub-stamp"' + (t.cover ? " hidden" : "") + ' role="img" aria-label="' + esc(t.title || "Trip") + '">' +
+        '<p>' + esc(t.title || "") + "</p></div>";
+      if (!t.cover) return stamp;
+      return '<div class="hub-cover"><img src="' + esc(t.cover) + '" alt="' + esc(t.title || "") + '" loading="lazy" decoding="async" /></div>' + stamp;
+    }
+
+    function bindCoverFallback(root) {
+      var img = root.querySelector(".hub-cover img");
+      var stamp = root.querySelector(".hub-stamp");
+      if (!img || !stamp) return;
+      stamp.hidden = true;
+      img.addEventListener("error", function () {
+        stamp.hidden = false;
+        var cover = img.parentNode;
+        if (cover && cover.parentNode) cover.parentNode.removeChild(cover);
+      });
+    }
+
+    function cardInner(t) {
+      var upcoming = isUpcoming(t);
+      return coverHtml(t) +
+        '<div class="p-4 sm:p-5">' +
+        '<p class="text-xs font-semibold uppercase tracking-widest text-primary">' + esc(t.dates || "") + "</p>" +
+        '<h3 class="mt-1 font-serif text-2xl font-semibold text-fg">' + esc(t.title || "") + "</h3>" +
+        (pathText(t) ? '<p class="path">' + esc(pathText(t)) + "</p>" : "") +
+        (upcoming ? '<div class="now-slot" data-kanda-now hidden></div><a class="hub-open" href="' + esc(t.href) + '">Open trip</a>' : "") +
         "</div>";
     }
 
-    function renderCard(t) {
-      var live = isLive(t);
-      var li = document.createElement("li");
-      li.id = "trip-" + (t.id || "");
-      li.className = "scroll-mt-20";
-      li.innerHTML =
-        '<article class="hub-card">' +
-        coverHtml(t) +
-        '<div class="p-5">' +
-        '<p class="text-xs font-semibold uppercase tracking-widest text-primary">' + esc(t.dates || "") + "</p>" +
-        '<h2 class="mt-1 font-serif text-2xl font-semibold text-fg">' + esc(t.title || "") + "</h2>" +
-        (live ? '<p class="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-primary"><span class="inline-block size-2 rounded-full bg-primary"></span>Live trip</p>' : "") +
-        (t.note ? '<p class="mt-2 text-base leading-relaxed text-muted">' + esc(t.note) + "</p>" : "") +
-        '<a class="hub-open" href="' + esc(t.href) + '">Open trip</a>' +
-        "</div></article>";
-      if (t.cover) {
-        var img = li.querySelector(".hub-cover img");
-        var stamp = li.querySelector(".hub-stamp");
-        if (img && stamp) {
-          img.addEventListener("error", function () {
-            var cover = img.parentNode;
-            stamp.hidden = false;
-            stamp.removeAttribute("hidden");
-            if (cover && cover.parentNode) cover.parentNode.removeChild(cover);
-          });
+    function renderHero(t) {
+      var wrap = document.getElementById("next-up");
+      if (!wrap || !t) return;
+      var article = document.createElement("article");
+      article.id = "trip-" + (t.id || "");
+      article.className = "hub-card scroll-mt-24";
+      article.innerHTML = cardInner(t);
+      bindCoverFallback(article);
+      wrap.appendChild(article);
+    }
+
+    function renderYears(trips) {
+      var root = document.getElementById("year-chapters");
+      if (!root) return;
+      var groups = {};
+      var order = [];
+      trips.forEach(function (t) {
+        if (!t || !t.href || isUpcoming(t)) return;
+        var year = startYear(t) || "Trips";
+        if (!groups[year]) {
+          groups[year] = [];
+          order.push(year);
         }
-      }
-      return li;
+        groups[year].push(t);
+      });
+      order.sort(function (a, b) { return a < b ? 1 : -1; });
+      order.forEach(function (year) {
+        var section = document.createElement("section");
+        section.className = "year-block";
+        section.innerHTML = '<h3>' + esc(year) + "</h3>";
+        var grid = document.createElement("div");
+        grid.className = "year-grid";
+        groups[year].forEach(function (t) {
+          var a = document.createElement("a");
+          a.id = "trip-" + (t.id || "");
+          a.className = "hub-card compact scroll-mt-24";
+          a.href = t.href;
+          a.innerHTML = cardInner(t);
+          bindCoverFallback(a);
+          grid.appendChild(a);
+        });
+        section.appendChild(grid);
+        root.appendChild(section);
+      });
     }
 
     function highlightCard(id) {
-      var cards = document.querySelectorAll(".hub-card");
-      cards.forEach(function (c) { c.classList.remove("is-active"); });
+      document.querySelectorAll(".hub-card").forEach(function (c) { c.classList.remove("is-active"); });
       Object.keys(pinDots).forEach(function (k) {
         pinDots[k].classList.toggle("is-on", k === id);
       });
-      var li = document.getElementById("trip-" + id);
-      if (!li) return;
-      var card = li.querySelector(".hub-card");
-      if (card) card.classList.add("is-active");
-      li.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+      var card = document.getElementById("trip-" + id);
+      if (!card) return;
+      card.classList.add("is-active");
+      card.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
       if (activeTimer) window.clearTimeout(activeTimer);
       activeTimer = window.setTimeout(function () {
-        if (card) card.classList.remove("is-active");
+        card.classList.remove("is-active");
       }, 4000);
+    }
+
+    function setTiles() {
+      if (!hubMap || typeof L === "undefined") return;
+      var night = nightOn();
+      if (tileLayer) hubMap.removeLayer(tileLayer);
+      tileLayer = L.tileLayer(night ? NIGHT_TILES : DAY_TILES, {
+        attribution: night ? NIGHT_ATTR : DAY_ATTR,
+        maxZoom: 6,
+        subdomains: "abcd"
+      });
+      tileLayer.addTo(hubMap);
     }
 
     function initMap(trips) {
       var el = document.getElementById("hub-map");
       if (!el || typeof L === "undefined") return;
-      var map = L.map(el, {
+      hubMap = L.map(el, {
         scrollWheelZoom: false,
         zoomControl: true,
         minZoom: 1,
         maxZoom: 6,
         worldCopyJump: true
       });
-      L.tileLayer(TILES, { attribution: ATTR, maxZoom: 6 }).addTo(map);
-      el.addEventListener("click", function (ev) {
-        var node = ev.target && ev.target.closest && ev.target.closest("[data-trip]");
-        if (!node) return;
-        highlightCard(node.getAttribute("data-trip"));
-      });
+      setTiles();
+      window.addEventListener("dj-theme", setTiles);
 
       var bounds = [];
       trips.forEach(function (t) {
@@ -253,69 +548,111 @@
         var lng = Number(t.lng);
         if (isNaN(lat) || isNaN(lng)) return;
         bounds.push([lat, lng]);
-        var live = isLive(t);
+        var upcoming = isUpcoming(t);
         var icon = L.divIcon({
           className: "hub-pin",
-          html: '<div class="hub-pin-hit"><div class="hub-pin-dot' + (live ? " is-live" : "") + '" data-trip="' + esc(t.id) + '"></div></div>',
+          html: '<div class="hub-pin-hit' + (sharesPin(t, trips) ? " is-nudge" : "") + '"><div class="hub-pin-dot' + (upcoming ? " is-next" : " is-been") + '" data-trip="' + esc(t.id) + '"></div></div>',
           iconSize: [28, 28],
           iconAnchor: [14, 14]
         });
         var marker = L.marker([lat, lng], { icon: icon, title: t.title || "", keyboard: true, riseOnHover: true });
-        marker.bindTooltip('<span data-trip="' + esc(t.id) + '">' + esc(t.title || "") + "</span>", {
+        var label = (upcoming ? "Next · " : "") + (t.title || "");
+        marker.bindTooltip('<span data-trip="' + esc(t.id) + '">' + esc(label) + "</span>", {
           permanent: true,
           interactive: true,
           direction: labelDir(t.id),
-          className: "hub-pin-label",
+          className: "hub-pin-label" + (upcoming ? " is-next" : ""),
           opacity: 1
         });
         marker.bindPopup(
-          "<p class=\"font-serif font-semibold\">" + esc(t.title || "") + "</p>" +
-          (t.dates ? "<p class=\"text-sm text-muted\">" + esc(t.dates) + "</p>" : "") +
+          '<p class="popup-kicker">' + (upcoming ? "Next" : "Been") + "</p>" +
+          '<p class="font-serif font-semibold">' + esc(t.title || "") + "</p>" +
+          (t.dates ? '<p class="text-sm">' + esc(t.dates) + "</p>" : "") +
+          (pathText(t) ? '<p class="mt-1 text-sm">' + esc(pathText(t)) + "</p>" : "") +
           '<p class="mt-2"><a href="' + esc(t.href) + '">Open trip</a></p>',
-          { className: "hub-popup", maxWidth: 220 }
+          { className: "hub-popup", maxWidth: 240 }
         );
         function selectTrip() { highlightCard(t.id); }
         marker.on("click", selectTrip);
         marker.on("tooltipclick", selectTrip);
-        marker.addTo(map);
+        marker.addTo(hubMap);
         var elDot = marker.getElement() && marker.getElement().querySelector(".hub-pin-dot");
         if (elDot) pinDots[t.id] = elDot;
       });
 
       if (bounds.length) {
-        map.fitBounds(bounds, { padding: [48, 56], maxZoom: 3, animate: false });
+        hubMap.fitBounds(bounds, { padding: [36, 48], maxZoom: 3, animate: false });
       } else {
-        map.setView([20, -40], 2);
+        hubMap.setView([20, 10], 2);
       }
-      setTimeout(function () {
-        map.invalidateSize();
-        trips.forEach(function (t) {
-          if (!t.id || pinDots[t.id]) return;
-          var found = el.querySelector('.hub-pin-dot[data-trip="' + t.id + '"]');
-          if (found) pinDots[t.id] = found;
-        });
-      }, 200);
+      setTimeout(function () { hubMap.invalidateSize(); }, 200);
     }
+
+    function fillTotals(trips) {
+      var totals = document.getElementById("hub-totals");
+      var countries = document.getElementById("hub-countries");
+      var n = (trips || []).length;
+      if (totals) {
+        totals.textContent = n + (n === 1 ? " trip" : " trips") + " · " + COUNTRIES.length + " countries";
+      }
+      if (countries) countries.textContent = COUNTRIES.join(", ") + ".";
+    }
+
+    function fillWord() {
+      fetch("/status.json", { cache: "no-store" })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (status) {
+          var el = document.getElementById("greece-word");
+          if (!el || !status || !status.word || !status.word.el) return;
+          el.textContent = status.word.el;
+        })
+        .catch(function () {});
+    }
+
+    function fillNote() {
+      fetch("/guestbook.json", { cache: "no-store" })
+        .then(function (r) { return r.ok ? r.json() : []; })
+        .then(function (items) {
+          var fig = document.getElementById("greece-note");
+          if (!fig) return;
+          var pick = (items || []).find(function (g) {
+            return g && g.name === "Colleen Ullrich" && g.date === "2026-09-15" && g.message;
+          });
+          if (!pick) return;
+          var quote = fig.querySelector("[data-quote]");
+          var by = fig.querySelector("[data-by]");
+          if (quote) quote.textContent = pick.message;
+          if (by) by.textContent = pick.name;
+          fig.hidden = false;
+        })
+        .catch(function () {});
+    }
+
+    fillWord();
+    fillNote();
 
     fetch("/trips.json", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : { trips: [] }; })
       .then(function (data) {
-        var list = document.getElementById("trips-list");
         var later = document.getElementById("trips-later");
-        if (!list) return;
         var trips = (data && data.trips) || [];
+        var upcoming = null;
         trips.forEach(function (t) {
-          if (!t || !t.href) return;
-          list.appendChild(renderCard(t));
+          if (t && t.href && isUpcoming(t) && !upcoming) upcoming = t;
         });
+        if (upcoming) renderHero(upcoming);
+        renderYears(trips);
         if (later && data && data.comingLater) {
           later.textContent = data.comingLater;
           later.classList.remove("hidden");
         }
+        fillTotals(trips);
         initMap(trips);
+        if (typeof window.__mountKandaNow === "function") window.__mountKandaNow();
       })
       .catch(function () {});
   })();
   </script>
+  <script src="/theme.js"></script>
 </body>
 </html>

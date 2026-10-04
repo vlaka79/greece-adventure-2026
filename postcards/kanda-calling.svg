@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Kanda Calling</title>
+  <desc id="desc">Postcard cover for Kanda Calling. Kitakyushu, October 6, 2026 to January 3, 2027.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b6f66"/>
+      <stop offset="0.62" stop-color="#0e3d39"/>
+      <stop offset="1" stop-color="#c4a35a"/>
+    </linearGradient>
+    <clipPath id="pic">
+      <rect x="48" y="48" width="656" height="579" rx="16"/>
+    </clipPath>
+  </defs>
+  <rect width="1200" height="675" fill="#f4eee4"/>
+  <rect x="24" y="24" width="1152" height="627" rx="22" fill="#fffcf6"/>
+  <g clip-path="url(#pic)">
+    <rect x="48" y="48" width="656" height="579" fill="url(#sea)"/>
+    <circle cx="560" cy="168" r="58" fill="#c4a35a"/>
+    <path d="M70 430c70-54 150-54 220 0s150 54 220 0 150-54 220 0" fill="none" stroke="#f4eee4" stroke-width="8" stroke-linecap="round"/>
+    <path d="M70 492c70-54 150-54 220 0s150 54 220 0 150-54 220 0" fill="none" stroke="#f4eee4" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+    <path d="M70 548c70-48 150-48 220 0s150 48 220 0 150-48 220 0" fill="none" stroke="#f4eee4" stroke-width="8" stroke-linecap="round" opacity="0.28"/>
+  </g>
+  <rect x="748" y="72" width="92" height="92" rx="8" fill="none" stroke="#c4a35a" stroke-width="3"/>
+  <circle cx="794" cy="100" r="12" fill="#c4a35a"/>
+  <path d="M762 128c16-12 32-12 48 0s32 12 48 0" fill="none" stroke="#1b6f66" stroke-width="3" stroke-linecap="round"/>
+  <path d="M762 142c16-12 32-12 48 0s32 12 48 0" fill="none" stroke="#1b6f66" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+  <text x="748" y="230" fill="#1b6f66" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="5">NEXT</text>
+  <text x="748" y="310" fill="#2a241c" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-style="italic">Kanda</text>
+  <text x="748" y="378" fill="#1b6f66" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-style="italic">Calling</text>
+  <text x="748" y="448" fill="#6f665b" font-family="Georgia, 'Times New Roman', serif" font-size="28">Kitakyushu</text>
+  <line x1="748" y1="478" x2="860" y2="478" stroke="#c4a35a" stroke-width="3"/>
+  <text x="748" y="528" fill="#2a241c" font-family="Georgia, 'Times New Roman', serif" font-size="22">October 6, 2026</text>
+  <text x="748" y="562" fill="#2a241c" font-family="Georgia, 'Times New Roman', serif" font-size="22">January 3, 2027</text>
+</svg>
